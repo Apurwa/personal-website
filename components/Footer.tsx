@@ -1,4 +1,8 @@
+'use client'
+
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { personalInfo } from '@/data/resume'
 
 const socialLinks = [
@@ -36,54 +40,137 @@ const footerLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
+function BackToTopButton() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setIsVisible(window.scrollY > 500)
+    }
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true })
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600 text-white shadow-lg transition-colors hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:bg-primary-500 dark:hover:bg-primary-600"
+          aria-label="Back to top"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </motion.button>
+      )}
+    </AnimatePresence>
+  )
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
-      <div className="container-wide py-12">
-        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
-          <div className="flex flex-col items-center gap-4 md:items-start">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
-              {personalInfo.name}
-            </Link>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Product Lead | Building AI-Powered Enterprise Solutions
-            </p>
-          </div>
+    <>
+      <BackToTopButton />
 
-          <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            {footerLinks.map((link) => (
+      {/* Gradient separator */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+
+      <footer className="border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
+        <div className="container-wide py-12">
+          <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center gap-4 md:items-start"
+            >
               <Link
-                key={link.name}
-                href={link.href}
-                className="text-sm text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+                href="/"
+                className="group relative text-lg font-semibold tracking-tight"
               >
-                {link.name}
+                <span className="relative z-10">{personalInfo.name}</span>
+                <motion.span
+                  className="absolute inset-0 -z-10 rounded-lg bg-primary-100 dark:bg-primary-900/30"
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileHover={{ scale: 1.1, opacity: 1 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                />
               </Link>
-            ))}
-          </nav>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                Product Lead | Building AI-Powered Enterprise Solutions
+              </p>
+            </motion.div>
 
-          <div className="flex gap-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
-                aria-label={link.name}
-              >
-                {link.icon}
-              </a>
-            ))}
+            <motion.nav
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex flex-wrap justify-center gap-x-6 gap-y-2"
+            >
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </motion.nav>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex gap-4"
+            >
+              {socialLinks.map((link) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+                  aria-label={link.name}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {link.icon}
+                </motion.a>
+              ))}
+            </motion.div>
           </div>
-        </div>
 
-        <div className="mt-8 border-t border-neutral-200 pt-8 text-center dark:border-neutral-800">
-          <p className="text-sm text-neutral-500 dark:text-neutral-500">
-            &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 border-t border-neutral-200 pt-8 text-center dark:border-neutral-800"
+          >
+            <p className="text-sm text-neutral-500 dark:text-neutral-500">
+              &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+            </p>
+          </motion.div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   )
 }
