@@ -153,21 +153,6 @@ export default function Home() {
                     itemProp="image"
                   />
                 </div>
-                {/* Status badge */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.8, type: 'spring', stiffness: 500 }}
-                  className="absolute -bottom-2 -right-2 flex items-center gap-2 rounded-full bg-white px-3 py-1.5 shadow-lg dark:bg-neutral-800"
-                >
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
-                  </span>
-                  <span className="text-xs font-medium text-neutral-700 dark:text-neutral-300">
-                    Open to opportunities
-                  </span>
-                </motion.div>
               </div>
             </motion.div>
           </div>
