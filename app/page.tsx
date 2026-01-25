@@ -9,21 +9,26 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section">
+      <section className="section" itemScope itemType="https://schema.org/Person">
         <div className="container-narrow">
           <div className="animate-fade-in">
             <p className="text-sm font-medium text-primary-600 dark:text-primary-400">
-              Product Lead at Redblock.ai
+              <span itemProp="jobTitle">Product Lead</span> at{' '}
+              <span itemProp="worksFor" itemScope itemType="https://schema.org/Organization">
+                <span itemProp="name">Redblock.ai</span>
+              </span>
             </p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              {personalInfo.name}
+              <span itemProp="name">{personalInfo.name}</span>
             </h1>
-            <p className="mt-6 text-xl text-neutral-600 dark:text-neutral-400">
+            <p className="mt-6 text-xl text-neutral-600 dark:text-neutral-400" itemProp="description">
               {personalInfo.tagline}
             </p>
             <p className="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
               {personalInfo.summary}
             </p>
+            <meta itemProp="email" content={personalInfo.email} />
+            <meta itemProp="url" content="https://apurwasarwajit.com" />
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/contact" className="btn-primary">
@@ -40,7 +45,8 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
-                aria-label="LinkedIn"
+                aria-label="Apurwa Sarwajit on LinkedIn"
+                itemProp="sameAs"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -49,7 +55,7 @@ export default function Home() {
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
-                aria-label="Email"
+                aria-label="Email Apurwa Sarwajit"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -65,9 +71,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Summary - SEO rich content */}
+      <section className="border-t border-neutral-200 bg-white py-12 dark:border-neutral-800 dark:bg-neutral-950">
+        <div className="container-narrow">
+          <h2 className="sr-only">About Apurwa Sarwajit</h2>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400">
+            <strong>Apurwa Sarwajit</strong> is a seasoned Product Lead based in Bangalore, India,
+            with expertise in building AI-powered enterprise solutions. An alumnus of{' '}
+            <strong>IIT Roorkee</strong> (Indian Institute of Technology Roorkee), Apurwa has
+            a proven track record of delivering products that generate significant business impact,
+            including <strong>$4M+ ARR</strong> and preventing <strong>$12M in fraud losses</strong>.
+          </p>
+        </div>
+      </section>
+
       {/* Key Stats */}
       <section className="border-y border-neutral-200 bg-neutral-50 py-12 dark:border-neutral-800 dark:bg-neutral-900">
         <div className="container-wide">
+          <h2 className="sr-only">Key Achievements by Apurwa Sarwajit</h2>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
               <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">$4M+</p>
@@ -102,7 +123,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="card mt-8">
+          <article className="card mt-8">
             <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
               <div>
                 <h3 className="text-xl font-semibold">{latestExperience.roles[0].title}</h3>
@@ -125,7 +146,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -133,7 +154,7 @@ export default function Home() {
       <section className="section border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
         <div className="container-wide">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold tracking-tight">Featured Projects</h2>
+            <h2 className="text-2xl font-bold tracking-tight">Featured Projects by Apurwa Sarwajit</h2>
             <Link
               href="/projects"
               className="text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
@@ -150,11 +171,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Skills and Expertise */}
+      <section className="section border-t border-neutral-200 dark:border-neutral-800">
+        <div className="container-narrow">
+          <h2 className="text-2xl font-bold tracking-tight text-center">Areas of Expertise</h2>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {[
+              'Product Management',
+              'Agentic AI',
+              'Fraud Detection',
+              'Enterprise Software',
+              'Machine Learning',
+              'Fintech',
+              'B2B SaaS',
+              'Platform Engineering',
+              'API Design',
+              'Product Strategy',
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="section">
+      <section className="section border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
         <div className="container-narrow text-center">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Interested in working together?
+            Interested in working with Apurwa Sarwajit?
           </h2>
           <p className="mt-4 text-neutral-600 dark:text-neutral-400">
             I&apos;m always open to discussing product opportunities, collaborations,
