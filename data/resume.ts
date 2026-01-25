@@ -3,7 +3,7 @@ export const personalInfo = {
   tagline: 'Product Lead | Building AI-Powered Enterprise Solutions',
   email: 'apurvsingh28@gmail.com',
   phone: '8979791361',
-  linkedin: 'https://linkedin.com/in/apurwasarwajit',
+  linkedin: 'https://www.linkedin.com/in/apurwa-sarwajit',
   location: 'Bangalore, India',
   summary: `Product leader with 5+ years of experience building AI-powered products that drive measurable business impact.
 Currently leading the Product and Engineering teams at Redblock.ai, building an agentic AI platform for enterprise security teams.
