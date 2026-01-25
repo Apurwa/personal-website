@@ -51,21 +51,12 @@ export const metadata: Metadata = {
     title: 'Apurwa Sarwajit | Product Lead at Redblock.ai',
     description:
       'Apurwa Sarwajit is a Product Lead building AI-powered enterprise solutions. Expert in fraud detection, agentic AI, and enterprise software. IIT Roorkee alumnus.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Apurwa Sarwajit - Product Lead',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Apurwa Sarwajit | Product Lead at Redblock.ai',
     description:
       'Product Lead building AI-powered enterprise solutions. Expert in fraud detection and agentic AI.',
-    images: ['/og-image.png'],
     creator: '@apurwasarwajit',
   },
   robots: {
