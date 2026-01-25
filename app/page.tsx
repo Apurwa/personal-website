@@ -8,6 +8,7 @@ import ProjectCard from '@/components/ProjectCard'
 import AnimatedSection, { StaggerContainer, AnimatedItem } from '@/components/AnimatedSection'
 import { AnimatedStat, Typewriter, TextReveal } from '@/components/AnimatedText'
 import HeroBackground, { DotPattern, GradientBackground } from '@/components/BackgroundPattern'
+import { ScrollReveal, Parallax, Magnetic, CountUp, StaggerReveal } from '@/components/GSAPAnimations'
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3)
@@ -77,16 +78,16 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="mt-8 flex flex-wrap gap-4"
             >
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Magnetic strength={0.2}>
                 <Link href="/contact" className="btn-primary">
                   Get in Touch
                 </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              </Magnetic>
+              <Magnetic strength={0.2}>
                 <Link href="/experience" className="btn-secondary">
                   View Experience
                 </Link>
-              </motion.div>
+              </Magnetic>
             </motion.div>
 
             <motion.div
@@ -128,91 +129,113 @@ export default function Home() {
             </motion.div>
             </motion.div>
 
-            {/* Profile Image */}
+            {/* Profile Image with Parallax */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="relative flex-shrink-0"
             >
-              <div className="relative">
-                {/* Decorative ring */}
-                <motion.div
-                  className="absolute -inset-4 rounded-full bg-gradient-to-tr from-primary-500/20 via-primary-400/10 to-transparent"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                />
-                {/* Image container */}
-                <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-xl dark:border-neutral-800 sm:h-64 sm:w-64 lg:h-72 lg:w-72">
-                  <Image
-                    src="/profile.jpg"
-                    alt="Apurwa Sarwajit"
-                    fill
-                    className="object-cover"
-                    priority
-                    itemProp="image"
+              <Parallax speed={0.15} direction="vertical">
+                <div className="relative">
+                  {/* Decorative ring */}
+                  <motion.div
+                    className="absolute -inset-4 rounded-full bg-gradient-to-tr from-primary-500/20 via-primary-400/10 to-transparent"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                   />
+                  {/* Image container */}
+                  <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-xl dark:border-neutral-800 sm:h-64 sm:w-64 lg:h-72 lg:w-72">
+                    <Image
+                      src="/profile.jpg"
+                      alt="Apurwa Sarwajit"
+                      fill
+                      className="object-cover"
+                      priority
+                      itemProp="image"
+                    />
+                  </div>
                 </div>
-              </div>
+              </Parallax>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Summary - SEO rich content */}
-      <AnimatedSection
-        as="section"
-        className="border-t border-neutral-200 bg-white py-12 dark:border-neutral-800 dark:bg-neutral-950"
-        variant="fadeInUp"
-      >
+      {/* About Summary - SEO rich content with GSAP */}
+      <section className="border-t border-neutral-200 bg-white py-12 dark:border-neutral-800 dark:bg-neutral-950">
         <div className="container-narrow">
           <h2 className="sr-only">About Apurwa Sarwajit</h2>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            <strong>Apurwa Sarwajit</strong> is a seasoned Product Lead based in Bangalore, India,
-            with expertise in building AI-powered enterprise solutions. An alumnus of{' '}
-            <strong>IIT Roorkee</strong> (Indian Institute of Technology Roorkee), Apurwa has
-            a proven track record of delivering products that generate significant business impact,
-            including <strong>$4M+ ARR</strong> and preventing <strong>$12M in fraud losses</strong>.
-          </p>
+          <ScrollReveal direction="up" duration={0.8}>
+            <p className="text-lg text-neutral-600 dark:text-neutral-400">
+              <strong>Apurwa Sarwajit</strong> is a seasoned Product Lead based in Bangalore, India,
+              with expertise in building AI-powered enterprise solutions. An alumnus of{' '}
+              <strong>IIT Roorkee</strong> (Indian Institute of Technology Roorkee), Apurwa has
+              a proven track record of delivering products that generate significant business impact,
+              including <strong>$4M+ ARR</strong> and preventing <strong>$12M in fraud losses</strong>.
+            </p>
+          </ScrollReveal>
         </div>
-      </AnimatedSection>
+      </section>
 
-      {/* Key Stats */}
+      {/* Key Stats - Using GSAP CountUp */}
       <section className="relative border-y border-neutral-200 bg-neutral-50 py-12 dark:border-neutral-800 dark:bg-neutral-900">
         <DotPattern className="text-neutral-400 dark:text-neutral-600" opacity={0.08} />
 
         <div className="container-wide relative">
           <h2 className="sr-only">Key Achievements by Apurwa Sarwajit</h2>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            <AnimatedStat value="$4M+" label="ARR Generated" delay={0} />
-            <AnimatedStat value="$12M" label="Fraud Prevented" delay={0.1} />
-            <AnimatedStat value="50M+" label="Monthly Transactions" delay={0.2} />
-            <AnimatedStat value="6" label="Top Banks as Clients" delay={0.3} />
-          </div>
+          <StaggerReveal className="grid grid-cols-2 gap-8 md:grid-cols-4" stagger={0.15}>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-neutral-900 dark:text-white sm:text-4xl">
+                <CountUp end={4} prefix="$" suffix="M+" duration={2.5} />
+              </div>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">ARR Generated</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-neutral-900 dark:text-white sm:text-4xl">
+                <CountUp end={12} prefix="$" suffix="M" duration={2.5} />
+              </div>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Fraud Prevented</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-neutral-900 dark:text-white sm:text-4xl">
+                <CountUp end={50} suffix="M+" duration={2.5} />
+              </div>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Monthly Transactions</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-neutral-900 dark:text-white sm:text-4xl">
+                <CountUp end={6} duration={2} />
+              </div>
+              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Top Banks as Clients</p>
+            </div>
+          </StaggerReveal>
         </div>
       </section>
 
-      {/* Current Role Highlight */}
+      {/* Current Role Highlight - Using GSAP ScrollReveal */}
       <section className="section relative">
         <GradientBackground variant="radial" />
 
         <div className="container-wide relative">
-          <AnimatedSection variant="fadeInUp">
+          <ScrollReveal direction="up" duration={0.6}>
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold tracking-tight">Current Role</h2>
-              <Link
-                href="/experience"
-                className="link-arrow text-sm font-medium"
-              >
-                View all experience
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <Magnetic strength={0.2}>
+                <Link
+                  href="/experience"
+                  className="link-arrow text-sm font-medium"
+                >
+                  View all experience
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </Magnetic>
             </div>
-          </AnimatedSection>
+          </ScrollReveal>
 
-          <AnimatedSection variant="slideUp" delay={0.1}>
+          <ScrollReveal direction="up" delay={0.15} duration={0.7}>
             <article className="card-hover mt-8">
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -228,58 +251,58 @@ export default function Home() {
                   {latestExperience.roles[0].period}
                 </span>
               </div>
-              <StaggerContainer className="mt-6 space-y-3" staggerDelay={0.05} delay={0.2}>
+              <StaggerReveal className="mt-6 space-y-3" stagger={0.08} direction="left">
                 {latestExperience.roles[0].achievements.slice(0, 3).map((achievement, index) => (
-                  <AnimatedItem key={index}>
-                    <div className="flex gap-3 text-neutral-600 dark:text-neutral-400">
-                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-500" />
-                      {achievement}
-                    </div>
-                  </AnimatedItem>
+                  <div key={index} className="flex gap-3 text-neutral-600 dark:text-neutral-400">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-500" />
+                    {achievement}
+                  </div>
                 ))}
-              </StaggerContainer>
+              </StaggerReveal>
             </article>
-          </AnimatedSection>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Featured Projects */}
+      {/* Featured Projects - Using GSAP ScrollReveal */}
       <section className="section border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
         <div className="container-wide">
-          <AnimatedSection variant="fadeInUp">
+          <ScrollReveal direction="up" duration={0.6}>
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold tracking-tight">Featured Projects by Apurwa Sarwajit</h2>
-              <Link
-                href="/projects"
-                className="link-arrow text-sm font-medium"
-              >
-                View all projects
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <Magnetic strength={0.2}>
+                <Link
+                  href="/projects"
+                  className="link-arrow text-sm font-medium"
+                >
+                  View all projects
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </Magnetic>
             </div>
-          </AnimatedSection>
+          </ScrollReveal>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
+          <StaggerReveal className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3" stagger={0.12}>
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} index={0} />
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
-      {/* Skills and Expertise */}
+      {/* Skills and Expertise - Using GSAP StaggerReveal */}
       <section className="section border-t border-neutral-200 dark:border-neutral-800">
         <div className="container-narrow">
-          <AnimatedSection variant="fadeInUp" className="text-center">
+          <ScrollReveal direction="up" className="text-center">
             <h2 className="text-2xl font-bold tracking-tight">Areas of Expertise</h2>
-          </AnimatedSection>
+          </ScrollReveal>
 
-          <StaggerContainer
+          <StaggerReveal
             className="mt-8 flex flex-wrap justify-center gap-3"
-            staggerDelay={0.03}
-            delay={0.1}
+            stagger={0.05}
+            direction="up"
           >
             {[
               'Product Management',
@@ -293,45 +316,42 @@ export default function Home() {
               'API Design',
               'Product Strategy',
             ].map((skill) => (
-              <AnimatedItem key={skill}>
-                <motion.span
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="tag-neutral cursor-default"
-                >
+              <Magnetic key={skill} strength={0.15}>
+                <span className="tag-neutral cursor-default">
                   {skill}
-                </motion.span>
-              </AnimatedItem>
+                </span>
+              </Magnetic>
             ))}
-          </StaggerContainer>
+          </StaggerReveal>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Using GSAP ScrollReveal and Magnetic */}
       <section className="section relative border-t border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900">
         <GradientBackground variant="radial" />
 
         <div className="container-narrow relative text-center">
-          <AnimatedSection variant="fadeInUp">
+          <ScrollReveal direction="up">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               <TextReveal>Interested in working with Apurwa Sarwajit?</TextReveal>
             </h2>
-          </AnimatedSection>
+          </ScrollReveal>
 
-          <AnimatedSection variant="fadeInUp" delay={0.1}>
+          <ScrollReveal direction="up" delay={0.1}>
             <p className="mt-4 text-neutral-600 dark:text-neutral-400">
               I&apos;m always open to discussing product opportunities, collaborations,
               or just having a chat about AI and technology.
             </p>
-          </AnimatedSection>
+          </ScrollReveal>
 
-          <AnimatedSection variant="fadeInUp" delay={0.2}>
+          <ScrollReveal direction="up" delay={0.2}>
             <div className="mt-8 flex justify-center gap-4">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Magnetic strength={0.25}>
                 <Link href="/contact" className="btn-primary">
                   Get in Touch
                 </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              </Magnetic>
+              <Magnetic strength={0.25}>
                 <a
                   href={personalInfo.linkedin}
                   target="_blank"
@@ -340,9 +360,9 @@ export default function Home() {
                 >
                   Connect on LinkedIn
                 </a>
-              </motion.div>
+              </Magnetic>
             </div>
-          </AnimatedSection>
+          </ScrollReveal>
         </div>
       </section>
     </>
