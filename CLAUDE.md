@@ -12,14 +12,15 @@ Personal portfolio website for Apurwa Sarwajit built with Next.js 14 (App Router
 
 ```bash
 npm run dev      # Start development server (http://localhost:3000)
-npm run build    # Build for production (static export)
+npm run build    # Build for production (static export to /out)
+npm run start    # Start production server (for local testing)
 npm run lint     # Run ESLint
 ```
 
 ## Architecture
 
 ### Static Export
-The site uses `output: 'export'` in next.config.js for static HTML generation. All pages must be statically generatable - no server-side features (API routes, dynamic server rendering).
+The site uses `output: 'export'` in next.config.js for static HTML generation. All pages must be statically generatable - no server-side features (API routes, dynamic server rendering). Images use `unoptimized: true` since Next.js image optimization requires a server.
 
 ### Data Flow
 - **`data/resume.ts`** - Central data source for all resume content (experiences, projects, skills, personal info)
@@ -66,12 +67,14 @@ title: "Post Title"
 description: "Brief description"
 date: "2024-01-15"
 tags: ["AI", "Product"]
+author: "Apurwa Sarwajit"  # optional, defaults to Apurwa Sarwajit
 ---
 ```
 
 ## Deployment
 
 Deployed to Vercel. Deploy with:
+
 ```bash
 npx vercel --prod
 ```
