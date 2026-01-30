@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import GSAPProvider from '@/components/GSAPProvider'
 import { PersonJsonLd, WebsiteJsonLd } from '@/components/JsonLd'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -98,6 +99,7 @@ export default function RootLayout({
             </div>
           </GSAPProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
