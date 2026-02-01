@@ -1,12 +1,14 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { BudgetData } from '../data/types'
 import { LevelSection } from './LevelSection'
 import { HealthBar } from './HealthBar'
+import { Drawer } from './Drawer'
+import { DeficitDetail } from './DeficitDetail'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,8 +16,50 @@ interface DeficitLevelProps {
   budget: BudgetData
 }
 
+type DeficitType = 'fiscal' | 'revenue' | 'primary' | 'debt'
+
+interface DamageItem {
+  type: DeficitType
+  label: string
+  value: string
+  color: string
+  icon: string
+}
+
 export function DeficitLevel({ budget }: DeficitLevelProps) {
   const bossRef = useRef<HTMLDivElement>(null)
+  const [selectedDeficit, setSelectedDeficit] = useState<DeficitType | null>(null)
+
+  const damageItems: DamageItem[] = [
+    {
+      type: 'fiscal',
+      label: 'Fiscal Deficit',
+      value: `${(budget.fiscalDeficit / 100000).toFixed(1)}L Cr`,
+      color: '#ff6b6b',
+      icon: '💥',
+    },
+    {
+      type: 'revenue',
+      label: 'Revenue Deficit',
+      value: `${(budget.revenueDeficit / 100000).toFixed(1)}L Cr`,
+      color: '#fbbf24',
+      icon: '💸',
+    },
+    {
+      type: 'primary',
+      label: 'Primary Deficit',
+      value: `${(budget.primaryDeficit / 100000).toFixed(1)}L Cr`,
+      color: '#a78bfa',
+      icon: '⚡',
+    },
+    {
+      type: 'debt',
+      label: 'Debt to GDP',
+      value: `${budget.debtToGdp}%`,
+      color: '#4ecdc4',
+      icon: '📊',
+    },
+  ]
   const maxValue = Math.max(budget.totalRevenue, budget.totalExpenditure)
 
   // Boss size based on deficit percentage (bigger = worse)
@@ -113,35 +157,60 @@ export function DeficitLevel({ budget }: DeficitLevelProps) {
       {/* Damage Report */}
       <div className="p-4 border-2 border-[#ffff00] bg-[#0f0f23]/80">
         <h3 className="text-sm text-[#ffff00] text-center mb-4">
-          DAMAGE REPORT
+          🎮 DAMAGE REPORT - TAP TO ANALYZE 🎮
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-xs">
-          <div>
-            <div className="text-[#00d4ff]">Fiscal Deficit</div>
-            <div className="text-[#ff00ff] text-lg">{(budget.fiscalDeficit / 100000).toFixed(1)}L Cr</div>
-          </div>
-          <div>
-            <div className="text-[#00d4ff]">Revenue Deficit</div>
-            <div className="text-[#ffb000] text-lg">{(budget.revenueDeficit / 100000).toFixed(1)}L Cr</div>
-          </div>
-          <div>
-            <div className="text-[#00d4ff]">Primary Deficit</div>
-            <div className="text-[#ffff00] text-lg">{(budget.primaryDeficit / 100000).toFixed(1)}L Cr</div>
-          </div>
-          <div>
-            <div className="text-[#00d4ff]">Debt to GDP</div>
-            <div className="text-[#00ff41] text-lg">{budget.debtToGdp}%</div>
-          </div>
+          {damageItems.map((item) => (
+            <button
+              key={item.type}
+              onClick={() => setSelectedDeficit(item.type)}
+              className="p-3 border border-[#2d2d44] bg-[#1a1a2e] transition-all duration-200 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,0,0.3)] cursor-pointer group"
+              style={{
+                borderColor: item.color,
+              }}
+            >
+              <div className="text-lg mb-1 group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <div className="text-[#c8d0dc] group-hover:text-white transition-colors">
+                {item.label}
+              </div>
+              <div className="text-lg mt-1" style={{ color: item.color }}>
+                {item.value}
+              </div>
+              <div className="text-xs text-[#888] mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                TAP →
+              </div>
+            </button>
+          ))}
         </div>
       </div>
 
+      {/* Hint */}
+      <p className="text-xs text-[#00d4ff] text-center mt-4 animate-pulse">
+        💡 Tap any deficit to see global comparisons and analysis
+      </p>
+
       <div className="mt-6 text-center">
-        <p className="text-xs text-[#00d4ff]">
+        <p className="text-xs text-[#c8d0dc]">
           The gap between Revenue and Expenditure is the{' '}
-          <span className="text-[#ff00ff]">Fiscal Deficit</span>
+          <span className="text-[#ff6b6b]">Fiscal Deficit</span>
           {' '}- borrowed to keep the game running!
         </p>
       </div>
+
+      {/* Deficit Detail Drawer */}
+      <Drawer
+        isOpen={selectedDeficit !== null}
+        onClose={() => setSelectedDeficit(null)}
+        title={damageItems.find((d) => d.type === selectedDeficit)?.label || ''}
+        icon={damageItems.find((d) => d.type === selectedDeficit)?.icon || '📊'}
+        accentColor={damageItems.find((d) => d.type === selectedDeficit)?.color || '#ffff00'}
+      >
+        {selectedDeficit && (
+          <DeficitDetail budget={budget} type={selectedDeficit} />
+        )}
+      </Drawer>
     </LevelSection>
   )
 }
