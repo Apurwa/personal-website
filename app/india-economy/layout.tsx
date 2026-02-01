@@ -15,7 +15,7 @@ export default function IndiaEconomyLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-[#0f0f23] text-[#00ff41]">
+    <div className="min-h-screen bg-[#0f0f23] text-[#00ff41] font-arcade">
       {children}
     </div>
   )
