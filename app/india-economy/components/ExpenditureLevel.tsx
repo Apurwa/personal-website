@@ -1,15 +1,32 @@
 'use client'
 
-import { BudgetData } from '../data/types'
+import { useState } from 'react'
+import { BudgetData, MinistryAllocation } from '../data/types'
 import { LevelSection } from './LevelSection'
 import { ScoreCounter } from './ScoreCounter'
 import { MinistryCard } from './MinistryCard'
+import { Drawer } from './Drawer'
+import { MinistryDetail } from './MinistryDetail'
 
 interface ExpenditureLevelProps {
   budget: BudgetData
 }
 
+const iconMap: Record<string, string> = {
+  shield: '🛡️',
+  road: '🛣️',
+  train: '🚂',
+  home: '🏠',
+  book: '📚',
+  heart: '❤️',
+  wheat: '🌾',
+  village: '🏘️',
+  coins: '💰',
+  misc: '📦',
+}
+
 export function ExpenditureLevel({ budget }: ExpenditureLevelProps) {
+  const [selectedMinistry, setSelectedMinistry] = useState<MinistryAllocation | null>(null)
   const maxAllocation = Math.max(...budget.ministryAllocations.map(m => m.allocation))
 
   return (
@@ -49,19 +66,41 @@ export function ExpenditureLevel({ budget }: ExpenditureLevelProps) {
             icon={ministry.icon}
             maxAllocation={maxAllocation}
             index={index}
+            onClick={() => setSelectedMinistry(ministry)}
           />
         ))}
       </div>
 
-      <div className="mt-8 text-center">
+      {/* Hint */}
+      <p className="text-xs text-[#00d4ff] text-center mt-6 animate-pulse">
+        💡 Tap any ministry to see detailed breakdown
+      </p>
+
+      <div className="mt-4 text-center">
         <p className="text-xs text-[#00d4ff]">
-          💡 Interest Payments alone consume{' '}
+          ⚠️ Interest Payments alone consume{' '}
           <span className="text-[#ff00ff]">
             {((budget.ministryAllocations.find(m => m.name === 'Interest Payments')?.allocation || 0) / budget.totalExpenditure * 100).toFixed(1)}%
           </span>
           {' '}of the budget!
         </p>
       </div>
+
+      {/* Ministry Detail Drawer */}
+      <Drawer
+        isOpen={selectedMinistry !== null}
+        onClose={() => setSelectedMinistry(null)}
+        title={selectedMinistry?.name || ''}
+        icon={selectedMinistry ? iconMap[selectedMinistry.icon] || '📦' : '📦'}
+        accentColor="#ffff00"
+      >
+        {selectedMinistry && (
+          <MinistryDetail
+            ministry={selectedMinistry}
+            totalExpenditure={budget.totalExpenditure}
+          />
+        )}
+      </Drawer>
     </LevelSection>
   )
 }
