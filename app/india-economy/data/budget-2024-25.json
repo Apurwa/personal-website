@@ -1,0 +1,48 @@
+{
+  "fiscalYear": "2024-25",
+  "lastUpdated": "2024-07-23",
+  "source": "Union Budget 2024-25, Ministry of Finance",
+  "totalRevenue": 3201000,
+  "grossTaxRevenue": 3839000,
+  "taxRevenue": {
+    "gst": 1068000,
+    "incomeTax": 1146000,
+    "corporateTax": 1024000,
+    "customsDuty": 218000,
+    "exciseDuty": 328000,
+    "otherTaxes": 55000
+  },
+  "nonTaxRevenue": {
+    "dividends": 235000,
+    "interestReceipts": 27000,
+    "otherNonTax": 78000
+  },
+  "borrowings": 1686000,
+  "totalExpenditure": 4818000,
+  "revenueExpenditure": 3727000,
+  "capitalExpenditure": 1111000,
+  "ministryAllocations": [
+    { "name": "Defence", "allocation": 621940, "icon": "shield" },
+    { "name": "Road Transport", "allocation": 278000, "icon": "road" },
+    { "name": "Railways", "allocation": 255000, "icon": "train" },
+    { "name": "Home Affairs", "allocation": 219643, "icon": "home" },
+    { "name": "Education", "allocation": 120628, "icon": "book" },
+    { "name": "Health", "allocation": 90171, "icon": "heart" },
+    { "name": "Agriculture", "allocation": 151000, "icon": "wheat" },
+    { "name": "Rural Development", "allocation": 182000, "icon": "village" },
+    { "name": "Interest Payments", "allocation": 1145000, "icon": "coins" },
+    { "name": "Others", "allocation": 1254418, "icon": "misc" }
+  ],
+  "fiscalDeficit": 1686000,
+  "fiscalDeficitPercent": 4.9,
+  "revenueDeficit": 526000,
+  "primaryDeficit": 541000,
+  "debtToGdp": 56.8,
+  "historical": [
+    { "year": "2020-21", "fiscalDeficitPercent": 9.2, "totalExpenditure": 3531000 },
+    { "year": "2021-22", "fiscalDeficitPercent": 6.7, "totalExpenditure": 3761000 },
+    { "year": "2022-23", "fiscalDeficitPercent": 6.4, "totalExpenditure": 4163000 },
+    { "year": "2023-24", "fiscalDeficitPercent": 5.6, "totalExpenditure": 4503000 },
+    { "year": "2024-25", "fiscalDeficitPercent": 4.9, "totalExpenditure": 4818000 }
+  ]
+}
