@@ -1,5 +1,6 @@
 import { getBudgetData } from './data'
 import { ArcadeScreen } from './components/ArcadeScreen'
+import { LevelSection } from './components/LevelSection'
 import { ScoreCounter } from './components/ScoreCounter'
 
 export default function IndiaEconomyPage() {
@@ -17,6 +18,13 @@ export default function IndiaEconomyPage() {
           value={budget.totalExpenditure}
           label="Total Budget"
         />
+        <LevelSection
+          level={1}
+          title="WHERE DOES THE MONEY COME FROM?"
+          subtitle="Revenue Sources"
+        >
+          <p className="text-center text-xs">Level content coming soon...</p>
+        </LevelSection>
       </main>
     </ArcadeScreen>
   )
