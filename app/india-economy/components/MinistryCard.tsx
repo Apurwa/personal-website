@@ -13,6 +13,7 @@ interface MinistryCardProps {
   icon: string
   maxAllocation: number
   index: number
+  onClick?: () => void
 }
 
 const iconMap: Record<string, string> = {
@@ -28,8 +29,8 @@ const iconMap: Record<string, string> = {
   misc: '📦',
 }
 
-export function MinistryCard({ name, allocation, icon, maxAllocation, index }: MinistryCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null)
+export function MinistryCard({ name, allocation, icon, maxAllocation, index, onClick }: MinistryCardProps) {
+  const cardRef = useRef<HTMLButtonElement>(null)
   const barRef = useRef<HTMLDivElement>(null)
 
   const percentage = (allocation / maxAllocation) * 100
@@ -67,13 +68,14 @@ export function MinistryCard({ name, allocation, icon, maxAllocation, index }: M
   }, [index, percentage])
 
   return (
-    <div
+    <button
       ref={cardRef}
-      className="p-3 border-2 border-[#2d2d44] bg-[#1a1a2e] hover:border-[#00ff41] transition-colors"
+      onClick={onClick}
+      className="p-3 border-2 border-[#2d2d44] bg-[#1a1a2e] text-left transition-all duration-200 hover:border-[#ffff00] hover:bg-[#ffff00]/5 hover:shadow-[0_0_15px_rgba(255,255,0,0.2)] hover:scale-105 cursor-pointer group"
     >
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-2xl">{iconMap[icon] || '📦'}</span>
-        <span className="text-xs text-[#00d4ff] truncate">{name}</span>
+        <span className="text-2xl group-hover:scale-110 transition-transform">{iconMap[icon] || '📦'}</span>
+        <span className="text-xs text-[#00d4ff] truncate group-hover:text-[#ffff00] transition-colors">{name}</span>
       </div>
       <div className="text-xs text-[#ffb000] mb-1">
         ₹{allocation.toLocaleString('en-IN')} Cr
@@ -85,6 +87,9 @@ export function MinistryCard({ name, allocation, icon, maxAllocation, index }: M
           style={{ width: '0%' }}
         />
       </div>
-    </div>
+      <div className="text-xs text-[#888] text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        TAP →
+      </div>
+    </button>
   )
 }
