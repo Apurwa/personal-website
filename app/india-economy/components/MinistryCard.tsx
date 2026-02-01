@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useCurrency } from '../context/CurrencyContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -32,6 +33,7 @@ const iconMap: Record<string, string> = {
 export function MinistryCard({ name, allocation, icon, maxAllocation, index, onClick }: MinistryCardProps) {
   const cardRef = useRef<HTMLButtonElement>(null)
   const barRef = useRef<HTMLDivElement>(null)
+  const { formatCurrency } = useCurrency()
 
   const percentage = (allocation / maxAllocation) * 100
 
@@ -78,7 +80,7 @@ export function MinistryCard({ name, allocation, icon, maxAllocation, index, onC
         <span className="text-xs text-[#00d4ff] truncate group-hover:text-[#ffff00] transition-colors">{name}</span>
       </div>
       <div className="text-xs text-[#ffb000] mb-1">
-        ₹{allocation.toLocaleString('en-IN')} Cr
+        {formatCurrency(allocation)}
       </div>
       <div className="h-2 bg-[#0f0f23] border border-[#2d2d44]">
         <div

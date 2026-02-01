@@ -2,6 +2,7 @@
 
 import { BudgetData } from '../data/types'
 import { Accordion, AccordionItem } from './Accordion'
+import { useCurrency } from '../context/CurrencyContext'
 
 interface TaxRevenueDetailProps {
   budget: BudgetData
@@ -16,6 +17,7 @@ interface CountryTaxData {
 
 export function TaxRevenueDetail({ budget }: TaxRevenueDetailProps) {
   const { taxRevenue, grossTaxRevenue } = budget
+  const { formatCurrency } = useCurrency()
 
   const taxItems = [
     {
@@ -118,7 +120,7 @@ export function TaxRevenueDetail({ budget }: TaxRevenueDetailProps) {
         <div className="text-center">
           <div className="text-xs text-[#b8c0cc] mb-1">GROSS TAX REVENUE</div>
           <div className="text-3xl font-bold text-[#00ff41]">
-            ₹{grossTaxRevenue.toLocaleString('en-IN')} Cr
+            {formatCurrency(grossTaxRevenue)}
           </div>
           <div className="text-sm text-[#e0e4ea] mt-1">
             ~{((grossTaxRevenue / budget.totalExpenditure) * 100).toFixed(0)}% of total budget
@@ -150,7 +152,7 @@ export function TaxRevenueDetail({ budget }: TaxRevenueDetailProps) {
                       {item.icon} {item.name}
                     </span>
                     <div className="text-right">
-                      <div style={{ color: item.color }}>₹{item.value.toLocaleString('en-IN')} Cr</div>
+                      <div style={{ color: item.color }}>{formatCurrency(item.value)}</div>
                       <div className="text-xs text-[#888]">{percent}%</div>
                     </div>
                   </div>

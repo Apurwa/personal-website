@@ -2,6 +2,7 @@
 
 import { MinistryAllocation } from '../data/types'
 import { Accordion, AccordionItem } from './Accordion'
+import { useCurrency } from '../context/CurrencyContext'
 
 interface MinistryDetailProps {
   ministry: MinistryAllocation
@@ -267,6 +268,7 @@ const iconMap: Record<string, string> = {
 
 export function MinistryDetail({ ministry, totalExpenditure }: MinistryDetailProps) {
   const info = ministryData[ministry.name] || ministryData['Others']
+  const { formatCurrency } = useCurrency()
   const percentOfBudget = ((ministry.allocation / totalExpenditure) * 100).toFixed(1)
   const perCapita = Math.round(ministry.allocation / 140) // 140 crore population
 
@@ -279,7 +281,7 @@ export function MinistryDetail({ ministry, totalExpenditure }: MinistryDetailPro
           <div>
             <div className="text-xs text-[#b8c0cc]">{info.fullName}</div>
             <div className="text-xl text-[#00ff41]">
-              ₹{ministry.allocation.toLocaleString('en-IN')} Cr
+              {formatCurrency(ministry.allocation)}
             </div>
           </div>
         </div>
@@ -290,7 +292,7 @@ export function MinistryDetail({ ministry, totalExpenditure }: MinistryDetailPro
           </div>
           <div className="p-2 bg-[#0f0f23] text-center">
             <div className="text-[#b8c0cc]">Per Citizen</div>
-            <div className="text-[#00d4ff] text-lg">₹{perCapita}</div>
+            <div className="text-[#00d4ff] text-lg">{formatCurrency(perCapita)}</div>
           </div>
         </div>
       </div>

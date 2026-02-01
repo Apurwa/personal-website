@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useCurrency } from '../context/CurrencyContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -24,6 +25,7 @@ export function ProgressBar({
   const barRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [displayValue, setDisplayValue] = useState(0)
+  const { formatCurrency } = useCurrency()
 
   const percentage = (value / maxValue) * 100
 
@@ -58,7 +60,7 @@ export function ProgressBar({
     <div ref={containerRef} className={`mb-4 ${className}`}>
       <div className="flex justify-between text-xs mb-1">
         <span className="text-[#00d4ff]">{label}</span>
-        <span className="text-[#ffb000]">₹{displayValue.toLocaleString('en-IN')} Cr</span>
+        <span className="text-[#ffb000]">{formatCurrency(displayValue)}</span>
       </div>
       <div className="h-4 bg-[#1a1a2e] border-2 border-[#2d2d44] relative">
         <div

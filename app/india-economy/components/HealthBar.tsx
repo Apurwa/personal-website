@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useCurrency } from '../context/CurrencyContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -18,6 +19,7 @@ export function HealthBar({ label, current, max, color, direction = 'ltr' }: Hea
   const barRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [displayValue, setDisplayValue] = useState(0)
+  const { formatCurrency } = useCurrency()
 
   const percentage = Math.min((current / max) * 100, 100)
 
@@ -51,7 +53,7 @@ export function HealthBar({ label, current, max, color, direction = 'ltr' }: Hea
     <div ref={containerRef} className="mb-4">
       <div className={`flex justify-between text-xs mb-1 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
         <span style={{ color }}>{label}</span>
-        <span className="text-[#ffb000]">{displayValue.toLocaleString('en-IN')} Cr</span>
+        <span className="text-[#ffb000]">{formatCurrency(displayValue)}</span>
       </div>
       <div className={`h-6 bg-[#1a1a2e] border-2 border-[#2d2d44] relative overflow-hidden ${direction === 'rtl' ? 'flex justify-end' : ''}`}>
         <div

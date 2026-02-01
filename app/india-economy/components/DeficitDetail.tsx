@@ -2,6 +2,7 @@
 
 import { BudgetData } from '../data/types'
 import { Accordion, AccordionItem } from './Accordion'
+import { useCurrency } from '../context/CurrencyContext'
 
 interface DeficitDetailProps {
   budget: BudgetData
@@ -16,7 +17,8 @@ interface CountryData {
 }
 
 export function DeficitDetail({ budget, type }: DeficitDetailProps) {
-  const content = getContent(budget, type)
+  const { formatCurrency } = useCurrency()
+  const content = getContent(budget, type, formatCurrency)
 
   return (
     <div className="space-y-4">
@@ -129,12 +131,18 @@ export function DeficitDetail({ budget, type }: DeficitDetailProps) {
   )
 }
 
-function getContent(budget: BudgetData, type: 'fiscal' | 'revenue' | 'primary' | 'debt') {
+function getContent(budget: BudgetData, type: 'fiscal' | 'revenue' | 'primary' | 'debt', formatCurrency: (value: number) => string) {
+  // Helper to format lakh crore values
+  const formatLakhCrore = (valueInLakhCrore: number) => {
+    const valueInCrore = valueInLakhCrore * 100000
+    return formatCurrency(valueInCrore)
+  }
+
   const contents = {
     fiscal: {
       label: 'Fiscal Deficit',
       value: `${budget.fiscalDeficitPercent}%`,
-      subtext: `₹${(budget.fiscalDeficit / 100000).toFixed(1)} Lakh Crore`,
+      subtext: formatLakhCrore(budget.fiscalDeficit / 100000),
       color: '#ff6b6b',
       explanation:
         'Fiscal Deficit is the gap between government\'s total spending and total revenue (excluding borrowings). It shows how much the government needs to borrow to meet its expenses. Think of it like spending more than your salary and using credit cards to cover the gap.',
@@ -183,7 +191,7 @@ function getContent(budget: BudgetData, type: 'fiscal' | 'revenue' | 'primary' |
     },
     revenue: {
       label: 'Revenue Deficit',
-      value: `₹${(budget.revenueDeficit / 100000).toFixed(1)}L Cr`,
+      value: formatCurrency(budget.revenueDeficit),
       subtext: 'Gap in day-to-day expenses',
       color: '#fbbf24',
       explanation:
@@ -230,7 +238,7 @@ function getContent(budget: BudgetData, type: 'fiscal' | 'revenue' | 'primary' |
     },
     primary: {
       label: 'Primary Deficit',
-      value: `₹${(budget.primaryDeficit / 100000).toFixed(1)}L Cr`,
+      value: formatCurrency(budget.primaryDeficit),
       subtext: 'Deficit excluding interest payments',
       color: '#a78bfa',
       explanation:

@@ -2,6 +2,7 @@
 
 import { BudgetData } from '../data/types'
 import { Accordion, AccordionItem } from './Accordion'
+import { useCurrency } from '../context/CurrencyContext'
 
 interface BorrowingsDetailProps {
   budget: BudgetData
@@ -16,6 +17,7 @@ interface CountryDebtData {
 
 export function BorrowingsDetail({ budget }: BorrowingsDetailProps) {
   const { borrowings, fiscalDeficitPercent, debtToGdp, totalExpenditure } = budget
+  const { formatCurrency } = useCurrency()
 
   const borrowingPercent = ((borrowings / totalExpenditure) * 100).toFixed(1)
 
@@ -82,7 +84,7 @@ export function BorrowingsDetail({ budget }: BorrowingsDetailProps) {
         <div className="text-center">
           <div className="text-xs text-[#b8c0cc] mb-1">⚠️ CREDIT USED</div>
           <div className="text-3xl font-bold text-[#ff00ff]">
-            ₹{borrowings.toLocaleString('en-IN')} Cr
+            {formatCurrency(borrowings)}
           </div>
           <div className="text-sm text-[#e0e4ea] mt-1">
             {borrowingPercent}% of total spending is borrowed!

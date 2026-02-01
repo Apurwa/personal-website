@@ -2,6 +2,7 @@
 
 import { BudgetData } from '../data/types'
 import { Accordion, AccordionItem } from './Accordion'
+import { useCurrency } from '../context/CurrencyContext'
 
 interface NonTaxRevenueDetailProps {
   budget: BudgetData
@@ -16,6 +17,7 @@ interface CountryData {
 
 export function NonTaxRevenueDetail({ budget }: NonTaxRevenueDetailProps) {
   const { nonTaxRevenue } = budget
+  const { formatCurrency } = useCurrency()
   const totalNonTax =
     nonTaxRevenue.dividends + nonTaxRevenue.interestReceipts + nonTaxRevenue.otherNonTax
 
@@ -92,7 +94,7 @@ export function NonTaxRevenueDetail({ budget }: NonTaxRevenueDetailProps) {
         <div className="text-center">
           <div className="text-xs text-[#b8c0cc] mb-1">TOTAL NON-TAX REVENUE</div>
           <div className="text-3xl font-bold text-[#00d4ff]">
-            ₹{totalNonTax.toLocaleString('en-IN')} Cr
+            {formatCurrency(totalNonTax)}
           </div>
           <div className="text-sm text-[#e0e4ea] mt-1">
             Revenue earned without imposing taxes
@@ -124,7 +126,7 @@ export function NonTaxRevenueDetail({ budget }: NonTaxRevenueDetailProps) {
                       {item.icon} {item.name}
                     </span>
                     <div className="text-right">
-                      <div style={{ color: item.color }}>₹{item.value.toLocaleString('en-IN')} Cr</div>
+                      <div style={{ color: item.color }}>{formatCurrency(item.value)}</div>
                       <div className="text-xs text-[#888]">{percent}%</div>
                     </div>
                   </div>

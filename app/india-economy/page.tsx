@@ -6,13 +6,20 @@ import { ExpenditureLevel } from './components/ExpenditureLevel'
 import { DeficitLevel } from './components/DeficitLevel'
 import { HighScores } from './components/HighScores'
 import { AchievementTracker } from './components/AchievementTracker'
+import { ClientWrapper } from './components/ClientWrapper'
+import { CurrencyToggle } from './components/CurrencyToggle'
 
 export default function IndiaEconomyPage() {
   const budget = getBudgetData()
   return (
-    <ArcadeScreen className="min-h-screen">
-      <AchievementTracker />
-      <main className="container mx-auto px-4 py-8">
+    <ClientWrapper>
+      <ArcadeScreen className="min-h-screen">
+        <AchievementTracker />
+        {/* Currency Toggle - Fixed Position below header */}
+        <div className="fixed top-20 right-4 z-40">
+          <CurrencyToggle />
+        </div>
+        <main className="container mx-auto px-4 py-8">
         {/* Hero */}
         <div className="min-h-[60vh] flex flex-col items-center justify-center">
           <h1 className="text-2xl md:text-4xl font-bold text-center mb-4">
@@ -43,5 +50,6 @@ export default function IndiaEconomyPage() {
         <HighScores budget={budget} />
       </main>
     </ArcadeScreen>
+    </ClientWrapper>
   )
 }
