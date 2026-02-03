@@ -38,12 +38,13 @@ Deployed to Vercel with serverless functions. API routes are supported. Images u
 - Uses Census Bureau API; requires `CENSUS_API_KEY` env var
 - Optional `OPENAI_API_KEY` for AI-powered business classification
 
-**Budget Quest** (`/india-economy`)
+**India Economy Portal** (`/india-economy`)
 
 - Self-contained in `app/india-economy/` with co-located components, data, hooks
-- Arcade-themed India budget visualization with drill-down drawers
+- "Thoughtful Textbook" theme - editorial, typography-driven design (see Design Preferences)
+- 9 sections: Budget, RBI, GDP, Inflation, Trade, Banking, Markets, Taxes, Employment
 - `CurrencyContext` provides INR/USD toggle with live exchange rates
-- Achievement system via `useAchievements` hook
+- See `app/india-economy/CLAUDE.md` for detailed section guidance
 
 ### Animation System
 
@@ -58,6 +59,43 @@ Two animation libraries:
 - Tailwind CSS with custom primary color palette
 - Utility classes in `globals.css`: `.card-hover`, `.btn-primary`, `.tag-neutral`, `.link-arrow`
 - Reduced motion support via `@media (prefers-reduced-motion)`
+
+## Design Preferences
+
+### Preferred Theme: "Thoughtful Textbook"
+
+For educational content (like `/india-economy`), use this distinctive editorial theme:
+
+**Typography:**
+- Headers: Source Serif 4 (elegant, readable serif)
+- Body: IBM Plex Sans (humanist, not cold)
+
+**Color Palette:**
+| Usage | Color | Hex |
+|-------|-------|-----|
+| Background | Warm cream | `#FAF7F2` |
+| Primary text | Deep indigo | `#1a2e44` |
+| Accent | Terracotta | `#b85c38` |
+| Links | Muted blue | `#4a6fa5` |
+| Captions | Slate | `#6b7c8f` |
+| Borders | Warm gray | `#e5e0d8` |
+| Callouts | Cream yellow | `#FFF8E7` |
+| Positive | Sage green | `#7a9e7e` |
+| Highlight | Gold | `#d4a84b` |
+
+**Design Principles:**
+- Typography-driven, no emojis
+- Paper texture background (`paper-texture` class)
+- Staggered animations with `animation-delay`
+- Asymmetric margin notes and callouts
+- Educational components: `Definition`, `MarginNote`, `KeyConcept`, `StatDisplay`
+
+**Animation Classes** (in `india-economy.css`):
+- `animate-fade-in-up`, `animate-fade-in`, `animate-slide-in-left`
+- `animate-draw-line` for decorative lines
+- `delay-1` through `delay-8` for staggered reveals
+- `hover-lift` for card interactions
+- All animations respect `prefers-reduced-motion`
 
 ## Environment Variables
 
