@@ -13,6 +13,8 @@ const navigation = [
   { name: 'Experience', href: '/experience' },
   { name: 'Projects', href: '/projects' },
   { name: 'AI', href: '/ai' },
+  { name: 'Economy', href: '/india-economy' },
+  { name: 'Tools', href: '/tools/market-sizer' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
