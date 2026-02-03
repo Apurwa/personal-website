@@ -32,6 +32,11 @@ const topics = [
     description: 'How do banks work? From PSU vs private banks to UPI revolution and deposit insurance. India\'s financial backbone.',
     href: '/india-economy/banking',
   },
+  {
+    title: 'Stock Markets',
+    description: 'How do Sensex and Nifty work? From IPOs to FIIs. India is now the 4th largest stock market globally.',
+    href: '/india-economy/markets',
+  },
 ]
 
 export default function IndiaEconomyPage() {
@@ -90,6 +95,10 @@ export default function IndiaEconomyPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#d4a84b] transition-transform group-hover:scale-150" aria-hidden="true" />
             NPCI
           </span>
+          <span className="flex items-center gap-2 group cursor-default">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6b7c8f] transition-transform group-hover:scale-150" aria-hidden="true" />
+            SEBI
+          </span>
         </div>
       </aside>
 
@@ -101,7 +110,8 @@ export default function IndiaEconomyPage() {
             'rbi-monetary-policy',
             'india-budget-historical',
             'commerce-ministry-trade',
-            'rbi-banking-stats'
+            'rbi-banking-stats',
+            'sebi-nse-bse-stats'
           ]}
         />
       </div>

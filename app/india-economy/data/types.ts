@@ -558,3 +558,212 @@ export interface BankingData {
   }
   keyInsights: string[]
 }
+
+// Stock Markets Data Types
+export interface StockExchange {
+  name: string
+  shortName: string
+  hindi: string
+  founded: number
+  headquarters: string
+  listedCompanies: number
+  marketCap: number
+  flagshipIndex: string
+  tradingShare: number
+  globalRank: number
+  highlights: string[]
+}
+
+export interface IndexConstituent {
+  name: string
+  weight: number
+}
+
+export interface SectorWeight {
+  sector: string
+  weight: number
+}
+
+export interface StockIndex {
+  fullName: string
+  hindi: string
+  meaning: string
+  companies: number
+  baseYear: number
+  baseValue: number
+  currentValue: number
+  allTimeHigh: number
+  allTimeHighDate: string
+  methodology: string
+  topConstituents: IndexConstituent[]
+  sectorWeights?: SectorWeight[]
+}
+
+export interface MarketMilestone {
+  year: string
+  event: string
+  sensex: number | null
+}
+
+export interface SebiReform {
+  year: number
+  reform: string
+}
+
+export interface IPOStep {
+  step: number
+  name: string
+  description: string
+}
+
+export interface IPOCategory {
+  category: string
+  quota: number
+  maxInvestment: string
+}
+
+export interface RecentIPO {
+  company: string
+  year: number
+  size: number
+  listing: number
+}
+
+export interface MarketCapCategory {
+  category: string
+  hindi: string
+  definition: string
+  minMarketCap: string
+  risk: string
+  examples: string[]
+}
+
+export interface GlobalMarketRank {
+  rank: number
+  country: string
+  exchange: string
+  marketCap: number
+  unit: string
+  highlight?: boolean
+}
+
+export interface MarketsData {
+  sourceId: string
+  description: string
+  asOf: string
+  overview: {
+    totalMarketCap: number
+    marketCapUnit: string
+    marketCapUsd: number
+    marketCapUsdUnit: string
+    globalRank: number
+    listedCompanies: number
+    dailyTurnover: number
+    dailyTurnoverUnit: string
+    retailInvestors: number
+    retailInvestorsUnit: string
+    marketCapToGdp: number
+  }
+  exchanges: StockExchange[]
+  indices: {
+    sensex: StockIndex
+    nifty: StockIndex
+    otherIndices: { name: string; description: string; companies: number }[]
+  }
+  historicalMilestones: MarketMilestone[]
+  sebi: {
+    fullName: string
+    hindi: string
+    established: number
+    statutoryPowers: number
+    headquarters: string
+    chairman: string
+    roles: string[]
+    recentReforms: SebiReform[]
+  }
+  investorTypes: {
+    fii: {
+      fullName: string
+      hindi: string
+      alsoKnown: string
+      totalAum: number
+      aumUnit: string
+      equityHolding: number
+      holdingUnit: string
+      topCountries: string[]
+      recentTrend: {
+        fy2024: number
+        fy2023: number
+        fy2022: number
+        unit: string
+      }
+    }
+    dii: {
+      fullName: string
+      hindi: string
+      includes: string[]
+      totalAum: number
+      aumUnit: string
+      equityHolding: number
+      holdingUnit: string
+      recentTrend: {
+        fy2024: number
+        fy2023: number
+        fy2022: number
+        unit: string
+      }
+      mutualFundSip: {
+        monthlySip: number
+        sipUnit: string
+        sipAccounts: number
+        sipAccountsUnit: string
+      }
+    }
+    retail: {
+      fullName: string
+      hindi: string
+      dematAccounts: number
+      dematUnit: string
+      equityHolding: number
+      holdingUnit: string
+      growthSince2020: number
+      growthUnit: string
+      averageTicketSize: number
+      ticketUnit: string
+    }
+  }
+  ipo: {
+    description: string
+    hindi: string
+    process: IPOStep[]
+    categories: IPOCategory[]
+    recentLargestIpos: RecentIPO[]
+    stats2024: {
+      totalIpos: number
+      amountRaised: number
+      amountUnit: string
+      averageSubscription: number
+      subscriptionUnit: string
+    }
+  }
+  tradingBasics: {
+    marketTimings: {
+      preOpen: string
+      normalTrading: string
+      postClose: string
+      days: string
+    }
+    orderTypes: { type: string; hindi: string; description: string }[]
+    segments: { name: string; description: string }[]
+    settlement: {
+      current: string
+      meaning: string
+      previousSystem: string
+      changedOn: string
+    }
+    charges: { charge: string; range?: string; rate?: string; note: string }[]
+  }
+  marketCapCategories: MarketCapCategory[]
+  globalComparison: GlobalMarketRank[]
+  keyInsights: string[]
+}

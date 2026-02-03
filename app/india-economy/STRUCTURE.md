@@ -23,7 +23,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | Inflation & Prices | ✅ Live | `/india-economy/inflation` | RBI, MoSPI |
 | Trade & Exports | ✅ Live | `/india-economy/trade` | DGFT, Commerce Ministry, RBI |
 | Banking System | ✅ Live | `/india-economy/banking` | RBI, NPCI, DICGC |
-| Stock Markets | 📋 Backlog | `/india-economy/markets` | NSE, BSE, SEBI |
+| Stock Markets | ✅ Live | `/india-economy/markets` | NSE, BSE, SEBI |
 | Taxation | 📋 Backlog | `/india-economy/taxes` | Income Tax Dept, GST Council |
 | Employment | 📋 Backlog | `/india-economy/employment` | Labour Ministry, NSSO |
 
@@ -283,16 +283,53 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 7. Stock Markets (`/markets`)
 
-**Status:** 📋 Backlog
+**Status:** ✅ Live
 
-**Topics to Cover:**
-- What is a stock exchange?
-- NSE vs BSE
-- Sensex and Nifty explained
-- How to read stock prices
-- IPOs explained
-- SEBI's role
-- FII and DII flows
+**Content Outline:**
+1. What is the Stock Market?
+   - Definition with Hindi term
+   - How shares represent ownership
+2. BSE vs NSE
+   - Founded dates, market share
+   - Flagship indices comparison
+   - Trading volume differences
+3. Sensex & Nifty Explained
+   - Index composition and calculation
+   - Top constituents and weights
+   - Sector composition visualization
+4. Stock Market History
+   - Timeline from 1875 to 2024
+   - Key milestones and Sensex levels
+5. SEBI: The Market Regulator
+   - Role and responsibilities
+   - Recent reforms (T+1, ASBA, F&O rules)
+6. Who Invests in the Market?
+   - FII/FPI statistics and trends
+   - DII including mutual funds and SIPs
+   - Retail investor explosion since COVID
+7. IPOs: How Companies Go Public
+   - 6-step IPO process
+   - Retail/HNI/QIB categories
+   - Recent large IPOs and listing performance
+8. How Trading Works
+   - Market timings and settlement
+   - Order types (Market, Limit, Stop Loss)
+   - Trading charges breakdown
+9. Large, Mid & Small Cap
+   - Classification definitions
+   - Risk profiles
+10. India vs The World
+    - Global market cap rankings
+    - India's rise to #4 position
+
+**Data Files:**
+- `markets-data.json` — Comprehensive stock market data
+
+**Future Additions:**
+- [ ] Live market ticker integration
+- [ ] Portfolio simulator
+- [ ] IPO calendar
+- [ ] Historical index calculator
 
 ---
 
@@ -409,13 +446,15 @@ All sources tracked in `data/sources.json`. Each data file references its source
 - [x] Trade & Exports
 - [x] Banking System
 
-### Phase 4 (Future)
-- [ ] Stock Markets
+### Phase 4 (Complete)
+- [x] Stock Markets
+
+### Phase 5 (Future)
+- [ ] Taxation
 - [ ] Interactive calculators
 - [ ] Quiz/trivia mode
 
-### Phase 5 (Aspirational)
-- [ ] Taxation
+### Phase 6 (Aspirational)
 - [ ] Employment
 - [ ] State-level comparisons
 - [ ] Mobile app version

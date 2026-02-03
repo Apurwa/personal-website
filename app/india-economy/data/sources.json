@@ -153,6 +153,39 @@
       "accessedDate": "2025-02-03",
       "coversData": ["banking-data.json"],
       "notes": "Deposit insurance coverage, claims data, and member banks"
+    },
+    {
+      "id": "sebi-nse-bse-stats",
+      "title": "Market Statistics and Data",
+      "publisher": "Securities and Exchange Board of India (SEBI)",
+      "url": "https://www.sebi.gov.in/statistics.html",
+      "type": "official",
+      "publishedDate": "2025-01-31",
+      "accessedDate": "2025-02-03",
+      "coversData": ["markets-data.json"],
+      "notes": "FII/DII flows, market cap data, IPO statistics, trading volumes"
+    },
+    {
+      "id": "nse-market-data",
+      "title": "NSE Market Data",
+      "publisher": "National Stock Exchange of India",
+      "url": "https://www.nseindia.com/market-data",
+      "type": "official",
+      "publishedDate": "2025-02-03",
+      "accessedDate": "2025-02-03",
+      "coversData": ["markets-data.json"],
+      "notes": "Nifty indices, market statistics, trading data"
+    },
+    {
+      "id": "bse-market-data",
+      "title": "BSE Market Statistics",
+      "publisher": "Bombay Stock Exchange",
+      "url": "https://www.bseindia.com/static/markets/marketinfo/default.aspx",
+      "type": "official",
+      "publishedDate": "2025-02-03",
+      "accessedDate": "2025-02-03",
+      "coversData": ["markets-data.json"],
+      "notes": "Sensex data, market cap, listed companies"
     }
   ]
 }

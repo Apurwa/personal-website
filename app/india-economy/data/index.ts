@@ -8,6 +8,7 @@ import gdpGlobalData from './gdp-global.json'
 import inflationData from './inflation-data.json'
 import tradeData from './trade-data.json'
 import bankingData from './banking-data.json'
+import marketsData from './markets-data.json'
 import type {
   BudgetData,
   SourcesData,
@@ -23,7 +24,8 @@ import type {
   GDPGlobalData,
   InflationData,
   TradeData,
-  BankingData
+  BankingData,
+  MarketsData
 } from './types'
 
 // Budget Data (current year detailed)
@@ -97,6 +99,11 @@ export function getBankingData(): BankingData {
   return bankingData as BankingData
 }
 
+// Markets Data
+export function getMarketsData(): MarketsData {
+  return marketsData as MarketsData
+}
+
 // Sources
 export function getSources(): Source[] {
   return (sourcesData as SourcesData).sources
@@ -145,5 +152,10 @@ export type {
   BankCategory,
   TopBank,
   NPAHistorical,
-  BankingReform
+  BankingReform,
+  MarketsData,
+  StockExchange,
+  StockIndex,
+  MarketMilestone,
+  GlobalMarketRank
 } from './types'

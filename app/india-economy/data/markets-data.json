@@ -1,0 +1,281 @@
+{
+  "sourceId": "sebi-nse-bse-stats",
+  "description": "India's stock market overview",
+  "asOf": "January 2025",
+  "overview": {
+    "totalMarketCap": 442.5,
+    "marketCapUnit": "Lakh Crore INR",
+    "marketCapUsd": 5.29,
+    "marketCapUsdUnit": "Trillion USD",
+    "globalRank": 4,
+    "listedCompanies": 7511,
+    "dailyTurnover": 1.25,
+    "dailyTurnoverUnit": "Lakh Crore INR",
+    "retailInvestors": 9.5,
+    "retailInvestorsUnit": "Crore demat accounts",
+    "marketCapToGdp": 136
+  },
+  "exchanges": [
+    {
+      "name": "National Stock Exchange",
+      "shortName": "NSE",
+      "hindi": "राष्ट्रीय शेयर बाज़ार",
+      "founded": 1992,
+      "headquarters": "Mumbai",
+      "listedCompanies": 2266,
+      "marketCap": 408.5,
+      "flagshipIndex": "Nifty 50",
+      "tradingShare": 93,
+      "globalRank": 7,
+      "highlights": [
+        "World's largest derivatives exchange by contracts",
+        "First fully electronic exchange in India",
+        "Processes 50,000+ orders per second"
+      ]
+    },
+    {
+      "name": "Bombay Stock Exchange",
+      "shortName": "BSE",
+      "hindi": "बम्बई शेयर बाज़ार",
+      "founded": 1875,
+      "headquarters": "Mumbai",
+      "listedCompanies": 5245,
+      "marketCap": 425.8,
+      "flagshipIndex": "Sensex",
+      "tradingShare": 7,
+      "globalRank": 9,
+      "highlights": [
+        "Asia's oldest stock exchange (150 years)",
+        "More listed companies than NSE",
+        "Sensex is India's most tracked index"
+      ]
+    }
+  ],
+  "indices": {
+    "sensex": {
+      "fullName": "S&P BSE Sensex",
+      "hindi": "सेंसेक्स",
+      "meaning": "Sensitive Index",
+      "companies": 30,
+      "baseYear": 1978,
+      "baseValue": 100,
+      "currentValue": 76500,
+      "allTimeHigh": 85978,
+      "allTimeHighDate": "September 2024",
+      "methodology": "Free-float market capitalization weighted",
+      "topConstituents": [
+        { "name": "Reliance Industries", "weight": 11.2 },
+        { "name": "HDFC Bank", "weight": 9.8 },
+        { "name": "ICICI Bank", "weight": 7.5 },
+        { "name": "Infosys", "weight": 6.2 },
+        { "name": "ITC", "weight": 4.8 }
+      ]
+    },
+    "nifty": {
+      "fullName": "Nifty 50",
+      "hindi": "निफ्टी",
+      "meaning": "National + Fifty",
+      "companies": 50,
+      "baseYear": 1995,
+      "baseValue": 1000,
+      "currentValue": 23200,
+      "allTimeHigh": 26277,
+      "allTimeHighDate": "September 2024",
+      "methodology": "Free-float market capitalization weighted",
+      "topConstituents": [
+        { "name": "Reliance Industries", "weight": 9.8 },
+        { "name": "HDFC Bank", "weight": 8.5 },
+        { "name": "ICICI Bank", "weight": 6.8 },
+        { "name": "Infosys", "weight": 5.9 },
+        { "name": "TCS", "weight": 4.2 }
+      ],
+      "sectorWeights": [
+        { "sector": "Financial Services", "weight": 32.5 },
+        { "sector": "IT", "weight": 13.2 },
+        { "sector": "Oil & Gas", "weight": 12.8 },
+        { "sector": "Consumer Goods", "weight": 9.5 },
+        { "sector": "Automobile", "weight": 6.8 },
+        { "sector": "Pharma", "weight": 4.5 },
+        { "sector": "Metals", "weight": 4.2 },
+        { "sector": "Others", "weight": 16.5 }
+      ]
+    },
+    "otherIndices": [
+      { "name": "Nifty Bank", "description": "12 major banks", "companies": 12 },
+      { "name": "Nifty IT", "description": "IT sector companies", "companies": 10 },
+      { "name": "Nifty Midcap 100", "description": "Mid-sized companies", "companies": 100 },
+      { "name": "Nifty Smallcap 250", "description": "Small companies", "companies": 250 },
+      { "name": "BSE Smallcap", "description": "BSE small companies", "companies": 756 }
+    ]
+  },
+  "historicalMilestones": [
+    { "year": "1875", "event": "BSE founded as 'Native Share & Stock Brokers Association'", "sensex": null },
+    { "year": "1986", "event": "Sensex launched with base value 100", "sensex": 549 },
+    { "year": "1992", "event": "NSE established; Harshad Mehta scam rocks markets", "sensex": 4285 },
+    { "year": "1999", "event": "Sensex crosses 5,000 for first time", "sensex": 5000 },
+    { "year": "2000", "event": "Dot-com crash; Ketan Parekh scam", "sensex": 3972 },
+    { "year": "2006", "event": "Sensex crosses 10,000", "sensex": 10000 },
+    { "year": "2008", "event": "Global financial crisis; Sensex falls 60%", "sensex": 8160 },
+    { "year": "2014", "event": "Modi government elected; markets rally", "sensex": 27499 },
+    { "year": "2017", "event": "Sensex crosses 30,000", "sensex": 32514 },
+    { "year": "2020", "event": "COVID crash; fastest recovery in history", "sensex": 47751 },
+    { "year": "2021", "event": "Sensex crosses 60,000", "sensex": 60000 },
+    { "year": "2024", "event": "Sensex crosses 85,000; India becomes 4th largest market", "sensex": 85978 }
+  ],
+  "sebi": {
+    "fullName": "Securities and Exchange Board of India",
+    "hindi": "भारतीय प्रतिभूति और विनिमय बोर्ड",
+    "established": 1988,
+    "statutoryPowers": 1992,
+    "headquarters": "Mumbai",
+    "chairman": "Madhabi Puri Buch",
+    "roles": [
+      "Protect investor interests",
+      "Regulate stock exchanges and intermediaries",
+      "Prevent fraudulent practices",
+      "Promote market development",
+      "Regulate mutual funds and portfolio managers"
+    ],
+    "recentReforms": [
+      { "year": 2023, "reform": "T+1 settlement (trade settles next day)" },
+      { "year": 2023, "reform": "ASBA for all IPO applications" },
+      { "year": 2024, "reform": "Stricter F&O trading rules for retail" },
+      { "year": 2024, "reform": "Enhanced disclosure norms for listed companies" }
+    ]
+  },
+  "investorTypes": {
+    "fii": {
+      "fullName": "Foreign Institutional Investors",
+      "hindi": "विदेशी संस्थागत निवेशक",
+      "alsoKnown": "FPIs (Foreign Portfolio Investors)",
+      "totalAum": 68.5,
+      "aumUnit": "Lakh Crore INR",
+      "equityHolding": 17.2,
+      "holdingUnit": "% of market cap",
+      "topCountries": ["USA", "Singapore", "Luxembourg", "Mauritius", "UK"],
+      "recentTrend": {
+        "fy2024": -25400,
+        "fy2023": -37632,
+        "fy2022": -121439,
+        "unit": "Crore INR (negative = selling)"
+      }
+    },
+    "dii": {
+      "fullName": "Domestic Institutional Investors",
+      "hindi": "घरेलू संस्थागत निवेशक",
+      "includes": ["Mutual Funds", "Insurance Companies", "Banks", "Pension Funds"],
+      "totalAum": 85.2,
+      "aumUnit": "Lakh Crore INR",
+      "equityHolding": 15.8,
+      "holdingUnit": "% of market cap",
+      "recentTrend": {
+        "fy2024": 185688,
+        "fy2023": 135937,
+        "fy2022": 125734,
+        "unit": "Crore INR (positive = buying)"
+      },
+      "mutualFundSip": {
+        "monthlySip": 26459,
+        "sipUnit": "Crore INR",
+        "sipAccounts": 9.81,
+        "sipAccountsUnit": "Crore"
+      }
+    },
+    "retail": {
+      "fullName": "Retail Individual Investors",
+      "hindi": "खुदरा निवेशक",
+      "dematAccounts": 17.1,
+      "dematUnit": "Crore accounts",
+      "equityHolding": 9.2,
+      "holdingUnit": "% of market cap",
+      "growthSince2020": 310,
+      "growthUnit": "% increase in demat accounts",
+      "averageTicketSize": 15000,
+      "ticketUnit": "INR per trade"
+    }
+  },
+  "ipo": {
+    "description": "Initial Public Offering - when a company sells shares to public for first time",
+    "hindi": "प्रारंभिक सार्वजनिक पेशकश",
+    "process": [
+      { "step": 1, "name": "DRHP Filing", "description": "Company files Draft Red Herring Prospectus with SEBI" },
+      { "step": 2, "name": "SEBI Review", "description": "SEBI reviews and approves after due diligence" },
+      { "step": 3, "name": "Price Band", "description": "Company sets price range for shares" },
+      { "step": 4, "name": "Bidding Period", "description": "Investors bid for shares (usually 3 days)" },
+      { "step": 5, "name": "Allotment", "description": "Shares allotted based on subscription" },
+      { "step": 6, "name": "Listing", "description": "Shares start trading on exchange" }
+    ],
+    "categories": [
+      { "category": "Retail", "quota": 35, "maxInvestment": "₹2 lakh" },
+      { "category": "HNI/NII", "quota": 15, "maxInvestment": "Above ₹2 lakh" },
+      { "category": "QIB", "quota": 50, "maxInvestment": "Institutional only" }
+    ],
+    "recentLargestIpos": [
+      { "company": "LIC", "year": 2022, "size": 21000, "listing": -8 },
+      { "company": "Hyundai Motor India", "year": 2024, "size": 27870, "listing": -1.3 },
+      { "company": "Paytm", "year": 2021, "size": 18300, "listing": -27 },
+      { "company": "Zomato", "year": 2021, "size": 9375, "listing": 66 },
+      { "company": "Nykaa", "year": 2021, "size": 5352, "listing": 96 }
+    ],
+    "stats2024": {
+      "totalIpos": 91,
+      "amountRaised": 65073,
+      "amountUnit": "Crore INR",
+      "averageSubscription": 68,
+      "subscriptionUnit": "times oversubscribed"
+    }
+  },
+  "tradingBasics": {
+    "marketTimings": {
+      "preOpen": "09:00 - 09:15",
+      "normalTrading": "09:15 - 15:30",
+      "postClose": "15:30 - 16:00",
+      "days": "Monday to Friday (except holidays)"
+    },
+    "orderTypes": [
+      { "type": "Market Order", "hindi": "बाजार आदेश", "description": "Buy/sell immediately at current price" },
+      { "type": "Limit Order", "hindi": "सीमा आदेश", "description": "Buy/sell only at specified price or better" },
+      { "type": "Stop Loss", "hindi": "स्टॉप लॉस", "description": "Sell automatically if price falls below limit" }
+    ],
+    "segments": [
+      { "name": "Cash/Equity", "description": "Buy and hold actual shares" },
+      { "name": "Futures", "description": "Contract to buy/sell at future date" },
+      { "name": "Options", "description": "Right (not obligation) to buy/sell" }
+    ],
+    "settlement": {
+      "current": "T+1",
+      "meaning": "Trade settles next business day",
+      "previousSystem": "T+2",
+      "changedOn": "January 2023"
+    },
+    "charges": [
+      { "charge": "Brokerage", "range": "0 - 0.5%", "note": "Many brokers offer zero brokerage" },
+      { "charge": "STT", "rate": "0.1%", "note": "Securities Transaction Tax" },
+      { "charge": "Exchange Fees", "rate": "0.00345%", "note": "NSE/BSE charges" },
+      { "charge": "GST", "rate": "18%", "note": "On brokerage and fees" },
+      { "charge": "Stamp Duty", "rate": "0.015%", "note": "State government tax" }
+    ]
+  },
+  "marketCapCategories": [
+    { "category": "Large Cap", "hindi": "लार्ज कैप", "definition": "Top 100 companies by market cap", "minMarketCap": "₹20,000 Cr+", "risk": "Low", "examples": ["Reliance", "TCS", "HDFC Bank"] },
+    { "category": "Mid Cap", "hindi": "मिड कैप", "definition": "101st to 250th company", "minMarketCap": "₹5,000 - 20,000 Cr", "risk": "Medium", "examples": ["AU Bank", "Coforge", "Persistent"] },
+    { "category": "Small Cap", "hindi": "स्मॉल कैप", "definition": "251st company onwards", "minMarketCap": "Below ₹5,000 Cr", "risk": "High", "examples": ["Many smaller companies"] }
+  ],
+  "globalComparison": [
+    { "rank": 1, "country": "USA", "exchange": "NYSE + NASDAQ", "marketCap": 50.8, "unit": "Trillion USD" },
+    { "rank": 2, "country": "China", "exchange": "Shanghai + Shenzhen", "marketCap": 10.1, "unit": "Trillion USD" },
+    { "rank": 3, "country": "Japan", "exchange": "Tokyo", "marketCap": 6.2, "unit": "Trillion USD" },
+    { "rank": 4, "country": "India", "exchange": "NSE + BSE", "marketCap": 5.3, "unit": "Trillion USD", "highlight": true },
+    { "rank": 5, "country": "UK", "exchange": "London", "marketCap": 3.4, "unit": "Trillion USD" },
+    { "rank": 6, "country": "France", "exchange": "Euronext Paris", "marketCap": 2.9, "unit": "Trillion USD" },
+    { "rank": 7, "country": "Canada", "exchange": "Toronto", "marketCap": 2.8, "unit": "Trillion USD" }
+  ],
+  "keyInsights": [
+    "India overtook Hong Kong to become 4th largest stock market in 2024",
+    "Retail investor participation tripled since COVID (2020)",
+    "DIIs have been net buyers for 8 consecutive years, offsetting FII selling",
+    "Monthly SIP inflows crossed ₹26,000 crore - highest ever",
+    "Sensex has grown from 100 (1979) to 76,000+ (2025) - 760x in 45 years",
+    "NSE handles 93% of India's equity trading volume"
+  ]
+}
