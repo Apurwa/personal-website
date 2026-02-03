@@ -21,7 +21,6 @@ const topics = [
     title: 'Inflation & Prices',
     description: 'Why do prices keep rising? How is inflation measured? Understand what affects your purchasing power.',
     href: '/india-economy/inflation',
-    comingSoon: true,
   },
 ]
 

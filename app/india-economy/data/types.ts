@@ -200,3 +200,64 @@ export interface GDPGlobalData {
     data: GDPProjection[]
   }
 }
+
+// Inflation Data Types
+export interface InflationYearData {
+  year: string
+  cpiInflation: number
+  foodInflation: number
+  coreInflation: number
+  notes?: string
+}
+
+export interface CPICategory {
+  name: string
+  weight: number
+  hindi: string
+  examples: string
+}
+
+export interface FoodSubCategory {
+  name: string
+  weight: number
+  recentInflation: number
+  volatile?: boolean
+}
+
+export interface PriceSpike {
+  item: string
+  year: string
+  peak: string
+  normal: string
+  cause: string
+  impact: string
+}
+
+export interface InflationData {
+  sourceId: string
+  description: string
+  notes: string
+  currentData: {
+    asOf: string
+    headlineInflation: number
+    foodInflation: number
+    coreInflation: number
+    fuelInflation: number
+    housingInflation: number
+  }
+  rbiTarget: {
+    target: number
+    lowerBound: number
+    upperBound: number
+    effectiveSince: string
+    framework: string
+    notes: string
+  }
+  historicalAnnual: InflationYearData[]
+  categoryWeights: {
+    description: string
+    categories: CPICategory[]
+  }
+  foodSubCategories: FoodSubCategory[]
+  notablePriceSpikes: PriceSpike[]
+}

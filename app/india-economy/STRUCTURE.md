@@ -20,7 +20,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | Union Budget | ✅ Live | `/india-economy/budget` | Ministry of Finance |
 | RBI & Monetary Policy | ✅ Live | `/india-economy/rbi` | RBI |
 | GDP & Growth | ✅ Live | `/india-economy/gdp` | MoSPI, World Bank |
-| Inflation & Prices | 🔜 Planned | `/india-economy/inflation` | RBI, MoSPI |
+| Inflation & Prices | ✅ Live | `/india-economy/inflation` | RBI, MoSPI |
 | Trade & Exports | 📋 Backlog | `/india-economy/trade` | DGFT, Commerce Ministry |
 | Banking System | 📋 Backlog | `/india-economy/banking` | RBI |
 | Stock Markets | 📋 Backlog | `/india-economy/markets` | NSE, BSE, SEBI |
@@ -136,32 +136,34 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 4. Inflation & Prices (`/inflation`)
 
-**Status:** 🔜 Planned
+**Status:** ✅ Live
 
 **Content Outline:**
 1. What is Inflation?
    - Definition with Hindi term
-   - Good inflation vs bad inflation
+   - Good vs bad inflation, deflation
 2. How is Inflation Measured?
-   - CPI (Consumer Price Index)
-   - WPI (Wholesale Price Index)
-   - The basket of goods concept
-3. Current Inflation Dashboard
-   - Latest CPI, food inflation, core inflation
-4. Why Prices Rise
-   - Demand-pull vs Cost-push
-   - Real examples (onion, petrol)
-5. RBI's Role in Controlling Inflation
-   - Inflation targeting (4% ± 2%)
-   - Link back to Repo Rate section
-6. Historical Inflation Trends
-   - Major spikes and their causes
+   - CPI basket breakdown (6 categories)
+   - CPI vs WPI comparison table
+3. Why Prices Rise
+   - Demand-pull vs Cost-push with examples
+   - Famous price spikes (onion, tomato, petrol, cooking oil)
+4. Historical Inflation (2014-2024)
+   - Visual chart with RBI target band overlay
+   - Year-by-year data with annotations
+5. RBI's Inflation Targeting
+   - 4% ± 2% framework visualization
+   - Tools to control inflation (links to RBI section)
+6. Food Inflation Breakdown
+   - Sub-category analysis with volatility markers
 
-**Data Needed:**
-- [ ] Monthly CPI data (10 years)
-- [ ] Category-wise inflation
-- [ ] WPI series
-- [ ] Commodity price trends
+**Data Files:**
+- `inflation-data.json` — CPI data, categories, historical, price spikes
+
+**Future Additions:**
+- [ ] Monthly inflation tracker
+- [ ] Inflation calculator (purchasing power over time)
+- [ ] State-wise inflation comparison
 
 ---
 
@@ -312,10 +314,10 @@ All sources tracked in `data/sources.json`. Each data file references its source
 - [x] RBI & Monetary Policy section
 - [x] Design system and animations
 
-### Phase 2 (In Progress)
+### Phase 2 (Complete)
 - [x] GDP & Growth section
-- [ ] Inflation & Prices section
-- [ ] Cross-linking between sections
+- [x] Inflation & Prices section
+- [x] Cross-linking between sections (RBI ↔ Inflation)
 
 ### Phase 3 (Future)
 - [ ] Trade & Exports

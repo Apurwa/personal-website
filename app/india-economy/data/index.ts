@@ -5,6 +5,7 @@ import rbiRatesData from './rbi-rates.json'
 import gdpHistoricalData from './gdp-historical.json'
 import gdpSectorsData from './gdp-sectors.json'
 import gdpGlobalData from './gdp-global.json'
+import inflationData from './inflation-data.json'
 import type {
   BudgetData,
   SourcesData,
@@ -17,7 +18,8 @@ import type {
   GDPHistoricalData,
   GDPYearEntry,
   GDPSectorsData,
-  GDPGlobalData
+  GDPGlobalData,
+  InflationData
 } from './types'
 
 // Budget Data (current year detailed)
@@ -76,6 +78,11 @@ export function getGDPMilestones(): GDPYearEntry[] {
   return getGDPHistorical().data.filter(entry => entry.milestone)
 }
 
+// Inflation Data
+export function getInflationData(): InflationData {
+  return inflationData as InflationData
+}
+
 // Sources
 export function getSources(): Source[] {
   return (sourcesData as SourcesData).sources
@@ -110,5 +117,10 @@ export type {
   SectorYearData,
   GDPGlobalData,
   CountryGDP,
-  GDPProjection
+  GDPProjection,
+  InflationData,
+  InflationYearData,
+  CPICategory,
+  FoodSubCategory,
+  PriceSpike
 } from './types'

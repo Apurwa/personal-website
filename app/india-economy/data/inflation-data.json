@@ -1,0 +1,89 @@
+{
+  "sourceId": "mospi-cpi",
+  "description": "India's Consumer Price Index and inflation data",
+  "notes": "CPI on base 2012=100. Inflation is year-on-year change in CPI.",
+  "currentData": {
+    "asOf": "December 2024",
+    "headlineInflation": 5.22,
+    "foodInflation": 8.39,
+    "coreInflation": 3.7,
+    "fuelInflation": -1.8,
+    "housingInflation": 2.9
+  },
+  "rbiTarget": {
+    "target": 4.0,
+    "lowerBound": 2.0,
+    "upperBound": 6.0,
+    "effectiveSince": "August 2016",
+    "framework": "Flexible Inflation Targeting",
+    "notes": "RBI must explain to government if inflation stays outside 2-6% band for 3 consecutive quarters"
+  },
+  "historicalAnnual": [
+    { "year": "2014-15", "cpiInflation": 5.9, "foodInflation": 6.4, "coreInflation": 5.4, "notes": "Post-2013 high inflation" },
+    { "year": "2015-16", "cpiInflation": 4.9, "foodInflation": 4.9, "coreInflation": 4.8, "notes": "Inflation targeting begins" },
+    { "year": "2016-17", "cpiInflation": 4.5, "foodInflation": 4.2, "coreInflation": 4.8, "notes": "Demonetization year" },
+    { "year": "2017-18", "cpiInflation": 3.6, "foodInflation": 1.8, "coreInflation": 4.6, "notes": "GST implementation" },
+    { "year": "2018-19", "cpiInflation": 3.4, "foodInflation": 0.1, "coreInflation": 5.4, "notes": "Lowest food inflation" },
+    { "year": "2019-20", "cpiInflation": 4.8, "foodInflation": 6.7, "coreInflation": 3.8, "notes": "Onion price spike" },
+    { "year": "2020-21", "cpiInflation": 6.2, "foodInflation": 7.7, "coreInflation": 5.5, "notes": "COVID supply disruptions" },
+    { "year": "2021-22", "cpiInflation": 5.5, "foodInflation": 3.8, "coreInflation": 6.0, "notes": "Post-COVID recovery" },
+    { "year": "2022-23", "cpiInflation": 6.7, "foodInflation": 6.6, "coreInflation": 6.1, "notes": "Ukraine war, oil spike" },
+    { "year": "2023-24", "cpiInflation": 5.4, "foodInflation": 6.7, "coreInflation": 4.3, "notes": "Moderation begins" },
+    { "year": "2024-25", "cpiInflation": 4.8, "foodInflation": 7.5, "coreInflation": 3.5, "notes": "Estimate based on Apr-Dec data" }
+  ],
+  "categoryWeights": {
+    "description": "CPI basket weights (2012 base)",
+    "categories": [
+      { "name": "Food & Beverages", "weight": 45.86, "hindi": "खाद्य पदार्थ", "examples": "cereals, vegetables, fruits, milk, meat" },
+      { "name": "Pan, Tobacco & Intoxicants", "weight": 2.38, "hindi": "पान, तम्बाकू", "examples": "beedi, cigarettes, liquor" },
+      { "name": "Clothing & Footwear", "weight": 6.53, "hindi": "कपड़े और जूते", "examples": "clothes, shoes, tailoring" },
+      { "name": "Housing", "weight": 10.07, "hindi": "आवास", "examples": "rent, repairs, water charges" },
+      { "name": "Fuel & Light", "weight": 6.84, "hindi": "ईंधन", "examples": "LPG, electricity, kerosene" },
+      { "name": "Miscellaneous", "weight": 28.32, "hindi": "विविध", "examples": "education, health, transport, communication" }
+    ]
+  },
+  "foodSubCategories": [
+    { "name": "Cereals & Products", "weight": 9.67, "recentInflation": 6.2 },
+    { "name": "Vegetables", "weight": 6.04, "recentInflation": 26.6, "volatile": true },
+    { "name": "Pulses & Products", "weight": 2.38, "recentInflation": 9.8, "volatile": true },
+    { "name": "Milk & Products", "weight": 6.61, "recentInflation": 3.1 },
+    { "name": "Eggs, Meat & Fish", "weight": 3.61, "recentInflation": 4.5 },
+    { "name": "Fruits", "weight": 2.88, "recentInflation": 5.4 },
+    { "name": "Spices", "weight": 2.50, "recentInflation": 4.8 },
+    { "name": "Oils & Fats", "weight": 3.56, "recentInflation": -5.2 }
+  ],
+  "notablePriceSpikes": [
+    {
+      "item": "Onion",
+      "year": "2019",
+      "peak": "₹150-200/kg",
+      "normal": "₹20-40/kg",
+      "cause": "Crop damage due to unseasonal rains",
+      "impact": "Contributed 0.8% to headline inflation"
+    },
+    {
+      "item": "Tomato",
+      "year": "2023",
+      "peak": "₹200-250/kg",
+      "normal": "₹30-50/kg",
+      "cause": "Heatwave and rain damage in growing regions",
+      "impact": "Food inflation crossed 11%"
+    },
+    {
+      "item": "Petrol",
+      "year": "2022",
+      "peak": "₹120/litre",
+      "normal": "₹80-90/litre",
+      "cause": "Russia-Ukraine war, global oil prices",
+      "impact": "Fuel inflation touched 11%"
+    },
+    {
+      "item": "Cooking Oil",
+      "year": "2022",
+      "peak": "₹200/litre",
+      "normal": "₹100-120/litre",
+      "cause": "Indonesia palm oil export ban, Ukraine sunflower oil",
+      "impact": "Edible oil inflation 16%"
+    }
+  ]
+}

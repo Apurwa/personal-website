@@ -1,6 +1,28 @@
 {
   "sources": [
     {
+      "id": "mospi-cpi",
+      "title": "Consumer Price Index (CPI) Statistics",
+      "publisher": "Ministry of Statistics and Programme Implementation (MoSPI)",
+      "url": "https://www.mospi.gov.in/cpi",
+      "type": "official",
+      "publishedDate": "2025-01-13",
+      "accessedDate": "2025-02-03",
+      "coversData": ["inflation-data.json"],
+      "notes": "Monthly CPI releases, category-wise inflation, base 2012=100"
+    },
+    {
+      "id": "rbi-inflation-data",
+      "title": "Database on Indian Economy - Prices",
+      "publisher": "Reserve Bank of India",
+      "url": "https://data.rbi.org.in/DBIE/dbie.rbi?site=statistics",
+      "type": "official",
+      "publishedDate": "2025-01-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["inflation-data.json"],
+      "notes": "Historical inflation data, monetary policy reports"
+    },
+    {
       "id": "mospi-national-accounts",
       "title": "National Accounts Statistics",
       "publisher": "Ministry of Statistics and Programme Implementation (MoSPI)",
