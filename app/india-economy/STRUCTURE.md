@@ -21,7 +21,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | RBI & Monetary Policy | ✅ Live | `/india-economy/rbi` | RBI |
 | GDP & Growth | ✅ Live | `/india-economy/gdp` | MoSPI, World Bank |
 | Inflation & Prices | ✅ Live | `/india-economy/inflation` | RBI, MoSPI |
-| Trade & Exports | 📋 Backlog | `/india-economy/trade` | DGFT, Commerce Ministry |
+| Trade & Exports | ✅ Live | `/india-economy/trade` | DGFT, Commerce Ministry, RBI |
 | Banking System | 📋 Backlog | `/india-economy/banking` | RBI |
 | Stock Markets | 📋 Backlog | `/india-economy/markets` | NSE, BSE, SEBI |
 | Taxation | 📋 Backlog | `/india-economy/taxes` | Income Tax Dept, GST Council |
@@ -169,15 +169,52 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 5. Trade & Exports (`/trade`)
 
-**Status:** 📋 Backlog
+**Status:** ✅ Live
 
-**Topics to Cover:**
-- Balance of Trade & Balance of Payments
-- Major exports (IT services, pharma, textiles, gems)
-- Major imports (oil, electronics, gold)
-- Trade agreements (FTAs)
-- Current account deficit
-- Foreign exchange reserves
+**Content Outline:**
+1. What is Trade?
+   - Definition with Hindi term
+   - Exports vs Imports explanation
+   - Balance of Trade concept
+2. India's Trade Summary (FY 2024-25)
+   - Total exports, imports, deficit
+   - Merchandise vs Services breakdown
+   - Services surplus insight
+3. Top Exports
+   - 10 major export categories
+   - Electronics growth story (highlighted)
+   - Sector shares visualization
+4. Top Imports
+   - 10 major import categories
+   - Oil import dependency (critical)
+   - Electronics import bill
+5. Trading Partners
+   - Top export destinations
+   - Top import sources (with deficit/surplus)
+   - China deficit insight
+6. Services Exports
+   - IT/Business services dominance
+   - Category breakdown
+7. Forex Reserves
+   - Current reserves and all-time high
+   - Component breakdown (FCA, Gold, SDRs)
+   - Import cover concept
+8. Current Account Deficit
+   - Definition with Hindi term
+   - Historical CAD visualization
+   - COVID surplus anomaly
+9. Historical Trade (2014-2025)
+   - 11-year trend visualization
+   - Key events annotations
+
+**Data Files:**
+- `trade-data.json` — Comprehensive trade data (FY 2024-25)
+
+**Future Additions:**
+- [ ] Interactive trade balance calculator
+- [ ] Country-wise trade explorer
+- [ ] Commodity price tracker
+- [ ] FTA impact analysis
 
 ---
 
@@ -319,13 +356,15 @@ All sources tracked in `data/sources.json`. Each data file references its source
 - [x] Inflation & Prices section
 - [x] Cross-linking between sections (RBI ↔ Inflation)
 
-### Phase 3 (Future)
-- [ ] Trade & Exports
+### Phase 3 (Complete)
+- [x] Trade & Exports
+
+### Phase 4 (Future)
 - [ ] Banking System
 - [ ] Interactive calculators
 - [ ] Quiz/trivia mode
 
-### Phase 4 (Aspirational)
+### Phase 5 (Aspirational)
 - [ ] Stock Markets
 - [ ] Taxation
 - [ ] Employment

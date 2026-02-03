@@ -1,0 +1,127 @@
+{
+  "sourceId": "commerce-ministry-trade",
+  "description": "India's international trade data",
+  "fiscalYear": "2024-25",
+  "summary": {
+    "totalExports": 820.93,
+    "totalImports": 915.19,
+    "tradeDeficit": -94.26,
+    "merchandiseExports": 437.42,
+    "merchandiseImports": 720.24,
+    "merchandiseDeficit": -282.83,
+    "servicesExports": 383.51,
+    "servicesImports": 194.95,
+    "servicesSurplus": 188.57,
+    "unit": "USD Billion",
+    "growthExports": 5.5,
+    "growthImports": 6.85
+  },
+  "globalRanking": {
+    "exportsRank": 18,
+    "importsRank": 9,
+    "tradeOpenness": 44.59
+  },
+  "topExports": [
+    { "commodity": "Petroleum Products", "value": 87.7, "share": 20.1, "growth": -5.2 },
+    { "commodity": "Gems & Jewellery", "value": 30.5, "share": 7.0, "growth": -8.3 },
+    { "commodity": "Pharmaceutical Products", "value": 27.9, "share": 6.4, "growth": 9.7 },
+    { "commodity": "Electronics & Mobiles", "value": 38.6, "share": 8.8, "growth": 32.5, "highlight": true },
+    { "commodity": "Engineering Goods", "value": 67.5, "share": 15.4, "growth": 3.2 },
+    { "commodity": "Textiles & Apparel", "value": 34.2, "share": 7.8, "growth": -2.1 },
+    { "commodity": "Chemicals", "value": 29.8, "share": 6.8, "growth": 4.5 },
+    { "commodity": "Iron & Steel", "value": 12.1, "share": 2.8, "growth": -12.4 },
+    { "commodity": "Agriculture & Allied", "value": 48.6, "share": 11.1, "growth": 2.8 },
+    { "commodity": "Other Merchandise", "value": 60.5, "share": 13.8, "growth": 5.6 }
+  ],
+  "topImports": [
+    { "commodity": "Crude Petroleum", "value": 195.2, "share": 27.1, "growth": 8.4, "critical": true },
+    { "commodity": "Gold", "value": 49.2, "share": 6.8, "growth": 14.8, "critical": true },
+    { "commodity": "Electronics", "value": 85.3, "share": 11.8, "growth": 11.7, "critical": true },
+    { "commodity": "Coal & Coke", "value": 38.5, "share": 5.3, "growth": -8.2 },
+    { "commodity": "Machinery", "value": 48.7, "share": 6.8, "growth": 6.4 },
+    { "commodity": "Chemicals", "value": 42.3, "share": 5.9, "growth": 4.1 },
+    { "commodity": "Vegetable Oils", "value": 18.9, "share": 2.6, "growth": -5.3 },
+    { "commodity": "Fertilizers", "value": 12.8, "share": 1.8, "growth": -22.5 },
+    { "commodity": "Plastics", "value": 19.4, "share": 2.7, "growth": 7.8 },
+    { "commodity": "Precious Stones", "value": 23.5, "share": 3.3, "growth": 3.2 }
+  ],
+  "servicesBreakdown": {
+    "exports": [
+      { "category": "IT & Business Services", "value": 198.5, "share": 51.8, "growth": 12.4 },
+      { "category": "Transport", "value": 32.8, "share": 8.6, "growth": 8.2 },
+      { "category": "Travel", "value": 35.2, "share": 9.2, "growth": 18.5 },
+      { "category": "Financial Services", "value": 28.4, "share": 7.4, "growth": 15.3 },
+      { "category": "Telecom & Computer", "value": 48.6, "share": 12.7, "growth": 14.8 },
+      { "category": "Other Services", "value": 40.0, "share": 10.4, "growth": 9.6 }
+    ]
+  },
+  "tradingPartners": {
+    "topExportDestinations": [
+      { "country": "United States", "value": 77.5, "share": 17.7 },
+      { "country": "UAE", "value": 35.2, "share": 8.0 },
+      { "country": "Netherlands", "value": 17.8, "share": 4.1 },
+      { "country": "China", "value": 16.7, "share": 3.8 },
+      { "country": "Bangladesh", "value": 13.4, "share": 3.1 },
+      { "country": "Singapore", "value": 12.8, "share": 2.9 },
+      { "country": "UK", "value": 12.1, "share": 2.8 },
+      { "country": "Saudi Arabia", "value": 10.8, "share": 2.5 }
+    ],
+    "topImportSources": [
+      { "country": "China", "value": 111.6, "share": 15.5, "deficit": -95.0 },
+      { "country": "Russia", "value": 65.5, "share": 9.1, "deficit": -52.3 },
+      { "country": "UAE", "value": 61.9, "share": 8.6, "deficit": -26.7 },
+      { "country": "United States", "value": 44.0, "share": 6.1, "surplus": 33.5 },
+      { "country": "Saudi Arabia", "value": 31.0, "share": 4.3, "deficit": -20.2 },
+      { "country": "Iraq", "value": 30.2, "share": 4.2, "deficit": -29.8 },
+      { "country": "Indonesia", "value": 24.5, "share": 3.4, "deficit": -17.2 },
+      { "country": "Switzerland", "value": 22.3, "share": 3.1, "deficit": -20.8 }
+    ]
+  },
+  "forexReserves": {
+    "current": 640.3,
+    "allTimeHigh": 704.89,
+    "allTimeHighDate": "September 2024",
+    "components": {
+      "foreignCurrencyAssets": 553.2,
+      "gold": 67.8,
+      "sdrs": 18.1,
+      "reservePosition": 4.2
+    },
+    "importCover": 10.6,
+    "unit": "USD Billion"
+  },
+  "currentAccountDeficit": {
+    "fy2024-25": {
+      "value": -37.1,
+      "percentGdp": -1.1
+    },
+    "historical": [
+      { "year": "2019-20", "value": -24.7, "percentGdp": -0.9 },
+      { "year": "2020-21", "value": 23.9, "percentGdp": 0.9, "surplus": true, "notes": "COVID reduced imports" },
+      { "year": "2021-22", "value": -38.7, "percentGdp": -1.2 },
+      { "year": "2022-23", "value": -67.0, "percentGdp": -2.0, "notes": "Oil price spike" },
+      { "year": "2023-24", "value": -23.2, "percentGdp": -0.7 },
+      { "year": "2024-25", "value": -37.1, "percentGdp": -1.1, "notes": "Estimate" }
+    ]
+  },
+  "historicalTrade": [
+    { "year": "2014-15", "exports": 310.3, "imports": 448.0, "deficit": -137.7 },
+    { "year": "2015-16", "exports": 262.3, "imports": 381.0, "deficit": -118.7, "notes": "Oil price crash" },
+    { "year": "2016-17", "exports": 275.9, "imports": 384.4, "deficit": -108.5 },
+    { "year": "2017-18", "exports": 303.5, "imports": 465.6, "deficit": -162.1 },
+    { "year": "2018-19", "exports": 330.1, "imports": 514.1, "deficit": -184.0 },
+    { "year": "2019-20", "exports": 313.4, "imports": 474.7, "deficit": -161.3, "notes": "Pre-COVID" },
+    { "year": "2020-21", "exports": 291.8, "imports": 394.4, "deficit": -102.6, "notes": "COVID impact" },
+    { "year": "2021-22", "exports": 422.0, "imports": 613.1, "deficit": -191.1, "notes": "Strong recovery" },
+    { "year": "2022-23", "exports": 451.1, "imports": 714.2, "deficit": -263.1, "notes": "Record deficit" },
+    { "year": "2023-24", "exports": 437.1, "imports": 678.2, "deficit": -241.1 },
+    { "year": "2024-25", "exports": 437.4, "imports": 720.2, "deficit": -282.8, "notes": "Estimate" }
+  ],
+  "keyInsights": [
+    "India runs a trade deficit in goods but surplus in services",
+    "Oil imports alone cause ~$150 billion deficit annually",
+    "Electronics exports grew 127x from 2014-15 to 2024-25",
+    "Services exports now almost equal merchandise exports",
+    "China is the largest import source and biggest deficit partner"
+  ]
+}

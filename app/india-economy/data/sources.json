@@ -1,6 +1,28 @@
 {
   "sources": [
     {
+      "id": "commerce-ministry-trade",
+      "title": "Trade Statistics",
+      "publisher": "Department of Commerce, Ministry of Commerce and Industry",
+      "url": "https://www.commerce.gov.in/trade-statistics/",
+      "type": "official",
+      "publishedDate": "2025-01-15",
+      "accessedDate": "2025-02-03",
+      "coversData": ["trade-data.json"],
+      "notes": "Official merchandise and services trade data, DGFT statistics"
+    },
+    {
+      "id": "rbi-bop-forex",
+      "title": "Balance of Payments and Foreign Exchange Reserves",
+      "publisher": "Reserve Bank of India",
+      "url": "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx",
+      "type": "official",
+      "publishedDate": "2025-01-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["trade-data.json"],
+      "notes": "Current account, capital account, forex reserves data"
+    },
+    {
       "id": "mospi-cpi",
       "title": "Consumer Price Index (CPI) Statistics",
       "publisher": "Ministry of Statistics and Programme Implementation (MoSPI)",

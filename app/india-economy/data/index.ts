@@ -6,6 +6,7 @@ import gdpHistoricalData from './gdp-historical.json'
 import gdpSectorsData from './gdp-sectors.json'
 import gdpGlobalData from './gdp-global.json'
 import inflationData from './inflation-data.json'
+import tradeData from './trade-data.json'
 import type {
   BudgetData,
   SourcesData,
@@ -19,7 +20,8 @@ import type {
   GDPYearEntry,
   GDPSectorsData,
   GDPGlobalData,
-  InflationData
+  InflationData,
+  TradeData
 } from './types'
 
 // Budget Data (current year detailed)
@@ -83,6 +85,11 @@ export function getInflationData(): InflationData {
   return inflationData as InflationData
 }
 
+// Trade Data
+export function getTradeData(): TradeData {
+  return tradeData as TradeData
+}
+
 // Sources
 export function getSources(): Source[] {
   return (sourcesData as SourcesData).sources
@@ -122,5 +129,9 @@ export type {
   InflationYearData,
   CPICategory,
   FoodSubCategory,
-  PriceSpike
+  PriceSpike,
+  TradeData,
+  TradeCommodity,
+  TradingPartner,
+  TradeYearData
 } from './types'

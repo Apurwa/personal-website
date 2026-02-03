@@ -22,6 +22,11 @@ const topics = [
     description: 'Why do prices keep rising? How is inflation measured? Understand what affects your purchasing power.',
     href: '/india-economy/inflation',
   },
+  {
+    title: 'Trade & Exports',
+    description: 'What does India export and import? Explore the $820 billion trade story, top partners, and forex reserves.',
+    href: '/india-economy/trade',
+  },
 ]
 
 export default function IndiaEconomyPage() {
@@ -52,7 +57,6 @@ export default function IndiaEconomyPage() {
               title={topic.title}
               description={topic.description}
               href={topic.href}
-              comingSoon={topic.comingSoon}
               index={index}
             />
           ))}
@@ -73,6 +77,10 @@ export default function IndiaEconomyPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#4a6fa5] transition-transform group-hover:scale-150" aria-hidden="true" />
             Reserve Bank of India
           </span>
+          <span className="flex items-center gap-2 group cursor-default">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#7a9e7e] transition-transform group-hover:scale-150" aria-hidden="true" />
+            Ministry of Commerce
+          </span>
         </div>
       </aside>
 
@@ -82,7 +90,8 @@ export default function IndiaEconomyPage() {
           sourceIds={[
             'union-budget-2024-25',
             'rbi-monetary-policy',
-            'india-budget-historical'
+            'india-budget-historical',
+            'commerce-ministry-trade'
           ]}
         />
       </div>

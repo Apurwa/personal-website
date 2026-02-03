@@ -261,3 +261,100 @@ export interface InflationData {
   foodSubCategories: FoodSubCategory[]
   notablePriceSpikes: PriceSpike[]
 }
+
+// Trade Data Types
+export interface TradeCommodity {
+  commodity: string
+  value: number
+  share: number
+  growth: number
+  highlight?: boolean
+  critical?: boolean
+}
+
+export interface TradingPartner {
+  country: string
+  value: number
+  share: number
+  deficit?: number
+  surplus?: number
+}
+
+export interface ServiceCategory {
+  category: string
+  value: number
+  share: number
+  growth: number
+}
+
+export interface CADEntry {
+  year: string
+  value: number
+  percentGdp: number
+  surplus?: boolean
+  notes?: string
+}
+
+export interface TradeYearData {
+  year: string
+  exports: number
+  imports: number
+  deficit: number
+  notes?: string
+}
+
+export interface TradeData {
+  sourceId: string
+  description: string
+  fiscalYear: string
+  summary: {
+    totalExports: number
+    totalImports: number
+    tradeDeficit: number
+    merchandiseExports: number
+    merchandiseImports: number
+    merchandiseDeficit: number
+    servicesExports: number
+    servicesImports: number
+    servicesSurplus: number
+    unit: string
+    growthExports: number
+    growthImports: number
+  }
+  globalRanking: {
+    exportsRank: number
+    importsRank: number
+    tradeOpenness: number
+  }
+  topExports: TradeCommodity[]
+  topImports: TradeCommodity[]
+  servicesBreakdown: {
+    exports: ServiceCategory[]
+  }
+  tradingPartners: {
+    topExportDestinations: TradingPartner[]
+    topImportSources: TradingPartner[]
+  }
+  forexReserves: {
+    current: number
+    allTimeHigh: number
+    allTimeHighDate: string
+    components: {
+      foreignCurrencyAssets: number
+      gold: number
+      sdrs: number
+      reservePosition: number
+    }
+    importCover: number
+    unit: string
+  }
+  currentAccountDeficit: {
+    'fy2024-25': {
+      value: number
+      percentGdp: number
+    }
+    historical: CADEntry[]
+  }
+  historicalTrade: TradeYearData[]
+  keyInsights: string[]
+}
