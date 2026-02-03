@@ -1,0 +1,367 @@
+{
+  "sourceId": "income-tax-gst-council",
+  "description": "India's taxation system overview",
+  "fiscalYear": "2024-25",
+  "overview": {
+    "grossTaxRevenue": 38.4,
+    "directTaxShare": 56.7,
+    "indirectTaxShare": 43.3,
+    "taxToGdp": 11.7,
+    "unit": "Lakh Crore INR",
+    "taxpayersFiling": 8.18,
+    "taxpayersUnit": "Crore returns filed",
+    "gstRegistrations": 1.46,
+    "gstRegistrationsUnit": "Crore businesses"
+  },
+  "directVsIndirect": {
+    "direct": {
+      "definition": "Taxes paid directly to the government by the person on whom it is imposed",
+      "hindi": "प्रत्यक्ष कर",
+      "examples": ["Income Tax", "Corporate Tax", "Capital Gains Tax", "Securities Transaction Tax"],
+      "share": 56.7,
+      "collection": 21.8,
+      "unit": "Lakh Crore INR",
+      "characteristics": [
+        "Cannot be transferred to others",
+        "Progressive - higher income pays higher rate",
+        "Based on ability to pay"
+      ]
+    },
+    "indirect": {
+      "definition": "Taxes collected by intermediaries from the end consumer, then paid to government",
+      "hindi": "अप्रत्यक्ष कर",
+      "examples": ["GST", "Customs Duty", "Excise Duty on fuel"],
+      "share": 43.3,
+      "collection": 16.6,
+      "unit": "Lakh Crore INR",
+      "characteristics": [
+        "Can be passed on to consumers",
+        "Same rate for everyone (regressive)",
+        "Easier to collect"
+      ]
+    }
+  },
+  "incomeTax": {
+    "description": "Tax on income earned by individuals and businesses",
+    "hindi": "आयकर",
+    "adminBody": "Central Board of Direct Taxes (CBDT)",
+    "filingDeadline": "31st July (individuals without audit)",
+    "oldRegime": {
+      "name": "Old Tax Regime",
+      "slabs": [
+        { "income": "Up to ₹2.5 lakh", "rate": 0, "tax": "Nil" },
+        { "income": "₹2.5 - 5 lakh", "rate": 5, "tax": "5% of amount above ₹2.5L" },
+        { "income": "₹5 - 10 lakh", "rate": 20, "tax": "₹12,500 + 20% above ₹5L" },
+        { "income": "Above ₹10 lakh", "rate": 30, "tax": "₹1,12,500 + 30% above ₹10L" }
+      ],
+      "benefits": [
+        "Section 80C deductions up to ₹1.5 lakh",
+        "Section 80D health insurance deduction",
+        "HRA exemption",
+        "Home loan interest deduction",
+        "NPS additional ₹50,000 deduction"
+      ],
+      "bestFor": "Those with high deductions (home loan, HRA, investments)"
+    },
+    "newRegime": {
+      "name": "New Tax Regime (Default from FY 2023-24)",
+      "slabs": [
+        { "income": "Up to ₹3 lakh", "rate": 0, "tax": "Nil" },
+        { "income": "₹3 - 7 lakh", "rate": 5, "tax": "5% of amount above ₹3L" },
+        { "income": "₹7 - 10 lakh", "rate": 10, "tax": "₹20,000 + 10% above ₹7L" },
+        { "income": "₹10 - 12 lakh", "rate": 15, "tax": "₹50,000 + 15% above ₹10L" },
+        { "income": "₹12 - 15 lakh", "rate": 20, "tax": "₹80,000 + 20% above ₹12L" },
+        { "income": "Above ₹15 lakh", "rate": 30, "tax": "₹1,40,000 + 30% above ₹15L" }
+      ],
+      "benefits": [
+        "Standard deduction of ₹75,000",
+        "Lower tax rates",
+        "Simpler compliance",
+        "No need to maintain investment proofs"
+      ],
+      "bestFor": "Those with few deductions or salaried employees"
+    },
+    "rebate87A": {
+      "oldRegime": "No tax if income up to ₹5 lakh",
+      "newRegime": "No tax if income up to ₹7 lakh",
+      "maxRebate": 25000
+    },
+    "surcharge": [
+      { "income": "₹50L - 1Cr", "rate": 10 },
+      { "income": "₹1Cr - 2Cr", "rate": 15 },
+      { "income": "₹2Cr - 5Cr", "rate": 25 },
+      { "income": "Above ₹5Cr", "rate": 37 }
+    ],
+    "cess": {
+      "name": "Health and Education Cess",
+      "rate": 4,
+      "appliedOn": "Tax + Surcharge"
+    },
+    "filingStats": {
+      "fy2024": {
+        "returnsFiled": 8.18,
+        "unit": "Crore",
+        "growth": 9.1,
+        "zeroTaxReturns": 5.27,
+        "zeroTaxPercent": 64.4
+      }
+    }
+  },
+  "corporateTax": {
+    "description": "Tax on profits earned by companies",
+    "hindi": "निगम कर",
+    "rates": [
+      { "category": "New manufacturing companies (post Oct 2019)", "rate": 15, "effective": 17.16 },
+      { "category": "Existing companies opting for lower rate", "rate": 22, "effective": 25.17 },
+      { "category": "Companies not opting for lower rate", "rate": 30, "effective": 34.94 },
+      { "category": "Foreign companies", "rate": 40, "effective": 43.68 }
+    ],
+    "minimumAlternateTax": {
+      "rate": 15,
+      "applicability": "Companies with book profit but paying less tax due to exemptions"
+    },
+    "collection": {
+      "fy2024": 10.2,
+      "fy2023": 8.9,
+      "growth": 14.6,
+      "unit": "Lakh Crore INR"
+    }
+  },
+  "gst": {
+    "description": "One Nation One Tax - replaced 17 indirect taxes",
+    "hindi": "वस्तु एवं सेवा कर",
+    "fullForm": "Goods and Services Tax",
+    "launchDate": "1st July 2017",
+    "governingBody": "GST Council (chaired by Union Finance Minister)",
+    "slabs": [
+      { "rate": 0, "items": ["Essential food items", "Healthcare", "Education"], "examples": ["Fresh vegetables", "Milk", "Eggs", "Books"] },
+      { "rate": 5, "items": ["Mass consumption items"], "examples": ["Packaged food", "Tea", "Coffee", "Edible oils", "Footwear under ₹1000"] },
+      { "rate": 12, "items": ["Standard goods"], "examples": ["Processed food", "Mobiles", "Computers", "Umbrellas"] },
+      { "rate": 18, "items": ["Most goods and services"], "examples": ["Hair oil", "Toothpaste", "Capital goods", "Industrial inputs", "Restaurant food"] },
+      { "rate": 28, "items": ["Luxury and sin goods"], "examples": ["Cars", "AC", "Cement", "Aerated drinks", "Tobacco"] }
+    ],
+    "types": [
+      { "type": "CGST", "fullForm": "Central GST", "hindi": "केंद्रीय जीएसटी", "goesTo": "Central Government" },
+      { "type": "SGST", "fullForm": "State GST", "hindi": "राज्य जीएसटी", "goesTo": "State Government" },
+      { "type": "IGST", "fullForm": "Integrated GST", "hindi": "एकीकृत जीएसटी", "goesTo": "Inter-state sales, then shared" },
+      { "type": "UTGST", "fullForm": "Union Territory GST", "hindi": "केंद्र शासित प्रदेश जीएसटी", "goesTo": "Union Territories" }
+    ],
+    "howItWorks": {
+      "example": "Restaurant bill of ₹1000 with 5% GST",
+      "breakdown": [
+        { "component": "Food cost", "amount": 1000 },
+        { "component": "CGST (2.5%)", "amount": 25 },
+        { "component": "SGST (2.5%)", "amount": 25 },
+        { "component": "Total bill", "amount": 1050 }
+      ],
+      "note": "In inter-state sale, IGST (5%) would be charged instead of CGST+SGST"
+    },
+    "inputTaxCredit": {
+      "definition": "Businesses can claim credit for GST paid on inputs against GST collected on outputs",
+      "example": "Manufacturer pays ₹18 GST on raw materials, collects ₹36 GST on finished goods, pays only ₹18 to government"
+    },
+    "collection": {
+      "monthlyAverage": 1.87,
+      "highestEver": 2.10,
+      "highestMonth": "April 2024",
+      "unit": "Lakh Crore INR",
+      "fy2024Total": 20.18
+    },
+    "taxesReplaced": [
+      "Central Excise Duty",
+      "Service Tax",
+      "VAT/Sales Tax",
+      "Entertainment Tax",
+      "Luxury Tax",
+      "Entry Tax",
+      "Purchase Tax",
+      "Octroi",
+      "Central Sales Tax"
+    ],
+    "benefits": [
+      "One nation, one tax - no cascading",
+      "Seamless inter-state movement",
+      "Input tax credit chain",
+      "Digital compliance",
+      "Reduced logistics costs"
+    ],
+    "challenges": [
+      "Multiple tax slabs (0, 5, 12, 18, 28)",
+      "Complex return filing",
+      "Technology issues initially",
+      "Some items still outside GST (petrol, alcohol)"
+    ]
+  },
+  "otherTaxes": {
+    "customsDuty": {
+      "description": "Tax on goods imported into India",
+      "hindi": "सीमा शुल्क",
+      "collection": 2.33,
+      "unit": "Lakh Crore INR",
+      "purpose": ["Revenue generation", "Protect domestic industry", "Trade policy tool"]
+    },
+    "exciseDuty": {
+      "description": "Now limited to petroleum and liquor (not under GST)",
+      "hindi": "उत्पाद शुल्क",
+      "collection": 3.2,
+      "unit": "Lakh Crore INR",
+      "note": "Major revenue from petrol/diesel"
+    },
+    "capitalGainsTax": {
+      "shortTerm": {
+        "equity": 20,
+        "holdingPeriod": "Less than 1 year",
+        "note": "Increased from 15% in Budget 2024"
+      },
+      "longTerm": {
+        "equity": 12.5,
+        "holdingPeriod": "More than 1 year",
+        "exemption": "₹1.25 lakh per year",
+        "note": "Increased from 10% in Budget 2024"
+      }
+    },
+    "stt": {
+      "fullForm": "Securities Transaction Tax",
+      "hindi": "प्रतिभूति लेनदेन कर",
+      "rate": "0.1% on delivery, 0.025% on intraday",
+      "purpose": "Tax equity transactions, reduce need for LTCG calculation"
+    },
+    "stampDuty": {
+      "description": "Tax on legal documents and property transactions",
+      "hindi": "स्टाम्प शुल्क",
+      "collectedBy": "State Governments",
+      "propertyRate": "3-8% depending on state"
+    },
+    "tds": {
+      "fullForm": "Tax Deducted at Source",
+      "hindi": "स्रोत पर कर कटौती",
+      "description": "Tax deducted by payer before making payment",
+      "examples": ["Salary TDS", "Interest TDS", "Rent TDS", "Professional fees TDS"],
+      "purpose": "Ensure tax collection at source, reduce evasion"
+    }
+  },
+  "taxToGdpRatio": {
+    "current": 11.7,
+    "historical": [
+      { "year": "2014-15", "ratio": 10.1 },
+      { "year": "2015-16", "ratio": 10.6 },
+      { "year": "2016-17", "ratio": 11.2 },
+      { "year": "2017-18", "ratio": 11.4, "notes": "GST launched" },
+      { "year": "2018-19", "ratio": 10.9 },
+      { "year": "2019-20", "ratio": 10.0, "notes": "Corporate tax cut" },
+      { "year": "2020-21", "ratio": 9.9, "notes": "COVID impact" },
+      { "year": "2021-22", "ratio": 10.8 },
+      { "year": "2022-23", "ratio": 11.2 },
+      { "year": "2023-24", "ratio": 11.6 },
+      { "year": "2024-25", "ratio": 11.7, "notes": "Estimate" }
+    ],
+    "globalComparison": [
+      { "country": "France", "ratio": 45.4 },
+      { "country": "Germany", "ratio": 38.8 },
+      { "country": "UK", "ratio": 35.3 },
+      { "country": "USA", "ratio": 27.1 },
+      { "country": "Japan", "ratio": 33.2 },
+      { "country": "China", "ratio": 17.5 },
+      { "country": "Brazil", "ratio": 33.9 },
+      { "country": "India", "ratio": 11.7, "highlight": true }
+    ],
+    "insight": "India's low tax-to-GDP ratio means limited resources for public services. The government aims to increase it to 15% by 2030."
+  },
+  "taxReforms": [
+    {
+      "year": "1991",
+      "reform": "Tax rate reduction begins",
+      "description": "Peak income tax rate reduced from 56% to 40%",
+      "impact": "Beginning of tax rationalization"
+    },
+    {
+      "year": "2000",
+      "reform": "PAN made mandatory",
+      "description": "Permanent Account Number required for all tax transactions",
+      "impact": "Better tracking of taxpayers"
+    },
+    {
+      "year": "2004",
+      "reform": "Securities Transaction Tax introduced",
+      "description": "Replaced long-term capital gains tax on equity",
+      "impact": "Simplified equity taxation"
+    },
+    {
+      "year": "2017",
+      "reform": "GST implemented",
+      "description": "Unified indirect tax replacing 17 taxes",
+      "impact": "One nation, one tax; GDP boost of 0.5-1%"
+    },
+    {
+      "year": "2019",
+      "reform": "Corporate tax cut",
+      "description": "Rate reduced from 30% to 22% (existing) and 15% (new manufacturing)",
+      "impact": "Made India competitive globally for investment"
+    },
+    {
+      "year": "2020",
+      "reform": "Faceless assessment",
+      "description": "Tax assessments done electronically without meeting officials",
+      "impact": "Reduced corruption, increased transparency"
+    },
+    {
+      "year": "2023",
+      "reform": "New tax regime as default",
+      "description": "Simplified tax structure with lower rates but fewer deductions",
+      "impact": "Easier compliance for salaried class"
+    },
+    {
+      "year": "2024",
+      "reform": "Capital gains tax rationalization",
+      "description": "STCG increased to 20%, LTCG to 12.5% with higher exemption",
+      "impact": "Simplified capital gains structure"
+    }
+  ],
+  "compliance": {
+    "itr": {
+      "forms": [
+        { "form": "ITR-1 (Sahaj)", "for": "Salaried with income up to ₹50 lakh" },
+        { "form": "ITR-2", "for": "Individuals with capital gains, foreign income" },
+        { "form": "ITR-3", "for": "Business/profession income" },
+        { "form": "ITR-4 (Sugam)", "for": "Presumptive income scheme" }
+      ],
+      "deadline": "31st July (without audit), 31st October (with audit)"
+    },
+    "gstReturns": [
+      { "return": "GSTR-1", "frequency": "Monthly/Quarterly", "purpose": "Outward supplies" },
+      { "return": "GSTR-3B", "frequency": "Monthly", "purpose": "Summary return with tax payment" },
+      { "return": "GSTR-9", "frequency": "Annual", "purpose": "Annual return" }
+    ],
+    "penalties": {
+      "lateFiling": "₹5,000 (₹1,000 if income below ₹5 lakh)",
+      "nonFiling": "Prosecution possible for income above ₹10 lakh",
+      "underReporting": "50% of tax on underreported income"
+    }
+  },
+  "blackMoney": {
+    "definition": "Income on which taxes are not paid, often hidden from government",
+    "hindi": "काला धन",
+    "estimatedSize": "Difficult to measure - estimates range from 20-40% of GDP",
+    "sources": [
+      "Tax evasion",
+      "Corruption",
+      "Smuggling",
+      "Illegal activities"
+    ],
+    "governmentMeasures": [
+      { "measure": "Demonetization (2016)", "purpose": "Flush out unaccounted cash", "result": "99.3% currency returned" },
+      { "measure": "Benami Property Act", "purpose": "Tackle property held in others' names", "result": "Ongoing enforcement" },
+      { "measure": "Black Money Act (2015)", "purpose": "Tax foreign undisclosed assets", "result": "₹8,216 crore collected" },
+      { "measure": "PMGKY (2016)", "purpose": "One-time voluntary disclosure", "result": "₹5,000 crore declared" },
+      { "measure": "AIS (Annual Information Statement)", "purpose": "Track all financial transactions", "result": "Reduced hiding scope" }
+    ]
+  },
+  "keyInsights": [
+    "Only 2.2% of Indians pay income tax (out of 140 crore population)",
+    "64% of ITR filers report zero tax liability",
+    "GST collection has grown 70% since launch (2017 to 2024)",
+    "India's tax-to-GDP ratio is among the lowest in major economies",
+    "Corporate tax cut of 2019 made India's rate competitive with Asian peers",
+    "New tax regime now benefits 75% of taxpayers (government estimate)"
+  ]
+}

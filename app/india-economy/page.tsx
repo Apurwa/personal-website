@@ -37,6 +37,11 @@ const topics = [
     description: 'How do Sensex and Nifty work? From IPOs to FIIs. India is now the 4th largest stock market globally.',
     href: '/india-economy/markets',
   },
+  {
+    title: 'Taxation',
+    description: 'Income tax, GST, corporate tax explained. Only 2.2% of Indians pay income tax. Learn how taxes fund the nation.',
+    href: '/india-economy/taxes',
+  },
 ]
 
 export default function IndiaEconomyPage() {
@@ -99,6 +104,10 @@ export default function IndiaEconomyPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#6b7c8f] transition-transform group-hover:scale-150" aria-hidden="true" />
             SEBI
           </span>
+          <span className="flex items-center gap-2 group cursor-default">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8b6914] transition-transform group-hover:scale-150" aria-hidden="true" />
+            CBDT / GST Council
+          </span>
         </div>
       </aside>
 
@@ -111,7 +120,8 @@ export default function IndiaEconomyPage() {
             'india-budget-historical',
             'commerce-ministry-trade',
             'rbi-banking-stats',
-            'sebi-nse-bse-stats'
+            'sebi-nse-bse-stats',
+            'income-tax-gst-council'
           ]}
         />
       </div>

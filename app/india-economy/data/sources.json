@@ -186,6 +186,28 @@
       "accessedDate": "2025-02-03",
       "coversData": ["markets-data.json"],
       "notes": "Sensex data, market cap, listed companies"
+    },
+    {
+      "id": "income-tax-gst-council",
+      "title": "Income Tax Statistics and GST Council Data",
+      "publisher": "Central Board of Direct Taxes & GST Council",
+      "url": "https://incometaxindia.gov.in/Pages/Direct-Taxes-Data.aspx",
+      "type": "official",
+      "publishedDate": "2025-01-15",
+      "accessedDate": "2025-02-03",
+      "coversData": ["taxation-data.json"],
+      "notes": "Income tax slabs, filing statistics, tax collection data"
+    },
+    {
+      "id": "gst-portal",
+      "title": "GST Statistics",
+      "publisher": "Goods and Services Tax Network (GSTN)",
+      "url": "https://www.gst.gov.in/",
+      "type": "official",
+      "publishedDate": "2025-02-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["taxation-data.json"],
+      "notes": "Monthly GST collection, registration data, return filing"
     }
   ]
 }

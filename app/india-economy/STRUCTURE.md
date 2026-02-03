@@ -24,7 +24,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | Trade & Exports | ✅ Live | `/india-economy/trade` | DGFT, Commerce Ministry, RBI |
 | Banking System | ✅ Live | `/india-economy/banking` | RBI, NPCI, DICGC |
 | Stock Markets | ✅ Live | `/india-economy/markets` | NSE, BSE, SEBI |
-| Taxation | 📋 Backlog | `/india-economy/taxes` | Income Tax Dept, GST Council |
+| Taxation | ✅ Live | `/india-economy/taxes` | CBDT, GST Council |
 | Employment | 📋 Backlog | `/india-economy/employment` | Labour Ministry, NSSO |
 
 **Status Legend:**
@@ -335,15 +335,51 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 8. Taxation (`/taxes`)
 
-**Status:** 📋 Backlog
+**Status:** ✅ Live
 
-**Topics to Cover:**
-- Direct vs Indirect taxes
-- Income tax slabs and how they work
-- GST structure (CGST, SGST, IGST)
-- Tax-to-GDP ratio
-- Black money and tax evasion
-- Tax reforms history
+**Content Outline:**
+1. Direct vs Indirect Taxes
+   - Definitions with Hindi terms
+   - Share of each in total revenue
+   - Examples and characteristics
+2. Income Tax
+   - Old vs New regime comparison
+   - Tax slabs for both regimes
+   - Section 87A rebate
+   - Surcharge and cess
+   - Filing statistics (only 2.2% pay tax)
+3. Corporate Tax
+   - Rate comparison by company type
+   - 2019 reform impact
+   - MAT explained
+4. GST: One Nation, One Tax
+   - 5 slab structure (0-28%)
+   - CGST, SGST, IGST, UTGST types
+   - How GST works with example
+   - Input Tax Credit concept
+   - Benefits and challenges
+5. Other Important Taxes
+   - Capital gains (STCG/LTCG)
+   - TDS explained
+   - Customs duty
+   - STT
+6. Tax-to-GDP Ratio
+   - India's historical trend
+   - Global comparison (India at 11.7%)
+7. Major Tax Reforms
+   - Timeline from 1991 to 2024
+   - GST, corporate tax cut, faceless assessment
+8. Black Money & Tax Evasion
+   - Government measures (demonetization, Benami Act, AIS)
+
+**Data Files:**
+- `taxation-data.json` — Comprehensive taxation data
+
+**Future Additions:**
+- [ ] Tax calculator (old vs new regime)
+- [ ] GST rate finder
+- [ ] TDS rate lookup
+- [ ] ITR form selector
 
 ---
 
@@ -449,12 +485,14 @@ All sources tracked in `data/sources.json`. Each data file references its source
 ### Phase 4 (Complete)
 - [x] Stock Markets
 
-### Phase 5 (Future)
-- [ ] Taxation
+### Phase 5 (Complete)
+- [x] Taxation
+
+### Phase 6 (Future)
+- [ ] Employment
 - [ ] Interactive calculators
 - [ ] Quiz/trivia mode
 
-### Phase 6 (Aspirational)
-- [ ] Employment
+### Phase 7 (Aspirational)
 - [ ] State-level comparisons
 - [ ] Mobile app version

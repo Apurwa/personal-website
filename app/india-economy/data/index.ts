@@ -9,6 +9,7 @@ import inflationData from './inflation-data.json'
 import tradeData from './trade-data.json'
 import bankingData from './banking-data.json'
 import marketsData from './markets-data.json'
+import taxationData from './taxation-data.json'
 import type {
   BudgetData,
   SourcesData,
@@ -25,7 +26,8 @@ import type {
   InflationData,
   TradeData,
   BankingData,
-  MarketsData
+  MarketsData,
+  TaxationData
 } from './types'
 
 // Budget Data (current year detailed)
@@ -104,6 +106,11 @@ export function getMarketsData(): MarketsData {
   return marketsData as MarketsData
 }
 
+// Taxation Data
+export function getTaxationData(): TaxationData {
+  return taxationData as TaxationData
+}
+
 // Sources
 export function getSources(): Source[] {
   return (sourcesData as SourcesData).sources
@@ -157,5 +164,9 @@ export type {
   StockExchange,
   StockIndex,
   MarketMilestone,
-  GlobalMarketRank
+  GlobalMarketRank,
+  TaxationData,
+  TaxSlab,
+  GSTSlab,
+  TaxReform
 } from './types'

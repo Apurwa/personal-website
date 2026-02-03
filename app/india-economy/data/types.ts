@@ -767,3 +767,235 @@ export interface MarketsData {
   globalComparison: GlobalMarketRank[]
   keyInsights: string[]
 }
+
+// Taxation Data Types
+export interface TaxSlab {
+  income: string
+  rate: number
+  tax: string
+}
+
+export interface GSTSlab {
+  rate: number
+  items: string[]
+  examples: string[]
+}
+
+export interface GSTType {
+  type: string
+  fullForm: string
+  hindi: string
+  goesTo: string
+}
+
+export interface TaxReform {
+  year: string
+  reform: string
+  description: string
+  impact: string
+}
+
+export interface TaxToGdpEntry {
+  year: string
+  ratio: number
+  notes?: string
+}
+
+export interface GlobalTaxComparison {
+  country: string
+  ratio: number
+  highlight?: boolean
+}
+
+export interface TaxationData {
+  sourceId: string
+  description: string
+  fiscalYear: string
+  overview: {
+    grossTaxRevenue: number
+    directTaxShare: number
+    indirectTaxShare: number
+    taxToGdp: number
+    unit: string
+    taxpayersFiling: number
+    taxpayersUnit: string
+    gstRegistrations: number
+    gstRegistrationsUnit: string
+  }
+  directVsIndirect: {
+    direct: {
+      definition: string
+      hindi: string
+      examples: string[]
+      share: number
+      collection: number
+      unit: string
+      characteristics: string[]
+    }
+    indirect: {
+      definition: string
+      hindi: string
+      examples: string[]
+      share: number
+      collection: number
+      unit: string
+      characteristics: string[]
+    }
+  }
+  incomeTax: {
+    description: string
+    hindi: string
+    adminBody: string
+    filingDeadline: string
+    oldRegime: {
+      name: string
+      slabs: TaxSlab[]
+      benefits: string[]
+      bestFor: string
+    }
+    newRegime: {
+      name: string
+      slabs: TaxSlab[]
+      benefits: string[]
+      bestFor: string
+    }
+    rebate87A: {
+      oldRegime: string
+      newRegime: string
+      maxRebate: number
+    }
+    surcharge: { income: string; rate: number }[]
+    cess: {
+      name: string
+      rate: number
+      appliedOn: string
+    }
+    filingStats: {
+      fy2024: {
+        returnsFiled: number
+        unit: string
+        growth: number
+        zeroTaxReturns: number
+        zeroTaxPercent: number
+      }
+    }
+  }
+  corporateTax: {
+    description: string
+    hindi: string
+    rates: { category: string; rate: number; effective: number }[]
+    minimumAlternateTax: {
+      rate: number
+      applicability: string
+    }
+    collection: {
+      fy2024: number
+      fy2023: number
+      growth: number
+      unit: string
+    }
+  }
+  gst: {
+    description: string
+    hindi: string
+    fullForm: string
+    launchDate: string
+    governingBody: string
+    slabs: GSTSlab[]
+    types: GSTType[]
+    howItWorks: {
+      example: string
+      breakdown: { component: string; amount: number }[]
+      note: string
+    }
+    inputTaxCredit: {
+      definition: string
+      example: string
+    }
+    collection: {
+      monthlyAverage: number
+      highestEver: number
+      highestMonth: string
+      unit: string
+      fy2024Total: number
+    }
+    taxesReplaced: string[]
+    benefits: string[]
+    challenges: string[]
+  }
+  otherTaxes: {
+    customsDuty: {
+      description: string
+      hindi: string
+      collection: number
+      unit: string
+      purpose: string[]
+    }
+    exciseDuty: {
+      description: string
+      hindi: string
+      collection: number
+      unit: string
+      note: string
+    }
+    capitalGainsTax: {
+      shortTerm: {
+        equity: number
+        holdingPeriod: string
+        note: string
+      }
+      longTerm: {
+        equity: number
+        holdingPeriod: string
+        exemption: string
+        note: string
+      }
+    }
+    stt: {
+      fullForm: string
+      hindi: string
+      rate: string
+      purpose: string
+    }
+    stampDuty: {
+      description: string
+      hindi: string
+      collectedBy: string
+      propertyRate: string
+    }
+    tds: {
+      fullForm: string
+      hindi: string
+      description: string
+      examples: string[]
+      purpose: string
+    }
+  }
+  taxToGdpRatio: {
+    current: number
+    historical: TaxToGdpEntry[]
+    globalComparison: GlobalTaxComparison[]
+    insight: string
+  }
+  taxReforms: TaxReform[]
+  compliance: {
+    itr: {
+      forms: { form: string; for: string }[]
+      deadline: string
+    }
+    gstReturns: { return: string; frequency: string; purpose: string }[]
+    penalties: {
+      lateFiling: string
+      nonFiling: string
+      underReporting: string
+    }
+  }
+  blackMoney: {
+    definition: string
+    hindi: string
+    estimatedSize: string
+    sources: string[]
+    governmentMeasures: { measure: string; purpose: string; result: string }[]
+  }
+  keyInsights: string[]
+}
