@@ -106,8 +106,9 @@ app/india-economy/
 <StatDisplay value="₹48.2L Cr" label="Total Budget" sublabel="FY 2024-25" />
 ```
 
-### Animations (CSS-only)
+### Animations
 
+**Page Load (CSS-only):**
 | Class | Effect |
 |-------|--------|
 | `animate-fade-in-up` | Rise up with fade |
@@ -118,6 +119,37 @@ app/india-economy/
 | `hover-lift` | Card lifts on hover |
 | `link-animated` | Underline grows on hover |
 | `paper-texture` | Subtle grain overlay |
+
+**Scroll-triggered (Intersection Observer + CSS):**
+
+```tsx
+import { ScrollReveal } from './components/ScrollReveal'
+
+<ScrollReveal animation="fade-up" delay={1}>
+  <ContentCard>...</ContentCard>
+</ScrollReveal>
+```
+
+| Animation | Effect |
+|-----------|--------|
+| `fade-up` | Rise 32px with fade |
+| `fade-in` | Simple fade |
+| `slide-left` | Slide from left 24px |
+| `slide-right` | Slide from right 24px |
+
+**Animated Stats (GSAP CountUp):**
+
+```tsx
+import { CountUpStat } from './components/CountUpStat'
+
+<CountUpStat
+  value={48.2}
+  prefix="₹"
+  suffix="L Cr"
+  decimals={1}
+  label="Total Budget"
+/>
+```
 
 All animations respect `prefers-reduced-motion`.
 
