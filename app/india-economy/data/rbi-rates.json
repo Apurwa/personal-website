@@ -1,0 +1,65 @@
+{
+  "sourceIds": ["rbi-monetary-policy", "rbi-database-indian-economy"],
+  "lastUpdated": "2025-02-03",
+  "currentRates": {
+    "repoRate": 6.5,
+    "reverseRepoRate": 3.35,
+    "crr": 4.0,
+    "slr": 18.0,
+    "bankRate": 6.75,
+    "marginalStandingFacility": 6.75,
+    "effectiveDate": "2024-12-06"
+  },
+  "repoRateHistory": [
+    { "effectiveDate": "2015-01-15", "rate": 7.75, "change": -0.25, "context": "Easing cycle begins" },
+    { "effectiveDate": "2015-03-04", "rate": 7.50, "change": -0.25, "context": "Inflation moderating" },
+    { "effectiveDate": "2015-06-02", "rate": 7.25, "change": -0.25, "context": "Supporting growth" },
+    { "effectiveDate": "2015-09-29", "rate": 6.75, "change": -0.50, "context": "Surprise 50 bps cut" },
+    { "effectiveDate": "2016-04-05", "rate": 6.50, "change": -0.25, "context": "Continued easing" },
+    { "effectiveDate": "2016-10-04", "rate": 6.25, "change": -0.25, "context": "Post-demonetization" },
+    { "effectiveDate": "2017-08-02", "rate": 6.00, "change": -0.25, "context": "Inflation under control" },
+    { "effectiveDate": "2018-06-06", "rate": 6.25, "change": 0.25, "context": "Rate hike cycle begins" },
+    { "effectiveDate": "2018-08-01", "rate": 6.50, "change": 0.25, "context": "Inflation concerns" },
+    { "effectiveDate": "2019-02-07", "rate": 6.25, "change": -0.25, "context": "Growth slowdown concerns" },
+    { "effectiveDate": "2019-04-04", "rate": 6.00, "change": -0.25, "context": "Supporting credit flow" },
+    { "effectiveDate": "2019-06-06", "rate": 5.75, "change": -0.25, "context": "Economic slowdown" },
+    { "effectiveDate": "2019-08-07", "rate": 5.40, "change": -0.35, "context": "Unconventional 35 bps cut" },
+    { "effectiveDate": "2019-10-04", "rate": 5.15, "change": -0.25, "context": "Fifth consecutive cut" },
+    { "effectiveDate": "2020-03-27", "rate": 4.40, "change": -0.75, "context": "COVID-19 emergency cut" },
+    { "effectiveDate": "2020-05-22", "rate": 4.00, "change": -0.40, "context": "COVID-19 second cut" },
+    { "effectiveDate": "2022-05-04", "rate": 4.40, "change": 0.40, "context": "Off-cycle hike; inflation surge" },
+    { "effectiveDate": "2022-06-08", "rate": 4.90, "change": 0.50, "context": "Aggressive tightening" },
+    { "effectiveDate": "2022-08-05", "rate": 5.40, "change": 0.50, "context": "Inflation fighting" },
+    { "effectiveDate": "2022-09-30", "rate": 5.90, "change": 0.50, "context": "Continued tightening" },
+    { "effectiveDate": "2022-12-07", "rate": 6.25, "change": 0.35, "context": "Pace moderation" },
+    { "effectiveDate": "2023-02-08", "rate": 6.50, "change": 0.25, "context": "Terminal rate reached" }
+  ],
+  "crrHistory": [
+    { "effectiveDate": "2015-01-01", "rate": 4.0, "context": "Maintained steady" },
+    { "effectiveDate": "2020-03-28", "rate": 3.0, "change": -1.0, "context": "COVID-19 liquidity injection" },
+    { "effectiveDate": "2021-03-27", "rate": 3.5, "change": 0.5, "context": "Partial normalization" },
+    { "effectiveDate": "2021-05-22", "rate": 4.0, "change": 0.5, "context": "Full normalization" },
+    { "effectiveDate": "2022-05-21", "rate": 4.5, "change": 0.5, "context": "Tightening liquidity" },
+    { "effectiveDate": "2024-12-14", "rate": 4.0, "change": -0.5, "context": "Easing to support growth" }
+  ],
+  "slrHistory": [
+    { "effectiveDate": "2015-02-07", "rate": 21.5, "context": "Pre-easing" },
+    { "effectiveDate": "2015-04-04", "rate": 21.25, "change": -0.25, "context": "Gradual reduction" },
+    { "effectiveDate": "2016-01-09", "rate": 21.0, "change": -0.25, "context": "Freeing up bank liquidity" },
+    { "effectiveDate": "2016-10-01", "rate": 20.75, "change": -0.25, "context": "Continued easing" },
+    { "effectiveDate": "2017-01-07", "rate": 20.5, "change": -0.25, "context": "Supporting credit growth" },
+    { "effectiveDate": "2017-04-08", "rate": 20.0, "change": -0.5, "context": "Major reduction" },
+    { "effectiveDate": "2017-10-14", "rate": 19.5, "change": -0.5, "context": "Continued reduction" },
+    { "effectiveDate": "2018-10-13", "rate": 19.25, "change": -0.25, "context": "Gradual easing" },
+    { "effectiveDate": "2019-04-13", "rate": 19.0, "change": -0.25, "context": "Near target" },
+    { "effectiveDate": "2019-10-12", "rate": 18.5, "change": -0.5, "context": "Approaching floor" },
+    { "effectiveDate": "2020-04-11", "rate": 18.0, "change": -0.5, "context": "COVID-19; reached floor" }
+  ],
+  "inflationTargetRange": {
+    "lower": 2.0,
+    "target": 4.0,
+    "upper": 6.0,
+    "effectiveSince": "2016-08-05",
+    "framework": "Flexible Inflation Targeting"
+  }
+}

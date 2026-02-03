@@ -43,10 +43,12 @@ app/india-economy/
 ├── hooks/
 │   └── useAchievements.ts  # Achievement unlock system
 └── data/
-    ├── index.ts          # Data exports and source helpers
-    ├── types.ts          # TypeScript interfaces
-    ├── sources.json      # Centralized source registry
-    └── budget-2024-25.json # Budget data (references sourceId)
+    ├── index.ts            # Data exports and helper functions
+    ├── types.ts            # TypeScript interfaces
+    ├── sources.json        # Centralized source registry
+    ├── budget-2024-25.json # Current year detailed budget
+    ├── budget-historical.json # 10-year budget summary (2015-2025)
+    └── rbi-rates.json      # RBI monetary policy history
 ```
 
 ## Data Structure
@@ -73,6 +75,64 @@ interface BudgetData {
   fiscalDeficitPercent: number // As % of GDP
   historical: Array<{ year, fiscalDeficitPercent, totalExpenditure }>
 }
+```
+
+## Historical Budget Data (10 years)
+
+`budget-historical.json` contains fiscal data from FY 2015-16 to 2024-25:
+
+```typescript
+interface BudgetHistoricalEntry {
+  fiscalYear: string
+  totalExpenditure: number    // In crores
+  fiscalDeficit: number
+  fiscalDeficitPercent: number // As % of GDP
+  revenueDeficit: number
+  gdpNominal: number
+  notes?: string              // Context (e.g., "COVID-19 pandemic")
+}
+```
+
+**Helper functions:**
+
+```tsx
+import { getBudgetHistorical, getBudgetByYear } from './data'
+
+// Get all 10 years
+const historical = getBudgetHistorical()
+
+// Get specific year
+const fy2020 = getBudgetByYear('2020-21')
+```
+
+## RBI Monetary Policy Data
+
+`rbi-rates.json` contains repo rate, CRR, and SLR history from 2015-2024:
+
+```typescript
+interface RBIRatesData {
+  currentRates: {
+    repoRate: number
+    reverseRepoRate: number
+    crr: number
+    slr: number
+    bankRate: number
+    effectiveDate: string
+  }
+  repoRateHistory: RateChange[]
+  crrHistory: RateChange[]
+  slrHistory: RateChange[]
+  inflationTargetRange: { lower, target, upper }
+}
+```
+
+**Helper functions:**
+
+```tsx
+import { getCurrentRates, getRepoRateHistory, getCRRHistory, getSLRHistory } from './data'
+
+const rates = getCurrentRates()        // Current repo, CRR, SLR
+const repoHistory = getRepoRateHistory() // All repo rate changes
 ```
 
 ## Sources System
@@ -183,8 +243,11 @@ Detail views use slide-out drawers:
 
 ## Future Ideas
 
-- [ ] Multi-year comparison view
+- [x] Multi-year budget data (10 years added)
+- [x] RBI monetary policy data
+- [ ] Multi-year comparison visualization
+- [ ] RBI rates timeline visualization
 - [ ] State budget data
+- [ ] Economic Survey highlights
 - [ ] Budget quiz/trivia mode
 - [ ] Share achievement cards
-- [ ] Animated transitions between levels

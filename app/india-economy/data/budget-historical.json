@@ -1,0 +1,98 @@
+{
+  "sourceIds": ["india-budget-historical", "carnegie-fiscal-policy-2014-2024"],
+  "lastUpdated": "2025-02-03",
+  "currency": "INR",
+  "unit": "crores",
+  "data": [
+    {
+      "fiscalYear": "2015-16",
+      "totalExpenditure": 1790783,
+      "fiscalDeficit": 532791,
+      "fiscalDeficitPercent": 3.9,
+      "revenueDeficit": 287572,
+      "gdpNominal": 13671087,
+      "notes": "First full budget of NDA government"
+    },
+    {
+      "fiscalYear": "2016-17",
+      "totalExpenditure": 1975194,
+      "fiscalDeficit": 535618,
+      "fiscalDeficitPercent": 3.5,
+      "revenueDeficit": 297015,
+      "gdpNominal": 15362386,
+      "notes": "Off-budget borrowing began (~0.5% GDP)"
+    },
+    {
+      "fiscalYear": "2017-18",
+      "totalExpenditure": 2147000,
+      "fiscalDeficit": 591000,
+      "fiscalDeficitPercent": 3.5,
+      "revenueDeficit": 316000,
+      "gdpNominal": 17098304,
+      "notes": "Plan/Non-Plan classification discontinued"
+    },
+    {
+      "fiscalYear": "2018-19",
+      "totalExpenditure": 2442213,
+      "fiscalDeficit": 637997,
+      "fiscalDeficitPercent": 3.4,
+      "revenueDeficit": 370000,
+      "gdpNominal": 18971089,
+      "notes": "Off-budget borrowing ~0.9% GDP"
+    },
+    {
+      "fiscalYear": "2019-20",
+      "totalExpenditure": 2686000,
+      "fiscalDeficit": 936000,
+      "fiscalDeficitPercent": 4.6,
+      "revenueDeficit": 490000,
+      "gdpNominal": 20074856,
+      "notes": "Economic slowdown began; GDP growth fell to 3.9%"
+    },
+    {
+      "fiscalYear": "2020-21",
+      "totalExpenditure": 3531000,
+      "fiscalDeficit": 1834000,
+      "fiscalDeficitPercent": 9.2,
+      "revenueDeficit": 1210000,
+      "gdpNominal": 19801342,
+      "notes": "COVID-19 pandemic; massive fiscal expansion"
+    },
+    {
+      "fiscalYear": "2021-22",
+      "totalExpenditure": 3761000,
+      "fiscalDeficit": 1533000,
+      "fiscalDeficitPercent": 6.7,
+      "revenueDeficit": 827000,
+      "gdpNominal": 23144703,
+      "notes": "Post-pandemic recovery began"
+    },
+    {
+      "fiscalYear": "2022-23",
+      "totalExpenditure": 4163000,
+      "fiscalDeficit": 1700000,
+      "fiscalDeficitPercent": 6.4,
+      "revenueDeficit": 800000,
+      "gdpNominal": 26945000,
+      "notes": "Fiscal consolidation path resumed"
+    },
+    {
+      "fiscalYear": "2023-24",
+      "totalExpenditure": 4503000,
+      "fiscalDeficit": 1690000,
+      "fiscalDeficitPercent": 5.6,
+      "revenueDeficit": 650000,
+      "gdpNominal": 30180000,
+      "notes": "Continued fiscal consolidation"
+    },
+    {
+      "fiscalYear": "2024-25",
+      "totalExpenditure": 4818000,
+      "fiscalDeficit": 1686000,
+      "fiscalDeficitPercent": 4.9,
+      "revenueDeficit": 526000,
+      "gdpNominal": 34400000,
+      "notes": "Target: reduce deficit below 4.5% by FY26"
+    }
+  ]
+}
