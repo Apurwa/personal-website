@@ -1,6 +1,28 @@
 {
   "sources": [
     {
+      "id": "mospi-national-accounts",
+      "title": "National Accounts Statistics",
+      "publisher": "Ministry of Statistics and Programme Implementation (MoSPI)",
+      "url": "https://mospi.gov.in/data",
+      "type": "official",
+      "publishedDate": "2025-01-07",
+      "accessedDate": "2025-02-03",
+      "coversData": ["gdp-historical.json", "gdp-sectors.json"],
+      "notes": "GDP estimates, sector-wise GVA, and national income data"
+    },
+    {
+      "id": "world-bank-gdp",
+      "title": "World Development Indicators - GDP",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+      "type": "official",
+      "publishedDate": "2024-12-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["gdp-historical.json", "gdp-global.json"],
+      "notes": "GDP in current US$, global rankings, and per capita comparisons"
+    },
+    {
       "id": "union-budget-2024-25",
       "title": "Union Budget 2024-25",
       "publisher": "Ministry of Finance, Government of India",

@@ -16,7 +16,6 @@ const topics = [
     title: 'GDP & Growth',
     description: 'What is GDP? How fast is India growing? Track the economic growth story over the decades.',
     href: '/india-economy/gdp',
-    comingSoon: true,
   },
   {
     title: 'Inflation & Prices',

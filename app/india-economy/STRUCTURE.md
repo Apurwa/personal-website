@@ -19,7 +19,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | Landing Hub | ✅ Live | `/india-economy` | — |
 | Union Budget | ✅ Live | `/india-economy/budget` | Ministry of Finance |
 | RBI & Monetary Policy | ✅ Live | `/india-economy/rbi` | RBI |
-| GDP & Growth | 🔜 Planned | `/india-economy/gdp` | MoSPI, World Bank |
+| GDP & Growth | ✅ Live | `/india-economy/gdp` | MoSPI, World Bank |
 | Inflation & Prices | 🔜 Planned | `/india-economy/inflation` | RBI, MoSPI |
 | Trade & Exports | 📋 Backlog | `/india-economy/trade` | DGFT, Commerce Ministry |
 | Banking System | 📋 Backlog | `/india-economy/banking` | RBI |
@@ -103,31 +103,34 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 3. GDP & Growth (`/gdp`)
 
-**Status:** 🔜 Planned
+**Status:** ✅ Live
 
 **Content Outline:**
 1. What is GDP?
    - Definition with Hindi term
-   - Real vs Nominal GDP
-   - GDP per capita
-2. How is GDP Measured?
-   - Expenditure method (C + I + G + NX)
-   - Production method (sectors)
-3. India's GDP Story
-   - Historical growth chart (1991 to present)
-   - Key milestones (liberalization, 2008 crisis, COVID)
-4. Sector Breakdown
-   - Agriculture, Industry, Services
-   - How the mix has changed
-5. Comparing with the World
-   - India's rank globally
-   - Comparison with China, US, neighbors
+   - Real vs Nominal GDP explanation
+   - GDP per capita calculation
+2. India's GDP Story (1991-2024)
+   - Key milestones timeline
+   - Growth rate visualization (last 10 years)
+3. Sector Breakdown
+   - Agriculture, Industry, Services shares
+   - Historical sector evolution chart
+   - Services-led growth insight
+4. Comparing with the World
+   - Top 10 economies table
+   - Asian economies comparison
+   - IMF projections to 2030
 
-**Data Needed:**
-- [ ] GDP annual data (1991-2024)
-- [ ] Sector-wise GDP contribution
-- [ ] Per capita GDP series
-- [ ] Global comparison data
+**Data Files:**
+- `gdp-historical.json` — 34 years of GDP data (1991-2025)
+- `gdp-sectors.json` — Sector-wise breakdown with historical
+- `gdp-global.json` — Global rankings and comparisons
+
+**Future Additions:**
+- [ ] Interactive GDP calculator
+- [ ] State-wise GDP comparison
+- [ ] GDP growth factors explainer
 
 ---
 
@@ -309,8 +312,8 @@ All sources tracked in `data/sources.json`. Each data file references its source
 - [x] RBI & Monetary Policy section
 - [x] Design system and animations
 
-### Phase 2 (Next)
-- [ ] GDP & Growth section
+### Phase 2 (In Progress)
+- [x] GDP & Growth section
 - [ ] Inflation & Prices section
 - [ ] Cross-linking between sections
 

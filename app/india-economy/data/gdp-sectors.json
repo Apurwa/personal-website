@@ -1,0 +1,63 @@
+{
+  "sourceId": "mospi-national-accounts",
+  "description": "Sector-wise GDP contribution over time",
+  "notes": "GVA shares at current prices. Agriculture includes forestry, fishing. Industry includes mining, manufacturing, utilities, construction.",
+  "currentYear": {
+    "fiscalYear": "2024-25",
+    "sectors": {
+      "agriculture": {
+        "name": "Agriculture & Allied",
+        "hindi": "कृषि",
+        "sharePercent": 17.9,
+        "growthPercent": 3.8,
+        "description": "Farming, animal husbandry, forestry, fishing"
+      },
+      "industry": {
+        "name": "Industry",
+        "hindi": "उद्योग",
+        "sharePercent": 27.1,
+        "growthPercent": 6.2,
+        "description": "Mining, manufacturing, electricity, construction",
+        "subsectors": {
+          "mining": 2.1,
+          "manufacturing": 14.3,
+          "electricity": 2.4,
+          "construction": 8.3
+        }
+      },
+      "services": {
+        "name": "Services",
+        "hindi": "सेवा क्षेत्र",
+        "sharePercent": 55.0,
+        "growthPercent": 7.2,
+        "description": "Trade, IT, finance, transport, government",
+        "subsectors": {
+          "trade": 12.1,
+          "finance": 7.2,
+          "realEstate": 8.5,
+          "transport": 5.1,
+          "communication": 3.2,
+          "publicAdmin": 6.8,
+          "otherServices": 12.1
+        }
+      }
+    }
+  },
+  "historical": [
+    { "year": "1950-51", "agriculture": 51.9, "industry": 14.2, "services": 33.9 },
+    { "year": "1960-61", "agriculture": 43.0, "industry": 19.3, "services": 37.7 },
+    { "year": "1970-71", "agriculture": 41.7, "industry": 20.5, "services": 37.8 },
+    { "year": "1980-81", "agriculture": 35.7, "industry": 24.3, "services": 40.0 },
+    { "year": "1990-91", "agriculture": 29.0, "industry": 26.5, "services": 44.5, "milestone": "Pre-liberalization" },
+    { "year": "2000-01", "agriculture": 23.0, "industry": 26.0, "services": 51.0, "milestone": "Services cross 50%" },
+    { "year": "2010-11", "agriculture": 18.2, "industry": 27.0, "services": 54.8 },
+    { "year": "2020-21", "agriculture": 20.2, "industry": 25.9, "services": 53.9, "milestone": "COVID bump in agriculture" },
+    { "year": "2024-25", "agriculture": 17.9, "industry": 27.1, "services": 55.0 }
+  ],
+  "keyInsights": [
+    "Agriculture employed 46% of workforce but contributes only 18% of GDP",
+    "Services sector grew from 34% (1950) to 55% (2024) of GDP",
+    "Manufacturing remains stuck at ~14-15% despite 'Make in India'",
+    "India's services-led growth is unique compared to Asian peers"
+  ]
+}

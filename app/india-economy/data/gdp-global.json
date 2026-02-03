@@ -1,0 +1,48 @@
+{
+  "sourceId": "world-bank-gdp",
+  "description": "India's global GDP ranking and comparison",
+  "asOf": "2024",
+  "indiaRanking": {
+    "nominal": 5,
+    "ppp": 3,
+    "perCapita": 139
+  },
+  "topEconomies": [
+    { "rank": 1, "country": "United States", "gdpUsdTn": 28.78, "perCapitaUsd": 85373 },
+    { "rank": 2, "country": "China", "gdpUsdTn": 18.53, "perCapitaUsd": 12970 },
+    { "rank": 3, "country": "Germany", "gdpUsdTn": 4.59, "perCapitaUsd": 54291 },
+    { "rank": 4, "country": "Japan", "gdpUsdTn": 4.11, "perCapitaUsd": 33138 },
+    { "rank": 5, "country": "India", "gdpUsdTn": 3.94, "perCapitaUsd": 2730, "highlight": true },
+    { "rank": 6, "country": "United Kingdom", "gdpUsdTn": 3.50, "perCapitaUsd": 51075 },
+    { "rank": 7, "country": "France", "gdpUsdTn": 3.13, "perCapitaUsd": 47360 },
+    { "rank": 8, "country": "Italy", "gdpUsdTn": 2.33, "perCapitaUsd": 39580 },
+    { "rank": 9, "country": "Brazil", "gdpUsdTn": 2.17, "perCapitaUsd": 10412 },
+    { "rank": 10, "country": "Canada", "gdpUsdTn": 2.14, "perCapitaUsd": 53247 }
+  ],
+  "asianComparison": [
+    { "country": "China", "gdpUsdTn": 18.53, "perCapitaUsd": 12970, "growthPercent": 4.8 },
+    { "country": "Japan", "gdpUsdTn": 4.11, "perCapitaUsd": 33138, "growthPercent": 0.3 },
+    { "country": "India", "gdpUsdTn": 3.94, "perCapitaUsd": 2730, "growthPercent": 6.5, "highlight": true },
+    { "country": "South Korea", "gdpUsdTn": 1.71, "perCapitaUsd": 33192, "growthPercent": 2.2 },
+    { "country": "Indonesia", "gdpUsdTn": 1.42, "perCapitaUsd": 5108, "growthPercent": 5.0 },
+    { "country": "Thailand", "gdpUsdTn": 0.51, "perCapitaUsd": 7298, "growthPercent": 2.8 },
+    { "country": "Vietnam", "gdpUsdTn": 0.47, "perCapitaUsd": 4623, "growthPercent": 6.4 },
+    { "country": "Bangladesh", "gdpUsdTn": 0.45, "perCapitaUsd": 2688, "growthPercent": 5.8 },
+    { "country": "Pakistan", "gdpUsdTn": 0.34, "perCapitaUsd": 1500, "growthPercent": 2.4 }
+  ],
+  "keyInsights": [
+    "India is 5th largest economy but 139th in per capita income",
+    "India's GDP per capita is just 3% of USA's",
+    "India grows faster than China but started from smaller base",
+    "India could become 3rd largest economy by 2027-28"
+  ],
+  "projections": {
+    "source": "IMF World Economic Outlook",
+    "notes": "Based on current growth trajectory",
+    "data": [
+      { "year": "2025", "projectedGdpUsdTn": 4.27, "projectedRank": 5 },
+      { "year": "2027", "projectedGdpUsdTn": 4.96, "projectedRank": 4, "note": "Could overtake Japan" },
+      { "year": "2030", "projectedGdpUsdTn": 6.00, "projectedRank": 3, "note": "Could overtake Germany" }
+    ]
+  }
+}

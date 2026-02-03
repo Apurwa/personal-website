@@ -2,6 +2,9 @@ import budgetData from './budget-2024-25.json'
 import sourcesData from './sources.json'
 import budgetHistoricalData from './budget-historical.json'
 import rbiRatesData from './rbi-rates.json'
+import gdpHistoricalData from './gdp-historical.json'
+import gdpSectorsData from './gdp-sectors.json'
+import gdpGlobalData from './gdp-global.json'
 import type {
   BudgetData,
   SourcesData,
@@ -10,7 +13,11 @@ import type {
   BudgetHistoricalEntry,
   RBIRatesData,
   RateChange,
-  CurrentRates
+  CurrentRates,
+  GDPHistoricalData,
+  GDPYearEntry,
+  GDPSectorsData,
+  GDPGlobalData
 } from './types'
 
 // Budget Data (current year detailed)
@@ -48,6 +55,27 @@ export function getSLRHistory(): RateChange[] {
   return getRBIRates().slrHistory
 }
 
+// GDP Data
+export function getGDPHistorical(): GDPHistoricalData {
+  return gdpHistoricalData as GDPHistoricalData
+}
+
+export function getGDPByYear(fiscalYear: string): GDPYearEntry | undefined {
+  return getGDPHistorical().data.find(entry => entry.fiscalYear === fiscalYear)
+}
+
+export function getGDPSectors(): GDPSectorsData {
+  return gdpSectorsData as GDPSectorsData
+}
+
+export function getGDPGlobal(): GDPGlobalData {
+  return gdpGlobalData as GDPGlobalData
+}
+
+export function getGDPMilestones(): GDPYearEntry[] {
+  return getGDPHistorical().data.filter(entry => entry.milestone)
+}
+
 // Sources
 export function getSources(): Source[] {
   return (sourcesData as SourcesData).sources
@@ -74,5 +102,13 @@ export type {
   RBIRatesData,
   RateChange,
   CurrentRates,
-  InflationTarget
+  InflationTarget,
+  GDPHistoricalData,
+  GDPYearEntry,
+  GDPSectorsData,
+  SectorData,
+  SectorYearData,
+  GDPGlobalData,
+  CountryGDP,
+  GDPProjection
 } from './types'

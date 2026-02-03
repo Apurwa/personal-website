@@ -114,3 +114,89 @@ export interface RBIRatesData {
   slrHistory: RateChange[]
   inflationTargetRange: InflationTarget
 }
+
+// GDP Data Types
+export interface GDPYearEntry {
+  fiscalYear: string
+  gdpNominalLakhCr: number
+  gdpNominalUsdBn: number
+  realGrowthPercent: number
+  perCapitaUsd: number
+  milestone?: string
+  notes?: string
+}
+
+export interface GDPHistoricalData {
+  sourceId: string
+  description: string
+  notes: string
+  data: GDPYearEntry[]
+}
+
+export interface SectorData {
+  name: string
+  hindi: string
+  sharePercent: number
+  growthPercent: number
+  description: string
+  subsectors?: Record<string, number>
+}
+
+export interface SectorYearData {
+  year: string
+  agriculture: number
+  industry: number
+  services: number
+  milestone?: string
+}
+
+export interface GDPSectorsData {
+  sourceId: string
+  description: string
+  notes: string
+  currentYear: {
+    fiscalYear: string
+    sectors: {
+      agriculture: SectorData
+      industry: SectorData
+      services: SectorData
+    }
+  }
+  historical: SectorYearData[]
+  keyInsights: string[]
+}
+
+export interface CountryGDP {
+  rank?: number
+  country: string
+  gdpUsdTn: number
+  perCapitaUsd: number
+  growthPercent?: number
+  highlight?: boolean
+}
+
+export interface GDPProjection {
+  year: string
+  projectedGdpUsdTn: number
+  projectedRank: number
+  note?: string
+}
+
+export interface GDPGlobalData {
+  sourceId: string
+  description: string
+  asOf: string
+  indiaRanking: {
+    nominal: number
+    ppp: number
+    perCapita: number
+  }
+  topEconomies: CountryGDP[]
+  asianComparison: CountryGDP[]
+  keyInsights: string[]
+  projections: {
+    source: string
+    notes: string
+    data: GDPProjection[]
+  }
+}

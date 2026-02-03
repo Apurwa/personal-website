@@ -1,0 +1,259 @@
+{
+  "sourceId": "mospi-national-accounts",
+  "description": "India's GDP historical data from 1991 to 2024",
+  "notes": "GDP in current prices (nominal). Growth rates are real GDP growth.",
+  "data": [
+    {
+      "fiscalYear": "1991-92",
+      "gdpNominalLakhCr": 6.72,
+      "gdpNominalUsdBn": 267,
+      "realGrowthPercent": 1.1,
+      "perCapitaUsd": 303,
+      "milestone": "Balance of Payments crisis, economic liberalization begins"
+    },
+    {
+      "fiscalYear": "1992-93",
+      "gdpNominalLakhCr": 7.70,
+      "gdpNominalUsdBn": 288,
+      "realGrowthPercent": 5.4,
+      "perCapitaUsd": 316
+    },
+    {
+      "fiscalYear": "1993-94",
+      "gdpNominalLakhCr": 8.79,
+      "gdpNominalUsdBn": 280,
+      "realGrowthPercent": 5.7,
+      "perCapitaUsd": 301
+    },
+    {
+      "fiscalYear": "1994-95",
+      "gdpNominalLakhCr": 10.39,
+      "gdpNominalUsdBn": 333,
+      "realGrowthPercent": 6.4,
+      "perCapitaUsd": 351
+    },
+    {
+      "fiscalYear": "1995-96",
+      "gdpNominalLakhCr": 12.18,
+      "gdpNominalUsdBn": 366,
+      "realGrowthPercent": 7.3,
+      "perCapitaUsd": 381
+    },
+    {
+      "fiscalYear": "1996-97",
+      "gdpNominalLakhCr": 14.07,
+      "gdpNominalUsdBn": 399,
+      "realGrowthPercent": 7.6,
+      "perCapitaUsd": 408
+    },
+    {
+      "fiscalYear": "1997-98",
+      "gdpNominalLakhCr": 15.61,
+      "gdpNominalUsdBn": 423,
+      "realGrowthPercent": 4.3,
+      "perCapitaUsd": 424,
+      "milestone": "Asian Financial Crisis"
+    },
+    {
+      "fiscalYear": "1998-99",
+      "gdpNominalLakhCr": 17.95,
+      "gdpNominalUsdBn": 428,
+      "realGrowthPercent": 6.7,
+      "perCapitaUsd": 421
+    },
+    {
+      "fiscalYear": "1999-00",
+      "gdpNominalLakhCr": 19.69,
+      "gdpNominalUsdBn": 466,
+      "realGrowthPercent": 8.0,
+      "perCapitaUsd": 450
+    },
+    {
+      "fiscalYear": "2000-01",
+      "gdpNominalLakhCr": 21.04,
+      "gdpNominalUsdBn": 476,
+      "realGrowthPercent": 4.0,
+      "perCapitaUsd": 453,
+      "milestone": "Dot-com bust, drought year"
+    },
+    {
+      "fiscalYear": "2001-02",
+      "gdpNominalLakhCr": 22.88,
+      "gdpNominalUsdBn": 485,
+      "realGrowthPercent": 5.4,
+      "perCapitaUsd": 460
+    },
+    {
+      "fiscalYear": "2002-03",
+      "gdpNominalLakhCr": 24.49,
+      "gdpNominalUsdBn": 514,
+      "realGrowthPercent": 3.9,
+      "perCapitaUsd": 480
+    },
+    {
+      "fiscalYear": "2003-04",
+      "gdpNominalLakhCr": 27.57,
+      "gdpNominalUsdBn": 618,
+      "realGrowthPercent": 7.9,
+      "perCapitaUsd": 573,
+      "milestone": "India Shining era begins"
+    },
+    {
+      "fiscalYear": "2004-05",
+      "gdpNominalLakhCr": 31.08,
+      "gdpNominalUsdBn": 721,
+      "realGrowthPercent": 7.8,
+      "perCapitaUsd": 659
+    },
+    {
+      "fiscalYear": "2005-06",
+      "gdpNominalLakhCr": 35.64,
+      "gdpNominalUsdBn": 834,
+      "realGrowthPercent": 9.3,
+      "perCapitaUsd": 754
+    },
+    {
+      "fiscalYear": "2006-07",
+      "gdpNominalLakhCr": 41.49,
+      "gdpNominalUsdBn": 949,
+      "realGrowthPercent": 9.3,
+      "perCapitaUsd": 851
+    },
+    {
+      "fiscalYear": "2007-08",
+      "gdpNominalLakhCr": 47.94,
+      "gdpNominalUsdBn": 1217,
+      "realGrowthPercent": 9.8,
+      "perCapitaUsd": 1081,
+      "milestone": "India crosses $1 trillion GDP"
+    },
+    {
+      "fiscalYear": "2008-09",
+      "gdpNominalLakhCr": 53.04,
+      "gdpNominalUsdBn": 1224,
+      "realGrowthPercent": 3.9,
+      "perCapitaUsd": 1077,
+      "milestone": "Global Financial Crisis"
+    },
+    {
+      "fiscalYear": "2009-10",
+      "gdpNominalLakhCr": 61.09,
+      "gdpNominalUsdBn": 1365,
+      "realGrowthPercent": 8.5,
+      "perCapitaUsd": 1185
+    },
+    {
+      "fiscalYear": "2010-11",
+      "gdpNominalLakhCr": 72.49,
+      "gdpNominalUsdBn": 1708,
+      "realGrowthPercent": 8.9,
+      "perCapitaUsd": 1461
+    },
+    {
+      "fiscalYear": "2011-12",
+      "gdpNominalLakhCr": 83.92,
+      "gdpNominalUsdBn": 1823,
+      "realGrowthPercent": 6.7,
+      "perCapitaUsd": 1533
+    },
+    {
+      "fiscalYear": "2012-13",
+      "gdpNominalLakhCr": 92.13,
+      "gdpNominalUsdBn": 1828,
+      "realGrowthPercent": 5.4,
+      "perCapitaUsd": 1507
+    },
+    {
+      "fiscalYear": "2013-14",
+      "gdpNominalLakhCr": 104.72,
+      "gdpNominalUsdBn": 1857,
+      "realGrowthPercent": 6.4,
+      "perCapitaUsd": 1503,
+      "milestone": "India crosses $2 trillion GDP"
+    },
+    {
+      "fiscalYear": "2014-15",
+      "gdpNominalLakhCr": 113.69,
+      "gdpNominalUsdBn": 2039,
+      "realGrowthPercent": 7.4,
+      "perCapitaUsd": 1627
+    },
+    {
+      "fiscalYear": "2015-16",
+      "gdpNominalLakhCr": 123.87,
+      "gdpNominalUsdBn": 2103,
+      "realGrowthPercent": 8.0,
+      "perCapitaUsd": 1660
+    },
+    {
+      "fiscalYear": "2016-17",
+      "gdpNominalLakhCr": 137.71,
+      "gdpNominalUsdBn": 2294,
+      "realGrowthPercent": 8.3,
+      "perCapitaUsd": 1761,
+      "milestone": "Demonetization"
+    },
+    {
+      "fiscalYear": "2017-18",
+      "gdpNominalLakhCr": 153.62,
+      "gdpNominalUsdBn": 2652,
+      "realGrowthPercent": 6.8,
+      "perCapitaUsd": 2000,
+      "milestone": "GST implementation"
+    },
+    {
+      "fiscalYear": "2018-19",
+      "gdpNominalLakhCr": 170.90,
+      "gdpNominalUsdBn": 2702,
+      "realGrowthPercent": 6.5,
+      "perCapitaUsd": 2014
+    },
+    {
+      "fiscalYear": "2019-20",
+      "gdpNominalLakhCr": 183.23,
+      "gdpNominalUsdBn": 2835,
+      "realGrowthPercent": 3.9,
+      "perCapitaUsd": 2088,
+      "milestone": "Pre-COVID slowdown"
+    },
+    {
+      "fiscalYear": "2020-21",
+      "gdpNominalLakhCr": 177.36,
+      "gdpNominalUsdBn": 2671,
+      "realGrowthPercent": -5.8,
+      "perCapitaUsd": 1933,
+      "milestone": "COVID-19 pandemic, first contraction since 1979"
+    },
+    {
+      "fiscalYear": "2021-22",
+      "gdpNominalLakhCr": 210.26,
+      "gdpNominalUsdBn": 3150,
+      "realGrowthPercent": 9.7,
+      "perCapitaUsd": 2257,
+      "milestone": "Strong recovery, India crosses $3 trillion GDP"
+    },
+    {
+      "fiscalYear": "2022-23",
+      "gdpNominalLakhCr": 242.25,
+      "gdpNominalUsdBn": 3385,
+      "realGrowthPercent": 7.0,
+      "perCapitaUsd": 2411
+    },
+    {
+      "fiscalYear": "2023-24",
+      "gdpNominalLakhCr": 269.50,
+      "gdpNominalUsdBn": 3550,
+      "realGrowthPercent": 8.2,
+      "perCapitaUsd": 2485
+    },
+    {
+      "fiscalYear": "2024-25",
+      "gdpNominalLakhCr": 330.68,
+      "gdpNominalUsdBn": 3940,
+      "realGrowthPercent": 6.5,
+      "perCapitaUsd": 2730,
+      "milestone": "India approaches $4 trillion GDP",
+      "notes": "Second Advance Estimate"
+    }
+  ]
+}
