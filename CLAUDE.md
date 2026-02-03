@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website for Apurwa Sarwajit built with Next.js 14 (App Router). The site showcases professional experience, projects, and blog posts with rich animations.
+Personal portfolio website for Apurwa Sarwajit built with Next.js 14 (App Router). Includes portfolio content, blog, and interactive tools.
 
 **Live site:** https://apurwasarwajit.com
 
@@ -12,68 +12,78 @@ Personal portfolio website for Apurwa Sarwajit built with Next.js 14 (App Router
 
 ```bash
 npm run dev      # Start development server (http://localhost:3000)
-npm run build    # Build for production (static export to /out)
-npm run start    # Start production server (for local testing)
+npm run build    # Build for production
 npm run lint     # Run ESLint
 ```
 
 ## Architecture
 
-### Static Export
-The site uses `output: 'export'` in next.config.js for static HTML generation. All pages must be statically generatable - no server-side features (API routes, dynamic server rendering). Images use `unoptimized: true` since Next.js image optimization requires a server.
+### Deployment Mode
 
-### Data Flow
-- **`data/resume.ts`** - Central data source for all resume content (experiences, projects, skills, personal info)
-- **`content/blog/*.mdx`** - Blog posts as MDX files with frontmatter
-- **`lib/blog.ts`** - MDX parsing utilities using gray-matter
+Deployed to Vercel with serverless functions. API routes are supported. Images use `unoptimized: true`.
 
-### Animation System (Dual Library)
-Two animation libraries work together:
+### Data Sources
 
-1. **Framer Motion** - Used in individual components for:
-   - Page transitions (`app/template.tsx`)
-   - Micro-interactions (hover, tap)
-   - AnimatedSection, AnimatedText components
+- **`data/resume.ts`** - Resume content (experiences, projects, skills, personal info)
+- **`content/blog/*.mdx`** - Blog posts with frontmatter; parsed by `lib/blog.ts`
+- **`app/india-economy/data/budget-2024-25.json`** - India budget data for Budget Quest
 
-2. **GSAP + ScrollTrigger** - Used for scroll-based animations:
-   - `GSAPProvider.tsx` wraps the app, registers plugins
-   - `GSAPAnimations.tsx` exports: ScrollReveal, Parallax, Magnetic, CountUp, StaggerReveal
-   - Checkpoint `v1.0-framer-motion` available if GSAP needs rollback
+### Interactive Tools
 
-### Key Component Patterns
-- **ThemeProvider** - Dark mode via `class` strategy on `<html>`
-- **Header** - Includes ScrollProgress bar, mobile menu with AnimatePresence
-- **Timeline** - Expandable work experience with animated line drawing
-- **ContactForm** - Floating labels, real-time validation, success animation
+**Market Sizer** (`/tools/market-sizer`)
+
+- API route: `app/api/market-size/route.ts`
+- Components: `components/market-sizer/`
+- Backend: `lib/marketSizer/` (NAICS classifier, Census API, calculator)
+- Uses Census Bureau API; requires `CENSUS_API_KEY` env var
+- Optional `OPENAI_API_KEY` for AI-powered business classification
+
+**Budget Quest** (`/india-economy`)
+
+- Self-contained in `app/india-economy/` with co-located components, data, hooks
+- Arcade-themed India budget visualization with drill-down drawers
+- `CurrencyContext` provides INR/USD toggle with live exchange rates
+- Achievement system via `useAchievements` hook
+
+### Animation System
+
+Two animation libraries:
+
+1. **Framer Motion** - Page transitions (`app/template.tsx`), micro-interactions, AnimatedSection/AnimatedText components
+
+2. **GSAP + ScrollTrigger** - Scroll animations via `GSAPProvider.tsx` and `GSAPAnimations.tsx` (ScrollReveal, Parallax, Magnetic, CountUp, StaggerReveal)
 
 ### Styling
-- Tailwind CSS with custom primary color palette (blue)
-- Custom animations defined in `tailwind.config.ts`
+
+- Tailwind CSS with custom primary color palette
 - Utility classes in `globals.css`: `.card-hover`, `.btn-primary`, `.tag-neutral`, `.link-arrow`
 - Reduced motion support via `@media (prefers-reduced-motion)`
 
+## Environment Variables
+
+Copy `.env.example` to `.env.local`:
+
+```bash
+CENSUS_API_KEY=...    # Required for Market Sizer (free from census.gov/developers)
+OPENAI_API_KEY=...    # Optional: AI-powered NAICS classification
+```
+
 ## Content Updates
 
-To update resume data, edit `data/resume.ts`. The file exports:
-- `personalInfo` - Name, tagline, contact info
-- `experiences` - Work history with roles and achievements
-- `projects` - Featured project cards
-- `education`, `skills`, `leadershipExperiences`
+**Resume**: Edit `data/resume.ts`
 
-To add blog posts, create MDX files in `content/blog/` with frontmatter:
+**Blog posts**: Create MDX files in `content/blog/` with frontmatter:
+
 ```yaml
 ---
 title: "Post Title"
 description: "Brief description"
 date: "2024-01-15"
 tags: ["AI", "Product"]
-author: "Apurwa Sarwajit"  # optional, defaults to Apurwa Sarwajit
 ---
 ```
 
 ## Deployment
-
-Deployed to Vercel. Deploy with:
 
 ```bash
 npx vercel --prod
