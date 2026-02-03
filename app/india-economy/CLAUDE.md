@@ -14,7 +14,8 @@ An arcade-themed interactive visualization of India's Union Budget. Users explor
 
 - Always cite official government sources (Ministry of Finance, RBI, indiabudget.gov.in)
 - Display source attribution prominently in the UI
-- Include `lastUpdated` and `source` fields in all data files
+- Register all sources in `data/sources.json` with full metadata
+- Link data files to sources via `sourceId` field
 - Never extrapolate or estimate figures - use only published data
 - When data is contested or revised, note the revision date
 
@@ -42,9 +43,10 @@ app/india-economy/
 ├── hooks/
 │   └── useAchievements.ts  # Achievement unlock system
 └── data/
-    ├── index.ts          # getBudgetData() export
+    ├── index.ts          # Data exports and source helpers
     ├── types.ts          # TypeScript interfaces
-    └── budget-2024-25.json # Budget data
+    ├── sources.json      # Centralized source registry
+    └── budget-2024-25.json # Budget data (references sourceId)
 ```
 
 ## Data Structure
@@ -73,15 +75,51 @@ interface BudgetData {
 }
 ```
 
+## Sources System
+
+All data sources are registered in `data/sources.json`:
+
+```typescript
+interface Source {
+  id: string              // Unique identifier, e.g., "union-budget-2024-25"
+  title: string           // "Union Budget 2024-25"
+  publisher: string       // "Ministry of Finance, Government of India"
+  url: string             // Link to source document
+  type: 'official' | 'news' | 'analysis'
+  publishedDate: string   // When source was published
+  accessedDate: string    // When we retrieved the data
+  coversData: string[]    // Data files this source supports
+  notes?: string          // Additional context
+}
+```
+
+**Helper functions in `data/index.ts`:**
+
+```tsx
+import { getSources, getSourceById, getSourcesForDataFile } from './data'
+
+// Get all sources
+const sources = getSources()
+
+// Get specific source
+const source = getSourceById('union-budget-2024-25')
+
+// Get sources for a data file
+const sources = getSourcesForDataFile('budget-2024-25.json')
+```
+
 ## Adding a New Budget Year
 
-1. Create `data/budget-YYYY-YY.json` following the structure above
-2. Update `data/index.ts` to import the new file
-3. Optionally add year selector UI if supporting multiple years
+1. **Add source to `sources.json`** with full metadata
+2. Create `data/budget-YYYY-YY.json` with `sourceId` referencing the source
+3. Update `data/index.ts` to import the new file
+4. Optionally add year selector UI if supporting multiple years
 
-**Data sources:**
+**Primary sources:**
+
 - Union Budget documents: https://www.indiabudget.gov.in
 - Ministry of Finance budget highlights PDF
+- RBI Handbook of Statistics: https://rbi.org.in
 
 ## Key Patterns
 

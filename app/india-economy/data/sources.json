@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "id": "union-budget-2024-25",
+      "title": "Union Budget 2024-25",
+      "publisher": "Ministry of Finance, Government of India",
+      "url": "https://www.indiabudget.gov.in",
+      "type": "official",
+      "publishedDate": "2024-07-23",
+      "accessedDate": "2024-07-25",
+      "coversData": ["budget-2024-25.json"],
+      "notes": "Full budget documents including Budget at a Glance, Expenditure Profile, and Receipt Budget"
+    }
+  ]
+}

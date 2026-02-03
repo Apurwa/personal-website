@@ -1,3 +1,19 @@
+export interface Source {
+  id: string
+  title: string
+  publisher: string
+  url: string
+  type: 'official' | 'news' | 'analysis'
+  publishedDate: string
+  accessedDate: string
+  coversData: string[]
+  notes?: string
+}
+
+export interface SourcesData {
+  sources: Source[]
+}
+
 export interface RevenueBreakdown {
   gst: number
   incomeTax: number
@@ -22,7 +38,7 @@ export interface MinistryAllocation {
 export interface BudgetData {
   fiscalYear: string
   lastUpdated: string
-  source: string
+  sourceId: string
   totalRevenue: number
   grossTaxRevenue: number
   taxRevenue: RevenueBreakdown
