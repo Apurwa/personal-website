@@ -208,6 +208,28 @@
       "accessedDate": "2025-02-03",
       "coversData": ["taxation-data.json"],
       "notes": "Monthly GST collection, registration data, return filing"
+    },
+    {
+      "id": "mospi-plfs-labour",
+      "title": "Periodic Labour Force Survey (PLFS)",
+      "publisher": "Ministry of Statistics and Programme Implementation (MoSPI)",
+      "url": "https://mospi.gov.in/publication/plfs-annual-report",
+      "type": "official",
+      "publishedDate": "2024-09-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["employment-data.json"],
+      "notes": "Official employment, unemployment, and labour force statistics"
+    },
+    {
+      "id": "labour-ministry-stats",
+      "title": "Labour Statistics and Annual Reports",
+      "publisher": "Ministry of Labour and Employment",
+      "url": "https://labour.gov.in/statistics",
+      "type": "official",
+      "publishedDate": "2024-12-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["employment-data.json"],
+      "notes": "MGNREGA data, skill development, labour reforms"
     }
   ]
 }

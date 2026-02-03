@@ -1,0 +1,424 @@
+{
+  "sourceId": "mospi-plfs-labour",
+  "description": "India's employment and labour market overview",
+  "asOf": "2023-24",
+  "overview": {
+    "totalWorkforce": 56.5,
+    "workforceUnit": "Crore workers",
+    "labourForceParticipation": 57.9,
+    "lfprUnit": "% of working age (15+)",
+    "unemploymentRate": 3.2,
+    "unemploymentUnit": "%",
+    "formalSectorShare": 21,
+    "informalSectorShare": 79,
+    "workingAgePopulation": 97.5,
+    "workingAgeUnit": "Crore (15-64 years)"
+  },
+  "unemploymentMetrics": {
+    "currentRate": {
+      "overall": 3.2,
+      "urban": 5.4,
+      "rural": 2.4,
+      "male": 3.0,
+      "female": 3.6
+    },
+    "youthUnemployment": {
+      "age15to29": 10.2,
+      "graduates": 13.4,
+      "postGraduates": 12.1,
+      "note": "Higher education correlates with higher unemployment - skills mismatch"
+    },
+    "historical": [
+      { "year": "2017-18", "rate": 6.1, "notes": "PLFS methodology begins" },
+      { "year": "2018-19", "rate": 5.8 },
+      { "year": "2019-20", "rate": 4.8 },
+      { "year": "2020-21", "rate": 4.2, "notes": "COVID impact, many left workforce" },
+      { "year": "2021-22", "rate": 4.1 },
+      { "year": "2022-23", "rate": 3.2 },
+      { "year": "2023-24", "rate": 3.2, "notes": "Record low" }
+    ],
+    "measurementMethods": [
+      {
+        "method": "Usual Status (PS+SS)",
+        "hindi": "सामान्य स्थिति",
+        "description": "Employment status over the reference year (365 days)",
+        "currentRate": 3.2
+      },
+      {
+        "method": "Current Weekly Status (CWS)",
+        "hindi": "चालू साप्ताहिक स्थिति",
+        "description": "Employment status in the reference week",
+        "currentRate": 4.1
+      },
+      {
+        "method": "Current Daily Status (CDS)",
+        "hindi": "चालू दैनिक स्थिति",
+        "description": "Employment status on each day of reference week",
+        "currentRate": 5.6
+      }
+    ]
+  },
+  "sectorDistribution": {
+    "bySector": [
+      { "sector": "Agriculture", "hindi": "कृषि", "share": 45.8, "workers": 25.9, "trend": "Declining", "description": "Farming, livestock, fisheries" },
+      { "sector": "Industry", "hindi": "उद्योग", "share": 11.4, "workers": 6.4, "trend": "Stable", "description": "Manufacturing, mining, utilities" },
+      { "sector": "Construction", "hindi": "निर्माण", "share": 12.4, "workers": 7.0, "trend": "Growing", "description": "Building, infrastructure" },
+      { "sector": "Services", "hindi": "सेवाएं", "share": 30.4, "workers": 17.2, "trend": "Growing", "description": "Trade, transport, IT, finance" }
+    ],
+    "historicalShift": [
+      { "year": "1991", "agriculture": 64, "industry": 16, "services": 20 },
+      { "year": "2000", "agriculture": 60, "industry": 17, "services": 23 },
+      { "year": "2010", "agriculture": 53, "industry": 22, "services": 25 },
+      { "year": "2020", "agriculture": 46, "industry": 25, "services": 29 },
+      { "year": "2024", "agriculture": 46, "industry": 24, "services": 30 }
+    ],
+    "insight": "Despite contributing only 18% to GDP, agriculture employs 46% of workforce - highlighting productivity gap"
+  },
+  "formalVsInformal": {
+    "formal": {
+      "definition": "Workers with written contracts, social security benefits, and legal protections",
+      "hindi": "औपचारिक क्षेत्र",
+      "share": 21,
+      "workers": 11.9,
+      "unit": "Crore",
+      "characteristics": [
+        "Regular salary with pay slips",
+        "PF, ESI, gratuity benefits",
+        "Paid leave and job security",
+        "Written employment contract"
+      ],
+      "breakdown": [
+        { "type": "Government", "workers": 2.3, "share": 19 },
+        { "type": "Public Sector", "workers": 0.9, "share": 8 },
+        { "type": "Private Organised", "workers": 8.7, "share": 73 }
+      ]
+    },
+    "informal": {
+      "definition": "Workers without formal contracts or social security, often in unregistered enterprises",
+      "hindi": "अनौपचारिक क्षेत्र",
+      "share": 79,
+      "workers": 44.6,
+      "unit": "Crore",
+      "characteristics": [
+        "No written contract",
+        "No social security",
+        "Irregular income",
+        "Limited legal protection"
+      ],
+      "breakdown": [
+        { "type": "Self-employed", "workers": 26.1, "share": 58 },
+        { "type": "Casual labour", "workers": 11.8, "share": 27 },
+        { "type": "Contract workers", "workers": 6.7, "share": 15 }
+      ]
+    },
+    "epfoData": {
+      "totalSubscribers": 7.2,
+      "unit": "Crore",
+      "monthlyAdditions": 15.4,
+      "monthlyUnit": "Lakh new subscribers",
+      "description": "EPFO data indicates formal job creation"
+    }
+  },
+  "womenInWorkforce": {
+    "lfpr": {
+      "overall": 37.0,
+      "rural": 41.5,
+      "urban": 25.4,
+      "note": "Urban women LFPR much lower due to social factors"
+    },
+    "historical": [
+      { "year": "2017-18", "lfpr": 23.3 },
+      { "year": "2018-19", "lfpr": 24.5 },
+      { "year": "2019-20", "lfpr": 30.0 },
+      { "year": "2020-21", "lfpr": 32.5 },
+      { "year": "2021-22", "lfpr": 32.8 },
+      { "year": "2022-23", "lfpr": 37.0, "notes": "Highest in 6 years" }
+    ],
+    "sectorDistribution": [
+      { "sector": "Agriculture", "share": 62 },
+      { "sector": "Manufacturing", "share": 12 },
+      { "sector": "Services", "share": 21 },
+      { "sector": "Construction", "share": 5 }
+    ],
+    "barriers": [
+      "Unpaid domestic work burden",
+      "Safety concerns in public spaces",
+      "Lack of childcare facilities",
+      "Social norms against working women",
+      "Wage gap (women earn 19% less)"
+    ],
+    "globalComparison": [
+      { "country": "China", "femaleLfpr": 61 },
+      { "country": "Bangladesh", "femaleLfpr": 38 },
+      { "country": "India", "femaleLfpr": 37, "highlight": true },
+      { "country": "Pakistan", "femaleLfpr": 22 },
+      { "country": "World Average", "femaleLfpr": 47 }
+    ]
+  },
+  "gigEconomy": {
+    "definition": "Work based on short-term contracts or freelance assignments, often through digital platforms",
+    "hindi": "गिग अर्थव्यवस्था",
+    "currentWorkers": 7.7,
+    "currentUnit": "Million workers",
+    "projectedWorkers2030": 23.5,
+    "projectedUnit": "Million workers",
+    "growth": "205% expected growth by 2030",
+    "platforms": {
+      "transportation": ["Ola", "Uber", "Rapido"],
+      "delivery": ["Zomato", "Swiggy", "Amazon Flex", "Dunzo"],
+      "services": ["Urban Company", "Housejoy"],
+      "freelance": ["Upwork", "Freelancer", "Fiverr"]
+    },
+    "workerProfile": {
+      "averageAge": 27,
+      "maleShare": 95,
+      "averageEarning": 18000,
+      "earningUnit": "INR per month",
+      "workingHours": 10,
+      "hoursUnit": "hours per day average"
+    },
+    "challenges": [
+      "No minimum wage guarantee",
+      "No social security benefits",
+      "Algorithmic control of work",
+      "Classification as 'partners' not employees",
+      "No collective bargaining rights"
+    ],
+    "governmentInitiatives": [
+      {
+        "initiative": "e-Shram Portal",
+        "description": "National database of unorganised workers",
+        "registered": 30.2,
+        "unit": "Crore workers"
+      },
+      {
+        "initiative": "Code on Social Security 2020",
+        "description": "Framework for gig worker benefits",
+        "status": "Rules pending notification"
+      }
+    ]
+  },
+  "mgnrega": {
+    "fullForm": "Mahatma Gandhi National Rural Employment Guarantee Act",
+    "hindi": "मनरेगा",
+    "launched": 2006,
+    "guarantee": "100 days of wage employment per household per year",
+    "coverage": "Rural areas across India",
+    "currentStats": {
+      "householdsEmployed": 6.46,
+      "householdsUnit": "Crore (FY 2023-24)",
+      "personDays": 297.4,
+      "personDaysUnit": "Crore",
+      "averageWage": 237,
+      "wageUnit": "INR per day (national average)",
+      "womenParticipation": 57.4,
+      "womenUnit": "% of total"
+    },
+    "budgetAllocation": {
+      "fy2024": 86000,
+      "fy2023": 89400,
+      "fy2022": 73000,
+      "unit": "Crore INR"
+    },
+    "topStates": [
+      { "state": "West Bengal", "personDays": 44.5 },
+      { "state": "Rajasthan", "personDays": 38.2 },
+      { "state": "Tamil Nadu", "personDays": 32.8 },
+      { "state": "Andhra Pradesh", "personDays": 28.1 },
+      { "state": "Uttar Pradesh", "personDays": 26.4 }
+    ],
+    "typeOfWorks": [
+      { "type": "Water conservation", "share": 55 },
+      { "type": "Rural connectivity", "share": 18 },
+      { "type": "Land development", "share": 15 },
+      { "type": "Others", "share": 12 }
+    ],
+    "impact": [
+      "Reduced distress migration",
+      "Increased rural wages",
+      "Created rural infrastructure",
+      "Women's economic empowerment",
+      "Drought proofing"
+    ],
+    "challenges": [
+      "Delayed wage payments",
+      "Inadequate budget allocation",
+      "Quality of assets created",
+      "Administrative capacity"
+    ]
+  },
+  "skillIndia": {
+    "description": "Umbrella for skill development initiatives launched in 2015",
+    "hindi": "कौशल भारत",
+    "target": "Skill 40 crore people by 2022 (later extended)",
+    "programs": [
+      {
+        "name": "PMKVY",
+        "fullForm": "Pradhan Mantri Kaushal Vikas Yojana",
+        "trained": 1.37,
+        "unit": "Crore candidates",
+        "placement": 18.9,
+        "placementUnit": "% placement rate"
+      },
+      {
+        "name": "ITIs",
+        "fullForm": "Industrial Training Institutes",
+        "institutes": 15042,
+        "capacity": 33.6,
+        "capacityUnit": "Lakh seats"
+      },
+      {
+        "name": "Apprenticeship",
+        "description": "Learn while you earn program",
+        "engaged": 11.7,
+        "unit": "Lakh apprentices (FY24)"
+      },
+      {
+        "name": "SANKALP",
+        "description": "Skills Acquisition and Knowledge Awareness for Livelihood Promotion",
+        "focus": "Institutional reforms in skill ecosystem"
+      }
+    ],
+    "challenges": [
+      "Low placement rates (19%)",
+      "Industry-academia gap",
+      "Quality of training",
+      "Recognition of prior learning",
+      "Stigma against vocational education"
+    ],
+    "nsfData": {
+      "formallySkilled": 2.3,
+      "unit": "% of workforce",
+      "globalComparison": [
+        { "country": "South Korea", "skilled": 96 },
+        { "country": "Germany", "skilled": 75 },
+        { "country": "Japan", "skilled": 80 },
+        { "country": "China", "skilled": 47 },
+        { "country": "India", "skilled": 2.3, "highlight": true }
+      ]
+    }
+  },
+  "labourReforms": {
+    "description": "Consolidation of 29 labour laws into 4 labour codes",
+    "codes": [
+      {
+        "code": "Code on Wages, 2019",
+        "hindi": "वेतन संहिता",
+        "replaces": "4 laws",
+        "keyFeatures": [
+          "Universal minimum wage",
+          "Floor wage by Centre",
+          "Equal pay for equal work",
+          "Timely payment of wages"
+        ]
+      },
+      {
+        "code": "Industrial Relations Code, 2020",
+        "hindi": "औद्योगिक संबंध संहिता",
+        "replaces": "3 laws",
+        "keyFeatures": [
+          "300 worker threshold for closure permission",
+          "Fixed-term employment",
+          "14-day strike notice",
+          "Recognition of trade unions"
+        ]
+      },
+      {
+        "code": "Social Security Code, 2020",
+        "hindi": "सामाजिक सुरक्षा संहिता",
+        "replaces": "9 laws",
+        "keyFeatures": [
+          "Universal social security",
+          "Gig workers coverage",
+          "Platform workers coverage",
+          "National Social Security Board"
+        ]
+      },
+      {
+        "code": "Occupational Safety Code, 2020",
+        "hindi": "व्यावसायिक सुरक्षा संहिता",
+        "replaces": "13 laws",
+        "keyFeatures": [
+          "Single registration",
+          "Women in all sectors including night shifts",
+          "Annual health checkups",
+          "Welfare facilities"
+        ]
+      }
+    ],
+    "status": "Rules notified by some states, full implementation pending",
+    "impact": [
+      "Ease of doing business",
+      "Hire and fire flexibility",
+      "Single license for multiple activities",
+      "Social security for gig workers"
+    ],
+    "concerns": [
+      "Weakened worker protections",
+      "Higher threshold for retrenchment",
+      "Impact on unionization"
+    ]
+  },
+  "wages": {
+    "minimumWage": {
+      "floorWage": 178,
+      "floorWageUnit": "INR per day (proposed)",
+      "variableBy": "State, skill level, and sector",
+      "highestState": "Kerala - ₹700+ for skilled",
+      "lowestState": "Bihar - ₹178 for unskilled",
+      "note": "Actual wages vary significantly by state"
+    },
+    "averageWages": {
+      "regular": {
+        "monthly": 20857,
+        "unit": "INR",
+        "male": 21862,
+        "female": 16867
+      },
+      "casual": {
+        "daily": 373,
+        "unit": "INR",
+        "male": 393,
+        "female": 278
+      }
+    },
+    "wageGrowth": [
+      { "year": "2017-18", "realGrowth": 2.1 },
+      { "year": "2018-19", "realGrowth": 2.8 },
+      { "year": "2019-20", "realGrowth": 1.5 },
+      { "year": "2020-21", "realGrowth": -3.2, "notes": "COVID impact" },
+      { "year": "2021-22", "realGrowth": 4.1 },
+      { "year": "2022-23", "realGrowth": 3.8 }
+    ]
+  },
+  "futureOfWork": {
+    "automation": {
+      "jobsAtRisk": 69,
+      "riskUnit": "Million jobs at high automation risk by 2030",
+      "sectorsAffected": ["Manufacturing", "Retail", "Transport", "Agriculture"],
+      "newJobsCreated": 90,
+      "newJobsUnit": "Million new jobs possible with reskilling"
+    },
+    "emergingSectors": [
+      { "sector": "Green jobs", "potential": "35 million by 2047" },
+      { "sector": "Healthcare", "potential": "8 million additional by 2030" },
+      { "sector": "Digital economy", "potential": "65 million by 2030" },
+      { "sector": "Electric vehicles", "potential": "5 million by 2030" }
+    ],
+    "demographicDividend": {
+      "description": "India adds 12 million to working age population annually",
+      "window": "2020-2050",
+      "challenge": "Creating 10 million jobs per year",
+      "opportunity": "World's largest workforce by 2027"
+    }
+  },
+  "keyInsights": [
+    "46% of workforce is in agriculture but it contributes only 18% to GDP",
+    "79% of workers are in the informal sector without social security",
+    "India's unemployment rate (3.2%) is low but underemployment is high",
+    "Only 2.3% of workforce is formally skilled vs 96% in South Korea",
+    "Women's workforce participation rose from 23% to 37% in 6 years",
+    "Gig economy expected to grow 205% by 2030",
+    "India needs to create 10 million jobs annually for demographic dividend"
+  ]
+}

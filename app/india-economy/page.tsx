@@ -42,6 +42,11 @@ const topics = [
     description: 'Income tax, GST, corporate tax explained. Only 2.2% of Indians pay income tax. Learn how taxes fund the nation.',
     href: '/india-economy/taxes',
   },
+  {
+    title: 'Employment',
+    description: 'Where do 56 crore Indians work? Formal vs informal sector, gig economy, MGNREGA, and the future of work.',
+    href: '/india-economy/employment',
+  },
 ]
 
 export default function IndiaEconomyPage() {
@@ -108,6 +113,10 @@ export default function IndiaEconomyPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#8b6914] transition-transform group-hover:scale-150" aria-hidden="true" />
             CBDT / GST Council
           </span>
+          <span className="flex items-center gap-2 group cursor-default">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#5a4a8a] transition-transform group-hover:scale-150" aria-hidden="true" />
+            MoSPI / Labour Ministry
+          </span>
         </div>
       </aside>
 
@@ -121,7 +130,8 @@ export default function IndiaEconomyPage() {
             'commerce-ministry-trade',
             'rbi-banking-stats',
             'sebi-nse-bse-stats',
-            'income-tax-gst-council'
+            'income-tax-gst-council',
+            'mospi-plfs-labour'
           ]}
         />
       </div>

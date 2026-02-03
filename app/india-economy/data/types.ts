@@ -999,3 +999,249 @@ export interface TaxationData {
   }
   keyInsights: string[]
 }
+
+// Employment Data Types
+export interface UnemploymentHistorical {
+  year: string
+  rate: number
+  notes?: string
+}
+
+export interface SectorEmployment {
+  sector: string
+  hindi: string
+  share: number
+  workers: number
+  trend: string
+  description: string
+}
+
+export interface LabourCode {
+  code: string
+  hindi: string
+  replaces: string
+  keyFeatures: string[]
+}
+
+export interface SkillProgram {
+  name: string
+  fullForm?: string
+  description?: string
+  trained?: number
+  unit?: string
+  placement?: number
+  placementUnit?: string
+  institutes?: number
+  capacity?: number
+  capacityUnit?: string
+  engaged?: number
+  focus?: string
+}
+
+export interface EmploymentData {
+  sourceId: string
+  description: string
+  asOf: string
+  overview: {
+    totalWorkforce: number
+    workforceUnit: string
+    labourForceParticipation: number
+    lfprUnit: string
+    unemploymentRate: number
+    unemploymentUnit: string
+    formalSectorShare: number
+    informalSectorShare: number
+    workingAgePopulation: number
+    workingAgeUnit: string
+  }
+  unemploymentMetrics: {
+    currentRate: {
+      overall: number
+      urban: number
+      rural: number
+      male: number
+      female: number
+    }
+    youthUnemployment: {
+      age15to29: number
+      graduates: number
+      postGraduates: number
+      note: string
+    }
+    historical: UnemploymentHistorical[]
+    measurementMethods: {
+      method: string
+      hindi: string
+      description: string
+      currentRate: number
+    }[]
+  }
+  sectorDistribution: {
+    bySector: SectorEmployment[]
+    historicalShift: {
+      year: string
+      agriculture: number
+      industry: number
+      services: number
+    }[]
+    insight: string
+  }
+  formalVsInformal: {
+    formal: {
+      definition: string
+      hindi: string
+      share: number
+      workers: number
+      unit: string
+      characteristics: string[]
+      breakdown: { type: string; workers: number; share: number }[]
+    }
+    informal: {
+      definition: string
+      hindi: string
+      share: number
+      workers: number
+      unit: string
+      characteristics: string[]
+      breakdown: { type: string; workers: number; share: number }[]
+    }
+    epfoData: {
+      totalSubscribers: number
+      unit: string
+      monthlyAdditions: number
+      monthlyUnit: string
+      description: string
+    }
+  }
+  womenInWorkforce: {
+    lfpr: {
+      overall: number
+      rural: number
+      urban: number
+      note: string
+    }
+    historical: { year: string; lfpr: number; notes?: string }[]
+    sectorDistribution: { sector: string; share: number }[]
+    barriers: string[]
+    globalComparison: { country: string; femaleLfpr: number; highlight?: boolean }[]
+  }
+  gigEconomy: {
+    definition: string
+    hindi: string
+    currentWorkers: number
+    currentUnit: string
+    projectedWorkers2030: number
+    projectedUnit: string
+    growth: string
+    platforms: {
+      transportation: string[]
+      delivery: string[]
+      services: string[]
+      freelance: string[]
+    }
+    workerProfile: {
+      averageAge: number
+      maleShare: number
+      averageEarning: number
+      earningUnit: string
+      workingHours: number
+      hoursUnit: string
+    }
+    challenges: string[]
+    governmentInitiatives: {
+      initiative: string
+      description: string
+      registered?: number
+      unit?: string
+      status?: string
+    }[]
+  }
+  mgnrega: {
+    fullForm: string
+    hindi: string
+    launched: number
+    guarantee: string
+    coverage: string
+    currentStats: {
+      householdsEmployed: number
+      householdsUnit: string
+      personDays: number
+      personDaysUnit: string
+      averageWage: number
+      wageUnit: string
+      womenParticipation: number
+      womenUnit: string
+    }
+    budgetAllocation: {
+      fy2024: number
+      fy2023: number
+      fy2022: number
+      unit: string
+    }
+    topStates: { state: string; personDays: number }[]
+    typeOfWorks: { type: string; share: number }[]
+    impact: string[]
+    challenges: string[]
+  }
+  skillIndia: {
+    description: string
+    hindi: string
+    target: string
+    programs: SkillProgram[]
+    challenges: string[]
+    nsfData: {
+      formallySkilled: number
+      unit: string
+      globalComparison: { country: string; skilled: number; highlight?: boolean }[]
+    }
+  }
+  labourReforms: {
+    description: string
+    codes: LabourCode[]
+    status: string
+    impact: string[]
+    concerns: string[]
+  }
+  wages: {
+    minimumWage: {
+      floorWage: number
+      floorWageUnit: string
+      variableBy: string
+      highestState: string
+      lowestState: string
+      note: string
+    }
+    averageWages: {
+      regular: {
+        monthly: number
+        unit: string
+        male: number
+        female: number
+      }
+      casual: {
+        daily: number
+        unit: string
+        male: number
+        female: number
+      }
+    }
+    wageGrowth: { year: string; realGrowth: number; notes?: string }[]
+  }
+  futureOfWork: {
+    automation: {
+      jobsAtRisk: number
+      riskUnit: string
+      sectorsAffected: string[]
+      newJobsCreated: number
+      newJobsUnit: string
+    }
+    emergingSectors: { sector: string; potential: string }[]
+    demographicDividend: {
+      description: string
+      window: string
+      challenge: string
+      opportunity: string
+    }
+  }
+  keyInsights: string[]
+}

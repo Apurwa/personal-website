@@ -10,6 +10,7 @@ import tradeData from './trade-data.json'
 import bankingData from './banking-data.json'
 import marketsData from './markets-data.json'
 import taxationData from './taxation-data.json'
+import employmentData from './employment-data.json'
 import type {
   BudgetData,
   SourcesData,
@@ -27,7 +28,8 @@ import type {
   TradeData,
   BankingData,
   MarketsData,
-  TaxationData
+  TaxationData,
+  EmploymentData
 } from './types'
 
 // Budget Data (current year detailed)
@@ -111,6 +113,11 @@ export function getTaxationData(): TaxationData {
   return taxationData as TaxationData
 }
 
+// Employment Data
+export function getEmploymentData(): EmploymentData {
+  return employmentData as EmploymentData
+}
+
 // Sources
 export function getSources(): Source[] {
   return (sourcesData as SourcesData).sources
@@ -168,5 +175,8 @@ export type {
   TaxationData,
   TaxSlab,
   GSTSlab,
-  TaxReform
+  TaxReform,
+  EmploymentData,
+  SectorEmployment,
+  LabourCode
 } from './types'

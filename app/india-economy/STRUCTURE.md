@@ -25,7 +25,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | Banking System | ✅ Live | `/india-economy/banking` | RBI, NPCI, DICGC |
 | Stock Markets | ✅ Live | `/india-economy/markets` | NSE, BSE, SEBI |
 | Taxation | ✅ Live | `/india-economy/taxes` | CBDT, GST Council |
-| Employment | 📋 Backlog | `/india-economy/employment` | Labour Ministry, NSSO |
+| Employment | ✅ Live | `/india-economy/employment` | MoSPI (PLFS), Labour Ministry |
 
 **Status Legend:**
 - ✅ Live — Published and accessible
@@ -385,15 +385,54 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 9. Employment (`/employment`)
 
-**Status:** 📋 Backlog
+**Status:** ✅ Live
 
-**Topics to Cover:**
-- Unemployment rate measurement
-- Formal vs Informal sector
-- Gig economy
-- MNREGA
-- Skill India initiatives
-- Labour law reforms
+**Content Outline:**
+1. Understanding Unemployment
+   - Unemployment rate definition
+   - Urban vs Rural comparison
+   - Youth unemployment paradox
+   - Historical trend visualization
+2. Where Do Indians Work?
+   - Sector distribution (Agriculture 46%, Services 30%)
+   - Productivity gap insight
+   - Historical shift from agriculture
+3. Formal vs Informal Sector
+   - Definitions with characteristics
+   - 79% informal without social security
+   - EPFO subscriber data
+4. Women in the Workforce
+   - Female LFPR trend (23% to 37%)
+   - Barriers to employment
+   - Global comparison
+5. The Gig Economy
+   - Platform workers (7.7M → 23.5M by 2030)
+   - Challenges without benefits
+   - e-Shram registration
+6. MGNREGA: Rural Employment Guarantee
+   - 100 days guarantee
+   - Person-days generated
+   - State-wise breakdown
+   - Impact and challenges
+7. Skill India
+   - PMKVY, ITIs, Apprenticeship programs
+   - Only 2.3% formally skilled
+   - Global skill comparison
+8. Labour Law Reforms
+   - 4 Labour Codes (29 laws consolidated)
+   - Key features of each code
+9. Future of Work
+   - Automation risks (69M jobs)
+   - Emerging sectors
+   - Demographic dividend opportunity
+
+**Data Files:**
+- `employment-data.json` — Comprehensive employment data
+
+**Future Additions:**
+- [ ] State-wise employment dashboard
+- [ ] Skills gap analyzer
+- [ ] Wage calculator by sector
 
 ---
 
@@ -488,11 +527,13 @@ All sources tracked in `data/sources.json`. Each data file references its source
 ### Phase 5 (Complete)
 - [x] Taxation
 
-### Phase 6 (Future)
-- [ ] Employment
+### Phase 6 (Complete)
+- [x] Employment
+
+### Phase 7 (Future)
 - [ ] Interactive calculators
 - [ ] Quiz/trivia mode
 
-### Phase 7 (Aspirational)
+### Phase 8 (Aspirational)
 - [ ] State-level comparisons
 - [ ] Mobile app version
