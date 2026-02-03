@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -15,6 +16,20 @@ import {
   TableCell,
 } from '../components/EducationalCards'
 import { getCurrentRates } from '../data'
+
+export const metadata: Metadata = {
+  title: 'RBI & Monetary Policy Explained',
+  description: 'Learn how RBI controls India\'s economy through repo rate, CRR, SLR, and reverse repo rate. Understand how interest rate changes affect your EMI, loans, and savings.',
+  keywords: ['RBI monetary policy', 'repo rate India', 'CRR SLR explained', 'Reserve Bank of India', 'interest rates India', 'EMI interest rate', 'MPC meeting'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/rbi',
+  },
+  openGraph: {
+    title: 'RBI & Monetary Policy Explained | India Economy',
+    description: 'How does RBI control inflation and interest rates? Learn about repo rate, CRR, SLR and how they affect your loans and savings.',
+    url: 'https://apurwasarwajit.com/india-economy/rbi',
+  },
+}
 
 export default function RBIPage() {
   const rates = getCurrentRates()

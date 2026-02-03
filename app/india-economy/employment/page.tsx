@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -16,9 +17,18 @@ import {
 } from '../components/EducationalCards'
 import { getEmploymentData } from '../data'
 
-export const metadata = {
-  title: 'Employment | Understanding India\'s Economy',
-  description: 'Learn about India\'s labour market - unemployment rates, formal vs informal sector, MGNREGA, gig economy, and skill development.',
+export const metadata: Metadata = {
+  title: 'Employment in India - Jobs, MGNREGA, Gig Economy',
+  description: 'Where do 56 crore Indians work? Formal vs informal sector (79% without benefits), MGNREGA, gig economy (23M workers by 2030), youth unemployment, women in workforce, and Skill India.',
+  keywords: ['unemployment India', 'MGNREGA', 'gig economy India', 'informal sector India', 'youth unemployment', 'women workforce India', 'Skill India', 'EPFO', 'labour laws India', 'PLFS data'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/employment',
+  },
+  openGraph: {
+    title: 'Employment in India - Jobs & Labour Market | India Economy',
+    description: 'India\'s employment story: 79% informal sector, MGNREGA, gig workers, youth unemployment, and the future of work.',
+    url: 'https://apurwasarwajit.com/india-economy/employment',
+  },
 }
 
 export default function EmploymentPage() {

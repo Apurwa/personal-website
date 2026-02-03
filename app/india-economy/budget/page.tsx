@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { getBudgetData, getBudgetHistorical } from '../data'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
@@ -9,6 +10,20 @@ import {
   StatDisplay,
   SectionHeading,
 } from '../components/EducationalCards'
+
+export const metadata: Metadata = {
+  title: 'Union Budget 2024-25 Explained Simply',
+  description: 'Understand India\'s Union Budget 2024-25 in simple terms. Learn where the government gets ₹48 lakh crore from (taxes, borrowing) and how it spends on defence, education, health, infrastructure.',
+  keywords: ['Union Budget 2024', 'India Budget explained', 'fiscal deficit India', 'government spending India', 'tax revenue India', 'budget allocation ministries'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/budget',
+  },
+  openGraph: {
+    title: 'Union Budget 2024-25 Explained Simply | India Economy',
+    description: 'Learn how India\'s ₹48 lakh crore budget works. Tax revenue, spending allocation, fiscal deficit - explained for students and beginners.',
+    url: 'https://apurwasarwajit.com/india-economy/budget',
+  },
+}
 
 export default function BudgetPage() {
   const budget = getBudgetData()

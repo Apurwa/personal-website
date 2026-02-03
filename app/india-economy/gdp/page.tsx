@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -15,6 +16,20 @@ import {
   TableCell,
 } from '../components/EducationalCards'
 import { getGDPHistorical, getGDPSectors, getGDPGlobal, getGDPMilestones } from '../data'
+
+export const metadata: Metadata = {
+  title: 'India GDP & Economic Growth Explained',
+  description: 'India\'s GDP journey from $270B (1991) to $3.9 trillion (2024). Learn about GDP growth rate, per capita income, sector breakdown (agriculture, services, industry), and global rankings.',
+  keywords: ['India GDP', 'India economic growth', 'GDP per capita India', 'India 5th largest economy', 'services sector India', 'India growth rate', 'real vs nominal GDP'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/gdp',
+  },
+  openGraph: {
+    title: 'India GDP & Economic Growth | India Economy',
+    description: 'Track India\'s economic growth from 1991 liberalization to becoming the 5th largest economy. GDP, per capita income, sector breakdown.',
+    url: 'https://apurwasarwajit.com/india-economy/gdp',
+  },
+}
 
 export default function GDPPage() {
   const gdpHistory = getGDPHistorical()

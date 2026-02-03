@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -16,6 +17,20 @@ import {
 } from '../components/EducationalCards'
 import { getInflationData } from '../data'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Inflation & Prices in India Explained',
+  description: 'Why do prices rise? Learn about CPI inflation, WPI, food inflation, and RBI\'s 4% inflation target. Understand onion prices, petrol prices, and what causes inflation in India.',
+  keywords: ['inflation India', 'CPI inflation', 'WPI inflation', 'food inflation India', 'RBI inflation target', 'consumer price index', 'why prices rise', 'onion price spike'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/inflation',
+  },
+  openGraph: {
+    title: 'Inflation & Prices in India | India Economy',
+    description: 'Why do onions cost ₹200 sometimes? Learn how inflation is measured (CPI, WPI) and why RBI targets 4% inflation.',
+    url: 'https://apurwasarwajit.com/india-economy/inflation',
+  },
+}
 
 export default function InflationPage() {
   const inflation = getInflationData()

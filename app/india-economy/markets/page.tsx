@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -16,9 +17,18 @@ import {
 } from '../components/EducationalCards'
 import { getMarketsData } from '../data'
 
-export const metadata = {
-  title: 'Stock Markets | Understanding India\'s Economy',
-  description: 'Learn about BSE, NSE, Sensex, Nifty, IPOs, and how the stock market works. India is now the 4th largest market globally.',
+export const metadata: Metadata = {
+  title: 'Indian Stock Markets - Sensex, Nifty Explained',
+  description: 'How do Sensex and Nifty work? Learn about BSE, NSE, IPOs, FIIs vs DIIs, SEBI regulations, and how India became the 4th largest stock market ($4.5 trillion market cap).',
+  keywords: ['Sensex explained', 'Nifty 50', 'BSE NSE difference', 'Indian stock market', 'IPO process India', 'FII DII India', 'SEBI regulations', 'how to invest stocks India', 'demat account'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/markets',
+  },
+  openGraph: {
+    title: 'Indian Stock Markets - Sensex, Nifty | India Economy',
+    description: 'BSE, NSE, Sensex, Nifty explained. IPOs, FIIs, retail investors. India is now the 4th largest stock market globally.',
+    url: 'https://apurwasarwajit.com/india-economy/markets',
+  },
 }
 
 export default function MarketsPage() {

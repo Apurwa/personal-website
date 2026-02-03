@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -15,6 +16,20 @@ import {
   TableCell,
 } from '../components/EducationalCards'
 import { getTradeData } from '../data'
+
+export const metadata: Metadata = {
+  title: 'India Trade & Exports Explained',
+  description: 'India\'s $820 billion trade story. Learn about top exports (IT services, petroleum, gems), imports (crude oil, electronics), trade deficit with China, forex reserves ($600B+), and current account deficit.',
+  keywords: ['India exports', 'India imports', 'trade deficit India', 'forex reserves India', 'current account deficit', 'IT services exports', 'crude oil imports', 'India trade partners'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/trade',
+  },
+  openGraph: {
+    title: 'India Trade & Exports | India Economy',
+    description: 'What does India export and import? ₹820 billion trade, forex reserves, trade deficit, and India\'s top trading partners.',
+    url: 'https://apurwasarwajit.com/india-economy/trade',
+  },
+}
 
 export default function TradePage() {
   const trade = getTradeData()

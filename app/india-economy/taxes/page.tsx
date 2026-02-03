@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -16,9 +17,18 @@ import {
 } from '../components/EducationalCards'
 import { getTaxationData } from '../data'
 
-export const metadata = {
-  title: 'Taxation | Understanding India\'s Economy',
-  description: 'Learn about income tax slabs, GST, corporate tax, and how India\'s taxation system works. Only 2.2% of Indians pay income tax.',
+export const metadata: Metadata = {
+  title: 'India Taxation - Income Tax, GST Explained',
+  description: 'Income tax slabs (old vs new regime), GST explained (5 slabs), corporate tax rates, TDS, capital gains tax. Only 2.2% of Indians pay income tax. Complete guide to Indian taxation.',
+  keywords: ['income tax slabs India', 'GST rates India', 'new tax regime', 'old tax regime', 'corporate tax India', 'TDS rates', 'capital gains tax India', 'section 80C', 'ITR filing', 'tax to GDP ratio'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/taxes',
+  },
+  openGraph: {
+    title: 'India Taxation - Income Tax, GST | India Economy',
+    description: 'Income tax old vs new regime, GST slabs, corporate tax, TDS explained. Only 2.2% Indians pay income tax.',
+    url: 'https://apurwasarwajit.com/india-economy/taxes',
+  },
 }
 
 export default function TaxesPage() {

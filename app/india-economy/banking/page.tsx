@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import {
@@ -16,9 +17,18 @@ import {
 } from '../components/EducationalCards'
 import { getBankingData } from '../data'
 
-export const metadata = {
-  title: 'Banking System | Understanding India\'s Economy',
-  description: 'Learn how India\'s banking system works - types of banks, how they make money, NPAs, UPI revolution, and deposit insurance.',
+export const metadata: Metadata = {
+  title: 'India Banking System & UPI Explained',
+  description: 'How do Indian banks work? Learn about SBI, PSU vs private banks, NPA crisis (bad loans), UPI revolution (14 billion transactions), deposit insurance (₹5 lakh), Jan Dhan Yojana, and bank mergers.',
+  keywords: ['Indian banking system', 'UPI payments', 'NPA crisis India', 'SBI bank', 'deposit insurance DICGC', 'Jan Dhan Yojana', 'PSU banks', 'private banks India', 'how banks make money'],
+  alternates: {
+    canonical: 'https://apurwasarwajit.com/india-economy/banking',
+  },
+  openGraph: {
+    title: 'India Banking System & UPI | India Economy',
+    description: 'From NPAs to UPI revolution. How India\'s banking system works, deposit insurance, and digital payments transformation.',
+    url: 'https://apurwasarwajit.com/india-economy/banking',
+  },
 }
 
 export default function BankingPage() {
