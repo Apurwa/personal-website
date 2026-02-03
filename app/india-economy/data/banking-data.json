@@ -1,0 +1,364 @@
+{
+  "sourceId": "rbi-banking-stats",
+  "description": "India's banking system overview",
+  "asOf": "December 2024",
+  "overview": {
+    "totalBanks": 139,
+    "totalBranches": 160521,
+    "totalATMs": 259943,
+    "totalDeposits": 212.3,
+    "totalCredit": 175.8,
+    "creditDepositRatio": 82.8,
+    "unit": "Lakh Crore INR",
+    "bankingPenetration": 78,
+    "accountHolders": 220
+  },
+  "bankCategories": [
+    {
+      "type": "Public Sector Banks",
+      "hindi": "सार्वजनिक क्षेत्र के बैंक",
+      "count": 12,
+      "marketShare": 58.4,
+      "description": "Banks where government owns more than 50% stake",
+      "examples": ["SBI", "PNB", "Bank of Baroda", "Canara Bank", "Union Bank"],
+      "totalAssets": 167.2,
+      "branches": 87234,
+      "keyFacts": [
+        "SBI alone has 22,000+ branches",
+        "Serve 70% of rural India",
+        "Major lenders to agriculture and MSMEs"
+      ]
+    },
+    {
+      "type": "Private Sector Banks",
+      "hindi": "निजी क्षेत्र के बैंक",
+      "count": 21,
+      "marketShare": 36.8,
+      "description": "Banks owned by private individuals and corporations",
+      "examples": ["HDFC Bank", "ICICI Bank", "Axis Bank", "Kotak Mahindra", "IndusInd"],
+      "totalAssets": 98.5,
+      "branches": 42156,
+      "keyFacts": [
+        "HDFC Bank is India's largest private bank",
+        "Known for better technology and service",
+        "Higher interest rates on deposits"
+      ]
+    },
+    {
+      "type": "Small Finance Banks",
+      "hindi": "लघु वित्त बैंक",
+      "count": 12,
+      "marketShare": 1.8,
+      "description": "Banks focused on unbanked and underbanked segments",
+      "examples": ["AU Small Finance", "Equitas", "Ujjivan", "Jana Small Finance"],
+      "totalAssets": 4.8,
+      "branches": 6892,
+      "keyFacts": [
+        "75% loans must be under ₹25 lakh",
+        "Must have 25% branches in unbanked rural areas",
+        "Higher deposit rates than large banks"
+      ]
+    },
+    {
+      "type": "Payments Banks",
+      "hindi": "भुगतान बैंक",
+      "count": 6,
+      "marketShare": 0.2,
+      "description": "Banks that can accept deposits but cannot lend",
+      "examples": ["Paytm Payments Bank", "Airtel Payments Bank", "India Post Payments Bank", "Jio Payments Bank"],
+      "totalAssets": 0.9,
+      "branches": 1245,
+      "keyFacts": [
+        "Maximum deposit limit ₹2 lakh per customer",
+        "Cannot issue credit cards or loans",
+        "Focus on digital and mobile banking"
+      ]
+    },
+    {
+      "type": "Regional Rural Banks",
+      "hindi": "क्षेत्रीय ग्रामीण बैंक",
+      "count": 43,
+      "marketShare": 2.5,
+      "description": "Banks focused on rural and agricultural lending",
+      "examples": ["Baroda UP Gramin Bank", "Kerala Gramin Bank", "Andhra Pradesh Grameena Vikas Bank"],
+      "totalAssets": 7.2,
+      "branches": 21543,
+      "keyFacts": [
+        "Jointly owned by Centre, State, and sponsor bank",
+        "Priority sector lending focus",
+        "Lower interest rates for farmers"
+      ]
+    },
+    {
+      "type": "Foreign Banks",
+      "hindi": "विदेशी बैंक",
+      "count": 45,
+      "marketShare": 0.3,
+      "description": "Banks headquartered outside India",
+      "examples": ["Citibank", "HSBC", "Standard Chartered", "Deutsche Bank", "DBS"],
+      "totalAssets": 12.8,
+      "branches": 1451,
+      "keyFacts": [
+        "Operate mainly in metros",
+        "Focus on corporate and wealth management",
+        "Subject to same RBI regulations"
+      ]
+    }
+  ],
+  "topBanksByAssets": [
+    { "rank": 1, "name": "State Bank of India", "type": "PSU", "assets": 67.2, "branches": 22405 },
+    { "rank": 2, "name": "HDFC Bank", "type": "Private", "assets": 34.5, "branches": 8738 },
+    { "rank": 3, "name": "ICICI Bank", "type": "Private", "assets": 23.3, "branches": 6000 },
+    { "rank": 4, "name": "Bank of Baroda", "type": "PSU", "assets": 18.4, "branches": 8214 },
+    { "rank": 5, "name": "Punjab National Bank", "type": "PSU", "assets": 17.8, "branches": 10103 },
+    { "rank": 6, "name": "Canara Bank", "type": "PSU", "assets": 15.2, "branches": 9582 },
+    { "rank": 7, "name": "Union Bank of India", "type": "PSU", "assets": 14.7, "branches": 8700 },
+    { "rank": 8, "name": "Axis Bank", "type": "Private", "assets": 14.1, "branches": 5000 },
+    { "rank": 9, "name": "Bank of India", "type": "PSU", "assets": 12.8, "branches": 5089 },
+    { "rank": 10, "name": "Indian Bank", "type": "PSU", "assets": 9.8, "branches": 5827 }
+  ],
+  "howBanksMakeMoney": {
+    "description": "Banks earn money primarily through the difference between interest earned and interest paid",
+    "revenueStreams": [
+      {
+        "source": "Net Interest Income",
+        "hindi": "शुद्ध ब्याज आय",
+        "share": 65,
+        "explanation": "Difference between interest earned on loans and interest paid on deposits",
+        "example": "If bank pays 6% on FD and charges 12% on home loan, it earns 6% spread"
+      },
+      {
+        "source": "Fee Income",
+        "hindi": "शुल्क आय",
+        "share": 18,
+        "explanation": "Charges for services like account maintenance, transactions, locker rent",
+        "example": "ATM charges, cheque book fees, RTGS/NEFT charges, locker rent"
+      },
+      {
+        "source": "Trading Income",
+        "hindi": "व्यापार आय",
+        "share": 10,
+        "explanation": "Profits from buying and selling government securities and forex",
+        "example": "Banks buy G-Secs at lower price, sell at higher price"
+      },
+      {
+        "source": "Other Income",
+        "hindi": "अन्य आय",
+        "share": 7,
+        "explanation": "Commission from selling insurance, mutual funds, and other products",
+        "example": "Bank earns commission when you buy insurance through them"
+      }
+    ],
+    "netInterestMargin": {
+      "current": 3.4,
+      "psb": 2.9,
+      "private": 4.1,
+      "explanation": "NIM = (Interest Earned - Interest Paid) / Average Assets"
+    }
+  },
+  "npaData": {
+    "description": "Non-Performing Assets - loans where borrowers haven't paid for 90+ days",
+    "currentGrossNPA": 3.2,
+    "currentNetNPA": 0.8,
+    "totalNPAAmount": 5.6,
+    "unit": "Lakh Crore INR",
+    "historical": [
+      { "year": "2015-16", "grossNPA": 7.5, "netNPA": 4.6, "notes": "NPA recognition begins" },
+      { "year": "2016-17", "grossNPA": 9.3, "netNPA": 5.3, "notes": "Asset Quality Review" },
+      { "year": "2017-18", "grossNPA": 11.2, "netNPA": 6.0, "notes": "Peak NPA year" },
+      { "year": "2018-19", "grossNPA": 9.1, "netNPA": 3.7, "notes": "IBC resolutions begin" },
+      { "year": "2019-20", "grossNPA": 8.2, "netNPA": 2.8 },
+      { "year": "2020-21", "grossNPA": 7.3, "netNPA": 2.4, "notes": "COVID moratorium" },
+      { "year": "2021-22", "grossNPA": 5.8, "netNPA": 1.7, "notes": "Recovery begins" },
+      { "year": "2022-23", "grossNPA": 3.9, "netNPA": 1.0 },
+      { "year": "2023-24", "grossNPA": 2.8, "netNPA": 0.6, "notes": "Decade low" },
+      { "year": "2024-25", "grossNPA": 3.2, "netNPA": 0.8, "notes": "Estimate" }
+    ],
+    "sectorWiseNPA": [
+      { "sector": "Industry", "share": 42, "majorDefaulters": "Steel, Textiles, Infrastructure" },
+      { "sector": "Agriculture", "share": 18, "majorDefaulters": "Farm loan waivers impact" },
+      { "sector": "Services", "share": 22, "majorDefaulters": "NBFCs, Real Estate" },
+      { "sector": "Retail", "share": 18, "majorDefaulters": "Personal loans, Credit cards" }
+    ],
+    "keyInsights": [
+      "Peak NPA in 2017-18 was ₹10.4 lakh crore",
+      "IBC helped recover ₹3.16 lakh crore since 2016",
+      "PSU banks had 5x higher NPAs than private banks",
+      "Willful defaulters owe ₹2.4 lakh crore"
+    ]
+  },
+  "digitalPayments": {
+    "description": "India's digital payments revolution",
+    "upiStats": {
+      "monthlyTransactions": 16.58,
+      "monthlyValue": 23.49,
+      "unit": "Billion transactions / Lakh Crore INR",
+      "yearOnYearGrowth": 45,
+      "dailyAverage": 553,
+      "dailyUnit": "Million transactions"
+    },
+    "upiMilestones": [
+      { "year": "2016", "event": "UPI launched by NPCI", "transactions": 0.001 },
+      { "year": "2017", "event": "Demonetization boost", "transactions": 0.09 },
+      { "year": "2019", "event": "1 billion monthly milestone", "transactions": 1.3 },
+      { "year": "2021", "event": "COVID accelerates adoption", "transactions": 4.2 },
+      { "year": "2023", "event": "10 billion monthly milestone", "transactions": 11.4 },
+      { "year": "2024", "event": "Global expansion begins", "transactions": 16.6 }
+    ],
+    "paymentModes": [
+      { "mode": "UPI", "share": 75.2, "growth": 45 },
+      { "mode": "IMPS", "share": 8.4, "growth": 12 },
+      { "mode": "NEFT", "share": 7.8, "growth": 8 },
+      { "mode": "Cards (Debit+Credit)", "share": 5.2, "growth": 15 },
+      { "mode": "RTGS", "share": 2.1, "growth": 5 },
+      { "mode": "Others", "share": 1.3, "growth": 10 }
+    ],
+    "globalComparison": [
+      { "country": "India", "realTimePayments": 165.2, "unit": "Billion", "rank": 1 },
+      { "country": "China", "realTimePayments": 98.5, "unit": "Billion", "rank": 2 },
+      { "country": "Thailand", "realTimePayments": 18.2, "unit": "Billion", "rank": 3 },
+      { "country": "Brazil", "realTimePayments": 16.8, "unit": "Billion", "rank": 4 },
+      { "country": "South Korea", "realTimePayments": 12.4, "unit": "Billion", "rank": 5 }
+    ],
+    "upiInternational": [
+      { "country": "Singapore", "status": "Live", "year": 2023 },
+      { "country": "UAE", "status": "Live", "year": 2023 },
+      { "country": "France", "status": "Live", "year": 2024 },
+      { "country": "Nepal", "status": "Live", "year": 2024 },
+      { "country": "Bhutan", "status": "Live", "year": 2024 },
+      { "country": "Sri Lanka", "status": "Planned", "year": 2025 },
+      { "country": "UK", "status": "Planned", "year": 2025 }
+    ]
+  },
+  "depositInsurance": {
+    "description": "Protection for depositors if a bank fails",
+    "currentCoverage": 500000,
+    "previousCoverage": 100000,
+    "changeDate": "February 2020",
+    "coveragePercent": 98.1,
+    "premiumPaidBy": "Banks (not depositors)",
+    "premiumRate": "0.12% of deposits",
+    "insurer": "Deposit Insurance and Credit Guarantee Corporation (DICGC)",
+    "parentOrg": "Wholly owned subsidiary of RBI",
+    "claims": {
+      "totalPaid": 9018,
+      "banksCovered": 506,
+      "unit": "Crore INR"
+    },
+    "whatsCovered": [
+      "Savings accounts",
+      "Current accounts",
+      "Fixed deposits",
+      "Recurring deposits"
+    ],
+    "whatsNotCovered": [
+      "Government deposits",
+      "Inter-bank deposits",
+      "Deposits outside India",
+      "Deposits of state/central governments"
+    ]
+  },
+  "bankingReforms": [
+    {
+      "year": "1969",
+      "reform": "Bank Nationalization",
+      "hindi": "बैंक राष्ट्रीयकरण",
+      "description": "14 major banks nationalized to expand banking to rural India",
+      "impact": "Branch expansion from 8,000 to 65,000 by 1990"
+    },
+    {
+      "year": "1991",
+      "reform": "Narasimham Committee I",
+      "hindi": "नरसिम्हम समिति",
+      "description": "Liberalization of banking sector, entry of private banks",
+      "impact": "Birth of ICICI Bank, HDFC Bank, Axis Bank"
+    },
+    {
+      "year": "2014",
+      "reform": "Jan Dhan Yojana",
+      "hindi": "जन धन योजना",
+      "description": "Financial inclusion program - bank account for every household",
+      "impact": "53 crore accounts opened, ₹2.3 lakh crore deposits"
+    },
+    {
+      "year": "2016",
+      "reform": "Insolvency and Bankruptcy Code",
+      "hindi": "दिवाला संहिता",
+      "description": "Time-bound resolution of bad loans through NCLT",
+      "impact": "₹3.16 lakh crore recovered, 52% haircut average"
+    },
+    {
+      "year": "2017",
+      "reform": "Bank Merger Wave",
+      "hindi": "बैंक विलय",
+      "description": "Consolidation of PSU banks from 27 to 12",
+      "impact": "Larger, stronger banks with better technology"
+    },
+    {
+      "year": "2020",
+      "reform": "Deposit Insurance Increase",
+      "hindi": "जमा बीमा वृद्धि",
+      "description": "Coverage increased from ₹1 lakh to ₹5 lakh",
+      "impact": "98% of depositors fully covered"
+    }
+  ],
+  "financialInclusion": {
+    "janDhan": {
+      "totalAccounts": 53.13,
+      "totalDeposits": 2.31,
+      "unit": "Crore accounts / Lakh Crore INR",
+      "rupayCards": 36.24,
+      "zeroBalanceAccounts": 8.2,
+      "averageBalance": 4351,
+      "womenAccounts": 29.56
+    },
+    "bankingAccessPoints": {
+      "branches": 160521,
+      "atms": 259943,
+      "bcAgents": 812458,
+      "microATMs": 1245632
+    },
+    "ruralBanking": {
+      "ruralBranches": 54234,
+      "ruralBranchShare": 33.8,
+      "villagesCovered": 648000,
+      "bankingCorrespondents": 812458
+    }
+  },
+  "interestRates": {
+    "savingsAccount": {
+      "psuAverage": 2.7,
+      "privateAverage": 3.0,
+      "smallFinanceAverage": 5.5,
+      "range": "2.5% - 7%"
+    },
+    "fixedDeposit": {
+      "oneYear": {
+        "psuAverage": 6.8,
+        "privateAverage": 7.0,
+        "smallFinanceAverage": 8.0
+      },
+      "threeYear": {
+        "psuAverage": 7.0,
+        "privateAverage": 7.2,
+        "smallFinanceAverage": 8.2
+      },
+      "seniorCitizenBonus": 0.5
+    },
+    "loanRates": {
+      "homeLoan": { "range": "8.35% - 11%", "average": 8.7 },
+      "personalLoan": { "range": "10.5% - 24%", "average": 12.5 },
+      "carLoan": { "range": "8.5% - 14%", "average": 9.5 },
+      "educationLoan": { "range": "8% - 15%", "average": 10.5 },
+      "goldLoan": { "range": "7% - 17%", "average": 9.0 }
+    }
+  },
+  "keyInsights": [
+    "India has more bank branches than any country except China",
+    "UPI processes more real-time payments than rest of the world combined",
+    "53 crore Jan Dhan accounts opened since 2014 - world's largest financial inclusion program",
+    "NPA crisis peaked at ₹10.4 lakh crore in 2018, now down to ₹5.6 lakh crore",
+    "SBI alone is larger than many countries' entire banking system",
+    "98% of depositors are fully covered under ₹5 lakh insurance"
+  ]
+}

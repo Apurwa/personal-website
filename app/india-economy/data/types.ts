@@ -358,3 +358,203 @@ export interface TradeData {
   historicalTrade: TradeYearData[]
   keyInsights: string[]
 }
+
+// Banking Data Types
+export interface BankCategory {
+  type: string
+  hindi: string
+  count: number
+  marketShare: number
+  description: string
+  examples: string[]
+  totalAssets: number
+  branches: number
+  keyFacts: string[]
+}
+
+export interface TopBank {
+  rank: number
+  name: string
+  type: string
+  assets: number
+  branches: number
+}
+
+export interface RevenueStream {
+  source: string
+  hindi: string
+  share: number
+  explanation: string
+  example: string
+}
+
+export interface NPAHistorical {
+  year: string
+  grossNPA: number
+  netNPA: number
+  notes?: string
+}
+
+export interface SectorNPA {
+  sector: string
+  share: number
+  majorDefaulters: string
+}
+
+export interface UPIMilestone {
+  year: string
+  event: string
+  transactions: number
+}
+
+export interface PaymentMode {
+  mode: string
+  share: number
+  growth: number
+}
+
+export interface GlobalPaymentRank {
+  country: string
+  realTimePayments: number
+  unit: string
+  rank: number
+}
+
+export interface UPIInternational {
+  country: string
+  status: string
+  year: number
+}
+
+export interface BankingReform {
+  year: string
+  reform: string
+  hindi: string
+  description: string
+  impact: string
+}
+
+export interface BankingData {
+  sourceId: string
+  description: string
+  asOf: string
+  overview: {
+    totalBanks: number
+    totalBranches: number
+    totalATMs: number
+    totalDeposits: number
+    totalCredit: number
+    creditDepositRatio: number
+    unit: string
+    bankingPenetration: number
+    accountHolders: number
+  }
+  bankCategories: BankCategory[]
+  topBanksByAssets: TopBank[]
+  howBanksMakeMoney: {
+    description: string
+    revenueStreams: RevenueStream[]
+    netInterestMargin: {
+      current: number
+      psb: number
+      private: number
+      explanation: string
+    }
+  }
+  npaData: {
+    description: string
+    currentGrossNPA: number
+    currentNetNPA: number
+    totalNPAAmount: number
+    unit: string
+    historical: NPAHistorical[]
+    sectorWiseNPA: SectorNPA[]
+    keyInsights: string[]
+  }
+  digitalPayments: {
+    description: string
+    upiStats: {
+      monthlyTransactions: number
+      monthlyValue: number
+      unit: string
+      yearOnYearGrowth: number
+      dailyAverage: number
+      dailyUnit: string
+    }
+    upiMilestones: UPIMilestone[]
+    paymentModes: PaymentMode[]
+    globalComparison: GlobalPaymentRank[]
+    upiInternational: UPIInternational[]
+  }
+  depositInsurance: {
+    description: string
+    currentCoverage: number
+    previousCoverage: number
+    changeDate: string
+    coveragePercent: number
+    premiumPaidBy: string
+    premiumRate: string
+    insurer: string
+    parentOrg: string
+    claims: {
+      totalPaid: number
+      banksCovered: number
+      unit: string
+    }
+    whatsCovered: string[]
+    whatsNotCovered: string[]
+  }
+  bankingReforms: BankingReform[]
+  financialInclusion: {
+    janDhan: {
+      totalAccounts: number
+      totalDeposits: number
+      unit: string
+      rupayCards: number
+      zeroBalanceAccounts: number
+      averageBalance: number
+      womenAccounts: number
+    }
+    bankingAccessPoints: {
+      branches: number
+      atms: number
+      bcAgents: number
+      microATMs: number
+    }
+    ruralBanking: {
+      ruralBranches: number
+      ruralBranchShare: number
+      villagesCovered: number
+      bankingCorrespondents: number
+    }
+  }
+  interestRates: {
+    savingsAccount: {
+      psuAverage: number
+      privateAverage: number
+      smallFinanceAverage: number
+      range: string
+    }
+    fixedDeposit: {
+      oneYear: {
+        psuAverage: number
+        privateAverage: number
+        smallFinanceAverage: number
+      }
+      threeYear: {
+        psuAverage: number
+        privateAverage: number
+        smallFinanceAverage: number
+      }
+      seniorCitizenBonus: number
+    }
+    loanRates: {
+      homeLoan: { range: string; average: number }
+      personalLoan: { range: string; average: number }
+      carLoan: { range: string; average: number }
+      educationLoan: { range: string; average: number }
+      goldLoan: { range: string; average: number }
+    }
+  }
+  keyInsights: string[]
+}

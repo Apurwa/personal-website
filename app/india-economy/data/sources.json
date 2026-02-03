@@ -120,6 +120,39 @@
       "accessedDate": "2025-02-03",
       "coversData": ["rbi-rates.json"],
       "notes": "Official RBI statistical database for monetary policy rates"
+    },
+    {
+      "id": "rbi-banking-stats",
+      "title": "Statistical Tables Relating to Banks in India",
+      "publisher": "Reserve Bank of India",
+      "url": "https://www.rbi.org.in/Scripts/AnnualPublications.aspx?head=Statistical%20Tables%20Relating%20to%20Banks%20in%20India",
+      "type": "official",
+      "publishedDate": "2024-12-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["banking-data.json"],
+      "notes": "Comprehensive banking statistics including deposits, credit, NPAs, and branch network"
+    },
+    {
+      "id": "npci-upi-stats",
+      "title": "UPI Product Statistics",
+      "publisher": "National Payments Corporation of India (NPCI)",
+      "url": "https://www.npci.org.in/what-we-do/upi/upi-ecosystem-statistics",
+      "type": "official",
+      "publishedDate": "2025-01-31",
+      "accessedDate": "2025-02-03",
+      "coversData": ["banking-data.json"],
+      "notes": "Monthly UPI transaction data, app-wise statistics"
+    },
+    {
+      "id": "dicgc-deposit-insurance",
+      "title": "Deposit Insurance",
+      "publisher": "Deposit Insurance and Credit Guarantee Corporation",
+      "url": "https://www.dicgc.org.in/",
+      "type": "official",
+      "publishedDate": "2024-12-01",
+      "accessedDate": "2025-02-03",
+      "coversData": ["banking-data.json"],
+      "notes": "Deposit insurance coverage, claims data, and member banks"
     }
   ]
 }

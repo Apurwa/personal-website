@@ -22,7 +22,7 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 | GDP & Growth | ✅ Live | `/india-economy/gdp` | MoSPI, World Bank |
 | Inflation & Prices | ✅ Live | `/india-economy/inflation` | RBI, MoSPI |
 | Trade & Exports | ✅ Live | `/india-economy/trade` | DGFT, Commerce Ministry, RBI |
-| Banking System | 📋 Backlog | `/india-economy/banking` | RBI |
+| Banking System | ✅ Live | `/india-economy/banking` | RBI, NPCI, DICGC |
 | Stock Markets | 📋 Backlog | `/india-economy/markets` | NSE, BSE, SEBI |
 | Taxation | 📋 Backlog | `/india-economy/taxes` | Income Tax Dept, GST Council |
 | Employment | 📋 Backlog | `/india-economy/employment` | Labour Ministry, NSSO |
@@ -220,15 +220,64 @@ An educational portal explaining India's economy to a 7th-grade audience (NCERT 
 
 ### 6. Banking System (`/banking`)
 
-**Status:** 📋 Backlog
+**Status:** ✅ Live
 
-**Topics to Cover:**
-- Types of banks (PSU, Private, Small Finance, Payments)
-- How banks make money
-- NPA (Non-Performing Assets) problem
-- Banking reforms history
-- Digital payments revolution (UPI)
-- Deposit insurance
+**Content Outline:**
+1. What is a Bank?
+   - Definition with Hindi term
+   - Role in economy
+2. Types of Banks in India
+   - Public Sector Banks (12)
+   - Private Sector Banks (21)
+   - Small Finance Banks (12)
+   - Payments Banks (6)
+   - Regional Rural Banks (43)
+   - Foreign Banks (45)
+3. Top 10 Banks by Assets
+   - SBI dominance
+   - PSU vs Private comparison
+4. How Banks Make Money
+   - Net Interest Income (65%)
+   - Fee Income (18%)
+   - Trading Income (10%)
+   - Net Interest Margin explained
+5. The NPA Problem
+   - Definition and measurement
+   - 10-year NPA trend (peak 11.2% in 2017-18)
+   - Sector-wise NPA breakdown
+   - IBC recovery impact
+6. Digital Payments Revolution
+   - UPI statistics and growth
+   - UPI timeline (2016-2024)
+   - Global comparison (#1 in real-time payments)
+   - UPI international expansion
+7. Deposit Insurance
+   - ₹5 lakh coverage
+   - DICGC role
+   - What's covered/not covered
+8. Key Banking Reforms
+   - 1969: Nationalization
+   - 1991: Liberalization
+   - 2014: Jan Dhan Yojana
+   - 2016: IBC
+   - 2017: Bank Mergers
+   - 2020: Deposit Insurance Increase
+9. Financial Inclusion
+   - Jan Dhan statistics
+   - Banking access points
+   - Rural banking coverage
+10. Interest Rates Guide
+    - Deposit rates comparison
+    - Loan rates reference
+
+**Data Files:**
+- `banking-data.json` — Comprehensive banking system data
+
+**Future Additions:**
+- [ ] Bank comparison tool
+- [ ] EMI calculator
+- [ ] FD interest calculator
+- [ ] Bank branch locator
 
 ---
 
@@ -358,14 +407,14 @@ All sources tracked in `data/sources.json`. Each data file references its source
 
 ### Phase 3 (Complete)
 - [x] Trade & Exports
+- [x] Banking System
 
 ### Phase 4 (Future)
-- [ ] Banking System
+- [ ] Stock Markets
 - [ ] Interactive calculators
 - [ ] Quiz/trivia mode
 
 ### Phase 5 (Aspirational)
-- [ ] Stock Markets
 - [ ] Taxation
 - [ ] Employment
 - [ ] State-level comparisons

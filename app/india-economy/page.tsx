@@ -27,6 +27,11 @@ const topics = [
     description: 'What does India export and import? Explore the $820 billion trade story, top partners, and forex reserves.',
     href: '/india-economy/trade',
   },
+  {
+    title: 'Banking System',
+    description: 'How do banks work? From PSU vs private banks to UPI revolution and deposit insurance. India\'s financial backbone.',
+    href: '/india-economy/banking',
+  },
 ]
 
 export default function IndiaEconomyPage() {
@@ -81,6 +86,10 @@ export default function IndiaEconomyPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#7a9e7e] transition-transform group-hover:scale-150" aria-hidden="true" />
             Ministry of Commerce
           </span>
+          <span className="flex items-center gap-2 group cursor-default">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4a84b] transition-transform group-hover:scale-150" aria-hidden="true" />
+            NPCI
+          </span>
         </div>
       </aside>
 
@@ -91,7 +100,8 @@ export default function IndiaEconomyPage() {
             'union-budget-2024-25',
             'rbi-monetary-policy',
             'india-budget-historical',
-            'commerce-ministry-trade'
+            'commerce-ministry-trade',
+            'rbi-banking-stats'
           ]}
         />
       </div>
