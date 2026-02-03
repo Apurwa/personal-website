@@ -16,8 +16,14 @@ interface CountryTaxData {
 }
 
 export function TaxRevenueDetail({ budget }: TaxRevenueDetailProps) {
-  const { taxRevenue, grossTaxRevenue } = budget
+  const { taxRevenue, grossTaxRevenue, totalRevenue, nonTaxRevenue } = budget
   const { formatCurrency } = useCurrency()
+
+  // Calculate States' Share (devolution to states per Finance Commission)
+  const totalNonTax = nonTaxRevenue.dividends + nonTaxRevenue.interestReceipts + nonTaxRevenue.otherNonTax
+  const netTaxRevenue = totalRevenue - totalNonTax
+  const statesShare = grossTaxRevenue - netTaxRevenue
+  const statesSharePercent = ((statesShare / grossTaxRevenue) * 100).toFixed(0)
 
   const taxItems = [
     {
@@ -123,9 +129,56 @@ export function TaxRevenueDetail({ budget }: TaxRevenueDetailProps) {
             {formatCurrency(grossTaxRevenue)}
           </div>
           <div className="text-sm text-[#e0e4ea] mt-1">
-            ~{((grossTaxRevenue / budget.totalExpenditure) * 100).toFixed(0)}% of total budget
+            Total taxes collected by Centre
           </div>
         </div>
+      </div>
+
+      {/* Tax Devolution Visual - States' Share */}
+      <div className="p-4 border-2 border-[#ffb000] bg-[#1a1a2e]">
+        <div className="text-xs text-[#ffb000] text-center mb-3">📊 WHERE DOES THE TAX GO?</div>
+
+        {/* Flow visualization */}
+        <div className="space-y-3">
+          {/* Gross Tax */}
+          <div className="flex items-center gap-2">
+            <div className="flex-1 h-8 bg-[#00ff41]/20 border border-[#00ff41] flex items-center justify-between px-3">
+              <span className="text-xs text-[#00ff41]">Gross Tax</span>
+              <span className="text-xs text-[#00ff41] font-bold">{formatCurrency(grossTaxRevenue)}</span>
+            </div>
+          </div>
+
+          {/* Arrow and split */}
+          <div className="flex items-center justify-center text-[#888]">↓ Split as per Finance Commission ↓</div>
+
+          {/* Two boxes side by side */}
+          <div className="grid grid-cols-2 gap-2">
+            {/* States' Share */}
+            <div className="h-16 bg-[#ff6b6b]/20 border border-[#ff6b6b] flex flex-col items-center justify-center p-2">
+              <span className="text-xs text-[#ff6b6b]">🏛️ States&apos; Share</span>
+              <span className="text-sm text-[#ff6b6b] font-bold">{formatCurrency(statesShare)}</span>
+              <span className="text-xs text-[#888]">~{statesSharePercent}%</span>
+            </div>
+
+            {/* Centre's Share */}
+            <div className="h-16 bg-[#00d4ff]/20 border border-[#00d4ff] flex flex-col items-center justify-center p-2">
+              <span className="text-xs text-[#00d4ff]">🏦 Centre&apos;s Share</span>
+              <span className="text-sm text-[#00d4ff] font-bold">{formatCurrency(netTaxRevenue)}</span>
+              <span className="text-xs text-[#888]">~{100 - Number(statesSharePercent)}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Explanatory Note */}
+      <div className="p-4 border border-[#ff6b6b] bg-[#ff6b6b]/10">
+        <div className="text-sm text-[#ff6b6b] mb-2">⚠️ Why is Gross Tax &gt; Total Revenue?</div>
+        <p className="text-sm text-[#c8d0dc] leading-relaxed">
+          The Centre doesn&apos;t keep all the tax it collects! As per the <span className="text-[#ffb000]">Constitution</span> and
+          <span className="text-[#ffb000]"> Finance Commission</span> recommendations, about <span className="text-[#ff6b6b]">41%</span> of
+          the &quot;divisible pool&quot; (Income Tax, Corporate Tax, GST) is shared with states. This is called
+          <span className="text-[#00ff41]"> Tax Devolution</span> - it ensures states have funds for local governance.
+        </p>
       </div>
 
       {/* What are taxes? */}
@@ -168,6 +221,44 @@ export function TaxRevenueDetail({ budget }: TaxRevenueDetailProps) {
                 </div>
               )
             })}
+          </div>
+        </AccordionItem>
+
+        {/* Tax Devolution */}
+        <AccordionItem title="Tax Devolution to States" icon="🏛️" accentColor="#ff6b6b">
+          <div className="space-y-3">
+            <p className="text-sm text-[#c8d0dc]">
+              The 15th Finance Commission (2021-26) recommends that <span className="text-[#ff6b6b] font-bold">41%</span> of
+              the divisible pool of central taxes be shared with states.
+            </p>
+            <div className="space-y-2">
+              <div className="text-xs text-[#b8c0cc] mb-2">Taxes in the Divisible Pool:</div>
+              <div className="flex justify-between text-sm p-2 bg-[#0f0f23]">
+                <span className="text-[#c8d0dc]">✓ Income Tax</span>
+                <span className="text-[#00ff41]">Shared</span>
+              </div>
+              <div className="flex justify-between text-sm p-2 bg-[#0f0f23]">
+                <span className="text-[#c8d0dc]">✓ Corporate Tax</span>
+                <span className="text-[#00ff41]">Shared</span>
+              </div>
+              <div className="flex justify-between text-sm p-2 bg-[#0f0f23]">
+                <span className="text-[#c8d0dc]">✓ CGST (Central GST)</span>
+                <span className="text-[#00ff41]">Shared</span>
+              </div>
+              <div className="flex justify-between text-sm p-2 bg-[#0f0f23]">
+                <span className="text-[#c8d0dc]">✗ Customs Duty</span>
+                <span className="text-[#ff6b6b]">Not Shared</span>
+              </div>
+              <div className="flex justify-between text-sm p-2 bg-[#0f0f23]">
+                <span className="text-[#c8d0dc]">✗ Excise on Fuel</span>
+                <span className="text-[#ff6b6b]">Not Shared</span>
+              </div>
+            </div>
+            <div className="mt-3 p-2 bg-[#0f0f23] border-l-2 border-[#ff6b6b]">
+              <span className="text-sm text-[#c8d0dc]">
+                💡 States with larger population & lower per-capita income get a bigger share!
+              </span>
+            </div>
           </div>
         </AccordionItem>
 

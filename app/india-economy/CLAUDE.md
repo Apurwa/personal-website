@@ -1,253 +1,189 @@
-# CLAUDE.md - Budget Quest (India Economy)
+# CLAUDE.md - Understanding India's Economy
 
-This file provides guidance for working on the Budget Quest feature (`/india-economy`).
+This file provides guidance for working on the India Economy educational portal (`/india-economy`).
 
 ## Overview
 
-An arcade-themed interactive visualization of India's Union Budget. Users explore revenue sources, expenditure allocations, and fiscal deficits through a gamified "levels" experience.
+An educational portal explaining India's economy at a 7th-grade reading level (NCERT-style). Uses simple language, real government data, and visual explanations to make economics accessible.
 
 **URL:** https://apurwasarwajit.com/india-economy
 
+**See [STRUCTURE.md](./STRUCTURE.md) for full content roadmap and section details.**
+
 ## Guiding Principles
 
-**Transparency and authentic sourcing are paramount.**
+1. **Transparency and authentic sourcing are paramount**
+   - Always cite official government sources (Ministry of Finance, RBI, indiabudget.gov.in)
+   - Display source attribution prominently in the UI
+   - Register all sources in `data/sources.json` with full metadata
+   - Never extrapolate or estimate figures — use only published data
 
-- Always cite official government sources (Ministry of Finance, RBI, indiabudget.gov.in)
-- Display source attribution prominently in the UI
-- Register all sources in `data/sources.json` with full metadata
-- Link data files to sources via `sourceId` field
-- Never extrapolate or estimate figures - use only published data
-- When data is contested or revised, note the revision date
+2. **Accessibility over complexity**
+   - Write for 7th-grade reading level
+   - Include Hindi terms for key concepts
+   - Use lakh/crore, not million/billion
+   - Prefer visual explanations over dense text
+
+3. **Distinctive design, not generic AI**
+   - Follow the "Thoughtful Textbook" theme
+   - Typography-driven, no emojis
+   - Staggered animations and micro-interactions
+   - Paper texture, warm colors, editorial feel
 
 ## Architecture
 
 ```
 app/india-economy/
-├── page.tsx              # Main page (Server Component)
-├── layout.tsx            # Arcade theme wrapper + metadata
+├── page.tsx              # Landing hub with topic cards
+├── layout.tsx            # Theme wrapper (fonts, texture)
+├── india-economy.css     # Animations, textures, effects
 ├── CLAUDE.md             # This file
+├── STRUCTURE.md          # Content roadmap (sections, status)
+├── budget/
+│   └── page.tsx          # Union Budget section
+├── rbi/
+│   └── page.tsx          # RBI & Monetary Policy section
 ├── components/
-│   ├── ClientWrapper.tsx # CurrencyProvider wrapper
-│   ├── ArcadeScreen.tsx  # Retro CRT effect container
-│   ├── ScoreCounter.tsx  # Animated number display
-│   ├── CurrencyToggle.tsx# INR/USD switcher
-│   ├── RevenueLevel.tsx  # Level 1: Tax & non-tax revenue
-│   ├── ExpenditureLevel.tsx # Level 2: Ministry allocations
-│   ├── DeficitLevel.tsx  # Level 3: Fiscal deficit "boss"
-│   ├── Drawer.tsx        # Slide-out detail panels
-│   ├── Accordion.tsx     # Expandable sections in drawers
-│   ├── *Detail.tsx       # Detail views for each category
-│   └── ...
-├── context/
-│   └── CurrencyContext.tsx # INR/USD state + exchange rate
-├── hooks/
-│   └── useAchievements.ts  # Achievement unlock system
+│   ├── Breadcrumb.tsx
+│   ├── TopicCard.tsx
+│   ├── TopicTabs.tsx
+│   ├── EducationalCards.tsx  # MarginNote, KeyConcept, Definition, etc.
+│   └── SourceFooter.tsx
 └── data/
-    ├── index.ts            # Data exports and helper functions
-    ├── types.ts            # TypeScript interfaces
-    ├── sources.json        # Centralized source registry
-    ├── budget-2024-25.json # Current year detailed budget
-    ├── budget-historical.json # 10-year budget summary (2015-2025)
-    └── rbi-rates.json      # RBI monetary policy history
+    ├── index.ts              # Data exports and helpers
+    ├── types.ts              # TypeScript interfaces
+    ├── sources.json          # Centralized source registry
+    ├── budget-2024-25.json   # Current year budget
+    ├── budget-historical.json # 10-year budget summary
+    └── rbi-rates.json        # RBI monetary policy history
 ```
 
-## Data Structure
+## Design System
 
-All values in **Crores of Rupees** (₹1 Cr = ₹10,000,000).
+### Theme: "Thoughtful Textbook"
 
-```typescript
-interface BudgetData {
-  fiscalYear: string           // "2024-25"
-  totalRevenue: number         // Tax + Non-tax revenue
-  grossTaxRevenue: number      // Before state transfers
-  taxRevenue: {
-    gst, incomeTax, corporateTax, customsDuty, exciseDuty, otherTaxes
-  }
-  nonTaxRevenue: {
-    dividends, interestReceipts, otherNonTax
-  }
-  borrowings: number           // Fiscal deficit financing
-  totalExpenditure: number     // Revenue + Capital
-  revenueExpenditure: number   // Recurring expenses
-  capitalExpenditure: number   // Asset creation
-  ministryAllocations: Array<{ name, allocation, icon }>
-  fiscalDeficit: number
-  fiscalDeficitPercent: number // As % of GDP
-  historical: Array<{ year, fiscalDeficitPercent, totalExpenditure }>
-}
-```
+**Typography:**
+- Headers: Source Serif 4 (elegant, readable serif)
+- Body: IBM Plex Sans (humanist, not cold)
 
-## Historical Budget Data (10 years)
+**Color Palette:**
+| Usage | Color | Hex |
+|-------|-------|-----|
+| Background | Warm cream | `#FAF7F2` |
+| Primary text | Deep indigo | `#1a2e44` |
+| Accent | Terracotta | `#b85c38` |
+| Links | Muted blue | `#4a6fa5` |
+| Captions | Slate | `#6b7c8f` |
+| Borders | Warm gray | `#e5e0d8` |
+| Callouts | Cream yellow | `#FFF8E7` |
+| Positive | Sage green | `#7a9e7e` |
+| Highlight | Gold | `#d4a84b` |
 
-`budget-historical.json` contains fiscal data from FY 2015-16 to 2024-25:
-
-```typescript
-interface BudgetHistoricalEntry {
-  fiscalYear: string
-  totalExpenditure: number    // In crores
-  fiscalDeficit: number
-  fiscalDeficitPercent: number // As % of GDP
-  revenueDeficit: number
-  gdpNominal: number
-  notes?: string              // Context (e.g., "COVID-19 pandemic")
-}
-```
-
-**Helper functions:**
+### Components
 
 ```tsx
-import { getBudgetHistorical, getBudgetByYear } from './data'
+// Section heading with optional chapter number
+<SectionHeading chapter={1} subtitle="Government's annual plan">
+  What is the Union Budget?
+</SectionHeading>
 
-// Get all 10 years
-const historical = getBudgetHistorical()
+// Definition with Hindi translation
+<Definition term="Fiscal Deficit" hindi="राजकोषीय घाटा">
+  The difference between what the government spends and earns.
+</Definition>
 
-// Get specific year
-const fy2020 = getBudgetByYear('2020-21')
+// Margin note (asymmetric callout)
+<MarginNote label="Did you know">
+  Interesting fact here...
+</MarginNote>
+
+// Key concept box
+<KeyConcept title="Key Takeaway">
+  Important insight...
+</KeyConcept>
+
+// Stats display
+<StatDisplay value="₹48.2L Cr" label="Total Budget" sublabel="FY 2024-25" />
 ```
 
-## RBI Monetary Policy Data
+### Animations (CSS-only)
 
-`rbi-rates.json` contains repo rate, CRR, and SLR history from 2015-2024:
+| Class | Effect |
+|-------|--------|
+| `animate-fade-in-up` | Rise up with fade |
+| `animate-fade-in` | Simple fade |
+| `animate-slide-in-left` | Slide from left |
+| `animate-draw-line` | Line draws itself |
+| `delay-1` to `delay-8` | Stagger timing |
+| `hover-lift` | Card lifts on hover |
+| `link-animated` | Underline grows on hover |
+| `paper-texture` | Subtle grain overlay |
 
-```typescript
-interface RBIRatesData {
-  currentRates: {
-    repoRate: number
-    reverseRepoRate: number
-    crr: number
-    slr: number
-    bankRate: number
-    effectiveDate: string
-  }
-  repoRateHistory: RateChange[]
-  crrHistory: RateChange[]
-  slrHistory: RateChange[]
-  inflationTargetRange: { lower, target, upper }
-}
-```
+All animations respect `prefers-reduced-motion`.
 
-**Helper functions:**
+## Data Management
 
-```tsx
-import { getCurrentRates, getRepoRateHistory, getCRRHistory, getSLRHistory } from './data'
+### Sources System
 
-const rates = getCurrentRates()        // Current repo, CRR, SLR
-const repoHistory = getRepoRateHistory() // All repo rate changes
-```
-
-## Sources System
-
-All data sources are registered in `data/sources.json`:
+All data sources registered in `data/sources.json`:
 
 ```typescript
 interface Source {
-  id: string              // Unique identifier, e.g., "union-budget-2024-25"
+  id: string              // e.g., "union-budget-2024-25"
   title: string           // "Union Budget 2024-25"
-  publisher: string       // "Ministry of Finance, Government of India"
-  url: string             // Link to source document
+  publisher: string       // "Ministry of Finance"
+  url: string             // Link to source
   type: 'official' | 'news' | 'analysis'
-  publishedDate: string   // When source was published
-  accessedDate: string    // When we retrieved the data
+  publishedDate: string
+  accessedDate: string
   coversData: string[]    // Data files this source supports
-  notes?: string          // Additional context
 }
 ```
 
-**Helper functions in `data/index.ts`:**
+### Adding New Data
+
+1. Add source to `data/sources.json`
+2. Create data file with `sourceId` reference
+3. Export from `data/index.ts`
+4. Add to SourceFooter in relevant pages
+
+### Helper Functions
 
 ```tsx
-import { getSources, getSourceById, getSourcesForDataFile } from './data'
-
-// Get all sources
-const sources = getSources()
-
-// Get specific source
-const source = getSourceById('union-budget-2024-25')
-
-// Get sources for a data file
-const sources = getSourcesForDataFile('budget-2024-25.json')
+import {
+  getBudgetData,
+  getBudgetHistorical,
+  getCurrentRates,
+  getSourceById,
+  getSources
+} from './data'
 ```
 
-## Adding a New Budget Year
+## Content Guidelines
 
-1. **Add source to `sources.json`** with full metadata
-2. Create `data/budget-YYYY-YY.json` with `sourceId` referencing the source
-3. Update `data/index.ts` to import the new file
-4. Optionally add year selector UI if supporting multiple years
+| Guideline | Example |
+|-----------|---------|
+| Reading level | 7th grade (NCERT) |
+| Numbers | ₹48 lakh crore, not ₹480 billion |
+| Hindi terms | Include in parentheses: Fiscal Deficit (राजकोषीय घाटा) |
+| Examples | Indian context: EMI, petrol prices, onion prices |
+| Section length | ~5 minute read |
+| Emojis | Never use emojis |
 
-**Primary sources:**
+## Adding a New Section
 
-- Union Budget documents: https://www.indiabudget.gov.in
-- Ministry of Finance budget highlights PDF
-- RBI Handbook of Statistics: https://rbi.org.in
+1. Create route folder: `app/india-economy/{section}/page.tsx`
+2. Update `STRUCTURE.md` with content outline
+3. Add to landing page topics array
+4. Create data files with sources
+5. Use existing components for consistency
 
-## Key Patterns
+## Current Status
 
-### Currency Toggle
+- ✅ Landing page with animations
+- ✅ Union Budget section
+- ✅ RBI & Monetary Policy section
+- 🔜 GDP & Growth (planned)
+- 🔜 Inflation & Prices (planned)
 
-Uses `CurrencyContext` for INR/USD conversion:
-
-```tsx
-import { useCurrency } from '../context/CurrencyContext'
-
-function MyComponent() {
-  const { formatCurrency } = useCurrency()
-  return <span>{formatCurrency(48200)}</span> // "₹48,200 Cr" or "$5.8B"
-}
-```
-
-### Achievement System
-
-Achievements unlock based on user interactions:
-
-```tsx
-import { useAchievements } from '../hooks/useAchievements'
-
-function Level() {
-  const { unlock } = useAchievements()
-
-  useEffect(() => {
-    unlock('revenue') // Unlocks "Tax Expert" achievement
-  }, [])
-}
-```
-
-**Achievement IDs:** `welcome`, `revenue`, `expenditure`, `deficit`, `complete`
-
-### Drawer Pattern
-
-Detail views use slide-out drawers:
-
-```tsx
-<Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} title="Tax Revenue">
-  <Accordion title="GST" defaultOpen>
-    <p>Details...</p>
-  </Accordion>
-</Drawer>
-```
-
-## Styling
-
-- **Theme:** Dark background (`#0f0f23`), green text (`#00ff41`), cyan accents (`#00d4ff`)
-- **Font:** `font-arcade` class (defined in Tailwind config)
-- **Effects:** CRT scanlines, glow effects, pixel-art aesthetic
-- Scoped to this feature via `layout.tsx` wrapper
-
-## localStorage Keys
-
-| Key | Purpose |
-|-----|---------|
-| `budget-quest-achievements` | Unlocked achievements |
-| `budget-quest-currency` | Currency preference (INR/USD) |
-| `budget-quest-exchange-rate` | Cached exchange rate + timestamp |
-
-## Future Ideas
-
-- [x] Multi-year budget data (10 years added)
-- [x] RBI monetary policy data
-- [ ] Multi-year comparison visualization
-- [ ] RBI rates timeline visualization
-- [ ] State budget data
-- [ ] Economic Survey highlights
-- [ ] Budget quiz/trivia mode
-- [ ] Share achievement cards
+See `STRUCTURE.md` for full roadmap.
