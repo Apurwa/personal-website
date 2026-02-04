@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
   MarginNote,
@@ -47,6 +48,18 @@ export default function GDPPage() {
   const gdpGrowthTimes = (latestGDP.gdpNominalUsdBn / earliestGDP.gdpNominalUsdBn).toFixed(0)
   const perCapitaGrowthTimes = (latestGDP.perCapitaUsd / earliestGDP.perCapitaUsd).toFixed(0)
 
+  // Table of Contents items
+  const tocItems = [
+    { id: 'big-picture', title: 'The Big Picture' },
+    { id: 'what-is-gdp', title: 'What is GDP?', chapter: 1 },
+    { id: 'gdp-per-capita', title: 'GDP Per Capita', chapter: 2 },
+    { id: 'gdp-history', title: "India's GDP Story (1991-2024)", chapter: 3 },
+    { id: 'sectors', title: "What Makes Up India's GDP?", chapter: 4 },
+    { id: 'global-comparison', title: 'Comparing with the World', chapter: 5 },
+    { id: 'projections', title: 'Projections' },
+    { id: 'summary', title: 'Quick Summary' },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
@@ -72,19 +85,10 @@ export default function GDPPage() {
         </p>
       </header>
 
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'big-picture', title: 'The Big Picture' },
-          { id: 'what-is-gdp', title: 'What is GDP?', chapter: 1 },
-          { id: 'gdp-per-capita', title: 'GDP Per Capita', chapter: 2 },
-          { id: 'gdp-history', title: "India's GDP Story (1991-2024)", chapter: 3 },
-          { id: 'sectors', title: "What Makes Up India's GDP?", chapter: 4 },
-          { id: 'global-comparison', title: 'Comparing with the World', chapter: 5 },
-          { id: 'projections', title: 'Projections' },
-          { id: 'summary', title: 'Quick Summary' },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* Key Numbers Dashboard */}
       <ScrollReveal animation="fade-up">

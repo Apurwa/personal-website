@@ -12,6 +12,7 @@ import {
 import { ScrollReveal } from '../components/ScrollReveal'
 import { CountUpStat } from '../components/CountUpStat'
 import { TableOfContents, TOCItem } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 
 export const metadata: Metadata = {
   title: 'Union Budget 2024-25 Explained Simply',
@@ -26,6 +27,15 @@ export const metadata: Metadata = {
     url: 'https://apurwasarwajit.com/india-economy/budget',
   },
 }
+
+const tocItems: TOCItem[] = [
+  { id: 'big-picture', title: 'The Big Picture' },
+  { id: 'what-is-budget', title: 'What is the Union Budget?' },
+  { id: 'where-money-comes-from', title: 'Where Does the Money Come From?' },
+  { id: 'where-money-goes', title: 'Where Does the Money Go?' },
+  { id: 'fiscal-deficit', title: 'What is Fiscal Deficit?' },
+  { id: 'deficit-trend', title: '10-Year Fiscal Deficit Trend' },
+]
 
 export default function BudgetPage() {
   const budget = getBudgetData()
@@ -60,17 +70,10 @@ export default function BudgetPage() {
         </p>
       </header>
 
+      <PageTOC items={tocItems} />
+
       <ScrollReveal animation="fade-up">
-        <TableOfContents
-          items={[
-            { id: 'big-picture', title: 'The Big Picture' },
-            { id: 'what-is-budget', title: 'What is the Union Budget?' },
-            { id: 'where-money-comes-from', title: 'Where Does the Money Come From?' },
-            { id: 'where-money-goes', title: 'Where Does the Money Go?' },
-            { id: 'fiscal-deficit', title: 'What is Fiscal Deficit?' },
-            { id: 'deficit-trend', title: '10-Year Fiscal Deficit Trend' },
-          ]}
-        />
+        <TableOfContents items={tocItems} />
       </ScrollReveal>
 
       {/* Key Numbers */}

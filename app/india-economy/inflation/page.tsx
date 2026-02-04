@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
   MarginNote,
@@ -42,6 +43,18 @@ export default function InflationPage() {
   // Find years with high inflation
   const highInflationYears = historicalAnnual.filter(y => y.cpiInflation > 6)
 
+  const tocItems = [
+    { id: 'current-rates', title: 'Current Inflation Rates' },
+    { id: 'what-is-inflation', title: 'What is Inflation?', chapter: 1 },
+    { id: 'how-measured', title: 'How is Inflation Measured?', chapter: 2 },
+    { id: 'why-prices-rise', title: 'Why Do Prices Rise?', chapter: 3 },
+    { id: 'price-spikes', title: 'Famous Price Spikes' },
+    { id: 'inflation-history', title: 'Inflation History (2014-2024)', chapter: 4 },
+    { id: 'rbi-targeting', title: "RBI's Inflation Targeting", chapter: 5 },
+    { id: 'food-inflation', title: 'Food Inflation Breakdown' },
+    { id: 'summary', title: 'Quick Summary' },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
@@ -67,20 +80,11 @@ export default function InflationPage() {
         </p>
       </header>
 
+      {/* Sticky Page TOC */}
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'current-rates', title: 'Current Inflation Rates' },
-          { id: 'what-is-inflation', title: 'What is Inflation?', chapter: 1 },
-          { id: 'how-measured', title: 'How is Inflation Measured?', chapter: 2 },
-          { id: 'why-prices-rise', title: 'Why Do Prices Rise?', chapter: 3 },
-          { id: 'price-spikes', title: 'Famous Price Spikes' },
-          { id: 'inflation-history', title: 'Inflation History (2014-2024)', chapter: 4 },
-          { id: 'rbi-targeting', title: "RBI's Inflation Targeting", chapter: 5 },
-          { id: 'food-inflation', title: 'Food Inflation Breakdown' },
-          { id: 'summary', title: 'Quick Summary' },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* Current Inflation Dashboard */}
       <ScrollReveal animation="fade-up">

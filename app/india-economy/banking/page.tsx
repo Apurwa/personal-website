@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { PageTOC } from '../components/PageTOC'
 import { TableOfContents } from '../components/TableOfContents'
 import {
   SectionHeading,
@@ -36,6 +37,20 @@ export const metadata: Metadata = {
 export default function BankingPage() {
   const data = getBankingData()
 
+  const tocItems = [
+    { id: 'what-is-a-bank', title: 'What is a Bank?', chapter: 1 },
+    { id: 'types-of-banks', title: 'Types of Banks in India', chapter: 2 },
+    { id: 'top-banks', title: 'Top 10 Banks by Assets', chapter: 3 },
+    { id: 'how-banks-make-money', title: 'How Banks Make Money', chapter: 4 },
+    { id: 'npa-problem', title: 'The NPA Problem', chapter: 5 },
+    { id: 'digital-payments', title: 'Digital Payments Revolution', chapter: 6 },
+    { id: 'deposit-insurance', title: 'Deposit Insurance', chapter: 7 },
+    { id: 'banking-reforms', title: 'Key Banking Reforms', chapter: 8 },
+    { id: 'financial-inclusion', title: 'Financial Inclusion', chapter: 9 },
+    { id: 'interest-rates', title: 'Interest Rates Quick Guide', chapter: 10 },
+    { id: 'key-takeaways', title: 'Key Takeaways', chapter: '★' },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       <Breadcrumb
@@ -58,6 +73,8 @@ export default function BankingPage() {
           From nationalization in 1969 to UPI revolution in 2016, explore how banks shape our economy.
         </p>
       </header>
+
+      <PageTOC items={tocItems} />
 
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">
@@ -93,21 +110,7 @@ export default function BankingPage() {
       </section>
 
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'what-is-a-bank', title: 'What is a Bank?', chapter: 1 },
-          { id: 'types-of-banks', title: 'Types of Banks in India', chapter: 2 },
-          { id: 'top-banks', title: 'Top 10 Banks by Assets', chapter: 3 },
-          { id: 'how-banks-make-money', title: 'How Banks Make Money', chapter: 4 },
-          { id: 'npa-problem', title: 'The NPA Problem', chapter: 5 },
-          { id: 'digital-payments', title: 'Digital Payments Revolution', chapter: 6 },
-          { id: 'deposit-insurance', title: 'Deposit Insurance', chapter: 7 },
-          { id: 'banking-reforms', title: 'Key Banking Reforms', chapter: 8 },
-          { id: 'financial-inclusion', title: 'Financial Inclusion', chapter: 9 },
-          { id: 'interest-rates', title: 'Interest Rates Quick Guide', chapter: 10 },
-          { id: 'key-takeaways', title: 'Key Takeaways', chapter: '★' },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* What is a Bank? */}
       <section className="mb-16">

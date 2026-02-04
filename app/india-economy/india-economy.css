@@ -318,3 +318,68 @@
 .scroll-delay-6 { transition-delay: 0.35s; }
 .scroll-delay-7 { transition-delay: 0.4s; }
 .scroll-delay-8 { transition-delay: 0.45s; }
+
+/* ===========================================
+   Sticky Table of Contents
+   =========================================== */
+
+/* Thin scrollbar for TOC overflow */
+.sticky-toc-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #e5e0d8 transparent;
+}
+
+.sticky-toc-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sticky-toc-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sticky-toc-scroll::-webkit-scrollbar-thumb {
+  background-color: #e5e0d8;
+  border-radius: 2px;
+}
+
+.sticky-toc-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #d4cfc7;
+}
+
+/* Sticky TOC container fade effect at bottom */
+.sticky-toc {
+  position: relative;
+}
+
+.sticky-toc::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: linear-gradient(to top, #FAF7F2, transparent);
+  pointer-events: none;
+}
+
+/* Line clamp for long TOC titles */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Mobile TOC FAB hover state */
+@media (hover: hover) {
+  .mobile-toc-fab:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Mobile TOC bottom sheet safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-toc-sheet {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
   MarginNote,
@@ -37,6 +38,18 @@ export default function TradePage() {
   const trade = getTradeData()
   const { summary, topExports, topImports, tradingPartners, forexReserves, currentAccountDeficit, historicalTrade, servicesBreakdown } = trade
 
+  const tocItems = [
+    { id: 'big-picture', title: 'The Big Picture' },
+    { id: 'what-is-trade', title: 'What is International Trade?', chapter: 1 },
+    { id: 'top-exports', title: 'Top Exports', chapter: 2 },
+    { id: 'top-imports', title: 'Top Imports', chapter: 3 },
+    { id: 'trading-partners', title: 'Major Trading Partners', chapter: 4 },
+    { id: 'forex-reserves', title: 'Foreign Exchange Reserves', chapter: 5 },
+    { id: 'balance-payments', title: 'Balance of Payments', chapter: 6 },
+    { id: 'trade-history', title: '10-Year Trade History' },
+    { id: 'summary', title: 'Quick Summary' },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
@@ -62,20 +75,11 @@ export default function TradePage() {
         </p>
       </header>
 
+      {/* Sticky Page TOC */}
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'big-picture', title: 'The Big Picture' },
-          { id: 'what-is-trade', title: 'What is International Trade?', chapter: 1 },
-          { id: 'top-exports', title: 'Top Exports', chapter: 2 },
-          { id: 'top-imports', title: 'Top Imports', chapter: 3 },
-          { id: 'trading-partners', title: 'Major Trading Partners', chapter: 4 },
-          { id: 'forex-reserves', title: 'Foreign Exchange Reserves', chapter: 5 },
-          { id: 'balance-payments', title: 'Balance of Payments', chapter: 6 },
-          { id: 'trade-history', title: '10-Year Trade History' },
-          { id: 'summary', title: 'Quick Summary' },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* Trade Summary Dashboard */}
       <ScrollReveal animation="fade-up">

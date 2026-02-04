@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
   MarginNote,
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
 export default function RBIPage() {
   const rates = getCurrentRates()
 
+  const tocItems = [
+    { id: 'current-rates', title: 'Current Policy Rates' },
+    { id: 'what-is-rbi', title: 'What is the Reserve Bank of India?' },
+    { id: 'repo-rate', title: 'What is Repo Rate?' },
+    { id: 'crr', title: 'What is CRR (Cash Reserve Ratio)?' },
+    { id: 'slr', title: 'What is SLR (Statutory Liquidity Ratio)?' },
+    { id: 'summary', title: 'Quick Summary' },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
@@ -61,16 +71,11 @@ export default function RBIPage() {
         </p>
       </header>
 
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
       <TableOfContents
-        items={[
-          { id: 'current-rates', title: 'Current Policy Rates' },
-          { id: 'what-is-rbi', title: 'What is the Reserve Bank of India?' },
-          { id: 'repo-rate', title: 'What is Repo Rate?' },
-          { id: 'crr', title: 'What is CRR (Cash Reserve Ratio)?' },
-          { id: 'slr', title: 'What is SLR (Statutory Liquidity Ratio)?' },
-          { id: 'summary', title: 'Quick Summary' },
-        ]}
+        items={tocItems}
       />
 
       {/* Current Rates Dashboard */}

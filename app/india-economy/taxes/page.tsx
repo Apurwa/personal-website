@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   SectionHeading,
   Definition,
@@ -37,6 +38,17 @@ export const metadata: Metadata = {
 export default function TaxesPage() {
   const data = getTaxationData()
 
+  const tocItems = [
+    { id: 'direct-vs-indirect', chapter: 1, title: 'Direct vs Indirect Taxes' },
+    { id: 'income-tax', chapter: 2, title: 'Income Tax' },
+    { id: 'corporate-tax', chapter: 3, title: 'Corporate Tax' },
+    { id: 'gst', chapter: 4, title: 'GST: One Nation, One Tax' },
+    { id: 'other-taxes', chapter: 5, title: 'Other Important Taxes' },
+    { id: 'tax-to-gdp', chapter: 6, title: 'Tax-to-GDP Ratio' },
+    { id: 'reforms', chapter: 7, title: 'Major Tax Reforms' },
+    { id: 'black-money', chapter: 8, title: 'Black Money & Tax Evasion' },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       <Breadcrumb
@@ -60,19 +72,10 @@ export default function TaxesPage() {
         </p>
       </header>
 
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'direct-vs-indirect', chapter: 1, title: 'Direct vs Indirect Taxes' },
-          { id: 'income-tax', chapter: 2, title: 'Income Tax' },
-          { id: 'corporate-tax', chapter: 3, title: 'Corporate Tax' },
-          { id: 'gst', chapter: 4, title: 'GST: One Nation, One Tax' },
-          { id: 'other-taxes', chapter: 5, title: 'Other Important Taxes' },
-          { id: 'tax-to-gdp', chapter: 6, title: 'Tax-to-GDP Ratio' },
-          { id: 'reforms', chapter: 7, title: 'Major Tax Reforms' },
-          { id: 'black-money', chapter: 8, title: 'Black Money & Tax Evasion' },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">

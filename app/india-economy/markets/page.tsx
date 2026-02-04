@@ -4,6 +4,7 @@ import { SourceFooter } from '../components/SourceFooter'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { CountUpStat } from '../components/CountUpStat'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   SectionHeading,
   Definition,
@@ -36,6 +37,19 @@ export const metadata: Metadata = {
 export default function MarketsPage() {
   const data = getMarketsData()
 
+  const tocItems = [
+    { id: 'stock-market-basics', title: 'What is the Stock Market?', chapter: 1 },
+    { id: 'bse-vs-nse', title: 'BSE vs NSE', chapter: 2 },
+    { id: 'sensex-nifty', title: 'Sensex & Nifty Explained', chapter: 3 },
+    { id: 'market-history', title: 'Stock Market History', chapter: 4 },
+    { id: 'sebi', title: 'SEBI: The Market Regulator', chapter: 5 },
+    { id: 'investors', title: 'Who Invests in the Market?', chapter: 6 },
+    { id: 'ipo', title: 'IPOs: How Companies Go Public', chapter: 7 },
+    { id: 'trading', title: 'How Trading Works', chapter: 8 },
+    { id: 'market-caps', title: 'Large, Mid & Small Cap', chapter: 9 },
+    { id: 'global-comparison', title: 'India vs The World', chapter: 10 },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       <Breadcrumb
@@ -60,21 +74,10 @@ export default function MarketsPage() {
         </p>
       </header>
 
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'stock-market-basics', title: 'What is the Stock Market?', chapter: 1 },
-          { id: 'bse-vs-nse', title: 'BSE vs NSE', chapter: 2 },
-          { id: 'sensex-nifty', title: 'Sensex & Nifty Explained', chapter: 3 },
-          { id: 'market-history', title: 'Stock Market History', chapter: 4 },
-          { id: 'sebi', title: 'SEBI: The Market Regulator', chapter: 5 },
-          { id: 'investors', title: 'Who Invests in the Market?', chapter: 6 },
-          { id: 'ipo', title: 'IPOs: How Companies Go Public', chapter: 7 },
-          { id: 'trading', title: 'How Trading Works', chapter: 8 },
-          { id: 'market-caps', title: 'Large, Mid & Small Cap', chapter: 9 },
-          { id: 'global-comparison', title: 'India vs The World', chapter: 10 },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">

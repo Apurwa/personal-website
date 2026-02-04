@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { TableOfContents } from '../components/TableOfContents'
+import { PageTOC } from '../components/PageTOC'
 import {
   SectionHeading,
   Definition,
@@ -37,6 +38,18 @@ export const metadata: Metadata = {
 export default function EmploymentPage() {
   const data = getEmploymentData()
 
+  const tocItems = [
+    { id: 'unemployment', title: 'Understanding Unemployment', chapter: 1 },
+    { id: 'where-indians-work', title: 'Where Do Indians Work?', chapter: 2 },
+    { id: 'formal-vs-informal', title: 'Formal vs Informal Sector', chapter: 3 },
+    { id: 'women-in-workforce', title: 'Women in the Workforce', chapter: 4 },
+    { id: 'gig-economy', title: 'The Gig Economy', chapter: 5 },
+    { id: 'mgnrega', title: 'MGNREGA: Rural Employment Guarantee', chapter: 6 },
+    { id: 'skill-india', title: 'Skill India', chapter: 7 },
+    { id: 'labour-reforms', title: 'Labour Law Reforms', chapter: 8 },
+    { id: 'future-of-work', title: 'Future of Work', chapter: 9 },
+  ]
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">
       <Breadcrumb
@@ -60,20 +73,10 @@ export default function EmploymentPage() {
         </p>
       </header>
 
+      <PageTOC items={tocItems} />
+
       {/* Table of Contents */}
-      <TableOfContents
-        items={[
-          { id: 'unemployment', title: 'Understanding Unemployment', chapter: 1 },
-          { id: 'where-indians-work', title: 'Where Do Indians Work?', chapter: 2 },
-          { id: 'formal-vs-informal', title: 'Formal vs Informal Sector', chapter: 3 },
-          { id: 'women-in-workforce', title: 'Women in the Workforce', chapter: 4 },
-          { id: 'gig-economy', title: 'The Gig Economy', chapter: 5 },
-          { id: 'mgnrega', title: 'MGNREGA: Rural Employment Guarantee', chapter: 6 },
-          { id: 'skill-india', title: 'Skill India', chapter: 7 },
-          { id: 'labour-reforms', title: 'Labour Law Reforms', chapter: 8 },
-          { id: 'future-of-work', title: 'Future of Work', chapter: 9 },
-        ]}
-      />
+      <TableOfContents items={tocItems} />
 
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">
