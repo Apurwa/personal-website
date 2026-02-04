@@ -26,7 +26,6 @@ Deployed to Vercel with serverless functions. API routes are supported. Images u
 
 - **`data/resume.ts`** - Resume content (experiences, projects, skills, personal info)
 - **`content/blog/*.mdx`** - Blog posts with frontmatter; parsed by `lib/blog.ts`
-- **`app/india-economy/data/budget-2024-25.json`** - India budget data for Budget Quest
 
 ### Interactive Tools
 
@@ -41,10 +40,20 @@ Deployed to Vercel with serverless functions. API routes are supported. Images u
 **India Economy Portal** (`/india-economy`)
 
 - Self-contained in `app/india-economy/` with co-located components, data, hooks
-- "Thoughtful Textbook" theme - editorial, typography-driven design (see Design Preferences)
-- 9 sections: Budget, RBI, GDP, Inflation, Trade, Banking, Markets, Taxes, Employment
+- "Thoughtful Textbook" theme - editorial, typography-driven design
+- 9 live sections: Budget, RBI, GDP, Inflation, Trade, Banking, Markets, Taxes, Employment
 - `CurrencyContext` provides INR/USD toggle with live exchange rates
-- See `app/india-economy/CLAUDE.md` for detailed section guidance
+- **See `app/india-economy/CLAUDE.md` for detailed guidance**
+- **See `app/india-economy/STRUCTURE.md` for content roadmap**
+
+**Neta Track - Political Promise Tracker** (`/neta-track`)
+
+- Fact-based tracker comparing election manifesto promises vs delivery
+- Neutral tone; every claim requires verifiable sources
+- Routes: `/parties/[party-slug]`, `/methodology`, `/issues`, `/compare`
+- Data: `app/neta-track/data/promises/{party}-{year}.json`
+- Reuses "Thoughtful Textbook" theme with status-specific colors (delivered/partial/not-delivered)
+- **See `app/neta-track/CLAUDE.md` for detailed guidance**
 
 ### Animation System
 
@@ -62,39 +71,27 @@ Two animation libraries:
 
 ## Design Preferences
 
-### Preferred Theme: "Thoughtful Textbook"
+### "Thoughtful Textbook" Theme
 
-For educational content (like `/india-economy`), use this distinctive editorial theme:
+Used for educational content (`/india-economy`, `/neta-track`). Distinctive editorial design:
 
-**Typography:**
-- Headers: Source Serif 4 (elegant, readable serif)
-- Body: IBM Plex Sans (humanist, not cold)
+**Typography:** Source Serif 4 (headers), IBM Plex Sans (body)
 
-**Color Palette:**
-| Usage | Color | Hex |
-|-------|-------|-----|
-| Background | Warm cream | `#FAF7F2` |
-| Primary text | Deep indigo | `#1a2e44` |
-| Accent | Terracotta | `#b85c38` |
-| Links | Muted blue | `#4a6fa5` |
-| Captions | Slate | `#6b7c8f` |
-| Borders | Warm gray | `#e5e0d8` |
-| Callouts | Cream yellow | `#FFF8E7` |
-| Positive | Sage green | `#7a9e7e` |
-| Highlight | Gold | `#d4a84b` |
+**Core Colors:**
+| Usage | Hex |
+|-------|-----|
+| Background (warm cream) | `#FAF7F2` |
+| Primary text (deep indigo) | `#1a2e44` |
+| Accent (terracotta) | `#b85c38` |
+| Links (muted blue) | `#4a6fa5` |
+| Positive/Delivered (sage green) | `#7a9e7e` |
+| Highlight/Partial (gold) | `#d4a84b` |
 
 **Design Principles:**
 - Typography-driven, no emojis
 - Paper texture background (`paper-texture` class)
 - Staggered animations with `animation-delay`
-- Asymmetric margin notes and callouts
 - Educational components: `Definition`, `MarginNote`, `KeyConcept`, `StatDisplay`
-
-**Animation Classes** (in `india-economy.css`):
-- `animate-fade-in-up`, `animate-fade-in`, `animate-slide-in-left`
-- `animate-draw-line` for decorative lines
-- `delay-1` through `delay-8` for staggered reveals
-- `hover-lift` for card interactions
 - All animations respect `prefers-reduced-motion`
 
 ## Environment Variables
@@ -110,16 +107,11 @@ OPENAI_API_KEY=...    # Optional: AI-powered NAICS classification
 
 **Resume**: Edit `data/resume.ts`
 
-**Blog posts**: Create MDX files in `content/blog/` with frontmatter:
+**Blog posts**: Create MDX in `content/blog/` with frontmatter (title, description, date, tags)
 
-```yaml
----
-title: "Post Title"
-description: "Brief description"
-date: "2024-01-15"
-tags: ["AI", "Product"]
----
-```
+**India Economy**: Add data to `app/india-economy/data/`, register sources in `sources.json`
+
+**Neta Track**: Add promises to `app/neta-track/data/promises/{party}-{year}.json`
 
 ## Deployment
 
