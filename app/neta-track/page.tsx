@@ -67,12 +67,21 @@ export default function NetaTrackPage() {
           <h2 className="font-serif text-2xl font-semibold text-[#1a2e44]">
             Party Report Cards
           </h2>
-          <Link
-            href="/neta-track/parties"
-            className="font-sans text-sm text-[#4a6fa5] link-animated"
-          >
-            View all parties
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/neta-track/compare"
+              className="font-sans text-sm text-[#4a6fa5] link-animated"
+            >
+              Compare parties
+            </Link>
+            <span className="text-[#e5e0d8]">|</span>
+            <Link
+              href="/neta-track/parties"
+              className="font-sans text-sm text-[#4a6fa5] link-animated"
+            >
+              View all
+            </Link>
+          </div>
         </div>
         <p className="font-sans text-[#6b7c8f] mb-6">
           2019 Lok Sabha manifesto promises tracked against delivery
