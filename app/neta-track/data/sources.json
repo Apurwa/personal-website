@@ -20,6 +20,16 @@
     "coversData": ["congress-2019.json"]
   },
   {
+    "id": "aap-manifesto-2019",
+    "title": "AAP Lok Sabha Manifesto 2019",
+    "publisher": "Aam Aadmi Party",
+    "url": "https://aamaadmiparty.org",
+    "type": "official",
+    "publishedDate": "2019-04-10",
+    "accessedDate": "2026-02-04",
+    "coversData": ["aap-2019.json"]
+  },
+  {
     "id": "bjp-manifesto-2024",
     "title": "BJP Sankalp Patra 2024",
     "publisher": "Bharatiya Janata Party",

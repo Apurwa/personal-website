@@ -1,0 +1,296 @@
+[
+  {
+    "id": "aap-2019-001",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will provide free electricity up to 200 units to every household in the country, just as we have done in Delhi.",
+    "summary": "Free electricity up to 200 units for all households nationally",
+    "sector": "social-welfare",
+    "concerns": ["prices", "development"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. However, implemented in Delhi (200 units free) and Punjab (300 units free) where AAP governs. Model not replicated nationally.",
+    "evidence": [
+      {
+        "title": "Delhi Free Electricity Scheme",
+        "url": "https://delhi.gov.in",
+        "type": "government",
+        "date": "2019-08-01"
+      },
+      {
+        "title": "Punjab Free Electricity 300 Units",
+        "url": "https://punjab.gov.in",
+        "type": "government",
+        "date": "2022-07-01"
+      }
+    ],
+    "manifestoPage": 5,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-002",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will provide free water up to 20,000 litres per month to every household.",
+    "summary": "Free water up to 20,000 litres/month for all households",
+    "sector": "social-welfare",
+    "concerns": ["prices", "development"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. Implemented in Delhi where 20,000 litres/month is free. Not implemented nationally or in Punjab due to different water infrastructure.",
+    "evidence": [
+      {
+        "title": "Delhi Jal Board Free Water Scheme",
+        "url": "https://delhijalboard.nic.in",
+        "type": "government",
+        "date": "2019-01-01"
+      }
+    ],
+    "manifestoPage": 5,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-003",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will set up Mohalla Clinics across the country to provide free primary healthcare within walking distance of every citizen.",
+    "summary": "Mohalla Clinics for free primary healthcare nationwide",
+    "sector": "healthcare",
+    "concerns": ["healthcare"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. 500+ Mohalla Clinics operational in Delhi serving 80+ lakh patients annually. Model praised but not replicated nationally. Punjab started Mohalla Clinics in 2023.",
+    "evidence": [
+      {
+        "title": "Delhi Mohalla Clinic Statistics",
+        "url": "https://health.delhi.gov.in",
+        "type": "government",
+        "date": "2024-01-01"
+      },
+      {
+        "title": "WHO Recognition of Mohalla Clinics",
+        "url": "https://www.who.int/india",
+        "type": "research",
+        "date": "2023-05-01"
+      }
+    ],
+    "manifestoPage": 8,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-004",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will transform government schools across the country following the Delhi model with world-class infrastructure and quality education.",
+    "summary": "Transform government schools following Delhi model",
+    "sector": "education",
+    "concerns": ["education", "youth"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. Delhi government schools showed significant improvement - pass rates increased, new infrastructure built. Model praised but Central government did not adopt it nationally.",
+    "evidence": [
+      {
+        "title": "Delhi Education Revolution - Third Party Assessment",
+        "url": "https://www.edudel.nic.in",
+        "type": "government",
+        "date": "2023-01-01"
+      },
+      {
+        "title": "Delhi Schools Performance Data",
+        "url": "https://cbseresults.nic.in",
+        "type": "government",
+        "date": "2024-05-01"
+      }
+    ],
+    "manifestoPage": 10,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-005",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will provide doorstep delivery of government services so citizens don't have to visit government offices for basic services.",
+    "summary": "Doorstep delivery of government services",
+    "sector": "governance",
+    "concerns": ["corruption", "development"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. Doorstep delivery operational in Delhi for 100+ services including ration card, caste certificate, driving license renewal. Not implemented nationally.",
+    "evidence": [
+      {
+        "title": "Delhi Doorstep Delivery Scheme",
+        "url": "https://doorstepservice.delhigovt.nic.in",
+        "type": "government",
+        "date": "2024-01-01"
+      }
+    ],
+    "manifestoPage": 15,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-006",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will make public transport free for women across the country.",
+    "summary": "Free public transport for women nationwide",
+    "sector": "social-welfare",
+    "concerns": ["women", "prices"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. Free bus travel for women implemented in Delhi (Oct 2019). Several other states adopted similar schemes independently. Not a national policy.",
+    "evidence": [
+      {
+        "title": "Delhi Free Bus Scheme for Women",
+        "url": "https://transport.delhi.gov.in",
+        "type": "government",
+        "date": "2019-10-29"
+      },
+      {
+        "title": "DTC Ridership Data",
+        "url": "https://dtc.delhi.gov.in",
+        "type": "government",
+        "date": "2024-01-01"
+      }
+    ],
+    "manifestoPage": 12,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-007",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will ensure full statehood for Delhi with control over police and land.",
+    "summary": "Full statehood for Delhi",
+    "sector": "governance",
+    "concerns": ["development"],
+    "status": "not-delivered",
+    "statusReason": "AAP won only 1 Lok Sabha seat in 2019. Full statehood for Delhi remains unachieved. Supreme Court ruled in 2023 that Delhi government has legislative control over services, but land and police remain with Centre.",
+    "evidence": [
+      {
+        "title": "Supreme Court Verdict on Delhi Services",
+        "url": "https://main.sci.gov.in",
+        "type": "government",
+        "date": "2023-05-11"
+      },
+      {
+        "title": "Delhi Services Ordinance 2023",
+        "url": "https://egazette.nic.in",
+        "type": "government",
+        "date": "2023-05-19"
+      }
+    ],
+    "manifestoPage": 3,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-008",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will waive all outstanding farm loans and ensure farmers get MSP as per Swaminathan Committee recommendations.",
+    "summary": "Farm loan waiver and MSP as per Swaminathan report",
+    "sector": "agriculture",
+    "concerns": ["farmers"],
+    "status": "partial",
+    "statusReason": "AAP did not form central government. In Punjab, AAP government waived loans up to Rs 2 lakh for landless farmers. Full Swaminathan MSP (C2+50%) not implemented anywhere.",
+    "evidence": [
+      {
+        "title": "Punjab Farm Loan Waiver",
+        "url": "https://punjab.gov.in",
+        "type": "government",
+        "date": "2022-07-01"
+      }
+    ],
+    "manifestoPage": 7,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-009",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will end VIP culture. No red beacons, no special treatment for politicians. Ministers will use public transport.",
+    "summary": "End VIP culture, ministers to use public transport",
+    "sector": "governance",
+    "concerns": ["corruption"],
+    "status": "partial",
+    "statusReason": "Red beacons banned nationally in 2017 (by BJP government). AAP ministers in Delhi initially used public transport but later used official vehicles. VIP culture persists across political system.",
+    "evidence": [
+      {
+        "title": "Red Beacon Ban 2017",
+        "url": "https://morth.nic.in",
+        "type": "government",
+        "date": "2017-04-19"
+      }
+    ],
+    "manifestoPage": 4,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-010",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will pass the Jan Lokpal Bill to create a strong anti-corruption ombudsman with power to prosecute corrupt officials and politicians.",
+    "summary": "Pass strong Jan Lokpal Bill at national level",
+    "sector": "governance",
+    "concerns": ["corruption"],
+    "status": "not-delivered",
+    "statusReason": "AAP did not form central government. Delhi Jan Lokpal Bill passed in 2015 but not notified until 2024 due to LG's objections. National Lokpal appointed in 2019 but with limited powers compared to Jan Lokpal demands.",
+    "evidence": [
+      {
+        "title": "Delhi Lokpal Bill 2015",
+        "url": "https://delhiassembly.nic.in",
+        "type": "government",
+        "date": "2015-12-14"
+      },
+      {
+        "title": "National Lokpal Appointment",
+        "url": "https://lokpal.gov.in",
+        "type": "government",
+        "date": "2019-03-23"
+      }
+    ],
+    "manifestoPage": 4,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-011",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will ensure 85% reservation for locals in private sector jobs in their respective states.",
+    "summary": "85% reservation for locals in private sector jobs",
+    "sector": "employment",
+    "concerns": ["jobs", "youth"],
+    "status": "not-delivered",
+    "statusReason": "AAP did not form central government. No such reservation implemented in Delhi or Punjab. Haryana's 75% local quota law faced legal challenges and was stayed by courts.",
+    "evidence": [
+      {
+        "title": "Haryana Local Quota Law Stayed",
+        "url": "https://highcourtchd.gov.in",
+        "type": "government",
+        "date": "2023-02-17"
+      }
+    ],
+    "manifestoPage": 6,
+    "sourceId": "aap-manifesto-2019"
+  },
+  {
+    "id": "aap-2019-012",
+    "partySlug": "aap",
+    "electionYear": 2019,
+    "text": "AAP will regularize all unauthorized colonies and provide ownership rights to residents.",
+    "summary": "Regularize unauthorized colonies, provide ownership rights",
+    "sector": "social-welfare",
+    "concerns": ["development"],
+    "status": "partial",
+    "statusReason": "In Delhi, PM-UDAY scheme (Central govt) regularized 1,731 unauthorized colonies in 2019. AAP government facilitated registry process. Similar work ongoing in Punjab.",
+    "evidence": [
+      {
+        "title": "PM-UDAY Scheme Delhi",
+        "url": "https://dda.org.in",
+        "type": "government",
+        "date": "2019-12-12"
+      },
+      {
+        "title": "Unauthorized Colony Registry Status",
+        "url": "https://revenue.delhi.gov.in",
+        "type": "government",
+        "date": "2024-01-01"
+      }
+    ],
+    "manifestoPage": 14,
+    "sourceId": "aap-manifesto-2019"
+  }
+]
