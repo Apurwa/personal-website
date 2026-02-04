@@ -35,6 +35,20 @@ export interface MinistryAllocation {
   icon: string
 }
 
+export interface SubsidyBreakdown {
+  food: number
+  fertilizer: number
+  petroleum: number
+  interest: number
+  other: number
+  total: number
+}
+
+export interface BudgetCalendarEntry {
+  date: string
+  event: string
+}
+
 export interface BudgetData {
   fiscalYear: string
   lastUpdated: string
@@ -53,6 +67,13 @@ export interface BudgetData {
   revenueDeficit: number
   primaryDeficit: number
   debtToGdp: number
+  totalDebt: number
+  subsidies: SubsidyBreakdown
+  transfers: {
+    financeCommission: number
+    centrallySponsoredSchemes: number
+  }
+  budgetCalendar: BudgetCalendarEntry[]
   historical: {
     year: string
     fiscalDeficitPercent: number

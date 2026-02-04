@@ -38,6 +38,27 @@
   "revenueDeficit": 526000,
   "primaryDeficit": 541000,
   "debtToGdp": 56.8,
+  "totalDebt": 18500000,
+  "subsidies": {
+    "food": 205000,
+    "fertilizer": 164000,
+    "petroleum": 11925,
+    "interest": 22000,
+    "other": 40000,
+    "total": 442925
+  },
+  "transfers": {
+    "financeCommission": 1220000,
+    "centrallySponsoredSchemes": 480000
+  },
+  "budgetCalendar": [
+    { "date": "Jan", "event": "Economic Survey preparation begins" },
+    { "date": "Feb 1", "event": "Budget presented in Parliament" },
+    { "date": "Feb", "event": "General discussion in both Houses" },
+    { "date": "Mar", "event": "Demands for Grants, voting" },
+    { "date": "Mar 31", "event": "Appropriation Bill passed" },
+    { "date": "Apr 1", "event": "New financial year begins" }
+  ],
   "historical": [
     { "year": "2020-21", "fiscalDeficitPercent": 9.2, "totalExpenditure": 3531000 },
     { "year": "2021-22", "fiscalDeficitPercent": 6.7, "totalExpenditure": 3761000 },

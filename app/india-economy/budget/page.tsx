@@ -31,9 +31,13 @@ export const metadata: Metadata = {
 const tocItems: TOCItem[] = [
   { id: 'big-picture', title: 'The Big Picture' },
   { id: 'what-is-budget', title: 'What is the Union Budget?' },
+  { id: 'budget-calendar', title: 'Budget Calendar' },
   { id: 'where-money-comes-from', title: 'Where Does the Money Come From?' },
   { id: 'where-money-goes', title: 'Where Does the Money Go?' },
+  { id: 'capital-vs-revenue', title: 'Capital vs Revenue Expenditure' },
+  { id: 'subsidies', title: 'Major Subsidies' },
   { id: 'fiscal-deficit', title: 'What is Fiscal Deficit?' },
+  { id: 'government-debt', title: 'Government Debt' },
   { id: 'deficit-trend', title: '10-Year Fiscal Deficit Trend' },
 ]
 
@@ -146,6 +150,44 @@ export default function BudgetPage() {
         </ContentCard>
       </ScrollReveal>
 
+      {/* Budget Calendar */}
+      <ScrollReveal animation="fade-up">
+        <SectionHeading id="budget-calendar" subtitle="Key dates in the annual budget process">
+          Budget Calendar
+        </SectionHeading>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-8">
+          <div className="relative">
+            {budget.budgetCalendar.map((item, index) => (
+              <div key={item.date} className="flex gap-4 mb-4 last:mb-0">
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-[#b85c38] text-white flex items-center justify-center font-serif font-semibold text-sm">
+                    {index + 1}
+                  </div>
+                  {index < budget.budgetCalendar.length - 1 && (
+                    <div className="w-0.5 h-8 bg-[#e5e0d8] my-1" />
+                  )}
+                </div>
+                <div className="flex-1 pt-1">
+                  <p className="font-sans text-xs font-semibold text-[#b85c38] uppercase tracking-wider">{item.date}</p>
+                  <p className="text-[#4a5568]">{item.event}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </ContentCard>
+      </ScrollReveal>
+
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="Fun Fact">
+          The tradition of presenting the budget at 5 PM (inherited from British colonial rule) was changed to 11 AM in 2001
+          by Finance Minister Yashwant Sinha. The &quot;budget briefcase&quot; was also replaced with a traditional &quot;bahi-khata&quot;
+          (Indian ledger) in 2019.
+        </MarginNote>
+      </ScrollReveal>
+
       {/* Where Money Comes From */}
       <ScrollReveal animation="fade-up">
         <SectionHeading id="where-money-comes-from" subtitle="Government's sources of income">
@@ -207,6 +249,114 @@ export default function BudgetPage() {
         </MarginNote>
       </ScrollReveal>
 
+      {/* Capital vs Revenue Expenditure */}
+      <ScrollReveal animation="fade-up">
+        <SectionHeading id="capital-vs-revenue" subtitle="Building assets vs running the government">
+          Capital vs Revenue Expenditure
+        </SectionHeading>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <Definition term="Revenue Expenditure" hindi="राजस्व व्यय">
+          Money spent on day-to-day running of the government — salaries, pensions, interest payments,
+          subsidies. This spending doesn&apos;t create any assets and is consumed in the same year.
+        </Definition>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <Definition term="Capital Expenditure" hindi="पूंजीगत व्यय">
+          Money spent on creating assets — roads, bridges, buildings, machinery, defence equipment.
+          This spending creates long-term value and is considered &quot;productive spending&quot;.
+        </Definition>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Expenditure Breakdown</h4>
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="text-center p-4 bg-[#FFF8E7] border border-[#d4a84b]/30 rounded-sm">
+              <div className="font-serif text-2xl font-bold text-[#1a2e44]">
+                ₹{(budget.revenueExpenditure / 100000).toFixed(1)}L Cr
+              </div>
+              <div className="font-sans text-sm text-[#6b7c8f]">Revenue Expenditure</div>
+              <div className="font-sans text-xs text-[#b85c38] font-medium mt-1">
+                {((budget.revenueExpenditure / budget.totalExpenditure) * 100).toFixed(0)}% of total
+              </div>
+            </div>
+            <div className="text-center p-4 bg-[#7a9e7e]/10 border border-[#7a9e7e]/30 rounded-sm">
+              <div className="font-serif text-2xl font-bold text-[#1a2e44]">
+                ₹{(budget.capitalExpenditure / 100000).toFixed(1)}L Cr
+              </div>
+              <div className="font-sans text-sm text-[#6b7c8f]">Capital Expenditure</div>
+              <div className="font-sans text-xs text-[#7a9e7e] font-medium mt-1">
+                {((budget.capitalExpenditure / budget.totalExpenditure) * 100).toFixed(0)}% of total
+              </div>
+            </div>
+          </div>
+          <div className="h-4 bg-[#e5e0d8]/50 rounded-sm overflow-hidden flex">
+            <div
+              className="h-full bg-[#d4a84b]"
+              style={{ width: `${(budget.revenueExpenditure / budget.totalExpenditure) * 100}%` }}
+            />
+            <div
+              className="h-full bg-[#7a9e7e]"
+              style={{ width: `${(budget.capitalExpenditure / budget.totalExpenditure) * 100}%` }}
+            />
+          </div>
+          <div className="flex justify-between mt-2 font-sans text-xs text-[#6b7c8f]">
+            <span className="flex items-center gap-1">
+              <span className="w-2 h-2 bg-[#d4a84b] rounded-sm" /> Revenue
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="w-2 h-2 bg-[#7a9e7e] rounded-sm" /> Capital
+            </span>
+          </div>
+        </ContentCard>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="Why Capital Expenditure Matters">
+          Economists prefer higher capital expenditure because it creates infrastructure that
+          boosts economic growth for years. The government has been increasing capex from 12% (2019-20)
+          to 23% (2024-25) of total spending — a positive shift.
+        </KeyConcept>
+      </ScrollReveal>
+
+      {/* Major Subsidies */}
+      <ScrollReveal animation="fade-up">
+        <SectionHeading id="subsidies" subtitle="Government support to keep prices low">
+          Major Subsidies
+        </SectionHeading>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <Definition term="Subsidy" hindi="सब्सिडी">
+          Money the government pays to keep prices of essential items affordable for common people.
+          When you buy subsidized LPG or ration shop wheat, the government pays the difference.
+        </Definition>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">
+            Total Subsidies: ₹{(budget.subsidies.total / 100000).toFixed(1)} lakh crore
+          </h4>
+          <div className="space-y-4">
+            <SubsidyBar label="Food Subsidy" value={budget.subsidies.food} total={budget.subsidies.total} color="bg-[#b85c38]" description="Free ration, PDS" />
+            <SubsidyBar label="Fertilizer Subsidy" value={budget.subsidies.fertilizer} total={budget.subsidies.total} color="bg-[#7a9e7e]" description="Cheap DAP, urea for farmers" />
+            <SubsidyBar label="Petroleum Subsidy" value={budget.subsidies.petroleum} total={budget.subsidies.total} color="bg-[#4a6fa5]" description="LPG for poor households" />
+            <SubsidyBar label="Other Subsidies" value={budget.subsidies.other + budget.subsidies.interest} total={budget.subsidies.total} color="bg-[#6b7c8f]" description="Interest, exports, etc." />
+          </div>
+        </ContentCard>
+      </ScrollReveal>
+
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="PMGKAY">
+          Under Pradhan Mantri Garib Kalyan Anna Yojana (PMGKAY), the government provides 5 kg free foodgrains
+          to 80 crore Indians every month. This is the world&apos;s largest food security program.
+        </MarginNote>
+      </ScrollReveal>
+
       {/* Fiscal Deficit */}
       <ScrollReveal animation="fade-up">
         <SectionHeading id="fiscal-deficit" subtitle="When government spends more than it earns">
@@ -233,6 +383,50 @@ export default function BudgetPage() {
             deficit is important — too much borrowing means higher interest payments in the future.
           </p>
         </ContentCard>
+      </ScrollReveal>
+
+      {/* Government Debt */}
+      <ScrollReveal animation="fade-up">
+        <SectionHeading id="government-debt" subtitle="How much does the government owe?">
+          Government Debt
+        </SectionHeading>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <Definition term="Government Debt" hindi="सरकारी कर्ज">
+          The total amount of money the government has borrowed over the years and hasn&apos;t repaid yet.
+          Every year&apos;s fiscal deficit adds to this debt pile.
+        </Definition>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <div className="grid grid-cols-2 gap-6 mb-6">
+            <div>
+              <p className="font-sans text-sm text-[#6b7c8f] mb-1">Total Government Debt</p>
+              <p className="font-serif text-3xl font-bold text-[#b85c38]">
+                ₹{(budget.totalDebt / 100000).toFixed(0)} lakh crore
+              </p>
+            </div>
+            <div>
+              <p className="font-sans text-sm text-[#6b7c8f] mb-1">Debt-to-GDP Ratio</p>
+              <p className="font-serif text-3xl font-bold text-[#1a2e44]">{budget.debtToGdp}%</p>
+            </div>
+          </div>
+          <p className="text-[#4a5568] text-sm leading-relaxed">
+            For every ₹100 of goods and services India produces, the government owes about ₹{budget.debtToGdp}.
+            This is considered manageable compared to countries like Japan (260%) or USA (120%), but higher
+            than China (80%) or Indonesia (40%).
+          </p>
+        </ContentCard>
+      </ScrollReveal>
+
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="Interest Burden">
+          The government spends ₹11.5 lakh crore (24% of budget) just on interest payments.
+          That&apos;s more than the combined spending on education, health, and agriculture!
+          This is why controlling fiscal deficit matters — more borrowing means even higher interest in future.
+        </KeyConcept>
       </ScrollReveal>
 
       {/* Historical Trend */}
@@ -296,6 +490,41 @@ function RevenueBar({
     <div>
       <div className="flex justify-between font-sans text-sm mb-1">
         <span className="text-[#1a2e44]">{label}</span>
+        <span className="text-[#6b7c8f]">₹{(value / 1000).toFixed(0)}K Cr ({percentage.toFixed(0)}%)</span>
+      </div>
+      <div className="h-2 bg-[#e5e0d8]/50 rounded-sm overflow-hidden">
+        <div
+          className={`h-full rounded-sm ${color}`}
+          style={{ width: `${percentage}%` }}
+        />
+      </div>
+    </div>
+  )
+}
+
+// Subsidy bar chart component
+function SubsidyBar({
+  label,
+  value,
+  total,
+  color,
+  description
+}: {
+  label: string
+  value: number
+  total: number
+  color: string
+  description: string
+}) {
+  const percentage = (value / total) * 100
+
+  return (
+    <div>
+      <div className="flex justify-between font-sans text-sm mb-1">
+        <span className="text-[#1a2e44]">
+          {label}
+          <span className="text-[#6b7c8f] text-xs ml-2">({description})</span>
+        </span>
         <span className="text-[#6b7c8f]">₹{(value / 1000).toFixed(0)}K Cr ({percentage.toFixed(0)}%)</span>
       </div>
       <div className="h-2 bg-[#e5e0d8]/50 rounded-sm overflow-hidden">
