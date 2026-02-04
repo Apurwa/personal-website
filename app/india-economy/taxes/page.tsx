@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   SectionHeading,
   Definition,
@@ -59,6 +60,20 @@ export default function TaxesPage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'direct-vs-indirect', chapter: 1, title: 'Direct vs Indirect Taxes' },
+          { id: 'income-tax', chapter: 2, title: 'Income Tax' },
+          { id: 'corporate-tax', chapter: 3, title: 'Corporate Tax' },
+          { id: 'gst', chapter: 4, title: 'GST: One Nation, One Tax' },
+          { id: 'other-taxes', chapter: 5, title: 'Other Important Taxes' },
+          { id: 'tax-to-gdp', chapter: 6, title: 'Tax-to-GDP Ratio' },
+          { id: 'reforms', chapter: 7, title: 'Major Tax Reforms' },
+          { id: 'black-money', chapter: 8, title: 'Black Money & Tax Evasion' },
+        ]}
+      />
+
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -97,7 +112,7 @@ export default function TaxesPage() {
       {/* Direct vs Indirect */}
       <section className="mb-16 animate-fade-in-up delay-4">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={1}>
+          <SectionHeading chapter={1} id="direct-vs-indirect">
             Direct vs Indirect Taxes
           </SectionHeading>
         </ScrollReveal>
@@ -181,7 +196,7 @@ export default function TaxesPage() {
       {/* Income Tax */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={2}>
+          <SectionHeading chapter={2} id="income-tax">
             Income Tax
           </SectionHeading>
         </ScrollReveal>
@@ -322,7 +337,7 @@ export default function TaxesPage() {
       {/* Corporate Tax */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={3}>
+          <SectionHeading chapter={3} id="corporate-tax">
             Corporate Tax
           </SectionHeading>
         </ScrollReveal>
@@ -381,7 +396,7 @@ export default function TaxesPage() {
       {/* GST */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={4}>
+          <SectionHeading chapter={4} id="gst">
             GST: One Nation, One Tax
           </SectionHeading>
         </ScrollReveal>
@@ -521,7 +536,7 @@ export default function TaxesPage() {
       {/* Other Taxes */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={5}>
+          <SectionHeading chapter={5} id="other-taxes">
             Other Important Taxes
           </SectionHeading>
         </ScrollReveal>
@@ -601,7 +616,7 @@ export default function TaxesPage() {
       {/* Tax-to-GDP Ratio */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={6}>
+          <SectionHeading chapter={6} id="tax-to-gdp">
             Tax-to-GDP Ratio
           </SectionHeading>
         </ScrollReveal>
@@ -661,7 +676,7 @@ export default function TaxesPage() {
       {/* Tax Reforms */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={7}>
+          <SectionHeading chapter={7} id="reforms">
             Major Tax Reforms
           </SectionHeading>
         </ScrollReveal>
@@ -691,7 +706,7 @@ export default function TaxesPage() {
       {/* Black Money */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={8}>
+          <SectionHeading chapter={8} id="black-money">
             Black Money & Tax Evasion
           </SectionHeading>
         </ScrollReveal>

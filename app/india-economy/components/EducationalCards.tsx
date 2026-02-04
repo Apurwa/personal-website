@@ -91,13 +91,15 @@ export function SectionHeading({
   children,
   subtitle,
   chapter,
+  id,
 }: {
   children: ReactNode
   subtitle?: string
   chapter?: number | string
+  id?: string
 }) {
   return (
-    <header className="mb-8 mt-16 first:mt-0 relative animate-fade-in-up">
+    <header id={id} className="mb-8 mt-16 first:mt-0 relative animate-fade-in-up scroll-mt-20">
       {chapter && (
         <span className="chapter-number font-serif">{chapter}</span>
       )}

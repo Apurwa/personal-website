@@ -3,6 +3,7 @@ import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { CountUpStat } from '../components/CountUpStat'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   SectionHeading,
   Definition,
@@ -59,6 +60,22 @@ export default function MarketsPage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'stock-market-basics', title: 'What is the Stock Market?', chapter: 1 },
+          { id: 'bse-vs-nse', title: 'BSE vs NSE', chapter: 2 },
+          { id: 'sensex-nifty', title: 'Sensex & Nifty Explained', chapter: 3 },
+          { id: 'market-history', title: 'Stock Market History', chapter: 4 },
+          { id: 'sebi', title: 'SEBI: The Market Regulator', chapter: 5 },
+          { id: 'investors', title: 'Who Invests in the Market?', chapter: 6 },
+          { id: 'ipo', title: 'IPOs: How Companies Go Public', chapter: 7 },
+          { id: 'trading', title: 'How Trading Works', chapter: 8 },
+          { id: 'market-caps', title: 'Large, Mid & Small Cap', chapter: 9 },
+          { id: 'global-comparison', title: 'India vs The World', chapter: 10 },
+        ]}
+      />
+
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -94,7 +111,7 @@ export default function MarketsPage() {
       {/* What is Stock Market */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={1}>
+          <SectionHeading chapter={1} id="stock-market-basics">
             What is the Stock Market?
           </SectionHeading>
         </ScrollReveal>
@@ -124,7 +141,7 @@ export default function MarketsPage() {
       {/* Stock Exchanges */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={2}>
+          <SectionHeading chapter={2} id="bse-vs-nse">
             BSE vs NSE
           </SectionHeading>
         </ScrollReveal>
@@ -191,7 +208,7 @@ export default function MarketsPage() {
       {/* Sensex & Nifty */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={3}>
+          <SectionHeading chapter={3} id="sensex-nifty">
             Sensex & Nifty Explained
           </SectionHeading>
         </ScrollReveal>
@@ -309,7 +326,7 @@ export default function MarketsPage() {
       {/* Market History Timeline */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={4}>
+          <SectionHeading chapter={4} id="market-history">
             Stock Market History
           </SectionHeading>
         </ScrollReveal>
@@ -347,7 +364,7 @@ export default function MarketsPage() {
       {/* SEBI */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={5}>
+          <SectionHeading chapter={5} id="sebi">
             SEBI: The Market Regulator
           </SectionHeading>
         </ScrollReveal>
@@ -416,7 +433,7 @@ export default function MarketsPage() {
       {/* FII, DII, Retail */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={6}>
+          <SectionHeading chapter={6} id="investors">
             Who Invests in the Market?
           </SectionHeading>
         </ScrollReveal>
@@ -518,7 +535,7 @@ export default function MarketsPage() {
       {/* IPO */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={7}>
+          <SectionHeading chapter={7} id="ipo">
             IPOs: How Companies Go Public
           </SectionHeading>
         </ScrollReveal>
@@ -604,7 +621,7 @@ export default function MarketsPage() {
       {/* Trading Basics */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={8}>
+          <SectionHeading chapter={8} id="trading">
             How Trading Works
           </SectionHeading>
         </ScrollReveal>
@@ -688,7 +705,7 @@ export default function MarketsPage() {
       {/* Market Cap Categories */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={9}>
+          <SectionHeading chapter={9} id="market-caps">
             Large, Mid & Small Cap
           </SectionHeading>
         </ScrollReveal>
@@ -731,7 +748,7 @@ export default function MarketsPage() {
       {/* Global Comparison */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={10}>
+          <SectionHeading chapter={10} id="global-comparison">
             India vs The World
           </SectionHeading>
         </ScrollReveal>

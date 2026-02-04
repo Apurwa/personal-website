@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   ContentCard,
   MarginNote,
@@ -60,9 +61,21 @@ export default function RBIPage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'current-rates', title: 'Current Policy Rates' },
+          { id: 'what-is-rbi', title: 'What is the Reserve Bank of India?' },
+          { id: 'repo-rate', title: 'What is Repo Rate?' },
+          { id: 'crr', title: 'What is CRR (Cash Reserve Ratio)?' },
+          { id: 'slr', title: 'What is SLR (Statutory Liquidity Ratio)?' },
+          { id: 'summary', title: 'Quick Summary' },
+        ]}
+      />
+
       {/* Current Rates Dashboard */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="These are the key interest rates set by RBI that affect the entire economy.">
+        <SectionHeading id="current-rates" subtitle="These are the key interest rates set by RBI that affect the entire economy.">
           Current Policy Rates
         </SectionHeading>
       </ScrollReveal>
@@ -104,7 +117,7 @@ export default function RBIPage() {
 
       {/* What is RBI */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading>What is the Reserve Bank of India?</SectionHeading>
+        <SectionHeading id="what-is-rbi">What is the Reserve Bank of India?</SectionHeading>
       </ScrollReveal>
 
       <ScrollReveal animation="fade-up">
@@ -130,7 +143,7 @@ export default function RBIPage() {
 
       {/* Repo Rate Explainer */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="The most important interest rate in India">
+        <SectionHeading id="repo-rate" subtitle="The most important interest rate in India">
           What is Repo Rate?
         </SectionHeading>
       </ScrollReveal>
@@ -174,7 +187,7 @@ export default function RBIPage() {
 
       {/* CRR Explainer */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="Money that banks must keep with RBI">
+        <SectionHeading id="crr" subtitle="Money that banks must keep with RBI">
           What is CRR (Cash Reserve Ratio)?
         </SectionHeading>
       </ScrollReveal>
@@ -218,7 +231,7 @@ export default function RBIPage() {
 
       {/* SLR Explainer */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="Investments banks must make in government securities">
+        <SectionHeading id="slr" subtitle="Investments banks must make in government securities">
           What is SLR (Statutory Liquidity Ratio)?
         </SectionHeading>
       </ScrollReveal>
@@ -259,7 +272,7 @@ export default function RBIPage() {
 
       {/* Summary */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading>Quick Summary</SectionHeading>
+        <SectionHeading id="summary">Quick Summary</SectionHeading>
       </ScrollReveal>
 
       <ScrollReveal animation="fade-up">

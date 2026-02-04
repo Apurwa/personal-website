@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   ContentCard,
   MarginNote,
@@ -52,7 +53,7 @@ export default function InflationPage() {
       />
 
       {/* Header */}
-      <header className="mb-16">
+      <header className="mb-12">
         <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-[#b85c38] mb-4">
           Price Stability
         </p>
@@ -66,9 +67,24 @@ export default function InflationPage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'current-rates', title: 'Current Inflation Rates' },
+          { id: 'what-is-inflation', title: 'What is Inflation?', chapter: 1 },
+          { id: 'how-measured', title: 'How is Inflation Measured?', chapter: 2 },
+          { id: 'why-prices-rise', title: 'Why Do Prices Rise?', chapter: 3 },
+          { id: 'price-spikes', title: 'Famous Price Spikes' },
+          { id: 'inflation-history', title: 'Inflation History (2014-2024)', chapter: 4 },
+          { id: 'rbi-targeting', title: "RBI's Inflation Targeting", chapter: 5 },
+          { id: 'food-inflation', title: 'Food Inflation Breakdown' },
+          { id: 'summary', title: 'Quick Summary' },
+        ]}
+      />
+
       {/* Current Inflation Dashboard */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle={`Latest data: ${currentData.asOf}`}>
+        <SectionHeading id="current-rates" subtitle={`Latest data: ${currentData.asOf}`}>
           Current Inflation Rates
         </SectionHeading>
       </ScrollReveal>
@@ -113,7 +129,7 @@ export default function InflationPage() {
 
       {/* What is Inflation */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={1}>
+        <SectionHeading id="what-is-inflation" chapter={1}>
           What is Inflation?
         </SectionHeading>
       </ScrollReveal>
@@ -174,7 +190,7 @@ export default function InflationPage() {
 
       {/* How is Inflation Measured */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={2} subtitle="CPI, WPI, and the basket of goods">
+        <SectionHeading id="how-measured" chapter={2} subtitle="CPI, WPI, and the basket of goods">
           How is Inflation Measured?
         </SectionHeading>
       </ScrollReveal>
@@ -265,7 +281,7 @@ export default function InflationPage() {
 
       {/* Why Prices Rise */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={3} subtitle="Demand-pull vs Cost-push">
+        <SectionHeading id="why-prices-rise" chapter={3} subtitle="Demand-pull vs Cost-push">
           Why Do Prices Rise?
         </SectionHeading>
       </ScrollReveal>
@@ -299,7 +315,7 @@ export default function InflationPage() {
 
       {/* Notable Price Spikes */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="When prices made headlines">
+        <SectionHeading id="price-spikes" subtitle="When prices made headlines">
           Famous Price Spikes
         </SectionHeading>
       </ScrollReveal>
@@ -343,7 +359,7 @@ export default function InflationPage() {
 
       {/* Historical Inflation */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={4} subtitle="A decade of price changes">
+        <SectionHeading id="inflation-history" chapter={4} subtitle="A decade of price changes">
           Inflation History (2014-2024)
         </SectionHeading>
       </ScrollReveal>
@@ -410,7 +426,7 @@ export default function InflationPage() {
 
       {/* RBI's Role */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={5} subtitle="How the central bank fights inflation">
+        <SectionHeading id="rbi-targeting" chapter={5} subtitle="How the central bank fights inflation">
           RBI&apos;s Inflation Targeting
         </SectionHeading>
       </ScrollReveal>
@@ -482,7 +498,7 @@ export default function InflationPage() {
 
       {/* Food Inflation Detail */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="The biggest contributor to inflation">
+        <SectionHeading id="food-inflation" subtitle="The biggest contributor to inflation">
           Food Inflation Breakdown
         </SectionHeading>
       </ScrollReveal>
@@ -522,7 +538,7 @@ export default function InflationPage() {
 
       {/* Summary */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading>Quick Summary</SectionHeading>
+        <SectionHeading id="summary">Quick Summary</SectionHeading>
       </ScrollReveal>
 
       <ScrollReveal animation="fade-up">

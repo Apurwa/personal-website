@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   SectionHeading,
   Definition,
@@ -59,6 +60,21 @@ export default function EmploymentPage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'unemployment', title: 'Understanding Unemployment', chapter: 1 },
+          { id: 'where-indians-work', title: 'Where Do Indians Work?', chapter: 2 },
+          { id: 'formal-vs-informal', title: 'Formal vs Informal Sector', chapter: 3 },
+          { id: 'women-in-workforce', title: 'Women in the Workforce', chapter: 4 },
+          { id: 'gig-economy', title: 'The Gig Economy', chapter: 5 },
+          { id: 'mgnrega', title: 'MGNREGA: Rural Employment Guarantee', chapter: 6 },
+          { id: 'skill-india', title: 'Skill India', chapter: 7 },
+          { id: 'labour-reforms', title: 'Labour Law Reforms', chapter: 8 },
+          { id: 'future-of-work', title: 'Future of Work', chapter: 9 },
+        ]}
+      />
+
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -94,7 +110,7 @@ export default function EmploymentPage() {
       {/* Unemployment */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={1}>
+          <SectionHeading chapter={1} id="unemployment">
             Understanding Unemployment
           </SectionHeading>
         </ScrollReveal>
@@ -182,7 +198,7 @@ export default function EmploymentPage() {
       {/* Sector Distribution */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={2}>
+          <SectionHeading chapter={2} id="where-indians-work">
             Where Do Indians Work?
           </SectionHeading>
         </ScrollReveal>
@@ -222,7 +238,7 @@ export default function EmploymentPage() {
       {/* Formal vs Informal */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={3}>
+          <SectionHeading chapter={3} id="formal-vs-informal">
             Formal vs Informal Sector
           </SectionHeading>
         </ScrollReveal>
@@ -316,7 +332,7 @@ export default function EmploymentPage() {
       {/* Women in Workforce */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={4}>
+          <SectionHeading chapter={4} id="women-in-workforce">
             Women in the Workforce
           </SectionHeading>
         </ScrollReveal>
@@ -409,7 +425,7 @@ export default function EmploymentPage() {
       {/* Gig Economy */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={5}>
+          <SectionHeading chapter={5} id="gig-economy">
             The Gig Economy
           </SectionHeading>
         </ScrollReveal>
@@ -506,7 +522,7 @@ export default function EmploymentPage() {
       {/* MGNREGA */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={6}>
+          <SectionHeading chapter={6} id="mgnrega">
             MGNREGA: Rural Employment Guarantee
           </SectionHeading>
         </ScrollReveal>
@@ -594,7 +610,7 @@ export default function EmploymentPage() {
       {/* Skill India */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={7}>
+          <SectionHeading chapter={7} id="skill-india">
             Skill India
           </SectionHeading>
         </ScrollReveal>
@@ -669,7 +685,7 @@ export default function EmploymentPage() {
       {/* Labour Reforms */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={8}>
+          <SectionHeading chapter={8} id="labour-reforms">
             Labour Law Reforms
           </SectionHeading>
         </ScrollReveal>
@@ -713,7 +729,7 @@ export default function EmploymentPage() {
       {/* Future of Work */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={9}>
+          <SectionHeading chapter={9} id="future-of-work">
             Future of Work
           </SectionHeading>
         </ScrollReveal>

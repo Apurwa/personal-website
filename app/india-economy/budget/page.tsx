@@ -11,6 +11,7 @@ import {
 } from '../components/EducationalCards'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { CountUpStat } from '../components/CountUpStat'
+import { TableOfContents, TOCItem } from '../components/TableOfContents'
 
 export const metadata: Metadata = {
   title: 'Union Budget 2024-25 Explained Simply',
@@ -59,9 +60,22 @@ export default function BudgetPage() {
         </p>
       </header>
 
+      <ScrollReveal animation="fade-up">
+        <TableOfContents
+          items={[
+            { id: 'big-picture', title: 'The Big Picture' },
+            { id: 'what-is-budget', title: 'What is the Union Budget?' },
+            { id: 'where-money-comes-from', title: 'Where Does the Money Come From?' },
+            { id: 'where-money-goes', title: 'Where Does the Money Go?' },
+            { id: 'fiscal-deficit', title: 'What is Fiscal Deficit?' },
+            { id: 'deficit-trend', title: '10-Year Fiscal Deficit Trend' },
+          ]}
+        />
+      </ScrollReveal>
+
       {/* Key Numbers */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="Here are the most important numbers from this year's budget">
+        <SectionHeading id="big-picture" subtitle="Here are the most important numbers from this year's budget">
           The Big Picture
         </SectionHeading>
       </ScrollReveal>
@@ -103,7 +117,7 @@ export default function BudgetPage() {
 
       {/* What is a Budget */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading>What is the Union Budget?</SectionHeading>
+        <SectionHeading id="what-is-budget">What is the Union Budget?</SectionHeading>
       </ScrollReveal>
 
       <ScrollReveal animation="fade-up">
@@ -135,7 +149,7 @@ export default function BudgetPage() {
 
       {/* Where Money Comes From */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="Government's sources of income">
+        <SectionHeading id="where-money-comes-from" subtitle="Government's sources of income">
           Where Does the Money Come From?
         </SectionHeading>
       </ScrollReveal>
@@ -162,7 +176,7 @@ export default function BudgetPage() {
 
       {/* Where Money Goes */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="Major areas of government spending">
+        <SectionHeading id="where-money-goes" subtitle="Major areas of government spending">
           Where Does the Money Go?
         </SectionHeading>
       </ScrollReveal>
@@ -196,7 +210,7 @@ export default function BudgetPage() {
 
       {/* Fiscal Deficit */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="When government spends more than it earns">
+        <SectionHeading id="fiscal-deficit" subtitle="When government spends more than it earns">
           What is Fiscal Deficit?
         </SectionHeading>
       </ScrollReveal>
@@ -224,7 +238,7 @@ export default function BudgetPage() {
 
       {/* Historical Trend */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="How has the deficit changed over the years?">
+        <SectionHeading id="deficit-trend" subtitle="How has the deficit changed over the years?">
           10-Year Fiscal Deficit Trend
         </SectionHeading>
       </ScrollReveal>

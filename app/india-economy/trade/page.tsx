@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   ContentCard,
   MarginNote,
@@ -61,9 +62,24 @@ export default function TradePage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'big-picture', title: 'The Big Picture' },
+          { id: 'what-is-trade', title: 'What is International Trade?', chapter: 1 },
+          { id: 'top-exports', title: 'Top Exports', chapter: 2 },
+          { id: 'top-imports', title: 'Top Imports', chapter: 3 },
+          { id: 'trading-partners', title: 'Major Trading Partners', chapter: 4 },
+          { id: 'forex-reserves', title: 'Foreign Exchange Reserves', chapter: 5 },
+          { id: 'balance-payments', title: 'Balance of Payments', chapter: 6 },
+          { id: 'trade-history', title: '10-Year Trade History' },
+          { id: 'summary', title: 'Quick Summary' },
+        ]}
+      />
+
       {/* Trade Summary Dashboard */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle={`FY ${trade.fiscalYear}`}>
+        <SectionHeading id="big-picture" subtitle={`FY ${trade.fiscalYear}`}>
           The Big Picture
         </SectionHeading>
       </ScrollReveal>
@@ -114,7 +130,7 @@ export default function TradePage() {
 
       {/* What is Trade */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={1}>
+        <SectionHeading id="what-is-trade" chapter={1}>
           What is International Trade?
         </SectionHeading>
       </ScrollReveal>
@@ -167,7 +183,7 @@ export default function TradePage() {
 
       {/* Top Exports */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={2} subtitle="What India sells to the world">
+        <SectionHeading id="top-exports" chapter={2} subtitle="What India sells to the world">
           Top Exports
         </SectionHeading>
       </ScrollReveal>
@@ -241,7 +257,7 @@ export default function TradePage() {
 
       {/* Top Imports */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={3} subtitle="What India buys from the world">
+        <SectionHeading id="top-imports" chapter={3} subtitle="What India buys from the world">
           Top Imports
         </SectionHeading>
       </ScrollReveal>
@@ -290,7 +306,7 @@ export default function TradePage() {
 
       {/* Trading Partners */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={4} subtitle="Who India trades with">
+        <SectionHeading id="trading-partners" chapter={4} subtitle="Who India trades with">
           Major Trading Partners
         </SectionHeading>
       </ScrollReveal>
@@ -344,7 +360,7 @@ export default function TradePage() {
 
       {/* Forex Reserves */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={5} subtitle="India's financial safety net">
+        <SectionHeading id="forex-reserves" chapter={5} subtitle="India's financial safety net">
           Foreign Exchange Reserves
         </SectionHeading>
       </ScrollReveal>
@@ -392,7 +408,7 @@ export default function TradePage() {
 
       {/* Current Account */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={6} subtitle="The broader picture">
+        <SectionHeading id="balance-payments" chapter={6} subtitle="The broader picture">
           Balance of Payments
         </SectionHeading>
       </ScrollReveal>
@@ -449,7 +465,7 @@ export default function TradePage() {
 
       {/* Historical Trade */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="How trade has grown">
+        <SectionHeading id="trade-history" subtitle="How trade has grown">
           10-Year Trade History
         </SectionHeading>
       </ScrollReveal>
@@ -477,7 +493,7 @@ export default function TradePage() {
 
       {/* Summary */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading>Quick Summary</SectionHeading>
+        <SectionHeading id="summary">Quick Summary</SectionHeading>
       </ScrollReveal>
 
       <ScrollReveal animation="fade-up">

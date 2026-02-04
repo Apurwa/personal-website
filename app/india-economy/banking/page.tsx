@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   SectionHeading,
   Definition,
@@ -91,10 +92,27 @@ export default function BankingPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'what-is-a-bank', title: 'What is a Bank?', chapter: 1 },
+          { id: 'types-of-banks', title: 'Types of Banks in India', chapter: 2 },
+          { id: 'top-banks', title: 'Top 10 Banks by Assets', chapter: 3 },
+          { id: 'how-banks-make-money', title: 'How Banks Make Money', chapter: 4 },
+          { id: 'npa-problem', title: 'The NPA Problem', chapter: 5 },
+          { id: 'digital-payments', title: 'Digital Payments Revolution', chapter: 6 },
+          { id: 'deposit-insurance', title: 'Deposit Insurance', chapter: 7 },
+          { id: 'banking-reforms', title: 'Key Banking Reforms', chapter: 8 },
+          { id: 'financial-inclusion', title: 'Financial Inclusion', chapter: 9 },
+          { id: 'interest-rates', title: 'Interest Rates Quick Guide', chapter: 10 },
+          { id: 'key-takeaways', title: 'Key Takeaways', chapter: '★' },
+        ]}
+      />
+
       {/* What is a Bank? */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={1}>
+          <SectionHeading chapter={1} id="what-is-a-bank">
             What is a Bank?
           </SectionHeading>
         </ScrollReveal>
@@ -125,7 +143,7 @@ export default function BankingPage() {
       {/* Types of Banks */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={2}>
+          <SectionHeading chapter={2} id="types-of-banks">
             Types of Banks in India
           </SectionHeading>
         </ScrollReveal>
@@ -187,7 +205,7 @@ export default function BankingPage() {
       {/* Top 10 Banks */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={3}>
+          <SectionHeading chapter={3} id="top-banks">
             Top 10 Banks by Assets
           </SectionHeading>
         </ScrollReveal>
@@ -239,7 +257,7 @@ export default function BankingPage() {
       {/* How Banks Make Money */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={4}>
+          <SectionHeading chapter={4} id="how-banks-make-money">
             How Banks Make Money
           </SectionHeading>
         </ScrollReveal>
@@ -289,7 +307,7 @@ export default function BankingPage() {
       {/* NPAs */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={5}>
+          <SectionHeading chapter={5} id="npa-problem">
             The NPA Problem
           </SectionHeading>
         </ScrollReveal>
@@ -391,7 +409,7 @@ export default function BankingPage() {
       {/* Digital Payments / UPI */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={6}>
+          <SectionHeading chapter={6} id="digital-payments">
             Digital Payments Revolution
           </SectionHeading>
         </ScrollReveal>
@@ -522,7 +540,7 @@ export default function BankingPage() {
       {/* Deposit Insurance */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={7}>
+          <SectionHeading chapter={7} id="deposit-insurance">
             Deposit Insurance
           </SectionHeading>
         </ScrollReveal>
@@ -589,7 +607,7 @@ export default function BankingPage() {
       {/* Banking Reforms Timeline */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={8}>
+          <SectionHeading chapter={8} id="banking-reforms">
             Key Banking Reforms
           </SectionHeading>
         </ScrollReveal>
@@ -622,7 +640,7 @@ export default function BankingPage() {
       {/* Financial Inclusion */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={9}>
+          <SectionHeading chapter={9} id="financial-inclusion">
             Financial Inclusion
           </SectionHeading>
         </ScrollReveal>
@@ -703,7 +721,7 @@ export default function BankingPage() {
       {/* Interest Rates Quick Reference */}
       <section className="mb-16">
         <ScrollReveal animation="fade-up">
-          <SectionHeading chapter={10}>
+          <SectionHeading chapter={10} id="interest-rates">
             Interest Rates Quick Guide
           </SectionHeading>
         </ScrollReveal>
@@ -757,7 +775,7 @@ export default function BankingPage() {
       </section>
 
       {/* Key Insights */}
-      <section className="mb-16">
+      <section className="mb-16" id="key-takeaways">
         <ScrollReveal animation="fade-up">
           <KeyConcept title="Key Takeaways">
             <ul className="space-y-2">

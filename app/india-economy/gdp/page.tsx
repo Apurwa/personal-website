@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
+import { TableOfContents } from '../components/TableOfContents'
 import {
   ContentCard,
   MarginNote,
@@ -71,9 +72,23 @@ export default function GDPPage() {
         </p>
       </header>
 
+      {/* Table of Contents */}
+      <TableOfContents
+        items={[
+          { id: 'big-picture', title: 'The Big Picture' },
+          { id: 'what-is-gdp', title: 'What is GDP?', chapter: 1 },
+          { id: 'gdp-per-capita', title: 'GDP Per Capita', chapter: 2 },
+          { id: 'gdp-history', title: "India's GDP Story (1991-2024)", chapter: 3 },
+          { id: 'sectors', title: "What Makes Up India's GDP?", chapter: 4 },
+          { id: 'global-comparison', title: 'Comparing with the World', chapter: 5 },
+          { id: 'projections', title: 'Projections' },
+          { id: 'summary', title: 'Quick Summary' },
+        ]}
+      />
+
       {/* Key Numbers Dashboard */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="India's economy at a glance">
+        <SectionHeading id="big-picture" subtitle="India's economy at a glance">
           The Big Picture
         </SectionHeading>
       </ScrollReveal>
@@ -120,7 +135,7 @@ export default function GDPPage() {
 
       {/* What is GDP */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={1}>
+        <SectionHeading id="what-is-gdp" chapter={1}>
           What is GDP?
         </SectionHeading>
       </ScrollReveal>
@@ -200,7 +215,7 @@ export default function GDPPage() {
 
       {/* GDP Per Capita */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={2} subtitle="The average Indian's share">
+        <SectionHeading id="gdp-per-capita" chapter={2} subtitle="The average Indian's share">
           GDP Per Capita
         </SectionHeading>
       </ScrollReveal>
@@ -234,7 +249,7 @@ export default function GDPPage() {
 
       {/* Historical Growth */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={3} subtitle="From crisis to growth">
+        <SectionHeading id="gdp-history" chapter={3} subtitle="From crisis to growth">
           India&apos;s GDP Story (1991-2024)
         </SectionHeading>
       </ScrollReveal>
@@ -297,7 +312,7 @@ export default function GDPPage() {
 
       {/* Sector Breakdown */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={4} subtitle="Agriculture, Industry, Services">
+        <SectionHeading id="sectors" chapter={4} subtitle="Agriculture, Industry, Services">
           What Makes Up India&apos;s GDP?
         </SectionHeading>
       </ScrollReveal>
@@ -397,7 +412,7 @@ export default function GDPPage() {
 
       {/* Global Comparison */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading chapter={5} subtitle="Where India stands globally">
+        <SectionHeading id="global-comparison" chapter={5} subtitle="Where India stands globally">
           Comparing with the World
         </SectionHeading>
       </ScrollReveal>
@@ -458,7 +473,7 @@ export default function GDPPage() {
 
       {/* Future Projections */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading subtitle="What the future might hold">
+        <SectionHeading id="projections" subtitle="What the future might hold">
           Projections
         </SectionHeading>
       </ScrollReveal>
@@ -498,7 +513,7 @@ export default function GDPPage() {
 
       {/* Summary */}
       <ScrollReveal animation="fade-up">
-        <SectionHeading>Quick Summary</SectionHeading>
+        <SectionHeading id="summary">Quick Summary</SectionHeading>
       </ScrollReveal>
 
       <ScrollReveal animation="fade-up">
