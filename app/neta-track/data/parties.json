@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "bjp",
+    "name": "Bharatiya Janata Party",
+    "shortName": "BJP",
+    "founded": 1980,
+    "symbol": "Lotus",
+    "color": "#FF9933",
+    "website": "https://www.bjp.org",
+    "currentLeader": "J.P. Nadda",
+    "description": "Centre-right party, currently the ruling party at the Centre. Formed in 1980 from the Bharatiya Jana Sangh."
+  },
+  {
+    "slug": "inc",
+    "name": "Indian National Congress",
+    "shortName": "Congress",
+    "founded": 1885,
+    "symbol": "Hand",
+    "color": "#00BFFF",
+    "website": "https://www.inc.in",
+    "currentLeader": "Mallikarjun Kharge",
+    "description": "Centre-left party, one of the oldest political parties in the world. Led India's independence movement."
+  },
+  {
+    "slug": "aap",
+    "name": "Aam Aadmi Party",
+    "shortName": "AAP",
+    "founded": 2012,
+    "symbol": "Broom",
+    "color": "#0066CC",
+    "website": "https://www.aamaadmiparty.org",
+    "currentLeader": "Arvind Kejriwal",
+    "description": "Centre-left party focused on anti-corruption. Grew out of the India Against Corruption movement."
+  },
+  {
+    "slug": "tmc",
+    "name": "All India Trinamool Congress",
+    "shortName": "TMC",
+    "founded": 1998,
+    "symbol": "Flowers and Grass",
+    "color": "#20C646",
+    "website": "https://www.aitcofficial.org",
+    "currentLeader": "Mamata Banerjee",
+    "description": "Centre-left regional party, dominant in West Bengal. Founded by Mamata Banerjee after splitting from Congress."
+  },
+  {
+    "slug": "sp",
+    "name": "Samajwadi Party",
+    "shortName": "SP",
+    "founded": 1992,
+    "symbol": "Bicycle",
+    "color": "#FF0000",
+    "website": "https://www.samajwadiparty.in",
+    "currentLeader": "Akhilesh Yadav",
+    "description": "Centre-left regional party based in Uttar Pradesh. Advocates for social justice and secularism."
+  },
+  {
+    "slug": "dmk",
+    "name": "Dravida Munnetra Kazhagam",
+    "shortName": "DMK",
+    "founded": 1949,
+    "symbol": "Rising Sun",
+    "color": "#FF0000",
+    "website": "https://www.dmk.in",
+    "currentLeader": "M.K. Stalin",
+    "description": "Centre-left Dravidian party dominant in Tamil Nadu. Advocates for social justice and Tamil identity."
+  }
+]

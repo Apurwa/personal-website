@@ -1,0 +1,137 @@
+[
+  {
+    "id": "bjp-2019-001",
+    "partySlug": "bjp",
+    "electionYear": 2019,
+    "text": "We will ensure that every family has a pucca house with water connection, toilet, electricity and LPG connection by 2022.",
+    "summary": "Pucca house with basic amenities for every family by 2022",
+    "sector": "social-welfare",
+    "concerns": ["development"],
+    "status": "partial",
+    "statusReason": "PMAY-G achieved 2.95 crore houses by 2024 against 2.95 crore target, but universal coverage not achieved. Jal Jeevan Mission reached 77% rural households with tap connections by Feb 2024.",
+    "evidence": [
+      {
+        "title": "PMAY-G Dashboard",
+        "url": "https://pmayg.nic.in/netiay/home.aspx",
+        "type": "government",
+        "date": "2024-02-01"
+      },
+      {
+        "title": "Jal Jeevan Mission Dashboard",
+        "url": "https://ejalshakti.gov.in/jjmreport/JJMIndia.aspx",
+        "type": "government",
+        "date": "2024-02-01"
+      }
+    ],
+    "manifestoPage": 12,
+    "sourceId": "bjp-manifesto-2019"
+  },
+  {
+    "id": "bjp-2019-002",
+    "partySlug": "bjp",
+    "electionYear": 2019,
+    "text": "We are committed to making India a 5 trillion dollar economy by 2024.",
+    "summary": "$5 trillion economy by 2024",
+    "sector": "economy",
+    "concerns": ["development", "jobs"],
+    "status": "not-delivered",
+    "statusReason": "India's GDP was approximately $3.5 trillion in 2024. The target was later revised to 2027-28.",
+    "evidence": [
+      {
+        "title": "World Bank GDP Data",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=IN",
+        "type": "research",
+        "date": "2024-07-01"
+      },
+      {
+        "title": "Economic Survey 2023-24",
+        "url": "https://www.indiabudget.gov.in/economicsurvey/",
+        "type": "government",
+        "date": "2024-07-22"
+      }
+    ],
+    "manifestoPage": 8,
+    "sourceId": "bjp-manifesto-2019"
+  },
+  {
+    "id": "bjp-2019-003",
+    "partySlug": "bjp",
+    "electionYear": 2019,
+    "text": "We will invest Rs. 100 lakh crore in infrastructure over the next 5 years.",
+    "summary": "Rs. 100 lakh crore infrastructure investment in 5 years",
+    "sector": "infrastructure",
+    "concerns": ["development", "jobs"],
+    "status": "delivered",
+    "statusReason": "National Infrastructure Pipeline launched with Rs. 111 lakh crore investment plan. Capital expenditure increased from Rs. 3.4 lakh crore (2019-20) to Rs. 10 lakh crore (2023-24).",
+    "evidence": [
+      {
+        "title": "National Infrastructure Pipeline",
+        "url": "https://indiainvestmentgrid.gov.in/national-infrastructure-pipeline",
+        "type": "government",
+        "date": "2023-01-01"
+      },
+      {
+        "title": "Union Budget 2023-24",
+        "url": "https://www.indiabudget.gov.in",
+        "type": "government",
+        "date": "2023-02-01"
+      }
+    ],
+    "manifestoPage": 15,
+    "sourceId": "bjp-manifesto-2019"
+  },
+  {
+    "id": "bjp-2019-004",
+    "partySlug": "bjp",
+    "electionYear": 2019,
+    "text": "We will double the income of farmers by 2022.",
+    "summary": "Double farmer income by 2022",
+    "sector": "agriculture",
+    "concerns": ["farmers"],
+    "status": "not-delivered",
+    "statusReason": "Government committee report showed farmer income grew 59% in nominal terms between 2015-16 and 2022-23, falling short of doubling. Real income growth was lower due to inflation.",
+    "evidence": [
+      {
+        "title": "Situation Assessment Survey of Agricultural Households",
+        "url": "https://mospi.gov.in",
+        "type": "government",
+        "date": "2021-09-01"
+      },
+      {
+        "title": "Factly Analysis on Farmer Income",
+        "url": "https://factly.in/has-the-government-met-its-target-of-doubling-farmers-income-by-2022/",
+        "type": "research",
+        "date": "2023-03-15"
+      }
+    ],
+    "manifestoPage": 21,
+    "sourceId": "bjp-manifesto-2019"
+  },
+  {
+    "id": "bjp-2019-005",
+    "partySlug": "bjp",
+    "electionYear": 2019,
+    "text": "We will ensure that no Indian will be left out of development because he/she does not have an Aadhaar Card, Ration Card, Birth Certificate or any other document.",
+    "summary": "Ensure no citizen excluded from schemes due to lack of documents",
+    "sector": "governance",
+    "concerns": ["development", "minorities"],
+    "status": "partial",
+    "statusReason": "Aadhaar coverage reached 99% of adult population. However, exclusion errors due to biometric failures and document issues continue to be reported in welfare schemes.",
+    "evidence": [
+      {
+        "title": "UIDAI Statistics",
+        "url": "https://uidai.gov.in/aadhaar_dashboard/",
+        "type": "government",
+        "date": "2024-01-01"
+      },
+      {
+        "title": "State of Aadhaar Report - IDinsight",
+        "url": "https://stateofaadhaar.in",
+        "type": "research",
+        "date": "2023-06-01"
+      }
+    ],
+    "manifestoPage": 6,
+    "sourceId": "bjp-manifesto-2019"
+  }
+]

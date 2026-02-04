@@ -1,0 +1,72 @@
+[
+  {
+    "id": "bjp-manifesto-2019",
+    "title": "BJP Sankalp Patra 2019",
+    "publisher": "Bharatiya Janata Party",
+    "url": "https://www.bjp.org/manifesto2019",
+    "type": "official",
+    "publishedDate": "2019-04-08",
+    "accessedDate": "2026-02-04",
+    "coversData": ["bjp-2019.json"]
+  },
+  {
+    "id": "inc-manifesto-2019",
+    "title": "Congress Manifesto 2019",
+    "publisher": "Indian National Congress",
+    "url": "https://manifesto.inc.in/en/index.html",
+    "type": "official",
+    "publishedDate": "2019-04-02",
+    "accessedDate": "2026-02-04",
+    "coversData": ["congress-2019.json"]
+  },
+  {
+    "id": "bjp-manifesto-2024",
+    "title": "BJP Sankalp Patra 2024",
+    "publisher": "Bharatiya Janata Party",
+    "url": "https://www.bjp.org/bjp-manifesto-2024",
+    "type": "official",
+    "publishedDate": "2024-04-14",
+    "accessedDate": "2026-02-04",
+    "coversData": ["bjp-2024.json"]
+  },
+  {
+    "id": "inc-manifesto-2024",
+    "title": "Congress Nyay Patra 2024",
+    "publisher": "Indian National Congress",
+    "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+    "type": "official",
+    "publishedDate": "2024-04-05",
+    "accessedDate": "2026-02-04",
+    "coversData": ["congress-2024.json"]
+  },
+  {
+    "id": "prs-legislative",
+    "title": "PRS Legislative Research",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org",
+    "type": "research",
+    "publishedDate": "2026-01-01",
+    "accessedDate": "2026-02-04",
+    "coversData": ["all"]
+  },
+  {
+    "id": "adr-reports",
+    "title": "Association for Democratic Reforms",
+    "publisher": "ADR",
+    "url": "https://adrindia.org",
+    "type": "research",
+    "publishedDate": "2026-01-01",
+    "accessedDate": "2026-02-04",
+    "coversData": ["all"]
+  },
+  {
+    "id": "eci-results",
+    "title": "Election Commission of India - Results",
+    "publisher": "Election Commission of India",
+    "url": "https://results.eci.gov.in",
+    "type": "official",
+    "publishedDate": "2024-06-04",
+    "accessedDate": "2026-02-04",
+    "coversData": ["election-results"]
+  }
+]

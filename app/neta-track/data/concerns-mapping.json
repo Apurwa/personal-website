@@ -1,0 +1,15 @@
+{
+  "jobs": ["employment", "economy", "education"],
+  "prices": ["economy", "agriculture"],
+  "safety": ["defence", "governance"],
+  "corruption": ["governance"],
+  "development": ["infrastructure", "economy"],
+  "healthcare": ["healthcare", "social-welfare"],
+  "education": ["education"],
+  "farmers": ["agriculture", "economy"],
+  "women": ["social-welfare", "governance", "employment"],
+  "youth": ["employment", "education"],
+  "environment": ["environment"],
+  "minorities": ["social-welfare", "governance"],
+  "reservation": ["social-welfare", "education", "employment"]
+}
