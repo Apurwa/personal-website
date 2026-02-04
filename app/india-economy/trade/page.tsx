@@ -6,7 +6,6 @@ import {
   MarginNote,
   KeyConcept,
   Definition,
-  StatDisplay,
   SectionHeading,
   DataTable,
   TableHead,
@@ -16,6 +15,8 @@ import {
   TableCell,
 } from '../components/EducationalCards'
 import { getTradeData } from '../data'
+import { ScrollReveal } from '../components/ScrollReveal'
+import { CountUpStat } from '../components/CountUpStat'
 
 export const metadata: Metadata = {
   title: 'India Trade & Exports Explained',
@@ -61,32 +62,48 @@ export default function TradePage() {
       </header>
 
       {/* Trade Summary Dashboard */}
-      <SectionHeading subtitle={`FY ${trade.fiscalYear}`}>
-        The Big Picture
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading subtitle={`FY ${trade.fiscalYear}`}>
+          The Big Picture
+        </SectionHeading>
+      </ScrollReveal>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 bg-white/40 border border-[#e5e0d8] p-6">
-        <StatDisplay
-          value={`$${summary.totalExports.toFixed(0)}B`}
-          label="Total Exports"
-          sublabel={`+${summary.growthExports}% growth`}
-        />
-        <StatDisplay
-          value={`$${summary.totalImports.toFixed(0)}B`}
-          label="Total Imports"
-          sublabel={`+${summary.growthImports}% growth`}
-        />
-        <StatDisplay
-          value={`$${Math.abs(summary.tradeDeficit).toFixed(0)}B`}
-          label="Trade Deficit"
-          sublabel="Imports > Exports"
-        />
-        <StatDisplay
-          value={`$${forexReserves.current.toFixed(0)}B`}
-          label="Forex Reserves"
-          sublabel={`${forexReserves.importCover} months cover`}
-        />
-      </div>
+      <ScrollReveal animation="fade-up">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 bg-white/40 border border-[#e5e0d8] p-6">
+          <CountUpStat
+            value={summary.totalExports}
+            prefix="$"
+            suffix="B"
+            decimals={0}
+            label="Total Exports"
+            sublabel={`+${summary.growthExports}% growth`}
+          />
+          <CountUpStat
+            value={summary.totalImports}
+            prefix="$"
+            suffix="B"
+            decimals={0}
+            label="Total Imports"
+            sublabel={`+${summary.growthImports}% growth`}
+          />
+          <CountUpStat
+            value={Math.abs(summary.tradeDeficit)}
+            prefix="$"
+            suffix="B"
+            decimals={0}
+            label="Trade Deficit"
+            sublabel="Imports > Exports"
+          />
+          <CountUpStat
+            value={forexReserves.current}
+            prefix="$"
+            suffix="B"
+            decimals={0}
+            label="Forex Reserves"
+            sublabel={`${forexReserves.importCover} months cover`}
+          />
+        </div>
+      </ScrollReveal>
 
       <div className="mb-8 p-4 bg-[#FFF8E7] border-l-4 border-[#d4a84b]">
         <p className="text-sm text-[#4a5568]">
@@ -96,16 +113,21 @@ export default function TradePage() {
       </div>
 
       {/* What is Trade */}
-      <SectionHeading chapter={1}>
-        What is International Trade?
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={1}>
+          What is International Trade?
+        </SectionHeading>
+      </ScrollReveal>
 
-      <Definition term="Trade Balance" hindi="व्यापार संतुलन">
-        The difference between what a country exports and imports. If imports exceed exports,
-        it&apos;s a trade deficit. If exports exceed imports, it&apos;s a trade surplus.
-      </Definition>
+      <ScrollReveal animation="fade-up">
+        <Definition term="Trade Balance" hindi="व्यापार संतुलन">
+          The difference between what a country exports and imports. If imports exceed exports,
+          it&apos;s a trade deficit. If exports exceed imports, it&apos;s a trade surplus.
+        </Definition>
+      </ScrollReveal>
 
-      <ContentCard className="mb-8">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-8">
         <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">India&apos;s Trade Structure</h4>
         <div className="space-y-4">
           <div className="flex items-center justify-between p-4 bg-[#e5e0d8]/30 rounded-sm">
@@ -134,18 +156,24 @@ export default function TradePage() {
           </div>
         </div>
       </ContentCard>
+      </ScrollReveal>
 
-      <MarginNote label="Key insight">
-        India&apos;s services surplus ($189B) offsets much of the goods deficit ($283B).
-        Our IT industry is the hero — services exports nearly equal merchandise exports now!
-      </MarginNote>
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="Key insight">
+          India&apos;s services surplus ($189B) offsets much of the goods deficit ($283B).
+          Our IT industry is the hero — services exports nearly equal merchandise exports now!
+        </MarginNote>
+      </ScrollReveal>
 
       {/* Top Exports */}
-      <SectionHeading chapter={2} subtitle="What India sells to the world">
-        Top Exports
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={2} subtitle="What India sells to the world">
+          Top Exports
+        </SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
         <div className="space-y-4">
           {topExports.slice(0, 8).map((item, index) => (
             <div key={item.commodity}>
@@ -176,16 +204,20 @@ export default function TradePage() {
           ))}
         </div>
       </ContentCard>
+      </ScrollReveal>
 
-      <KeyConcept title="The Electronics Revolution">
-        Electronics exports grew 127x — from ₹1,500 crore in 2014-15 to ₹2 lakh crore in 2024-25!
-        India is now the 3rd largest mobile phone exporter. &quot;Make in India&quot; is finally
-        showing results in this sector.
-      </KeyConcept>
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="The Electronics Revolution">
+          Electronics exports grew 127x — from ₹1,500 crore in 2014-15 to ₹2 lakh crore in 2024-25!
+          India is now the 3rd largest mobile phone exporter. &quot;Make in India&quot; is finally
+          showing results in this sector.
+        </KeyConcept>
+      </ScrollReveal>
 
       {/* Services Exports */}
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Services Exports Breakdown (${summary.servicesExports}B)</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Services Exports Breakdown (${summary.servicesExports}B)</h4>
         <div className="space-y-3">
           {servicesBreakdown.exports.map((service) => (
             <div key={service.category} className="flex items-center justify-between py-2 border-b border-[#e5e0d8] last:border-0">
@@ -198,20 +230,26 @@ export default function TradePage() {
           ))}
         </div>
       </ContentCard>
+      </ScrollReveal>
 
-      <MarginNote label="IT powerhouse">
-        IT & Business Services alone account for 52% of India&apos;s services exports.
-        Companies like TCS, Infosys, and Wipro serve clients worldwide, bringing in ~$200B annually.
-      </MarginNote>
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="IT powerhouse">
+          IT & Business Services alone account for 52% of India&apos;s services exports.
+          Companies like TCS, Infosys, and Wipro serve clients worldwide, bringing in ~$200B annually.
+        </MarginNote>
+      </ScrollReveal>
 
       {/* Top Imports */}
-      <SectionHeading chapter={3} subtitle="What India buys from the world">
-        Top Imports
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={3} subtitle="What India buys from the world">
+          Top Imports
+        </SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
-        <div className="space-y-4">
-          {topImports.slice(0, 8).map((item, index) => (
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <div className="space-y-4">
+            {topImports.slice(0, 8).map((item, index) => (
             <div key={item.commodity}>
               <div className="flex justify-between items-baseline mb-1">
                 <div className="flex items-center gap-2">
@@ -240,20 +278,26 @@ export default function TradePage() {
           ))}
         </div>
       </ContentCard>
+      </ScrollReveal>
 
-      <KeyConcept title="The Oil Dependency">
-        Crude oil alone causes ~$150 billion deficit annually. India imports 85% of its oil needs.
-        This is why petrol prices in India are affected by global oil prices and why electric
-        vehicles are a strategic priority.
-      </KeyConcept>
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="The Oil Dependency">
+          Crude oil alone causes ~$150 billion deficit annually. India imports 85% of its oil needs.
+          This is why petrol prices in India are affected by global oil prices and why electric
+          vehicles are a strategic priority.
+        </KeyConcept>
+      </ScrollReveal>
 
       {/* Trading Partners */}
-      <SectionHeading chapter={4} subtitle="Who India trades with">
-        Major Trading Partners
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={4} subtitle="Who India trades with">
+          Major Trading Partners
+        </SectionHeading>
+      </ScrollReveal>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
-        <ContentCard>
+      <ScrollReveal animation="fade-up">
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <ContentCard>
           <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Top Export Destinations</h4>
           <div className="space-y-2">
             {tradingPartners.topExportDestinations.slice(0, 6).map((partner, index) => (
@@ -288,24 +332,32 @@ export default function TradePage() {
           </div>
         </ContentCard>
       </div>
+      </ScrollReveal>
 
-      <MarginNote label="The China gap">
-        India&apos;s trade deficit with China alone is ~$95 billion — more than our total deficit
-        with all other countries combined. We import electronics, machinery, and chemicals from
-        China but export relatively little back.
-      </MarginNote>
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="The China gap">
+          India&apos;s trade deficit with China alone is ~$95 billion — more than our total deficit
+          with all other countries combined. We import electronics, machinery, and chemicals from
+          China but export relatively little back.
+        </MarginNote>
+      </ScrollReveal>
 
       {/* Forex Reserves */}
-      <SectionHeading chapter={5} subtitle="India's financial safety net">
-        Foreign Exchange Reserves
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={5} subtitle="India's financial safety net">
+          Foreign Exchange Reserves
+        </SectionHeading>
+      </ScrollReveal>
 
-      <Definition term="Forex Reserves" hindi="विदेशी मुद्रा भंडार">
-        Foreign currency and gold held by RBI to pay for imports, stabilize the rupee, and
-        handle economic shocks. Think of it as the country&apos;s savings account in foreign currency.
-      </Definition>
+      <ScrollReveal animation="fade-up">
+        <Definition term="Forex Reserves" hindi="विदेशी मुद्रा भंडार">
+          Foreign currency and gold held by RBI to pay for imports, stabilize the rupee, and
+          handle economic shocks. Think of it as the country&apos;s savings account in foreign currency.
+        </Definition>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
           <div className="text-center p-4 bg-[#e5e0d8]/30 rounded-sm">
             <div className="font-serif text-2xl font-bold text-[#1a2e44]">${forexReserves.components.foreignCurrencyAssets}B</div>
@@ -329,23 +381,31 @@ export default function TradePage() {
           Current reserves can cover {forexReserves.importCover} months of imports.
         </p>
       </ContentCard>
+      </ScrollReveal>
 
-      <KeyConcept title="Why forex matters">
-        During the 1991 crisis, India had only 2 weeks of import cover and had to pledge gold.
-        Today, with 10+ months cover, India is much more resilient to external shocks.
-      </KeyConcept>
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="Why forex matters">
+          During the 1991 crisis, India had only 2 weeks of import cover and had to pledge gold.
+          Today, with 10+ months cover, India is much more resilient to external shocks.
+        </KeyConcept>
+      </ScrollReveal>
 
       {/* Current Account */}
-      <SectionHeading chapter={6} subtitle="The broader picture">
-        Balance of Payments
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={6} subtitle="The broader picture">
+          Balance of Payments
+        </SectionHeading>
+      </ScrollReveal>
 
-      <Definition term="Current Account Deficit (CAD)" hindi="चालू खाता घाटा">
-        The difference between money flowing in (exports, remittances, investment income) and
-        money flowing out (imports, payments abroad). A deficit means more money is leaving than coming in.
-      </Definition>
+      <ScrollReveal animation="fade-up">
+        <Definition term="Current Account Deficit (CAD)" hindi="चालू खाता घाटा">
+          The difference between money flowing in (exports, remittances, investment income) and
+          money flowing out (imports, payments abroad). A deficit means more money is leaving than coming in.
+        </Definition>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
         <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">CAD History (% of GDP)</h4>
         <div className="space-y-2">
           {currentAccountDeficit.historical.map((year) => (
@@ -385,13 +445,17 @@ export default function TradePage() {
           * 2020-21 saw a rare surplus as COVID crashed imports. 2022-23 saw highest deficit due to oil prices.
         </p>
       </ContentCard>
+      </ScrollReveal>
 
       {/* Historical Trade */}
-      <SectionHeading subtitle="How trade has grown">
-        10-Year Trade History
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading subtitle="How trade has grown">
+          10-Year Trade History
+        </SectionHeading>
+      </ScrollReveal>
 
-      <DataTable>
+      <ScrollReveal animation="fade-up">
+        <DataTable>
         <TableHead>
           <TableHeader>Year</TableHeader>
           <TableHeader className="text-right">Exports</TableHeader>
@@ -409,11 +473,15 @@ export default function TradePage() {
           ))}
         </TableBody>
       </DataTable>
+      </ScrollReveal>
 
       {/* Summary */}
-      <SectionHeading>Quick Summary</SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading>Quick Summary</SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard>
+      <ScrollReveal animation="fade-up">
+        <ContentCard>
         <ul className="space-y-3 text-[#4a5568]">
           <li className="flex gap-3">
             <span className="text-[#b85c38] font-semibold">1.</span>
@@ -437,6 +505,7 @@ export default function TradePage() {
           </li>
         </ul>
       </ContentCard>
+      </ScrollReveal>
 
       {/* Source Attribution */}
       <SourceFooter sourceIds={['commerce-ministry-trade', 'rbi-bop-forex']} />

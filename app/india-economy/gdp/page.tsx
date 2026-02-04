@@ -6,7 +6,6 @@ import {
   MarginNote,
   KeyConcept,
   Definition,
-  StatDisplay,
   SectionHeading,
   DataTable,
   TableHead,
@@ -16,6 +15,8 @@ import {
   TableCell,
 } from '../components/EducationalCards'
 import { getGDPHistorical, getGDPSectors, getGDPGlobal, getGDPMilestones } from '../data'
+import { ScrollReveal } from '../components/ScrollReveal'
+import { CountUpStat } from '../components/CountUpStat'
 
 export const metadata: Metadata = {
   title: 'India GDP & Economic Growth Explained',
@@ -71,51 +72,69 @@ export default function GDPPage() {
       </header>
 
       {/* Key Numbers Dashboard */}
-      <SectionHeading subtitle="India's economy at a glance">
-        The Big Picture
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading subtitle="India's economy at a glance">
+          The Big Picture
+        </SectionHeading>
+      </ScrollReveal>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 bg-white/40 border border-[#e5e0d8] p-6">
-        <StatDisplay
-          value={`$${(latestGDP.gdpNominalUsdBn / 1000).toFixed(1)}T`}
+        <CountUpStat
+          value={latestGDP.gdpNominalUsdBn / 1000}
+          prefix="$"
+          suffix="T"
+          decimals={1}
           label="GDP (2024-25)"
           sublabel="5th largest in world"
         />
-        <StatDisplay
-          value={`${latestGDP.realGrowthPercent}%`}
+        <CountUpStat
+          value={latestGDP.realGrowthPercent}
+          suffix="%"
+          decimals={1}
           label="Growth Rate"
           sublabel="Real GDP growth"
         />
-        <StatDisplay
-          value={`$${latestGDP.perCapitaUsd.toLocaleString()}`}
+        <CountUpStat
+          value={latestGDP.perCapitaUsd}
+          prefix="$"
+          decimals={0}
           label="Per Capita"
           sublabel="139th in world"
         />
-        <StatDisplay
-          value={`${gdpGrowthTimes}x`}
+        <CountUpStat
+          value={parseInt(gdpGrowthTimes)}
+          suffix="x"
+          decimals={0}
           label="Since 1991"
           sublabel="GDP multiplied"
         />
       </div>
 
-      <MarginNote label="The journey">
-        In 1991, India&apos;s GDP was just $267 billion. Today it&apos;s nearly $4 trillion —
-        a {gdpGrowthTimes}x increase in 33 years! Per capita income grew {perCapitaGrowthTimes}x
-        from ${earliestGDP.perCapitaUsd} to ${latestGDP.perCapitaUsd.toLocaleString()}.
-      </MarginNote>
+      <ScrollReveal animation="slide-left">
+          <MarginNote label="The journey">
+          In 1991, India&apos;s GDP was just $267 billion. Today it&apos;s nearly $4 trillion —
+          a {gdpGrowthTimes}x increase in 33 years! Per capita income grew {perCapitaGrowthTimes}x
+          from ${earliestGDP.perCapitaUsd} to ${latestGDP.perCapitaUsd.toLocaleString()}.
+        </MarginNote>
+      </ScrollReveal>
 
       {/* What is GDP */}
-      <SectionHeading chapter={1}>
-        What is GDP?
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={1}>
+          What is GDP?
+        </SectionHeading>
+      </ScrollReveal>
 
-      <Definition term="Gross Domestic Product" hindi="सकल घरेलू उत्पाद">
-        The total monetary value of all goods and services produced within a country&apos;s
-        borders in a specific time period (usually one year). It measures the &quot;size&quot;
-        of an economy.
-      </Definition>
+      <ScrollReveal animation="fade-up">
+        <Definition term="Gross Domestic Product" hindi="सकल घरेलू उत्पाद">
+          The total monetary value of all goods and services produced within a country&apos;s
+          borders in a specific time period (usually one year). It measures the &quot;size&quot;
+          of an economy.
+        </Definition>
+      </ScrollReveal>
 
-      <ContentCard className="mb-8">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-8">
         <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Think of it like this...</h4>
         <p className="text-[#4a5568] leading-relaxed mb-4">
           Imagine counting everything India produces in a year:
@@ -145,10 +164,12 @@ export default function GDPPage() {
         <p className="text-[#4a5568] leading-relaxed mt-4">
           Add up the value of all of this — that&apos;s GDP!
         </p>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
       {/* Real vs Nominal GDP */}
-      <ContentCard className="mb-6">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
         <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Real GDP vs Nominal GDP</h4>
         <div className="space-y-4 text-[#4a5568]">
           <div className="pl-4 border-l-2 border-[#4a6fa5]">
@@ -166,25 +187,33 @@ export default function GDPPage() {
             </p>
           </div>
         </div>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
-      <KeyConcept title="Why Real GDP matters">
-        When we say India grew at 6.5%, we mean real GDP growth. This means India actually
-        produced 6.5% more goods and services than the previous year — after removing the
-        effect of price increases.
-      </KeyConcept>
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="Why Real GDP matters">
+          When we say India grew at 6.5%, we mean real GDP growth. This means India actually
+          produced 6.5% more goods and services than the previous year — after removing the
+          effect of price increases.
+        </KeyConcept>
+      </ScrollReveal>
 
       {/* GDP Per Capita */}
-      <SectionHeading chapter={2} subtitle="The average Indian's share">
-        GDP Per Capita
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={2} subtitle="The average Indian's share">
+          GDP Per Capita
+        </SectionHeading>
+      </ScrollReveal>
 
-      <Definition term="GDP Per Capita" hindi="प्रति व्यक्ति जीडीपी">
-        Total GDP divided by the population. It tells us the average income if we distributed
-        the entire GDP equally among all citizens.
-      </Definition>
+      <ScrollReveal animation="fade-up">
+        <Definition term="GDP Per Capita" hindi="प्रति व्यक्ति जीडीपी">
+          Total GDP divided by the population. It tells us the average income if we distributed
+          the entire GDP equally among all citizens.
+        </Definition>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
         <div className="flex items-baseline gap-4 mb-4">
           <div className="font-serif text-3xl font-bold text-[#1a2e44]">${latestGDP.perCapitaUsd.toLocaleString()}</div>
           <div className="font-sans text-[#6b7c8f]">per person per year</div>
@@ -200,15 +229,19 @@ export default function GDPPage() {
             But this is an average — actual incomes vary widely.
           </p>
         </div>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
       {/* Historical Growth */}
-      <SectionHeading chapter={3} subtitle="From crisis to growth">
-        India&apos;s GDP Story (1991-2024)
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={3} subtitle="From crisis to growth">
+          India&apos;s GDP Story (1991-2024)
+        </SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Key Milestones</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Key Milestones</h4>
         <div className="space-y-4">
           {milestones.map((entry) => (
             <div key={entry.fiscalYear} className="flex gap-4 items-start">
@@ -225,11 +258,13 @@ export default function GDPPage() {
             </div>
           ))}
         </div>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
       {/* GDP Growth Chart */}
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">GDP Growth Rate (Last 10 Years)</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">GDP Growth Rate (Last 10 Years)</h4>
         <div className="space-y-2">
           {gdpHistory.data.slice(-10).map((year) => (
             <div key={year.fiscalYear} className="flex items-center gap-4">
@@ -257,15 +292,19 @@ export default function GDPPage() {
         <p className="font-sans text-[#6b7c8f] text-sm mt-4 italic">
           * 2020-21 shows India&apos;s first GDP contraction since 1979 due to COVID-19
         </p>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
       {/* Sector Breakdown */}
-      <SectionHeading chapter={4} subtitle="Agriculture, Industry, Services">
-        What Makes Up India&apos;s GDP?
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={4} subtitle="Agriculture, Industry, Services">
+          What Makes Up India&apos;s GDP?
+        </SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Sector Shares ({gdpSectors.currentYear.fiscalYear})</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Sector Shares ({gdpSectors.currentYear.fiscalYear})</h4>
         <div className="space-y-6">
           {Object.entries(gdpSectors.currentYear.sectors).map(([key, sector]) => (
             <div key={key}>
@@ -293,16 +332,20 @@ export default function GDPPage() {
             </div>
           ))}
         </div>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
-      <MarginNote label="The big shift">
-        In 1950, agriculture was 52% of GDP. Today it&apos;s just 18% — but still employs
-        46% of the workforce. This mismatch is why farm incomes remain low.
-      </MarginNote>
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="The big shift">
+          In 1950, agriculture was 52% of GDP. Today it&apos;s just 18% — but still employs
+          46% of the workforce. This mismatch is why farm incomes remain low.
+        </MarginNote>
+      </ScrollReveal>
 
       {/* Sector Evolution */}
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">How Sectors Have Changed</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">How Sectors Have Changed</h4>
         <div className="space-y-3">
           {gdpSectors.historical.map((year) => (
             <div key={year.year} className="flex items-center gap-2">
@@ -341,20 +384,26 @@ export default function GDPPage() {
             Services
           </span>
         </div>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
-      <KeyConcept title="Services-led growth">
-        India&apos;s growth is unusual — most countries industrialized first (like China),
-        then moved to services. India leapfrogged directly to services (IT, finance, telecom).
-        This is why &quot;Make in India&quot; tries to boost manufacturing.
-      </KeyConcept>
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="Services-led growth">
+          India&apos;s growth is unusual — most countries industrialized first (like China),
+          then moved to services. India leapfrogged directly to services (IT, finance, telecom).
+          This is why &quot;Make in India&quot; tries to boost manufacturing.
+        </KeyConcept>
+      </ScrollReveal>
 
       {/* Global Comparison */}
-      <SectionHeading chapter={5} subtitle="Where India stands globally">
-        Comparing with the World
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading chapter={5} subtitle="Where India stands globally">
+          Comparing with the World
+        </SectionHeading>
+      </ScrollReveal>
 
-      <DataTable>
+      <ScrollReveal animation="fade-up">
+        <DataTable>
         <TableHead>
           <TableHeader>Rank</TableHeader>
           <TableHeader>Country</TableHeader>
@@ -375,16 +424,20 @@ export default function GDPPage() {
             </TableRow>
           ))}
         </TableBody>
-      </DataTable>
+        </DataTable>
+      </ScrollReveal>
 
-      <MarginNote label="The paradox">
-        India is the 5th largest economy but ranks 139th in per capita income.
-        Our GDP per capita is just 3% of the USA&apos;s — because we have 4x their population.
-      </MarginNote>
+      <ScrollReveal animation="slide-left">
+        <MarginNote label="The paradox">
+          India is the 5th largest economy but ranks 139th in per capita income.
+          Our GDP per capita is just 3% of the USA&apos;s — because we have 4x their population.
+        </MarginNote>
+      </ScrollReveal>
 
       {/* Asian Comparison */}
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Among Asian Economies</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">Among Asian Economies</h4>
         <div className="space-y-3">
           {gdpGlobal.asianComparison.slice(0, 6).map((country) => (
             <div key={country.country} className={`flex items-center justify-between py-2 border-b border-[#e5e0d8] last:border-0 ${country.highlight ? 'bg-[#FFF8E7] -mx-4 px-4' : ''}`}>
@@ -400,15 +453,19 @@ export default function GDPPage() {
             </div>
           ))}
         </div>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
       {/* Future Projections */}
-      <SectionHeading subtitle="What the future might hold">
-        Projections
-      </SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading subtitle="What the future might hold">
+          Projections
+        </SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard className="mb-6">
-        <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">IMF Growth Outlook</h4>
+      <ScrollReveal animation="fade-up">
+        <ContentCard className="mb-6">
+          <h4 className="font-serif font-semibold text-[#1a2e44] mb-4">IMF Growth Outlook</h4>
         <div className="space-y-4">
           {gdpGlobal.projections.data.map((proj) => (
             <div key={proj.year} className="flex items-center justify-between py-2 border-b border-[#e5e0d8] last:border-0">
@@ -428,18 +485,24 @@ export default function GDPPage() {
         <p className="text-sm text-[#6b7c8f] mt-4 italic">
           * Projections based on current growth trajectory. Actual results may vary.
         </p>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
-      <KeyConcept title="The $5 Trillion Goal">
-        India aims to become a $5 trillion economy. At current growth rates, this could
-        happen around 2027-28. But more important than the number is ensuring growth
-        creates jobs and reduces poverty.
-      </KeyConcept>
+      <ScrollReveal animation="fade-up">
+        <KeyConcept title="The $5 Trillion Goal">
+          India aims to become a $5 trillion economy. At current growth rates, this could
+          happen around 2027-28. But more important than the number is ensuring growth
+          creates jobs and reduces poverty.
+        </KeyConcept>
+      </ScrollReveal>
 
       {/* Summary */}
-      <SectionHeading>Quick Summary</SectionHeading>
+      <ScrollReveal animation="fade-up">
+        <SectionHeading>Quick Summary</SectionHeading>
+      </ScrollReveal>
 
-      <ContentCard>
+      <ScrollReveal animation="fade-up">
+        <ContentCard>
         <ul className="space-y-3 text-[#4a5568]">
           <li className="flex gap-3">
             <span className="text-[#b85c38] font-semibold">1.</span>
@@ -462,7 +525,8 @@ export default function GDPPage() {
             <span>India could become the <strong className="text-[#1a2e44]">3rd largest economy</strong> by 2030</span>
           </li>
         </ul>
-      </ContentCard>
+        </ContentCard>
+      </ScrollReveal>
 
       {/* Source Attribution */}
       <SourceFooter sourceIds={['mospi-national-accounts', 'world-bank-gdp']} />
