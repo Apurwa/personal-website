@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Source_Serif_4, IBM_Plex_Sans } from 'next/font/google'
 import './india-economy.css'
+import { ReadingProgressBar } from './components/ReadingProgressBar'
 
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
@@ -184,6 +185,7 @@ export default function IndiaEconomyLayout({
           - Headers: Source Serif 4 (elegant, readable serif)
           - Body: IBM Plex Sans (humanist, not cold)
         */}
+        <ReadingProgressBar />
         {children}
       </div>
     </>
