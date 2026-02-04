@@ -16,7 +16,7 @@ export function TopicCard({ title, description, href, comingSoon, index = 0 }: T
   const content = (
     <article
       className={`
-        group relative p-8 border transition-all duration-300
+        group relative p-8 border transition-all duration-300 h-full flex flex-col
         animate-fade-in-up ${delayClass}
         ${comingSoon
           ? 'border-[#e5e0d8] bg-[#FAF7F2] opacity-60 cursor-not-allowed'
@@ -34,12 +34,12 @@ export function TopicCard({ title, description, href, comingSoon, index = 0 }: T
         {title}
       </h3>
 
-      <p className={`font-sans text-[15px] leading-relaxed ${comingSoon ? 'text-[#a0aab4]' : 'text-[#4a5568]'}`}>
+      <p className={`font-sans text-[15px] leading-relaxed flex-grow ${comingSoon ? 'text-[#a0aab4]' : 'text-[#4a5568]'}`}>
         {description}
       </p>
 
       {!comingSoon && (
-        <span className="inline-flex items-center gap-2 mt-4 font-sans text-sm font-medium text-[#4a6fa5] group-hover:text-[#b85c38] transition-colors duration-300">
+        <span className="inline-flex items-center gap-2 mt-auto pt-4 font-sans text-sm font-medium text-[#4a6fa5] group-hover:text-[#b85c38] transition-colors duration-300">
           Read more
           <svg
             className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
@@ -59,7 +59,7 @@ export function TopicCard({ title, description, href, comingSoon, index = 0 }: T
   }
 
   return (
-    <Link href={href} className="block">
+    <Link href={href} className="block h-full">
       {content}
     </Link>
   )
