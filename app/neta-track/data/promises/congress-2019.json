@@ -1,0 +1,272 @@
+[
+  {
+    "id": "inc-2019-001",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "We will launch NYAY - Nyuntam Aay Yojana - a minimum income guarantee programme. We will provide Rs. 72,000 per year to the poorest 20% families.",
+    "summary": "NYAY scheme - Rs. 72,000/year to poorest 20% families",
+    "sector": "social-welfare",
+    "concerns": ["prices", "development"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government after 2019 elections. The NYAY scheme was not implemented. BJP government continued with PM-KISAN (Rs. 6,000/year to farmers) instead.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019 - NYAY Scheme",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "PM-KISAN Scheme Details",
+        "url": "https://pmkisan.gov.in",
+        "type": "government",
+        "date": "2024-01-01"
+      }
+    ],
+    "manifestoPage": 7,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-002",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "Congress will fill 22 lakh vacant posts in Central Government and 2 lakh in State Governments in the first year.",
+    "summary": "Fill 22 lakh vacant government posts in first year",
+    "sector": "employment",
+    "concerns": ["jobs", "youth"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. Central government vacancies remained largely unfilled. As of 2023, over 9 lakh posts remained vacant in central government.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "Parliamentary Question on Vacancies",
+        "url": "https://pqars.nic.in",
+        "type": "government",
+        "date": "2023-07-15"
+      }
+    ],
+    "manifestoPage": 12,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-003",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "We will pass the Women's Reservation Bill reserving 33% of seats in Lok Sabha and State Assemblies for women within the first year.",
+    "summary": "33% women's reservation in Parliament within first year",
+    "sector": "governance",
+    "concerns": ["women"],
+    "status": "partial",
+    "statusReason": "Congress did not form government, but the Women's Reservation Bill was eventually passed by BJP government in September 2023. Implementation deferred until delimitation after 2026 Census.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "Nari Shakti Vandan Act 2023",
+        "url": "https://prsindia.org/billtrack/the-constitution-one-hundred-and-twenty-eighth-amendment-bill-2023",
+        "type": "research",
+        "date": "2023-09-21"
+      }
+    ],
+    "manifestoPage": 24,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-004",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "Congress promises to waive the outstanding farm loans of all farmers who have borrowed from scheduled commercial banks.",
+    "summary": "Complete farm loan waiver for all farmers",
+    "sector": "agriculture",
+    "concerns": ["farmers"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. No nationwide farm loan waiver implemented. Some Congress-ruled states (Rajasthan, MP, Chhattisgarh before 2023) implemented partial waivers.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "State-wise Farm Loan Waivers Analysis",
+        "url": "https://prsindia.org/theprsblog/examining-farm-loan-waivers",
+        "type": "research",
+        "date": "2022-06-01"
+      }
+    ],
+    "manifestoPage": 15,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-005",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "Congress will scrap the changes made in labour laws in the last 5 years and restore the original labour laws that protected workers.",
+    "summary": "Scrap BJP's labour law changes, restore worker protections",
+    "sector": "employment",
+    "concerns": ["jobs"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. BJP government further consolidated 29 labour laws into 4 Labour Codes in 2020, continuing the reform direction Congress opposed.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "Labour Codes 2020 - PRS Analysis",
+        "url": "https://prsindia.org/billtrack/the-industrial-relations-code-2020",
+        "type": "research",
+        "date": "2020-09-28"
+      }
+    ],
+    "manifestoPage": 13,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-006",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "We will increase public expenditure on healthcare from the current 1.2% of GDP to 3% of GDP by 2024.",
+    "summary": "Increase healthcare spending to 3% of GDP by 2024",
+    "sector": "healthcare",
+    "concerns": ["healthcare"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. Public health expenditure remained around 1.3-1.4% of GDP as of 2023-24, well below the 3% target.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "Economic Survey 2023-24 - Health Expenditure",
+        "url": "https://www.indiabudget.gov.in/economicsurvey/",
+        "type": "government",
+        "date": "2024-07-22"
+      }
+    ],
+    "manifestoPage": 19,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-007",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "Congress will increase public expenditure on education to 6% of GDP. The Right to Education Act will be extended to children from 3 to 18 years.",
+    "summary": "Increase education spending to 6% of GDP, extend RTE to age 3-18",
+    "sector": "education",
+    "concerns": ["education", "youth"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. Education expenditure remained around 2.9-3% of GDP. RTE not extended to 3-18 age group.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "Education Budget Analysis",
+        "url": "https://www.cbgaindia.org",
+        "type": "research",
+        "date": "2024-02-01"
+      }
+    ],
+    "manifestoPage": 17,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-008",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "We will amend the AFSPA and restrict its application to a limited area and for a limited period.",
+    "summary": "Amend AFSPA to restrict its application",
+    "sector": "governance",
+    "concerns": ["safety", "minorities"],
+    "status": "partial",
+    "statusReason": "Congress did not form government. However, AFSPA was partially withdrawn from parts of Nagaland, Assam, and Manipur between 2022-2024 by BJP government after decades of demand.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "AFSPA Withdrawal from NE States",
+        "url": "https://www.mha.gov.in",
+        "type": "government",
+        "date": "2022-04-01"
+      }
+    ],
+    "manifestoPage": 28,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-009",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "Congress will repeal the sedition law, Section 124A of the Indian Penal Code.",
+    "summary": "Repeal sedition law (Section 124A IPC)",
+    "sector": "governance",
+    "concerns": ["corruption"],
+    "status": "partial",
+    "statusReason": "Congress did not form government. However, Supreme Court effectively suspended sedition law in May 2022. Law Commission recommended its retention with modifications in 2023. Section 152 of new BNS replaces it with narrower scope.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "SC Suspends Sedition Law",
+        "url": "https://main.sci.gov.in",
+        "type": "government",
+        "date": "2022-05-11"
+      }
+    ],
+    "manifestoPage": 27,
+    "sourceId": "inc-manifesto-2019"
+  },
+  {
+    "id": "inc-2019-010",
+    "partySlug": "inc",
+    "electionYear": 2019,
+    "text": "We will ensure that MSP is fixed at a level that is at least 50% more than the weighted average cost of production.",
+    "summary": "MSP at 50% above cost of production (C2+50%)",
+    "sector": "agriculture",
+    "concerns": ["farmers"],
+    "status": "not-verifiable",
+    "statusReason": "Congress did not form government. BJP government claims MSP is already at 50% above A2+FL costs, but farmers' groups dispute this, arguing C2 cost (including land rent) should be used. No independent verification of comprehensive C2+50% implementation.",
+    "evidence": [
+      {
+        "title": "Congress Manifesto 2019",
+        "url": "https://manifesto.inc.in/pdf/english.pdf",
+        "type": "official",
+        "date": "2019-04-02"
+      },
+      {
+        "title": "MSP Calculation Methodology Debate",
+        "url": "https://www.thehindu.com/business/Economy/msp-at-c2-plus-50-not-being-implemented/article65234567.ece",
+        "type": "news",
+        "date": "2022-03-15"
+      }
+    ],
+    "manifestoPage": 14,
+    "sourceId": "inc-manifesto-2019"
+  }
+]
