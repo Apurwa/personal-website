@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
-import { TableOfContents } from '../components/TableOfContents'
 import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
@@ -72,11 +71,6 @@ export default function RBIPage() {
       </header>
 
       <PageTOC items={tocItems} />
-
-      {/* Table of Contents */}
-      <TableOfContents
-        items={tocItems}
-      />
 
       {/* Current Rates Dashboard */}
       <ScrollReveal animation="fade-up">

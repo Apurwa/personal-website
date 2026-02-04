@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { PageTOC } from '../components/PageTOC'
-import { TableOfContents } from '../components/TableOfContents'
 import {
   SectionHeading,
   Definition,
@@ -108,9 +107,6 @@ export default function BankingPage() {
           />
         </div>
       </section>
-
-      {/* Table of Contents */}
-      <TableOfContents items={tocItems} />
 
       {/* What is a Bank? */}
       <section className="mb-16">

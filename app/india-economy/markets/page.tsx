@@ -3,7 +3,6 @@ import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { CountUpStat } from '../components/CountUpStat'
-import { TableOfContents } from '../components/TableOfContents'
 import { PageTOC } from '../components/PageTOC'
 import {
   SectionHeading,
@@ -75,9 +74,6 @@ export default function MarketsPage() {
       </header>
 
       <PageTOC items={tocItems} />
-
-      {/* Table of Contents */}
-      <TableOfContents items={tocItems} />
 
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">

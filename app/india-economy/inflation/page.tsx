@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
-import { TableOfContents } from '../components/TableOfContents'
 import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
@@ -82,9 +81,6 @@ export default function InflationPage() {
 
       {/* Sticky Page TOC */}
       <PageTOC items={tocItems} />
-
-      {/* Table of Contents */}
-      <TableOfContents items={tocItems} />
 
       {/* Current Inflation Dashboard */}
       <ScrollReveal animation="fade-up">

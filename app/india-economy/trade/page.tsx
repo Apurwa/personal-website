@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
-import { TableOfContents } from '../components/TableOfContents'
 import { PageTOC } from '../components/PageTOC'
 import {
   ContentCard,
@@ -77,9 +76,6 @@ export default function TradePage() {
 
       {/* Sticky Page TOC */}
       <PageTOC items={tocItems} />
-
-      {/* Table of Contents */}
-      <TableOfContents items={tocItems} />
 
       {/* Trade Summary Dashboard */}
       <ScrollReveal animation="fade-up">

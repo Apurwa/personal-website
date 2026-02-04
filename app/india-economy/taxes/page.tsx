@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { SourceFooter } from '../components/SourceFooter'
-import { TableOfContents } from '../components/TableOfContents'
 import { PageTOC } from '../components/PageTOC'
 import {
   SectionHeading,
@@ -73,9 +72,6 @@ export default function TaxesPage() {
       </header>
 
       <PageTOC items={tocItems} />
-
-      {/* Table of Contents */}
-      <TableOfContents items={tocItems} />
 
       {/* Overview Stats */}
       <section className="mb-16 animate-fade-in-up delay-3">

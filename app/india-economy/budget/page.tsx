@@ -11,7 +11,7 @@ import {
 } from '../components/EducationalCards'
 import { ScrollReveal } from '../components/ScrollReveal'
 import { CountUpStat } from '../components/CountUpStat'
-import { TableOfContents, TOCItem } from '../components/TableOfContents'
+import { TOCItem } from '../components/TableOfContents'
 import { PageTOC } from '../components/PageTOC'
 
 export const metadata: Metadata = {
@@ -71,10 +71,6 @@ export default function BudgetPage() {
       </header>
 
       <PageTOC items={tocItems} />
-
-      <ScrollReveal animation="fade-up">
-        <TableOfContents items={tocItems} />
-      </ScrollReveal>
 
       {/* Key Numbers */}
       <ScrollReveal animation="fade-up">
