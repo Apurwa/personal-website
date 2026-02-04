@@ -1,0 +1,272 @@
+[
+  {
+    "id": "inc-2024-001",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will provide a legal guarantee for MSP (Minimum Support Price) for crops recommended by the Swaminathan Commission.",
+    "summary": "Legal guarantee for MSP",
+    "sector": "agriculture",
+    "concerns": ["farmers"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government after 2024 elections. No legal guarantee for MSP enacted. BJP government maintains MSP is already at 50% above A2+FL costs but no legal backing.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "MSP Legal Guarantee Debate - PRS",
+        "url": "https://prsindia.org",
+        "type": "research",
+        "date": "2024-02-01"
+      }
+    ],
+    "manifestoPage": 8,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-002",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will conduct a nationwide Caste Census to ensure accurate data for social justice policies.",
+    "summary": "Conduct nationwide Caste Census",
+    "sector": "governance",
+    "concerns": ["reservation", "minorities"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. No nationwide caste census announced by BJP government. Bihar conducted state-level caste survey in 2023. Karnataka announced plans in 2024.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Bihar Caste Survey Results",
+        "url": "https://state.bihar.gov.in",
+        "type": "government",
+        "date": "2023-10-02"
+      }
+    ],
+    "manifestoPage": 12,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-003",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will remove the 50% cap on reservations and provide reservations based on population share.",
+    "summary": "Remove 50% cap on reservations",
+    "sector": "social-welfare",
+    "concerns": ["reservation", "minorities"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. 50% cap on reservations (established by Supreme Court in Indra Sawhney case) remains in place. No constitutional amendment proposed.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Indra Sawhney Case - 50% Cap",
+        "url": "https://main.sci.gov.in",
+        "type": "government",
+        "date": "1992-11-16"
+      }
+    ],
+    "manifestoPage": 13,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-004",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will provide Apprenticeship Programme (Pehli Naukri Pakki) to 1 crore youth annually with Rs 1 lakh per year.",
+    "summary": "Apprenticeship for 1 crore youth with Rs 1 lakh/year (Pehli Naukri)",
+    "sector": "employment",
+    "concerns": ["jobs", "youth"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. BJP government launched PM Internship Scheme with Rs 5,000/month (Rs 60,000/year) instead, targeting 1 crore over 5 years (not annually).",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "PM Internship Scheme Details",
+        "url": "https://pminternship.mca.gov.in",
+        "type": "government",
+        "date": "2024-10-15"
+      }
+    ],
+    "manifestoPage": 6,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-005",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will provide Mahalakshmi scheme - Rs 1 lakh per year to one woman in every poor family.",
+    "summary": "Rs 1 lakh/year to one woman per poor family (Mahalakshmi)",
+    "sector": "social-welfare",
+    "concerns": ["women", "prices"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. Scheme not implemented nationally. Congress-ruled Karnataka implemented similar scheme (Gruha Lakshmi - Rs 2,000/month to women heads of households).",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Karnataka Gruha Lakshmi Scheme",
+        "url": "https://karnataka.gov.in",
+        "type": "government",
+        "date": "2023-08-15"
+      }
+    ],
+    "manifestoPage": 10,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-006",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will restore the old pension scheme for government employees.",
+    "summary": "Restore Old Pension Scheme for government employees",
+    "sector": "social-welfare",
+    "concerns": ["jobs"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form central government. However, Congress-ruled states (Rajasthan, Chhattisgarh, Himachal Pradesh before elections) restored OPS. Central government announced Unified Pension Scheme instead.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Unified Pension Scheme Announcement",
+        "url": "https://pib.gov.in",
+        "type": "government",
+        "date": "2024-08-24"
+      }
+    ],
+    "manifestoPage": 7,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-007",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will fill all 30 lakh vacant posts in Central and State governments within 1 year.",
+    "summary": "Fill 30 lakh government vacancies within 1 year",
+    "sector": "employment",
+    "concerns": ["jobs", "youth"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. Central government vacancies remain significant. BJP government announced 10 lakh recruitment target (Rozgar Mela) but not all posts filled.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Government Vacancy Status - Parliament Q&A",
+        "url": "https://pqars.nic.in",
+        "type": "government",
+        "date": "2024-07-15"
+      }
+    ],
+    "manifestoPage": 6,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-008",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will repeal the three new criminal laws (BNS, BNSS, BSA) and restore IPC, CrPC with reforms.",
+    "summary": "Repeal new criminal laws (BNS, BNSS, BSA)",
+    "sector": "governance",
+    "concerns": ["safety", "minorities"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. New criminal laws (BNS, BNSS, BSA) came into effect on July 1, 2024. No repeal or rollback announced.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "New Criminal Laws Implementation",
+        "url": "https://www.mha.gov.in",
+        "type": "government",
+        "date": "2024-07-01"
+      }
+    ],
+    "manifestoPage": 15,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-009",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will increase healthcare expenditure to 4% of GDP and provide universal healthcare.",
+    "summary": "Increase healthcare spending to 4% of GDP",
+    "sector": "healthcare",
+    "concerns": ["healthcare"],
+    "status": "not-delivered",
+    "statusReason": "Congress did not form government. Public health expenditure remains around 1.4% of GDP in 2024-25. No significant increase toward 4% target.",
+    "evidence": [
+      {
+        "title": "Congress Nyay Patra 2024",
+        "url": "https://www.inc.in/congress-sandesh/manifesto-2024",
+        "type": "official",
+        "date": "2024-04-05"
+      },
+      {
+        "title": "Union Budget 2024-25 Health Allocation",
+        "url": "https://www.indiabudget.gov.in",
+        "type": "government",
+        "date": "2024-07-23"
+      }
+    ],
+    "manifestoPage": 18,
+    "sourceId": "inc-manifesto-2024"
+  },
+  {
+    "id": "inc-2024-010",
+    "partySlug": "inc",
+    "electionYear": 2024,
+    "text": "Congress will restore statehood to Jammu & Kashmir and conduct Assembly elections.",
+    "summary": "Restore J&K statehood and hold Assembly elections",
+    "sector": "governance",
+    "concerns": ["minorities", "development"],
+    "status": "partial",
+    "statusReason": "Congress did not form central government. However, Supreme Court directed J&K Assembly elections by September 2024. Elections held in Sept-Oct 2024. Statehood restoration promised by Centre but not yet implemented.",
+    "evidence": [
+      {
+        "title": "Supreme Court Directive on J&K Elections",
+        "url": "https://main.sci.gov.in",
+        "type": "government",
+        "date": "2023-12-11"
+      },
+      {
+        "title": "J&K Assembly Election Results 2024",
+        "url": "https://results.eci.gov.in",
+        "type": "government",
+        "date": "2024-10-08"
+      }
+    ],
+    "manifestoPage": 20,
+    "sourceId": "inc-manifesto-2024"
+  }
+]

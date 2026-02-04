@@ -2,14 +2,18 @@ import { Promise, Party, PartyStats, ElectionYear, Concern, CONCERN_LABELS, Conc
 import partiesData from '../data/parties.json'
 import concernsMapping from '../data/concerns-mapping.json'
 import bjp2019 from '../data/promises/bjp-2019.json'
+import bjp2024 from '../data/promises/bjp-2024.json'
 import congress2019 from '../data/promises/congress-2019.json'
+import congress2024 from '../data/promises/congress-2024.json'
 import aap2019 from '../data/promises/aap-2019.json'
 
 // Type assertions for imported JSON
 const parties = partiesData as Party[]
 const allPromises: Promise[] = [
   ...(bjp2019 as Promise[]),
+  ...(bjp2024 as Promise[]),
   ...(congress2019 as Promise[]),
+  ...(congress2024 as Promise[]),
   ...(aap2019 as Promise[]),
 ]
 

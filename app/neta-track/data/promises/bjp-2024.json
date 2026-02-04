@@ -1,0 +1,308 @@
+[
+  {
+    "id": "bjp-2024-001",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will build 3 crore additional houses for the poor and middle class under PM Awas Yojana in the next 5 years.",
+    "summary": "Build 3 crore additional houses under PMAY in 5 years",
+    "sector": "social-welfare",
+    "concerns": ["development"],
+    "status": "in-progress",
+    "statusReason": "PM Awas Yojana Urban 2.0 launched in August 2024 with target of 1 crore urban houses. Budget allocation of Rs 10 lakh crore announced. Implementation ongoing.",
+    "evidence": [
+      {
+        "title": "PMAY Urban 2.0 Launch",
+        "url": "https://pib.gov.in",
+        "type": "government",
+        "date": "2024-08-15"
+      },
+      {
+        "title": "Union Budget 2024-25 - Housing Allocation",
+        "url": "https://www.indiabudget.gov.in",
+        "type": "government",
+        "date": "2024-07-23"
+      }
+    ],
+    "manifestoPage": 15,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-002",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will continue to provide free ration to 80 crore beneficiaries under PM Garib Kalyan Anna Yojana for the next 5 years.",
+    "summary": "Continue free ration for 80 crore people for 5 years",
+    "sector": "social-welfare",
+    "concerns": ["prices", "development"],
+    "status": "delivered",
+    "statusReason": "PM Garib Kalyan Anna Yojana extended for 5 years (till December 2028) in Union Budget 2024-25. 80+ crore beneficiaries continue to receive free foodgrains.",
+    "evidence": [
+      {
+        "title": "PMGKAY Extension Announcement",
+        "url": "https://pib.gov.in",
+        "type": "government",
+        "date": "2024-07-23"
+      },
+      {
+        "title": "Union Budget 2024-25",
+        "url": "https://www.indiabudget.gov.in",
+        "type": "government",
+        "date": "2024-07-23"
+      }
+    ],
+    "manifestoPage": 18,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-003",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We are committed to implementing One Nation One Election for Lok Sabha and State Assemblies.",
+    "summary": "Implement One Nation One Election",
+    "sector": "governance",
+    "concerns": ["corruption", "development"],
+    "status": "in-progress",
+    "statusReason": "High-Level Committee under former President Ram Nath Kovind submitted report in March 2024 recommending simultaneous elections. Constitution Amendment Bills introduced in December 2024, referred to JPC.",
+    "evidence": [
+      {
+        "title": "Kovind Committee Report on ONOE",
+        "url": "https://legislative.gov.in",
+        "type": "government",
+        "date": "2024-03-14"
+      },
+      {
+        "title": "ONOE Bills Introduced in Parliament",
+        "url": "https://prsindia.org",
+        "type": "research",
+        "date": "2024-12-17"
+      }
+    ],
+    "manifestoPage": 8,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-004",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will implement the Uniform Civil Code across India.",
+    "summary": "Implement Uniform Civil Code nationally",
+    "sector": "governance",
+    "concerns": ["minorities"],
+    "status": "in-progress",
+    "statusReason": "Uttarakhand became first state to implement UCC (February 2024). Law Commission examining feedback. No national UCC bill introduced in Parliament yet as of early 2026.",
+    "evidence": [
+      {
+        "title": "Uttarakhand UCC Implementation",
+        "url": "https://uk.gov.in",
+        "type": "government",
+        "date": "2024-02-07"
+      },
+      {
+        "title": "Law Commission on UCC",
+        "url": "https://lawcommissionofindia.nic.in",
+        "type": "government",
+        "date": "2024-06-01"
+      }
+    ],
+    "manifestoPage": 40,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-005",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will ensure 100% saturation of piped water supply to all rural households under Jal Jeevan Mission by 2024.",
+    "summary": "100% piped water to rural households via Jal Jeevan Mission",
+    "sector": "infrastructure",
+    "concerns": ["development", "healthcare"],
+    "status": "partial",
+    "statusReason": "As of January 2026, approximately 78% of rural households have tap water connections under JJM. Target of 100% saturation revised. 15 states/UTs achieved 100% coverage.",
+    "evidence": [
+      {
+        "title": "Jal Jeevan Mission Dashboard",
+        "url": "https://ejalshakti.gov.in/jjmreport/JJMIndia.aspx",
+        "type": "government",
+        "date": "2026-01-15"
+      }
+    ],
+    "manifestoPage": 20,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-006",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will make India a global hub for semiconductor manufacturing and attract major investments in chip fabrication.",
+    "summary": "Make India a global semiconductor manufacturing hub",
+    "sector": "economy",
+    "concerns": ["jobs", "development"],
+    "status": "in-progress",
+    "statusReason": "India Semiconductor Mission active. Micron's $2.75 billion facility in Gujarat under construction. Tata-PSMC fab in Gujarat approved. First made-in-India chips expected by 2026.",
+    "evidence": [
+      {
+        "title": "India Semiconductor Mission Updates",
+        "url": "https://www.meity.gov.in",
+        "type": "government",
+        "date": "2024-09-01"
+      },
+      {
+        "title": "Micron Gujarat Plant Progress",
+        "url": "https://pib.gov.in",
+        "type": "government",
+        "date": "2024-06-01"
+      }
+    ],
+    "manifestoPage": 25,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-007",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will expand Ayushman Bharat to provide free health insurance to all senior citizens above 70 years, regardless of income.",
+    "summary": "Expand Ayushman Bharat to all citizens above 70 years",
+    "sector": "healthcare",
+    "concerns": ["healthcare"],
+    "status": "delivered",
+    "statusReason": "Announced in Union Budget 2024-25. Ayushman Bharat extended to all citizens 70+ regardless of income. Implementation began October 2024.",
+    "evidence": [
+      {
+        "title": "Ayushman Bharat for 70+ Announcement",
+        "url": "https://pib.gov.in",
+        "type": "government",
+        "date": "2024-09-11"
+      },
+      {
+        "title": "PM-JAY 70+ Implementation",
+        "url": "https://pmjay.gov.in",
+        "type": "government",
+        "date": "2024-10-01"
+      }
+    ],
+    "manifestoPage": 22,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-008",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will increase capital expenditure to Rs 15 lakh crore annually and fast-track infrastructure development.",
+    "summary": "Increase capital expenditure to Rs 15 lakh crore annually",
+    "sector": "infrastructure",
+    "concerns": ["development", "jobs"],
+    "status": "in-progress",
+    "statusReason": "Union Budget 2024-25 allocated Rs 11.11 lakh crore for capital expenditure, an 11% increase from previous year. On track to reach Rs 15 lakh crore target by 2028-29.",
+    "evidence": [
+      {
+        "title": "Union Budget 2024-25 Capital Expenditure",
+        "url": "https://www.indiabudget.gov.in",
+        "type": "government",
+        "date": "2024-07-23"
+      }
+    ],
+    "manifestoPage": 26,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-009",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will ensure that the process for implementation of Women Reservation Act is completed at the earliest.",
+    "summary": "Implement Women's Reservation Act at earliest",
+    "sector": "governance",
+    "concerns": ["women"],
+    "status": "in-progress",
+    "statusReason": "Nari Shakti Vandan Act passed in 2023. Implementation linked to delimitation exercise after next Census. Census 2021 delayed due to COVID, now expected 2025. Delimitation to follow.",
+    "evidence": [
+      {
+        "title": "Nari Shakti Vandan Act 2023",
+        "url": "https://prsindia.org/billtrack/the-constitution-one-hundred-and-twenty-eighth-amendment-bill-2023",
+        "type": "research",
+        "date": "2023-09-21"
+      },
+      {
+        "title": "Census 2025 Preparation",
+        "url": "https://censusindia.gov.in",
+        "type": "government",
+        "date": "2024-11-01"
+      }
+    ],
+    "manifestoPage": 35,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-010",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will establish 'Viksit Bharat' by 2047, making India a developed nation on the centenary of independence.",
+    "summary": "Make India a developed nation by 2047 (Viksit Bharat)",
+    "sector": "economy",
+    "concerns": ["development"],
+    "status": "in-progress",
+    "statusReason": "Viksit Bharat @2047 vision document being prepared. Various sectoral targets set. Long-term goal - assessment possible only over time. Interim milestones being tracked.",
+    "evidence": [
+      {
+        "title": "Viksit Bharat @2047 Framework",
+        "url": "https://www.niti.gov.in",
+        "type": "government",
+        "date": "2024-08-15"
+      }
+    ],
+    "manifestoPage": 5,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-011",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will provide internship opportunities to 1 crore youth in top companies over 5 years with Rs 5,000 monthly allowance.",
+    "summary": "1 crore internships for youth with Rs 5,000/month allowance",
+    "sector": "employment",
+    "concerns": ["jobs", "youth"],
+    "status": "in-progress",
+    "statusReason": "PM Internship Scheme announced in Budget 2024-25. Portal launched October 2024. First batch of internships started. Target: 1 crore internships over 5 years in 500 top companies.",
+    "evidence": [
+      {
+        "title": "PM Internship Scheme Launch",
+        "url": "https://pib.gov.in",
+        "type": "government",
+        "date": "2024-10-03"
+      },
+      {
+        "title": "PM Internship Portal",
+        "url": "https://pminternship.mca.gov.in",
+        "type": "government",
+        "date": "2024-10-15"
+      }
+    ],
+    "manifestoPage": 12,
+    "sourceId": "bjp-manifesto-2024"
+  },
+  {
+    "id": "bjp-2024-012",
+    "partySlug": "bjp",
+    "electionYear": 2024,
+    "text": "We will ensure India becomes the 3rd largest economy in the world during our third term.",
+    "summary": "Make India world's 3rd largest economy",
+    "sector": "economy",
+    "concerns": ["development"],
+    "status": "in-progress",
+    "statusReason": "India currently 5th largest economy. Projected to overtake Japan and Germany by 2027-28 based on IMF projections. On track but dependent on sustained growth rates.",
+    "evidence": [
+      {
+        "title": "IMF World Economic Outlook",
+        "url": "https://www.imf.org/en/Publications/WEO",
+        "type": "research",
+        "date": "2024-10-01"
+      },
+      {
+        "title": "Economic Survey 2024-25",
+        "url": "https://www.indiabudget.gov.in/economicsurvey/",
+        "type": "government",
+        "date": "2025-01-31"
+      }
+    ],
+    "manifestoPage": 6,
+    "sourceId": "bjp-manifesto-2024"
+  }
+]
