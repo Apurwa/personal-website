@@ -44,9 +44,17 @@ export default function NetaTrackPage() {
 
       {/* Browse by Concern */}
       <section className="mb-16 animate-fade-in-up delay-4">
-        <h2 className="font-serif text-2xl font-semibold text-[#1a2e44] mb-4">
-          What matters to you?
-        </h2>
+        <div className="flex items-baseline justify-between mb-4">
+          <h2 className="font-serif text-2xl font-semibold text-[#1a2e44]">
+            What matters to you?
+          </h2>
+          <Link
+            href="/neta-track/issues"
+            className="font-sans text-sm text-[#4a6fa5] link-animated"
+          >
+            View all issues
+          </Link>
+        </div>
         <p className="font-sans text-[#6b7c8f] mb-6">
           Browse promises by the issues you care about
         </p>
